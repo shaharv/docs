@@ -126,6 +126,14 @@ Make:
 - Verbose build (any make impl.)          make SHELL='sh -x'
 - Verbose build (GNU make)                make VERBOSE=1
 
+Profiling:
+
+- Perf basic CPU stats                    perf stat <command>
+- Perf detailed CPU stats                 perf stat -d <command>
+- Valgrind + callgrind                    valgrind --tool=callgrind <command>
+- Valgrind + callgrind for JVM profiling  valgrind --tool=callgrind --vex-iropt-register-updates=allregs-at-mem-access <command>
+- Perf examples and cheat sheet           http://www.brendangregg.com/perf.html
+
 Transferring files:
 
 - Download file from link                 wget <url>
