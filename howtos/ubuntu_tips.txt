@@ -1,7 +1,7 @@
 Ubuntu cheat sheet
 ------------------
 
-Shell basics:
+Bash basics:
 
 - Back to previous folder                 cd -
 - Set env. variable with global scope     export VAR=VAL
@@ -11,6 +11,7 @@ Shell basics:
 - Search recent shell commands            CTRL+R
 - Make shell exit on error                set -e (set +e to revert)
 - Make shell echo executed commands       set -x (set +x to revert)
+- Bash "strict mode"                      set -euo pipefail
 - Run script in the same shell env.       . script.sh
 - Change languague                        Super key [Windows Key] + Space
 - Redirect stdout and stderr to file      cmd >log.txt 2>&1
