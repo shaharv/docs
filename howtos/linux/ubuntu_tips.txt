@@ -73,6 +73,7 @@ Process management:
 - Running processes                       top, htop
 - Process info in batch mode              top -b -p `pidof some_running_process`
 - Killing a process                       kill <pid>
+- Kill process by name                    pkill java*
 - Get process PID                         pidof <pname>
 - List processes by name                  ps aux | grep myprog
 - Get pid's of processes matching regexp  ps aux | grep 'java -agentpath:' | perl -pe "s/^\w+\s+//" | perl -pe "s/\s+.*$//" | head -n -1
@@ -130,6 +131,8 @@ Profiling:
 
 - Perf basic CPU stats                    perf stat <command>
 - Perf detailed CPU stats                 perf stat -d <command>
+- Perf cache events                       perf stat -e cache-references,cache-misses <command>
+- Perf list available event types         perf list
 - Valgrind + callgrind                    valgrind --tool=callgrind <command>
 - Valgrind + callgrind for JVM profiling  valgrind --tool=callgrind --vex-iropt-register-updates=allregs-at-mem-access <command>
 - Perf examples and cheat sheet           http://www.brendangregg.com/perf.html
