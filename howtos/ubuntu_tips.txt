@@ -1,0 +1,175 @@
+Ubuntu cheat sheet
+------------------
+
+Shell basics:
+
+- Back to previous folder                 cd -
+- Set env. variable with global scope     export VAR=VAL
+- Display env. variable                   echo $VAR
+- Print all env. variables                printenv
+- Exit code of last command               echo $?
+- Search recent shell commands            CTRL+R
+- Make shell exit on error                set -e (set +e to revert)
+- Make shell echo executed commands       set -x (set +x to revert)
+- Run script in the same shell env.       . script.sh
+- Change languague                        Super key [Windows Key] + Space
+- Redirect stdout and stderr to file      cmd >log.txt 2>&1
+- Quick copy                              Shift + Ctrl + C
+- Quick paste                             Shift + Ctrl + V
+
+Folders:
+
+- Remove a non-empty folder               rm -rf <folder-name>
+- Copy folder entirely                    cp -a <src> <dst>
+- Copy folder with specific files         cd $dir; find . -name '*.txt' | cpio -pdm $target_dir
+
+Files:
+
+- Get the type of a file                  file <filename>
+- Get the full path of a file             realpath <filename>
+- Create a symbolic link                  ln -s <link from> <link name>
+- Batch rename                            rename -v 's/something//' *.txt
+
+Finding files:
+
+- Locate a file, first in PATH:           whereis <filename>
+- Locate all files matching wildcard      locate <filename>
+- Find a file in folder hierarcy          find . -name "wildcard"
+- Find files with several wildcards       find -type f \( -name "*.ext1" -o -name "*.ext2" \)
+
+Searching in files:
+
+- Search recursively in all files         grep -r "string"
+- Search object files for symbol          find . -name "*.o" -exec llvm-nm -A {} \; | grep "_foo"
+- Search string in specific file types    find . -type f -name '*.cpp' | xargs grep "string"
+- Count "-o" in all commands files        ls commands*.txt | xargs grep '^\-o' | count 1
+- Grep results with sorrounding context   cat file.txt | grep icudt55_dat -B 10 -A 20
+- Search numbers with X digits            grep 'heap: ([0-9]\{11\}B' *.log
+- Grep w/o color (disable ANSI output)    grep --color=never ...
+
+Disk usage:
+
+- Disk usage of current folder            du -sh
+- Disk usage of each file                 du -sh *
+- Summary of disks and free space         df -h
+- Sizes of all files of type, recursive   du -ab . | grep cpp$ | sort -n
+- Ubuntu Disk Usage Analyzer              baobab
+- Empty the bin                           trash-empty (requires trash-cli)
+- Junk cleaner                            bleachbit
+- Package manager                         synaptic
+
+Text processing:
+
+- Remove blank lines from file            sed -i '/^\s*$/d' file.txt
+- Remove N=123 lines after a match        sed -i '/my-regex/,+123d' file.txt
+- Remove trailing spaces                  sed -i 's/ *$//' file.txt
+- Use Perl as sed - for familiar syntax   perl -pe "s/^\w+\s+//"
+- Convert epoch to local time (Windows)   perl -pe "s/([\d]{10})/localtime $1/eg;" inp.txt
+- Convert epoch to local time (Linux)     perl -pe 's/([\d]{10})/localtime $1/eg;' inp.txt
+
+Process management:
+
+- Running processes                       top, htop
+- Process info in batch mode              top -b -p `pidof some_running_process`
+- Killing a process                       kill <pid>
+- Get process PID                         pidof <pname>
+- List processes by name                  ps aux | grep myprog
+- Get pid's of processes matching regexp  ps aux | grep 'java -agentpath:' | perl -pe "s/^\w+\s+//" | perl -pe "s/\s+.*$//" | head -n -1
+- Max mem usage by process                /usr/bin/time --format='(%Xtext+%Ddata %Mmax)' <command>
+- Give time out to shell sub processes    ulimit -t <seconds>
+
+System:
+
+- Linux distro version                    lsb_release -a
+- CPU info                                lscpu
+- Linux kernel version                    uname -r
+- System info abbreviated summary         inxi
+- Restart machine                         sudo reboot
+- Show all running services               service --status-all
+- Show system uptime                      uptime
+- Check filesystem                        sudo e2fsck -fv /dev/sdX
+- Check HD for bad blocks                 sudo fsck -c /dev/sdX
+
+Boot:
+
+- Disable secure boot (for VirtualBox)    sudo mokutil --disable-validation
+- Re-enable secure boot                   sudo mokutil --enable-validation
+
+Permissions:
+
+- Read+write permissions to me only       chmod 400 file
+- Give execute permission                 chmod +x file
+
+Date and time:
+
+- Disable auto time update                timedatectl set-ntp 0
+- Enable auto time update                 timedatectl set-ntp 1
+- Set date – example                      sudo date -s "30 OCT 2016 18:00:00"
+- Seconds since the epoch (1/1/1970)      date +%s
+- Date in DD/MM/YY format                 date +%D
+- Date and time                           date '+%D %T'
+
+Network:
+
+- Network status                          nmcli dev show
+- IP address                              ip addr show
+- MAC address                             ifconfig | grep Hwaddr
+- Active internet connection              netstat -tan
+- Speed of transfers                      sudo iftop
+- Open ports                              sudo netstat -ntlp | grep LISTEN
+- Restart network connection              sudo service network-manager restart
+- Restart SSHD service                    sudo pkill sshd
+
+Make:
+
+- Verbose build (any make impl.)          make SHELL='sh -x'
+- Verbose build (GNU make)                make VERBOSE=1
+
+Transferring files:
+
+- Download file from link                 wget <url>
+- Copy remote files                       scp [-P port] src dst    [ Example: scp foo.txt user@server.com:/tmp ]
+
+Desktop:
+
+- Add a desktop shortcut                  gnome-desktop-item-edit --create-new ~/Desktop
+  (prerequisite)                          sudo apt-get install --no-install-recommends gnome-panel
+
+Connecting and working on remote machine:
+
+- Connect to a server                     ssh [-p port] user@server.com
+- New screen                              screen -d -R <name>
+- Connect to existing screen              screen -x <name>
+
+Monitor:
+
+- Screen brightness (example)             xbacklight +50
+- Screen contrant (example)               xrandr -gamma 0.5
+
+Compression:
+
+- Compress a single file/folder (GNU tar) tar -czvf archive.tar.gz /fullpath/to/folder-or-file
+- Compress a single folder (zip)          zip -r zipname foldername/*
+- Unzip all zip files into current dir    for file in `ls *.zip`; do unzip $file; done
+- Unzip all zip files into seperate dirs  for file in `ls *.zip`; do unzip $file -d `echo $file | cut -d . -f 1`; done
+- Extract rpm                             rpm2cpio myinstaller.rpm | cpio -idmv
+
+Troubleshooting:
+
+- Get system calls trace for a process    strace <command>
+- Login to shell from desktop GUI         CTRL+ALT+F1 (also F3)
+- Going back to GUI from shell            CTRL+ALT+F7
+
+Useful utilities:
+
+- Paritition mangement                    gparted
+- Unity tweaker                           unity-tweak-tool
+
+Misc:
+
+- Hexadecimal text to binary              xxd -r -p input.txt output.jar
+- MD5 sum of a file                       md5sum <filename>
+- Create 1MB binary file filled with 0's  dd if=/dev/zero of=out.bin count=1 bs=1MB
+- Create 1MB binary file filled randomly  dd if=/dev/urandom of=out.bin count=1000 bs=1000
+- Create 1MB text file with random text   base64 /dev/urandom | head -c 1000000 > out.txt
+
