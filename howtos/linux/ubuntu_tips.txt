@@ -158,6 +158,12 @@ Monitor:
 - Screen brightness (example)             xbacklight +50
 - Screen contrant (example)               xrandr -gamma 0.5
 
+Sound:
+
+- No sound from headphones (1)            alsactl restore
+- No sound from headphones (2)            rm -r ~/.config/pulse; pulseaudio -k
+- "Top five wrong ways to fix your audio" http://voices.canonical.com/david.henningsson/2012/07/13/top-five-wrong-ways-to-fix-your-audio/
+
 Compression:
 
 - Compress a single file/folder (GNU tar) tar -czvf archive.tar.gz /fullpath/to/folder-or-file
