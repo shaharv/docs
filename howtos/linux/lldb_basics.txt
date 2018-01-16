@@ -1,0 +1,57 @@
+LLDB cheat sheet
+----------------
+
+From command line, run: $ lldb “exec to debug"
+
+Run:
+
+   r                   - run the program (arguments should follow r)
+   c                   - continue (run to breakpoint)
+   kill                - kill the program
+
+General:
+
+   q                   - quit
+   gui                 - GUI mode
+
+Step:
+
+   s                   - single source step in
+   si                  - assembly single source step in
+   n                   - single source step over
+   ni                  - assembly single source step over
+   finish              - step out from function
+
+Breakpoints:
+
+   b <funcname>        - break on function
+   b <srcfile>:<line>  - break on line number in file
+   br l                - list all breakpoints
+   br di               - disable all breakpoints
+   rb ‘regexp’         - break on all functions matching regexp
+
+Registers:
+
+   register read       - Show all registers
+   register read rax   - Show value of specified register, rax
+
+Watchpoints:
+
+Debug:
+
+   bt                  - print backtrace (frame #0 is current)
+   d                   - disassemble function and highlight pc
+   d --pc              - disassemble from pc
+   fr v                - show frame variables
+   p <var>             - show value of variable <var>
+   reg write pc 0x1234 - set the pc (same as jmp)
+
+More:
+http://lldb.llvm.org/lldb-gdb.html
+
+GDB reading
+-----------
+
+TrinityCore GDB guidelines:
+https://trinitycore.atlassian.net/wiki/display/tc/GDB
+

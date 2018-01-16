@@ -1,0 +1,50 @@
+apt cheat sheet
+---------------
+
+Install and repair:
+
+- Fix installation issues                    sudo apt-get -f install
+- Details of installed package (1)           sudo dpkg -l | grep <name>
+- Details of installed package (2)           apt-cache policy <name>
+- Upgrade all upgradable packages            sudo apt-get update --fix-missing && sudo apt-get upgrade
+
+Remove:
+
+- Forcibly remove a package                  dpkg -r <name>
+- Remove installed package with apt          sudo apt-get --purge remove <name>
+
+Search:
+
+- Find package to install                    apt-cache search <name>
+- Package policy                             apt-cache policy <name>
+- List installed packages:                   apt list --installed
+
+Cleanup:
+
+- Remove unneeded packages                   sudo apt autoremove
+- Purge all downloaded packages from cache   sudo apt-get clean
+
+Repositories:
+
+- Add repository for dev. toolchains         sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+- Remove repository                          sudo add-apt-repository --remove ppa:ubuntu-toolchain-r/test
+- Update repositories status                 sudo apt-get update
+- List installed PPAs                        apt-cache policy
+- Add missing PUBKEY                         sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys [PUBKEY]
+
+Manage:
+
+- Launch the Gnome update manager            sudo update-manager -d
+
+Alternatives (example):
+
+- sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 720 --slave /usr/bin/g++ g++ /usr/bin/g++-7
+
+- sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-3.8 380
+- sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang++-3.8 380
+- sudo update-alternatives --remove clang /usr/bin/clang
+- sudo update-alternatives --config
+
+Useful links:
+
+- https://help.ubuntu.com/community/AptGet/Howto

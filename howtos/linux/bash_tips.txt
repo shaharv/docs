@@ -1,0 +1,23 @@
+Useful bash links
+-----------------
+
+Use the Unofficial Bash Strict Mode (Unless You Looove Debugging):
+http://redsymbol.net/articles/unofficial-bash-strict-mode
+
+-- That is:
+
+   #!/bin/bash
+   set -euo pipefail
+
+Creating a bash library:
+http://stackoverflow.com/questions/11369522/bash-utility-script-library
+
+List of available bash libraries:
+https://dberkholz.com/2011/04/07/bash-shell-scripting-libraries
+
+Greg's Bash wiki:
+http://mywiki.wooledge.org/BashGuide
+
+Arithmetic Expressions in Bash:
+http://www.softpanorama.org/Scripting/Shellorama/arithmetic_expressions.shtml
+

@@ -1,0 +1,16 @@
+Useful GRUB tips
+---------------
+
+Change GRUB boot order:
+
+- Backup
+  sudo cp /etc/default/grub /etc/default/grub.bak
+
+- Edit and update DEFAULT_GRUB field
+  sudo nano /etc/default/grub
+  DEFAULT_GRUB=N
+
+- Commit update
+  sudo update-grub
+
+

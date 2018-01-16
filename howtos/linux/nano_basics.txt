@@ -1,0 +1,45 @@
+nano cheat sheet
+----------------
+
+File Control in nano, and general
+
+    nano index.php    Open or create the file “index.php” with nano on command line.
+    Ctrl-o Y Enter    Save changes.
+    Ctrl-r            Insert from file.
+    Alt->             Switch to the next file buffer in nano.
+    Alt-<             Switch to the previous file buffer in nano.
+    Ctrl-x            Quit nano.
+    Ctrl-g            Help.
+    Esc+$             Word wrap.
+
+Navigating through file contents in nano
+
+    Home              Move to the beginning of the current line.
+    End               Move to the end of the current line.
+    PgDn              Move down one page.
+    PgUp              Move up one page.
+    Alt-\             Go to the beginning of the file.
+    Alt-/             Go to the end of the file.
+    Alt-g             Go to a target line number.
+    Alt-]             Jump to matching open/close symbol.
+    Alt-a Alt-}       Select a block and indent the block.
+    Alt-a Alt-{       Select a block and outden the block.
+    Ctrl+c            Show current line number.
+
+Copy and Paste in nano
+
+    Ctrl-k            Cut from the current cursor position to the end of the current line.
+    Ctrl-u            Paste the contents from the clipboard at the current cursor psition.
+    Ctrl+Shift+C      Copy to clipboard
+    Ctrl+Shift+V      Paste from clipboard
+
+Search and Replace in nano
+
+    Ctrl-w            Search for a target string.
+    Alt-w             Repeat the last search.
+    Ctrl-\            Search and replace.
+
+Text manipulation
+
+    F4                Remove all newlines in paragraph
+
