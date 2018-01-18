@@ -42,6 +42,10 @@ Alternatives (example):
 - sudo update-alternatives --remove clang /usr/bin/clang
 - sudo update-alternatives --config
 
+Release lock (E: Could not get lock /var/lib/apt/lists/lock):
+
+- ps aux | grep apt, and kill any apt process running
+
 Useful links:
 
 - https://help.ubuntu.com/community/AptGet/Howto
