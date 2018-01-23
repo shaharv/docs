@@ -1,0 +1,95 @@
+Git cheat sheet
+---------------
+
+- Basic git commands, files                        add, rm, mv
+- Basic git commands, update                       commit, push, pull
+
+- Clone remote git database                        git clone <remote>
+- Clone remote git database into specific folder   git clone <remote> <dest-folder>
+
+- Display list of all staged and unstaged files    git status
+- List all local diffs                             git diff
+- List diffs from specified branch                 git diff <base-branch>
+- List diffs from specified branch - filenames     git diff --name-only <base-branch>
+
+- History of a specific file                       gitk filename
+                                                   git log -p filename
+- Summarized history                               git log --oneline
+- Show only commits matching a regex               git log --grep="<pattern>"
+- Show only commits from a certain person          git log --author="<pattern>"
+
+- Update history of origin branch (without         git fetch
+  affecting local files at all)
+  
+- Rename unpushed branch                           git branch -m <feature/new/name>
+- Create a new branch                              git branch crazy-experiment
+  (note: a branch is just a ref. to commit)
+- List local branches                              git branch [-v] [-vv]
+- List all branches - local and remote             git branch -a
+- Delete local branch                              git branch -d <feature/to/delete>
+  (note: checkout a different branch first)
+- Publish new local branch                         git push --set-upstream origin <branch-name>
+												   
+- Show old file version of a file                  git show <revhash>:<file>
+- Show commit                                      git show <revhash>
+
+- Search for commited files                        git ls-tree -r --name-only <branch name> | grep <file pattern>
+
+- Commit all pending changes, not adding files     git commit -a
+- Overwrite last commit with a new commit          git commit --amend
+
+- Checkout a specific git revision                 git checkout <revhash>
+- Checkout a specific git revision, file           git checkout <revhash> -- <filemask>
+- Checkout a specific file from another branch     git checkout <branch-name> -- <filepath>
+- Fix detached head                                git checkout <branch-name>
+
+- Stash changes                                    git stash
+- Unstash the last stash                           git stash apply
+- Unstash the 3rd last stash                       git stash apply stash@{2}
+- Show list of stashes                             git stash list
+- Show stached changes                             git stash show -p
+
+- Discard pending changes                          git reset
+- Discard only last unpushed commit                git reset HEAD~1
+- Reset local branch to its origin state           git checkout <branch>
+                                                   git reset --hard origin/<branch>
+- Revert a specific commit (place a new            git revert <id>
+  commit that undo the specified commit)
+
+- Display changes that caused HEAD update          git reflog
+
+- Display git configuration settings               git config --list
+- Configure user name                              git config --global [--replace-all] user.name "User Name"
+- Configure user mail                              git config --global user.email user@domain.com
+
+- Merge specified branch into current branch       git merge <branch-to-merge-from>
+- Merge after pulling the latest                   git pull origin <branch-to-merge-from>
+
+- Cherry pick a merge commit                       git cherry-pick -m1 -x <sha1>
+  (m1 is the branch we merged from,
+   m2 is the branch we merged to)
+
+- Search source code                               git grep 'search string'
+
+Git setup tips
+--------------
+
+- Set Notepad++ as the editor for commit messages on Windows 64-bit:
+  git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
+  (https://stackoverflow.com/questions/10564/how-can-i-set-up-an-editor-to-work-with-git-on-windows)
+
+Git reading
+-----------
+
+- Atlassian - What is Git
+  https://www.atlassian.com/git/tutorials/what-is-git
+  
+- Atlassian - Git cheat sheet
+  https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet  
+  
+- The Git book
+  https://git-scm.com/book/en/v2
+
+- Github GitFlow
+  https://datasift.github.io/gitflow/IntroducingGitFlow.html
+
