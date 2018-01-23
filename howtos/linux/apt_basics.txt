@@ -7,6 +7,7 @@ Install and repair:
 - Details of installed package (1)           sudo dpkg -l | grep <name>
 - Details of installed package (2)           apt-cache policy <name>
 - Upgrade all upgradable packages            sudo apt-get update --fix-missing && sudo apt-get upgrade
+- Upgrade and fix missing dependencies       sudo apt-get dist-upgrade
 
 Remove:
 
@@ -28,7 +29,7 @@ Repositories:
 
 - Add repository for dev. toolchains         sudo add-apt-repository ppa:ubuntu-toolchain-r/test
 - Remove repository                          sudo add-apt-repository --remove ppa:ubuntu-toolchain-r/test
-- Update repositories status                 sudo apt-get update
+- Update repositories                        sudo apt-get update
 - List installed PPAs                        apt-cache policy
 - Add missing PUBKEY                         sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys [PUBKEY]
 
