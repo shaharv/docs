@@ -71,6 +71,7 @@ Git cheat sheet
 
 - Search source code                               git grep 'search string'
 
+
 Git setup tips
 --------------
 
@@ -78,18 +79,19 @@ Git setup tips
   git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
   (https://stackoverflow.com/questions/10564/how-can-i-set-up-an-editor-to-work-with-git-on-windows)
 
+
 Git reading
 -----------
 
-- Atlassian - What is Git
+- Atlassian - What is Git:
   https://www.atlassian.com/git/tutorials/what-is-git
   
-- Atlassian - Git cheat sheet
+- Atlassian - Git cheat sheet:
   https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet  
   
-- The Git book
+- The Git book:
   https://git-scm.com/book/en/v2
 
-- Github GitFlow
+- Github GitFlow:
   https://datasift.github.io/gitflow/IntroducingGitFlow.html
 
