@@ -161,7 +161,7 @@ Monitor:
 Sound:
 
 - No sound from headphones (1)            alsactl restore
-- No sound from headphones (2)            rm -r ~/.config/pulse; pulseaudio -k
+- No sound from headphones (2)            rm -r ~/.config/pulse; pulseaudio -k && sudo alsa force-reload
 - "Top five wrong ways to fix your audio" http://voices.canonical.com/david.henningsson/2012/07/13/top-five-wrong-ways-to-fix-your-audio/
 
 Compression:
