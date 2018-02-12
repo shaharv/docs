@@ -72,7 +72,7 @@ Text processing:
 
 Process management:
 
-- Running processes                       top, htop
+- Processes stats (CPU, memory)           top, htop
 - Process info in batch mode              top -b -p `pidof some_running_process`
 - Killing a process                       kill <pid>
 - Kill process by name                    pkill java*
