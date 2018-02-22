@@ -143,6 +143,7 @@ Transferring files:
 
 - Download file from link                 wget <url>
 - Copy remote files                       scp [-P port] src dst    [ Example: scp foo.txt user@server.com:/tmp ]
+- Copying text to clipboard               xsel --clipboard < somefile
 
 Desktop:
 
