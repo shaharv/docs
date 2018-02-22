@@ -1,0 +1,17 @@
+Useful Windows Commands
+-----------------------
+
+Network:
+
+- Who's listening to ports                netstat -a -b -o
+
+Process:
+
+- Forcibly termniate process by PID       taskkill /F /PID 5096
+- Forcibly termniate process by name      taskkill /F /IM notepad++.exe
+- List all processes                      tasklist
+- List process with PID                   tasklist /FI "PID eq 12196"
+
+Shell:
+
+- Open the current folder in Explorer     start .
