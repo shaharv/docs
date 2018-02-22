@@ -1,0 +1,8 @@
+AIX cheat sheet
+---------------
+
+Basics:
+
+- Run bash shell                          bash
+- Install rpm package                     rpm -i mypackage.rpm
+- Get AIX version                         oslevel
