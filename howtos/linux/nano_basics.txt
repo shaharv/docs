@@ -3,7 +3,6 @@ nano cheat sheet
 
 File Control in nano, and general
 
-    nano index.php    Open or create the file “index.php” with nano on command line
     Ctrl-o Y Enter    Save changes
     Ctrl-r            Insert from file
     Alt->             Switch to the next file buffer in nano
