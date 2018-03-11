@@ -71,6 +71,7 @@ Git cheat sheet
 
 - Search source code                               git grep 'search string'
 
+- Clean up and optimize                            git gc
 
 Git setup tips
 --------------
