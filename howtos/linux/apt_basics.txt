@@ -31,7 +31,8 @@ Cleanup:
 Repositories:
 
 - Add repository for dev. toolchains         sudo add-apt-repository ppa:ubuntu-toolchain-r/test
-- Remove repository                          sudo add-apt-repository --remove ppa:ubuntu-toolchain-r/test
+- Remove repository (1)                      sudo add-apt-repository --remove ppa:ubuntu-toolchain-r/test
+- Remove repository (2)                      sudo nano /etc/apt/sources.list  # remove offending ppa
 - Update repositories                        sudo apt-get update
 - List installed PPAs                        apt-cache policy
 - Add missing PUBKEY                         sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys [PUBKEY]
