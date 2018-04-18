@@ -6,3 +6,14 @@ Basics:
 - Run bash shell                          bash
 - Install rpm package                     rpm -i mypackage.rpm
 - Get AIX version                         oslevel
+
+Debugging:
+
+- Inspect coredump                        dbx <process> <core file>
+- Attach to process                       dbx -a <pid>
+
+Installations:
+
+- Binutils for AIX 6, 7
+  wget --no-check-certificate https://public.dhe.ibm.com/aix/freeSoftware/aixtoolbox/RPMS/ppc/binutils/binutils-2.25.1-1.aix6.1.ppc.rpm
+  rpm -i binutils-2.25.1-1.aix6.1.ppc.rpm
