@@ -1,0 +1,13 @@
+dbx basics
+----------
+
+Debug:
+
+- Break on function        stop in __DoThrowV6    // example 1
+                           stop in j9dump_create  // example 2
+- Resume execution         cont
+
+Core analysis:
+
+- Malloc summary           malloc
+- Malloc allocations       malloc allocation
