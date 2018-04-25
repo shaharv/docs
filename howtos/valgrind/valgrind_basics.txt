@@ -10,6 +10,17 @@ Tools:
 - Callgrind                               --tool=callgrind
 - Memcheck (default)                      --tool=memcheck
 
+Valgrind:
+
+- Write to log file                       --log-file=log.txt
+- Unlimited errors                        --error-limit=no
+- Do not demangle symbols                 --demangle=no
+
+Memcheck:
+
+- Print suppressions                      --gen-suppressions=all
+- Specify supressions file                --suppressions=my_valgrind.supp
+
 Misc:
 
 - Required for JVM profiling              --vex-iropt-register-updates=allregs-at-mem-access
