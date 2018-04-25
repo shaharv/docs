@@ -9,8 +9,12 @@ Basics:
 
 Debugging:
 
-- Inspect coredump                        dbx <process> <core file>
+- Debug a coredump                        dbx <process> <core file>
 - Attach to process                       dbx -a <pid>
+
+Disk:
+
+- Sort files by size                      du -a . | sort -n
 
 Installations:
 
