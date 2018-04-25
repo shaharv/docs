@@ -138,8 +138,6 @@ Profiling:
 - Perf detailed CPU stats                 perf stat -d <command>
 - Perf cache events                       perf stat -e cache-references,cache-misses <command>
 - Perf list available event types         perf list
-- Valgrind + callgrind                    valgrind --tool=callgrind <command>
-- Valgrind + callgrind for JVM profiling  valgrind --tool=callgrind --vex-iropt-register-updates=allregs-at-mem-access <command>
 - Perf examples and cheat sheet           http://www.brendangregg.com/perf.html
 
 Transferring files:
@@ -172,7 +170,7 @@ Sound:
 
 Compression:
 
-- Compress a single file/folder (GNU tar) tar -czvf archive.tar.gz /fullpath/to/folder-or-file
+- Compress a single file/folder (GNU tar) tar -cvf archive.tar.gz /fullpath/to/folder-or-file
 - Compress a single folder (zip)          zip -r zipname foldername/*
 - Unzip all zip files into current dir    for file in `ls *.zip`; do unzip $file; done
 - Unzip all zip files into seperate dirs  for file in `ls *.zip`; do unzip $file -d `echo $file | cut -d . -f 1`; done
