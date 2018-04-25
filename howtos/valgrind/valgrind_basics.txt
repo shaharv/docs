@@ -1,0 +1,16 @@
+Valgrind basics
+---------------
+
+Basic:
+
+- Command line structure                  valgrind --tool=<toolname> <args> <program command>
+
+Tools:
+
+- Callgrind                               --tool=callgrind
+- Memcheck (default)                      --tool=memcheck
+
+Misc:
+
+- Required for JVM profiling              --vex-iropt-register-updates=allregs-at-mem-access
+
