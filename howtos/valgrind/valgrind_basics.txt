@@ -14,3 +14,10 @@ Misc:
 
 - Required for JVM profiling              --vex-iropt-register-updates=allregs-at-mem-access
 
+Further reading:
+
+- Memcheck manual                         http://valgrind.org/docs/manual/mc-manual.html
+- Using and understanding valgrind        http://valgrind.org/docs/manual/manual-core.html
+- Suppression file howto                  https://wiki.wxwidgets.org/Valgrind_Suppression_File_Howto
+- Suppressing Valgrind errors: note       https://groups.google.com/a/chromium.org/forum/#!topic/chromium-dev/XcwIBpmNc1A
+
