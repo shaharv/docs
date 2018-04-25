@@ -11,6 +11,8 @@ Debugging:
 
 - Debug a coredump                        dbx <process> <core file>
 - Attach to process                       dbx -a <pid>
+- Enable debug malloc                     MALLOCTYPE=debug
+- Configure debug malloc                  MALLOCDEBUG=validate_ptrs,postfree_checking,override_signal_handling
 
 Disk:
 
