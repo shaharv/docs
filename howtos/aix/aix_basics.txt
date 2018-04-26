@@ -7,6 +7,10 @@ Basics:
 - Install rpm package                     rpm -i mypackage.rpm
 - Get AIX version                         oslevel
 
+Processes:
+
+- Running processes with commands         ps -ef
+
 Debugging:
 
 - Debug a coredump                        dbx <process> <core file>
