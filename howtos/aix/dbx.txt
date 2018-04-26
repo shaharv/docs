@@ -1,11 +1,17 @@
 dbx basics
 ----------
 
-Debug:
+Source debug:
 
 - Break on function        stop in __DoThrowV6    // example 1
                            stop in j9dump_create  // example 2
 - Resume execution         cont
+
+Assembly debug:
+
+- Show register values     registers
+- Show memory address      0x12345678/X
+- List assembly inst.      listi 0x1234,0x5678
 
 Core analysis:
 
