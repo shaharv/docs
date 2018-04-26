@@ -80,8 +80,9 @@ Process management:
 - Killing a process                       kill <pid>
 - Kill process by name                    pkill java*
 - Get process PID                         pidof <pname>
-- List processes by name                  ps aux | grep myprog
-- Get pid's of processes matching regexp  ps aux | grep 'java -agentpath:' | perl -pe "s/^\w+\s+//" | perl -pe "s/\s+.*$//" | head -n -1
+- List processes by name                  ps -ef | grep myprog
+- Get pid's of processes matching regexp  ps -ef | grep 'java -agentpath:' | perl -pe "s/^\w+\s+//" | perl -pe "s/\s+.*$//" | head -n -1
+  * ps -ef is more portable than ps aux
 - Max mem usage by process                /usr/bin/time --format='(%Xtext+%Ddata %Mmax)' <command>
 - Give time out to shell sub processes    ulimit -t <seconds>
 
