@@ -30,7 +30,14 @@
    <insert_a_suppression_name_here>
    Memcheck:Addr8
    ...
-   fun:returnFromJITD
+   fun:returnFromJIT*
+}
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Addr4
+   ...
+   fun:returnFromJIT*
 }
 
 {
@@ -285,6 +292,12 @@
 
 {
    <insert_a_suppression_name_here>
+   Memcheck:Addr4
+   fun:com_ibm_oti_vm_VM_*
+}
+
+{
+   <insert_a_suppression_name_here>
    Memcheck:Addr8
    fun:sendLoadClass
 }
@@ -326,4 +339,16 @@
    <insert_a_suppression_name_here>
    Memcheck:Cond
    fun:_ZN18TR_CISCTransformer*
+}
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Addr8
+   fun:getMethodOrFieldID
+}
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Addr4
+   fun:hookJBifeq
 }
