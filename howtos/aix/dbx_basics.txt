@@ -3,9 +3,15 @@ dbx basics
 
 Source debug:
 
+- Run process                  dbx <executable path>
+                               run <arguments>
 - Break on function            stop in __DoThrowV6    // example 1
                                stop in j9dump_create  // example 2
 - Resume execution             cont
+
+Breakpoints:
+
+- Register value in range      stop if (($r2 >0x10110000000) && ($r2 < 0x10200000000))
 
 Assembly debug:
 
