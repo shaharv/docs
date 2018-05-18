@@ -1,4 +1,4 @@
-Jenkins tips
+Jenkins Tips
 ------------
 
 Main Built in Jenkins Environment Variables:
@@ -22,3 +22,28 @@ Job Statistics:
   For viewing build time trend over the course of time. For example:
   http://localhost:8083/bot/job/nt2/buildTimeTrend
 
+
+Jenkins HTTP troubleshooting
+----------------------------
+
+1. If Jenkins is not responding to HTTP requests - no GUI is shown,
+   first view the log and look for unusual output:
+
+   $ cat /var/log/jenkins/jenkins.log
+
+2. Try to restart the service:
+
+   $ sudo service jenkins restart
+
+   If that doesn't work, forcibly kill the process and then start the service again:
+
+   $ sudo pkill -9 -f 'java.*jenkins.war'
+   $ sudo service jenkins start
+
+3. For further troubleshooting steps, see:
+   https://wiki.jenkins-ci.org/display/JENKINS/Starting+and+Accessing+Jenkins
+
+4. If needed, run the following command instead to generate the keystore
+   and certificate:
+
+   $ keytool -genkeypair -keysize 2048 -keyalg RSA -alias jenkins -keystore keystore -validity 3650
