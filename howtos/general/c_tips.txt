@@ -1,0 +1,102 @@
+C Coding Tips
+=============
+
+General
+-------
+
+- Use unsigned types where possible - iterators, etc (MISRA guideline,
+  but under strong debate)
+- Use const where possible
+- Use stdint.h types (uint32_t)
+- For bool, #include <stdbool.h>
+- Use size_t for respresenting sizes, for increased portability
+- Use constant suffixes (1u, 0x8000ull)
+- perror
+- Use enums
+- Use assert and static_assert (c11)
+- Use __builtin_unreachable (fallthrough after assert - good for NDEBUG)
+- Use smallest possible scopes
+
+Symbol names
+------------
+
+- Names begining with __ or _[A-Z] are reserved to the implementation
+  (C99 and C++11).
+
+Functions
+---------
+
+- Use func(void) instead of func()
+  https://blog.mathiashabluetzel.ch/archive/func-or-func-void
+
+  NOTE - not needed for C++!
+  http://stackoverflow.com/questions/7412274/why-add-void-to-method-parameter-list
+
+- Use noreturn attribute
+  void assert_malloc_failed(void) __attribute__((noreturn))
+
+Malloc
+------
+
+- Always check malloc result
+- Always assign NULL to freed pointer
+- Style:
+  my_type *sieve = malloc(length * sizeof *sieve);
+  http://stackoverflow.com/questions/605845/do-i-cast-the-result-of-malloc
+
+- More:
+  http://stackoverflow.com/questions/722922/best-way-to-handle-memory-allocation-in-c
+  https://www.codeproject.com/Articles/13853/Secure-Coding-Best-Practices-for-Memory-Allocation
+  https://softwareengineering.stackexchange.com/questions/143858/array-or-malloc
+
+alloca and VLA
+--------------
+
+- VLA is the C99 alternative for alloca.
+  Should be used only for small allocations, where appropriate.
+  If fails to "allocate" (runs of of stack), program will break badly (but,
+  this is the same also for usual automatic storage).
+
+- Why aren't VLAs part of the C++ standard?
+  http://stackoverflow.com/questions/1887097/why-arent-variable-length-arrays-part-of-the-c-standard
+  https://groups.google.com/forum/#!topic/comp.std.c++/K_4lgA1JYeg
+
+- More:
+  http://stackoverflow.com/questions/1018853/why-is-the-use-of-alloca-not-considered-good-practice
+  http://www.drdobbs.com/the-new-cwhy-variable-length-arrays/184401444
+  http://stackoverflow.com/questions/3082126/is-it-a-good-idea-to-use-c99-vla-compared-to-malloc-free
+
+size_t
+------
+
+- http://quabr.com/28684322/when-to-use-size-t-vs-uint32-t
+  http://www.embedded.com/electronics-blogs/programming-pointers/4026076/2/Why-size-t-matters
+
+Technique - Polymorphism in C
+-----------------------------
+
+- http://stackoverflow.com/questions/524033/how-can-i-simulate-oo-style-polymorphism-in-c
+
+- The base class is a struct; derived structs must include the base struct at
+  the first position, so that a pointer to the "derived" struct will also be 
+  a valid pointer to the base struct.
+
+- Example:
+
+   typedef struct {
+     data member_x;
+   } base;
+
+   typedef struct {
+     struct base;
+     data member_y;
+   } derived;
+
+   void function_on_base(struct base * a);       // can pass both pointers to derived and to base
+   void function_on_derived(struct derived * b); // must pass a pointer to the derived class
+
+System programming
+------------------
+
+- volatile
+
