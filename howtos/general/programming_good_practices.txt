@@ -1,0 +1,101 @@
+Good Programming Practices
+--------------------------
+
+Main Principles of Good Programming:
+
+- DRY - Don't Repeat Yourself
+
+  When the DRY principle is applied successfully, a modification of any single
+  element of a system does not require a change in other logically unrelated
+  elements. Additionally, elements that are logically related all change
+  predictably and uniformly, and are thus kept in sync.
+
+  See
+  https://en.wikipedia.org/wiki/Don%27t_repeat_yourself#DRY_vs_WET_solutions
+  https://sourcemaking.com/antipatterns/cut-and-paste-programming
+
+- KISS - Keep it simple stupid
+
+  Simplicity (and avoiding complexity) should always be a key goal. Simple
+  code takes less time to write, has fewer bugs, and is easier to modify.
+  http://en.wikipedia.org/wiki/KISS_principle
+
+- Boy-Scout Rule
+
+  The boy-scout rule states that we should always leave the code cleaner
+  than we found it.
+
+  Why:
+  When making changes to an existing codebase the code quality tends
+  to degrade, accumulating technical debt. Following the boyscout rule, we
+  should mind the quality with each commit. Technical debt is resisted by
+  continuous refactoring, no matter how small.
+
+  How:
+  With each commit make sure it does not degrade the codebase quality.
+  Any time someone sees some code that isn’t as clear as it should be,
+  they should take the opportunity to fix it right there and then.
+
+- Code For The Maintainer
+
+  Always code as if the person who ends up maintaining your code is a
+  violent psychopath who knows where you live.
+  Always code and comment in such a way that if someone a few notches junior
+  picks up the code, they will take pleasure in reading and learning from it.
+
+- Embrace Change
+
+  This is the subtitle of a book by Kent Beck, and is also considered a tenet
+  of extreme programming and the agile methodology in general. Many other
+  principles are based on the concept that you should expect and welcome change.
+
+- Avoid Premature Optimization
+
+  Don’t even think about optimization unless your code is working, but slower
+  than you want. Only then should you start thinking about optimizing, and
+  then only with the aid of empirical data.
+  "We should forget about small efficiencies, say about 97% of the time:
+  premature optimization is the root of all evil" - Donald Knuth.
+  http://en.wikipedia.org/wiki/Program_optimization
+
+In short:
+
+  K - KISS
+  A - Avoid premature optimization
+  M - code for the Maintainer
+  B - Boyscout rule
+  E - Embrace change
+  D - DRY
+
+Additional Guidelines:
+
+- Globals
+
+* http://wiki.c2.com/?GlobalVariablesAreBad
+* The use of global variables is generally discouraged, and considered
+  a bad practice. They make software harder to understand, debug and
+  maintain.
+
+- Comments
+
+* http://www.fluentcpp.com/2017/05/02/to-comment-or-not-to-comment-that-is-the-question
+* Code should be as expressive as possible
+* Needing too much comments might indicate the code is overly complex and needs a rewrite
+* Document where needed (non-trivial algorithm etc.)
+* A commentary paragraph in the begining of a file - good practice
+
+Links:
+
+- The Principles of Good Programming
+  http://www.artima.com/weblogs/viewpost.jsp?thread=331531
+
+- Programming Priciples
+  https://webpro.github.io/programming-principles
+
+- List of software development philosophies
+  https://en.wikipedia.org/wiki/List_of_software_development_philosophies
+
+- eBook - Programming Pearls by John Bentley
+  http://www.littledumbdoctor.com/index_files/Interview_Programming_pearls.pdf
+  http://eli.thegreenplace.net/2008/09/12/book-review-programming-pearls-by-jon-bentley
+
