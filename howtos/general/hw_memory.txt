@@ -1,0 +1,63 @@
+Memory Concepts
+===============
+
+Data Locality
+-------------
+
+- Great friendly optimization guide, game oriented:
+  http://gameprogrammingpatterns.com/data-locality.html
+ 
+  Memory could be kept contagious by keeping together objects of same
+  types (in arrays), using contagious containers (e.g. vector over list),
+  avoiding polymorphism, etc. See above.
+
+- Pitfalls of Object-Oriented Programming:
+  http://research.scee.net/files/presentations/gcapaustralia09/Pitfalls_of_Object_Oriented_Programming_GCAP_09.pdf
+
+- Cache friendly code:
+  http://stackoverflow.com/questions/16699247/what-is-cache-friendly-code
+
+- Cost of pointer dereference:
+  http://stackoverflow.com/questions/431469/how-expensive-is-it-to-dereference-a-pointer
+
+TLB
+---
+
+- Overview:
+  https://en.wikipedia.org/wiki/Translation_lookaside_buffer
+
+- TLB vs. data cache:
+  https://cs.stackexchange.com/questions/18313/how-does-a-tlb-and-data-cache-work
+
+- The TLB is a cache for the virtual address to physical address lookup. 
+  The page tables provide a way to map virtualaddress ↦ physicaladdress, by looking 
+  up the virtual address in the page tables. However, doing the lookup in the page 
+  tables is slow (it involves 2-3 memory loads). If the processor had to do this 
+  lookup every time any instruction accessed memory, this would cause a substantial
+  slowdown.
+
+  Therefore, the TLB acts as a dedicated cache for this lookup. The TLB has a few 
+  TLB entries, where each TLB entry contains both a virtual address and its 
+  corresponding physical address.
+
+Virtual Memory
+--------------
+
+- Overview:
+  https://en.wikipedia.org/wiki/Virtual_memory
+
+- Virtual memory makes application programming easier by hiding fragmentation of 
+  physical memory; by delegating to the kernel the burden of managing the memory
+  hierarchy (eliminating the need for the program to handle overlays explicitly); 
+  and, when each process is run in its own dedicated address space, by obviating 
+  the need to relocate program code or to access memory with relative addressing.
+
+Paging (swapping)
+-----------------
+
+- Paging:
+  https://en.wikipedia.org/wiki/Paging
+
+- Paging is a memory management scheme by which a computer stores and retrieves 
+  data from secondary storage for use in main memory (e.g. HD <-> RAM).
+
