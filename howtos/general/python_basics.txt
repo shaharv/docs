@@ -1,0 +1,22 @@
+Python Basics
+=============
+
+Classes
+-------
+
+- Python 2.7.13 documentation:
+  https://docs.python.org/2/tutorial/classes.html
+
+- The self "keyword" - very basic tutorial:
+  https://pythontips.com/2013/08/07/the-self-variable-in-python-explained
+
+- Relevant SO threads:
+  http://stackoverflow.com/questions/625083/python-init-and-self-what-do-they-do
+  http://stackoverflow.com/questions/9056957/correct-way-to-define-class-variables-in-python
+
+- Guido van Rossum on explicit self:
+  http://neopythonic.blogspot.co.il/2008/10/why-explicit-self-has-to-stay.html
+
+- Method function argument - self, cls, @staticmethod:
+  https://docs.quantifiedcode.com/python-anti-patterns/correctness/method_has_no_argument.html
+
