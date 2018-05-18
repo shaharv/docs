@@ -1,0 +1,28 @@
+Ubuntu First Steps
+==================
+
+1. Update system packages:
+
+   $ sudo apt update
+   $ sudo apt upgrade
+
+2. Configure git:
+
+   $ sudo apt-get install git
+   $ git config --global user.name username
+   $ git config --global user.email user@domain.com
+
+3. ~/.bashrc convinience updates (append at EOF):
+
+   force_color_prompt=yes
+   bind TAB:menu-complete
+   alias cd..="cd .."
+
+4. Disable sudo password for sudoers:
+
+   - $ sudo visudo
+
+   - Add the 3rd line below:
+     # Allow members of group sudo to execute any command
+     %sudo   ALL=(ALL:ALL) ALL
+     shahar  ALL=NOPASSWD: ALL
