@@ -1,0 +1,37 @@
+Interesting and Useful Links
+============================
+
+LLVM/Clang
+----------
+
+- A Tourist’s Guide to the LLVM Source Code
+  http://blog.regehr.org/archives/1453
+
+Build
+-----
+
+- Ninja - by Evan Martin
+  http://www.aosabook.org/en/posa/ninja.html
+
+Java
+----
+
+- Comparison of Java and C++
+  https://en.wikipedia.org/wiki/Comparison_of_Java_and_C%2B%2B
+
+- Why no unsigned ints in Java?
+  http://stackoverflow.com/questions/430346/why-doesnt-java-support-unsigned-ints
+  https://www.nayuki.io/page/unsigned-int-considered-harmful-for-java
+
+- Do you really need instanceof?
+  http://letstalkaboutjava.blogspot.co.il/2016/10/do-you-really-need-instanceof.html
+  
+Security
+--------
+  
+- The Beginner’s Guide to iptables, the Linux Firewall
+  https://www.howtogeek.com/177621/the-beginners-guide-to-iptables-the-linux-firewall
+
+- A Design for Building an IPS (Intrusion Prevention System)
+  Using Open Source Products
+  https://www.sans.org/reading-room/whitepapers/intrusion/design-building-ips-open-source-products-1662
