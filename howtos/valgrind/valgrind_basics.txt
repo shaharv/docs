@@ -10,6 +10,10 @@ Tools:
 - Callgrind                               --tool=callgrind
 - Memcheck (default)                      --tool=memcheck
 
+Callgrind:
+
+- Inspect callgrind output                kcachegrind callgrind.out.<PROCNUM>
+
 Valgrind:
 
 - Write to log file                       --log-file=log.txt
