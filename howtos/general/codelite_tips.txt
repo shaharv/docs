@@ -1,0 +1,38 @@
+Codelite basics
+---------------
+
+Debug shortcuts:
+
+- F5         Start debug
+- Shift+F5   Stop debug
+- F9         Set breakpoint
+- F10        Step over
+- F11        Step into
+- Ctrl+F9    Run
+
+Important know how:
+
+- CMake supports generating Codelite projects. However, the generated projects are
+  suitable for build only, as a single monolithic target, and needs to be customized 
+  for debugging purposes.
+  Alternatively, the "Quick Debug" option could be used for debugging LLVM.project.
+
+Caveats:
+
+- Codelite has several integration issues with ninja, such as showing build output only
+  when build is done, and not being able to compile individual files. Therefore, plain
+  make should be used instead.
+- Debug session could take some 20 seconds to start with debug clang (1GB executable).
+
+Quick Debug:
+
+- Debugger -> Quick Debug
+- Select Executable: /path/to/executable
+- Working directoty: ...
+- Program arguments: ...
+
+Debug Options:
+
+- In Quick Debug -> Startup commands, add:   set follow-fork-mode child
+  This is for gdb to follow the child process after fork.
+  See: http://stackoverflow.com/questions/6199270/how-do-i-debug-the-child-process-after-fork-in-gdb
