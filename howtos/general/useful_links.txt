@@ -35,3 +35,27 @@ Security
 - A Design for Building an IPS (Intrusion Prevention System)
   Using Open Source Products
   https://www.sans.org/reading-room/whitepapers/intrusion/design-building-ips-open-source-products-1662
+
+UML
+---
+
+- Recommended UML modeler - Umberllo:
+  https://umbrello.kde.org
+  https://en.wikipedia.org/wiki/Umbrello_UML_Modeller
+
+- List of UML modeling tools:
+  https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools
+
+- 2014 review of free UML tools:
+  http://software-talk.org/blog/2014/05/comparison-of-free-uml-tools
+
+- 2009 review of UML tools:
+  http://judebert.com/progress/archives/329-Rating-UML-Editors.html#comments
+
+- Types of UML diagrams - SmartDraw:
+  https://www.smartdraw.com/uml-diagram
+
+- UML Diagrams - WikiPedia:
+  https://en.wikipedia.org/wiki/Activity_diagram (see page bottom for all types)
+  https://en.wikipedia.org/wiki/Unified_Modeling_Language
+
