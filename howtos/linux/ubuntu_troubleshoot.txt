@@ -1,0 +1,176 @@
+Ubuntu Server Troubleshooting Tips
+==================================
+
+Passwords
+---------
+
+- Force password change:
+  sudo passwd
+
+- Delete password - helps to solve passwd corruption:
+  sudo passwd -d [username]
+
+- Checks passwords integrity and automatically fix errors:
+  sudo pwck
+
+Date and time
+-------------
+
+- Diagnose:
+
+  $ echo LC_TIME
+  $ echo TZ
+  $ cat /etc/default/locale
+
+- If date is in the wrong locale/format, try to reconfigure tzdata:
+  $ sudo dpkg-reconfigure tzdata
+
+- Make sure the contents of /etc/default/locale makes sense.
+  If it refers to wrong locale, correct it, for example:
+  $ sudo sed -i 's/tr_TR/he_IL/' /etc/default/locale
+
+- In case of apt issues, such as trying to fetch from non-IL repositories, or other
+  issues related to wrong locale setting:
+
+  $ sudo locale-gen he_IL he_IL.UTF-8 en_US.UTF-8
+  $ sudo dpkg-reconfigure locales
+
+Ubuntu Desktop Login
+--------------------
+
+- First troubleshooting step to try:
+
+  $ sudo service lightdm restart
+
+- In case of "Failed to start session", SSH into the machine and try 
+  to repair the desktop modules:
+
+  $ sudo apt-get install ubuntu-desktop
+
+- If that doesn't help, try repairing .Xauthority:
+
+  $ sudo mv ~/.Xauthority ~/.Xauthority.backup
+  $ sudo service lightdm restart
+
+- If nothing works, and there are still unrepairable issues related to Ubuntu desktop,
+  try to remove and re-install ubuntu-desktop and related components:
+
+  $ sudo apt remove xorg lightdm light-themes plymouth ubuntu-desktop
+  $ sudo apt autoremove
+  $ sudo apt-get install --reinstall xorg lightdm light-themes plymouth ubuntu-desktop
+  $ rm .Xauthority*
+  $ rm .xsession*
+  $ sudo reboot
+
+  After reboot, you'll need to set a new login password via "User Accounts".
+
+Bugzilla
+--------
+
+Mail troubleshooting:
+
+- If mail is not working, make sure that jobqueue.pl is running:
+  $ ps aux | grep jobqueue
+
+  If it isn't, run it using:
+  $ sudo perl /etc/init.d/jobqueue.pl start
+
+- Check apache2 error log:
+  $ cat /var/log/apache2/error.log
+
+- Diagnose:
+  $ sudo perl checksetup.pl
+
+- Create the "errorlog" file to enable logging:
+  $ echo > /var/www/html/bugz/data/errorlog
+
+- Dump bugzilla DB (maintanace):
+
+  $ DATE=$(date +%Y-%m-%d)
+  $ mysqldump --user=bugs password=MyPass bugs > bugs-$DATE.sql
+
+Bugzilla - Configuration
+------------------------
+
+- Via the web interface, Administration -> Parameters.
+
+  Required Settings:
+  * urlbase: http://server.com/bugz/
+  * ssl_redirect: On
+  * sslbase: https://localhost:8081/bugz/
+  * cookiepath: /bugz/
+
+- Email:
+
+  * mail_delivery_method: SMTP
+  * mailfrom: mailer@domain.com
+  * use_mailer_queue: On (Try Off when troubleshooting mail issues)
+  * smtpserver: smtp.gmail.com:465
+  * smtp_username: mailer@domain.com
+  * smtp_password: 
+  * smtp_ssl: On
+  * smtp_debug: Off (Enable for debugging email issues)
+
+- Parameters are saved to /var/www/html/bugz/data/params.
+
+Automatic Updates
+-----------------
+
+- Diagnosis steps:
+
+** For checking when last updates when installed, to see if automatic updates
+   is actually working:
+   $ grep " install " /var/log/dpkg.log
+
+** Logs to inspect when troubleshooting:
+   /var/log/dpkg.log
+   /var/log/unattended-upgrades/unattended-upgrades.log
+   /var/log/unattended-upgrades/unattended-upgrades-dpkg.log
+
+** For seeing the system information that is printed upon SSH login, run:
+   $ sudo run-parts /etc/update-motd.d
+
+- Update manually:
+
+** For updating manually, start the update service:
+   $ sudo systemctl start apt-daily.service
+
+** For updating manually through the GUI:
+   $ sudo update-manager -d
+
+- Verify files:
+
+1. Make sure you have setup automatic updates are per install-server-more.txt.
+
+2. Run: $ sudo nano /etc/apt/apt.conf.d/20auto-upgrades
+   Make sure contents is as follows:
+
+   APT::Periodic::Update-Package-Lists "1";
+   APT::Periodic::Unattended-Upgrade "1";
+
+3. Verify that apt services are running by:
+   $ sudo systemctl status apt-daily.service
+   $ sudo systemctl status apt-daily.timer
+
+   The last lines in the output should be of this sort:
+   Oct 04 18:39:58 slave02 systemd[1]: Starting Daily apt activities...
+   Oct 04 18:39:59 slave02 systemd[1]: Started Daily apt activities.
+
+4. Check the remaining time until next update:
+   $ sudo systemctl list-timers apt-daily.timer
+
+   If there are more than 12 hours until next update, or if the last
+   update time don't make sense, it's possible that the timer timestamp
+   is corrupted. In that case, delete the file:
+ 
+   $ rm -f /var/lib/systemd/timers/stamp-apt-daily.timer
+
+   Then restart the server, and make sure it was recreated with correct
+   time.
+
+Useful links:
+
+   https://help.ubuntu.com/lts/serverguide/automatic-updates.html
+   http://www.hiroom2.com/2016/05/18/ubuntu-16-04-auto-apt-update-and-apt-upgrade
+   https://help.ubuntu.com/community/AptGet/Howto
+
