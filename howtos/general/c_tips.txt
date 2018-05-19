@@ -1,8 +1,8 @@
 C Coding Tips
 =============
 
-General
--------
+General (MISRA)
+---------------
 
 - Use unsigned types where possible - iterators, etc (MISRA guideline,
   but under strong debate)
