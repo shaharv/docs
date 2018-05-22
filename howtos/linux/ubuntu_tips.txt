@@ -189,6 +189,13 @@ Useful utilities:
 - Paritition mangement                    gparted
 - Unity tweaker                           unity-tweak-tool
 
+Source Code Formatting:
+
+- Format with astyle, inplace              astyle --suffix=none path/to/file.cpp
+- Format with astyle, inplace, recursive   astyle --suffix=none -r "./tree/root/*.cpp"
+- Format with astyle, with backup          astyle path/to/file.cpp
+- Useful astyle parameters                 --indent=force-tab --indent-preproc-cond --indent-after-parens --indent-continuation=1
+
 Misc:
 
 - Display image                           xdg-open <image.jpg>
