@@ -1,0 +1,10 @@
+HotSpot JVM
+-----------
+
+- Print internal flags             java -XX:+UnlockDiagnosticVMOptions -XX:+PrintFlagsFinal -version
+- Print initial -Xms value         java -XX:+PrintFlagsFinal -version 2>nul | grep InitialHeapSize
+- Print initial -Xmx value         java -XX:+PrintFlagsFinal -version 2>nul | grep MaxHeapSize
+- Print initial -Xss value         java -XX:+PrintFlagsFinal -version 2>nul | grep ThreadStackSize
+
+  ¯\_( ͡° ͜ʖ ͡°)_/¯                   ¯\_(ツ)_/¯
+
