@@ -4,11 +4,12 @@ apt cheat sheet
 Install and repair:
 
 - Fix installation issues                    sudo apt-get -f install
+- Attempt to fix dependencies                sudo aptitude full-upgrade
 - Details of installed package (1)           sudo dpkg -l | grep <name>
 - Details of installed package (2)           apt-cache policy <name>
 - Upgrade all upgradable packages            sudo apt-get update --fix-missing && sudo apt-get upgrade
 - Upgrade and fix missing dependencies       sudo apt-get dist-upgrade
-- Installable version of package             apt-cache madison rrdtool
+- Installable version of package             apt-cache madison <package name>
 - All versions of package from Ubuntu        rmadison <package name>
   main repositories (incl. uninstallable)
 
