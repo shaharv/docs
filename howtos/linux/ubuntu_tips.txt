@@ -133,6 +133,10 @@ Make:
 - Verbose build (any make impl.)          make SHELL='sh -x'
 - Verbose build (GNU make)                make VERBOSE=1
 
+Linking:
+
+- Find library reachable by ld            ldconfig -p | grep <libname>
+
 Profiling:
 
 - Perf basic CPU stats                    perf stat <command>
@@ -184,7 +188,7 @@ Troubleshooting:
 - Login to shell from desktop GUI         CTRL+ALT+F1 (also F3)
 - Going back to GUI from shell            CTRL+ALT+F7
 
-Useful utilities:
+Useful Utilities:
 
 - Paritition mangement                    gparted
 - Unity tweaker                           unity-tweak-tool
