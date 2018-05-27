@@ -21,7 +21,8 @@ Search:
 
 - Find package to install                    apt-cache search <name>
 - Package policy                             apt-cache policy <name>
-- List installed packages:                   apt list --installed
+- List installed packages                    apt list --installed
+- Find which pacakges provides a library     apt-file search <filename>
 
 Cleanup:
 
