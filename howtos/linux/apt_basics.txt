@@ -12,6 +12,7 @@ Install and repair:
 - Installable version of package             apt-cache madison <package name>
 - All versions of package from Ubuntu        rmadison <package name>
   main repositories (incl. uninstallable)
+- Forcibly overwrite a package               sudo apt-get -o Dpkg::Options::="--force-overwrite" install <pkg-name>
 
 Remove:
 
