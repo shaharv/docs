@@ -4,6 +4,8 @@ Git cheat sheet
 - Basic git commands, files                        add, rm, mv
 - Basic git commands, update                       commit, push, pull
 
+- Pull with rebasing                               git pull --rebase
+
 - Clone remote git database                        git clone <remote>
 - Clone remote git database into specific folder   git clone <remote> <dest-folder>
 
