@@ -18,8 +18,13 @@ Debugging:
 - Enable debug malloc                     MALLOCTYPE=debug
 - Configure debug malloc                  MALLOCDEBUG=validate_ptrs,postfree_checking,override_signal_handling
 
-Disk:
+Management:
 
+- Increase quotas                         ulimit -d unlimited
+
+Disk and files:
+
+- Find files                              find . -name '*.dmp'
 - Sort files by size                      du -a . | sort -n
 
 Installations:
