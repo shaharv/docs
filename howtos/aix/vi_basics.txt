@@ -1,0 +1,12 @@
+vi cheat sheet
+--------------
+
+Edit:
+
+- Delete one character                x
+- Delete 4 characters                 4x
+- Insert at cursor                    i to edit, <Esc> when done
+
+Misc:
+
+- Quit vi                             :x
