@@ -19,3 +19,8 @@ Shell:
 System:
 
 - Disable hibernation (as admin)          powercfg -h on
+
+Keyboard:
+
+- Exit function key mode                  Fn + Esc
+
