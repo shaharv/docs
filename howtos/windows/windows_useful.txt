@@ -22,5 +22,5 @@ System:
 
 Keyboard:
 
-- Exit function key mode                  Fn + Esc
+- Exit function key mode (Dell laptop)    Fn + Esc
 
