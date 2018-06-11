@@ -1,0 +1,9 @@
+Firefox
+-------
+
+- Hard refresh                            Ctrl + F5
+
+Chrome
+------
+
+- Enter dev mode                          F12
