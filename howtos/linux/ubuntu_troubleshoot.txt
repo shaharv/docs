@@ -1,6 +1,13 @@
 Ubuntu Server Troubleshooting Tips
 ==================================
 
+Xorg crashes at startup
+-----------------------
+
+- sudo nano /etc/init/lightdm.conf
+- Add "sleep 1"
+- See https://bugs.launchpad.net/ubuntu/+source/lightdm/+bug/982889
+
 Passwords
 ---------
 

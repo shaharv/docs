@@ -65,6 +65,7 @@ Git cheat sheet
 - Configure user mail                              git config --global user.email user@domain.com
 
 - Merge specified branch into current branch       git merge <branch-to-merge-from>
+- Abort failed merge                               git merge --abort
 - Merge after pulling the latest                   git pull origin <branch-to-merge-from>
 
 - Cherry pick a merge commit                       git cherry-pick -m1 -x <sha1>
