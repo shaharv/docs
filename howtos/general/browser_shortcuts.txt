@@ -3,7 +3,25 @@ Firefox
 
 - Hard refresh                            Ctrl + F5
 
+
 Chrome
 ------
 
-- Enter dev mode                          F12
+Basic:
+
+- Downloads                               Ctrl + J
+- Restore recent closed tab               Ctrl + Shift + T
+
+Developer:
+
+- Open develper mode                      F12
+- Disable page caching                    Network -> Disable cache
+- Search for script files                 Ctrl + O
+- Reload and refresh options              Right click refresh button
+
+Javascript debugging:
+
+- Choose file                             F12 -> Elements -> Sources
+- Run                                     F8
+- Step Over                               F10
+- Step In                                 F11
