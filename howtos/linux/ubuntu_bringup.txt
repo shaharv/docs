@@ -26,3 +26,10 @@ Ubuntu First Steps
      # Allow members of group sudo to execute any command
      %sudo   ALL=(ALL:ALL) ALL
      shahar  ALL=NOPASSWD: ALL
+
+5. Install basic packages:
+
+  $ sudo apt-get install \
+        dos2unix \
+        python-pip python3-pip \
+        realpath
