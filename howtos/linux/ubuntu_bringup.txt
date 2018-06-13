@@ -30,6 +30,18 @@ Ubuntu First Steps
 5. Install basic packages:
 
   $ sudo apt-get install \
-        dos2unix \
-        python-pip python3-pip \
-        realpath
+      audacious \
+      cmake \
+      coreutils \
+      dos2unix \
+      git \
+      gitk \
+      meld \
+      ninja-build \
+      python-pip python3-pip \
+      tree
+
+6. Add toolchain repository:
+
+   $ sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+   $ sudo apt update

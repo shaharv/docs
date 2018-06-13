@@ -21,6 +21,7 @@ Remove:
 
 Search:
 
+- Display package contents                   dpkg -L <pkg-name>
 - Find package to install                    apt-cache search <name>
 - Package policy                             apt-cache policy <name>
 - List installed packages                    apt list --installed
