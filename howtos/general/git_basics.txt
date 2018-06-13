@@ -76,6 +76,7 @@ Git cheat sheet
 
 - Clean up and optimize                            git gc
 
+
 Git setup tips
 --------------
 
@@ -87,6 +88,12 @@ Git setup tips
 - Set Notepad++ as the editor for commit messages on Windows 64-bit:
   git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
   (https://stackoverflow.com/questions/10564/how-can-i-set-up-an-editor-to-work-with-git-on-windows)
+
+
+Github
+------
+
+- Ignore whitespace in PR                           Append ?w=1 to PR link
 
 
 Git reading
