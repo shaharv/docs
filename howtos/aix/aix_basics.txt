@@ -25,7 +25,9 @@ Management:
 Disk and files:
 
 - Find files                              find . -name '*.dmp'
-- Sort files by size                      du -a . | sort -n
+- Sort files by size in KB                du -ak . | sort -n
+- Folder size in KB                       du -sk <dir>
+- Free disk space in KB                   df -k
 
 Installations:
 
