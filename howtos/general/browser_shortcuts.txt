@@ -19,6 +19,10 @@ Developer:
 - Search for script files                 Ctrl + O
 - Reload and refresh options              Right click refresh button
 
+Management:
+
+- Chrome task manager                     Shift + Esc
+
 Javascript debugging:
 
 - Choose file                             F12 -> Elements -> Sources
