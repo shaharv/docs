@@ -1,0 +1,7 @@
+Java One Liners
+---------------
+
+Stack trace:
+
+- Print stack trace                        Thread.dumpStack();
+- Get stack trace elements                 Thread.currentThread().getStackTrace();
