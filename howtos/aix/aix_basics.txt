@@ -10,6 +10,7 @@ Basics:
 Processes:
 
 - Running processes with commands         ps -ef
+- Process viewer (similar to top)         topas
 
 Debugging:
 

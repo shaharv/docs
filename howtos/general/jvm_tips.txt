@@ -6,11 +6,15 @@ HotSpot JVM
 - Print initial -Xmx value         java -XX:+PrintFlagsFinal -version 2>nul | grep MaxHeapSize
 - Print initial -Xss value         java -XX:+PrintFlagsFinal -version 2>nul | grep ThreadStackSize
 
-
 IBM J9
 ------
 
 - Disable JIT - run interpreted    -Xint
+
+Debugging
+---------
+
+- Dump stacks of java threads      sudo jstack -l -m <pid>
 
 
   ¯\_( ͡° ͜ʖ ͡°)_/¯                   ¯\_(ツ)_/¯
