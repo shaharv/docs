@@ -3,10 +3,16 @@ vi cheat sheet
 
 Edit:
 
+- Insert at cursor                    i to edit, <Esc> when done
+- Move to line end and Append mode    A
+
+Delete:
+
 - Delete one character                x
 - Delete 4 characters                 4x
-- Insert at cursor                    i to edit, <Esc> when done
+- Delete line                         dd
 
-Misc:
+Quit:
 
 - Quit vi                             :x
+- Quit without saving changes         :q!
