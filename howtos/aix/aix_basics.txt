@@ -4,8 +4,13 @@ AIX cheat sheet
 Basics:
 
 - Run bash shell                          bash
-- Install rpm package                     rpm -i mypackage.rpm
 - Get AIX version                         oslevel
+
+Installations:
+
+- Install rpm package                     rpm -i mypackage.rpm
+- Update rpm database (may resolve deps)  updtvpkg
+- Download rpm packages from              https://www.ibm.com/developerworks/aix/library/aix-toolbox/alpha.html
 
 Processes:
 
@@ -21,6 +26,7 @@ Debugging:
 
 Management:
 
+- Login as superuser (root)               su
 - Increase quotas                         ulimit -d unlimited
 
 Disk and files:
@@ -29,9 +35,3 @@ Disk and files:
 - Sort files by size in KB                du -ak . | sort -n
 - Folder size in KB                       du -sk <dir>
 - Free disk space in KB                   df -k
-
-Installations:
-
-- Binutils for AIX 6, 7
-  wget --no-check-certificate https://public.dhe.ibm.com/aix/freeSoftware/aixtoolbox/RPMS/ppc/binutils/binutils-2.25.1-1.aix6.1.ppc.rpm
-  rpm -i binutils-2.25.1-1.aix6.1.ppc.rpm
