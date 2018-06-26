@@ -8,7 +8,7 @@ Bash basics:
 - Display env. variable                   echo $VAR
 - Print all env. variables                printenv
 - Exit code of last command               echo $?
-- Search recent shell commands            CTRL+R
+- Search recent shell commands            Ctrl + R
 - Make shell exit on error                set -e (set +e to revert)
 - Make shell echo executed commands       set -x (set +x to revert)
 - Bash "strict mode"                      set -euo pipefail
@@ -185,8 +185,8 @@ Compression:
 Troubleshooting:
 
 - Get system calls trace for a process    strace <command>
-- Login to shell from desktop GUI         CTRL+ALT+F1 (also F3)
-- Going back to GUI from shell            CTRL+ALT+F7
+- Enter virtual console                   Ctrl + Alt + F1
+- Exit virtual console, back to desktop   Ctrl + Alt + F7
 
 Useful Utilities:
 
