@@ -14,10 +14,11 @@ Installations:
 - Download rpm packages from:             https://www.ibm.com/developerworks/aix/library/aix-toolbox/alpha.html
 - Install images with installp            inutoc . && installp -agXYd . JavaX.jre JavaX.sdk
 
-Processes:
+System:
 
 - Running processes with commands         ps -ef
 - Process viewer (similar to top)         topas
+- Virtual and physical CPUs               lparstat -i | grep CPU
 
 Debugging:
 
