@@ -9,8 +9,10 @@ Basics:
 Installations:
 
 - Install rpm package                     rpm -i mypackage.rpm
+- List rpm contents                       rpm -qpl mypackage.rpm
 - Update rpm database (may resolve deps)  updtvpkg
-- Download rpm packages from              https://www.ibm.com/developerworks/aix/library/aix-toolbox/alpha.html
+- Download rpm packages from:             https://www.ibm.com/developerworks/aix/library/aix-toolbox/alpha.html
+- Install images with installp            inutoc . && installp -agXYd . JavaX.jre JavaX.sdk
 
 Processes:
 
@@ -35,3 +37,5 @@ Disk and files:
 - Sort files by size in KB                du -ak . | sort -n
 - Folder size in KB                       du -sk <dir>
 - Free disk space in KB                   df -k
+- Enlarge mount size by 1 x 512KB 512b    chfs -a size=+1 /home
+  blocks (taken from /tmp)
