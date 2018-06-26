@@ -5,6 +5,7 @@ Edit:
 
 - Insert at cursor                    i to edit, <Esc> when done
 - Move to line end and Append mode    A
+- Insert line and -> insert mode      o
 
 Delete:
 

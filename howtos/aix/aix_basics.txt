@@ -21,10 +21,11 @@ System:
 - Virtual and physical CPUs               lparstat -i | grep CPU
 - Get libc version                        lslpp -l bos.rte.lib
 
-Debugging:
+Debugging and diagnostics:
 
 - Debug a coredump                        dbx <process> <core file>
 - Attach to process                       dbx -a <pid>
+- Dump stack                              procstack <pid>
 - Enable debug malloc                     MALLOCTYPE=debug
 - Configure debug malloc                  MALLOCDEBUG=validate_ptrs,postfree_checking,override_signal_handling
 
@@ -41,3 +42,7 @@ Disk and files:
 - Free disk space in KB                   df -k
 - Enlarge mount size by 1 x 512KB 512b    chfs -a size=+1 /home
   blocks (taken from /tmp)
+
+Misc:
+
+- Run processes without hangups           nohup <cmd> &
