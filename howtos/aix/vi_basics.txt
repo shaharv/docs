@@ -16,3 +16,7 @@ Quit:
 
 - Quit vi                             :x
 - Quit without saving changes         :q!
+
+Links:
+
+- Interactive vim tutorial            http://www.openvim.com/tutorial.html
