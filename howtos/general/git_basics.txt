@@ -51,6 +51,10 @@ Git cheat sheet
 - Show list of stashes                             git stash list
 - Show stached changes                             git stash show -p
 
+- Remove unstaged files from folder - dry run      git clean -n
+- Remove unstaged folders from folder - dry run    git clean -n -d
+- Remove unstaged files from folder - for real     git clean -f
+
 - Discard pending changes                          git reset
 - Discard only last unpushed commit                git reset HEAD~1
 - Reset local branch to its origin state           git checkout <branch>
