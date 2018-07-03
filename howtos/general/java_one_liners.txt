@@ -1,6 +1,10 @@
 Java One Liners
 ---------------
 
+Arrays:
+
+- byte[] to file (Apache Commons IO)       FileUtils.writeByteArrayToFile(new File("pathname"), myByteArray)
+
 Stack trace:
 
 - Print stack trace                        Thread.dumpStack();
