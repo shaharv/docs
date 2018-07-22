@@ -1,31 +1,35 @@
 apt cheat sheet
 ---------------
 
-Install and repair:
+Install, remove or repair specific packages:
+
+- Install package from specified repo        sudo apt-get install <name>/<repo>
+- Reinstall package                          sudo apt-get install --reinstall <name>
+- Forcibly remove package                    dpkg -r <name>
+- Remove installed package with apt          sudo apt-get --purge remove <name>
+- Installable version of package             apt-cache madison <name>
+- Forcibly overwrite a package               sudo apt-get -o Dpkg::Options::="--force-overwrite" install <name>
+
+Upgrade and repair:
 
 - Fix installation issues                    sudo apt-get -f install
 - Attempt to fix dependencies                sudo aptitude full-upgrade
-- Details of installed package (1)           sudo dpkg -l | grep <name>
-- Details of installed package (2)           apt-cache policy <name>
 - Upgrade all upgradable packages            sudo apt-get update --fix-missing && sudo apt-get upgrade
 - Upgrade and fix missing dependencies       sudo apt-get dist-upgrade
-- Installable version of package             apt-cache madison <package name>
-- All versions of package from Ubuntu        rmadison <package name>
-  main repositories (incl. uninstallable)
-- Forcibly overwrite a package               sudo apt-get -o Dpkg::Options::="--force-overwrite" install <pkg-name>
 
-Remove:
+Inspect package:
 
-- Forcibly remove a package                  dpkg -r <name>
-- Remove installed package with apt          sudo apt-get --purge remove <name>
+- Display package contents                   dpkg -L <name>
+- Details of installed package (1)           sudo dpkg -l | grep <name>
+- Details of installed package (2)           apt-cache policy <name>
 
-Search:
+Search and list packages:
 
-- Display package contents                   dpkg -L <pkg-name>
-- Find package to install                    apt-cache search <name>
-- Package policy                             apt-cache policy <name>
+- Find installable package                   apt-cache search <name>
 - List installed packages                    apt list --installed
 - Find which pacakges provides a library     apt-file search <filename>
+- All versions of package from Ubuntu        rmadison <package name>
+  main repositories (incl. uninstallable)
 
 Cleanup:
 
@@ -51,7 +55,7 @@ Alternatives (example):
 - sudo update-alternatives --remove clang /usr/bin/clang
 - sudo update-alternatives --config
 
-Release lock (E: Could not get lock /var/lib/apt/lists/lock):
+Release apt lock (E: Could not get lock /var/lib/apt/lists/lock):
 
 - ps aux | grep apt, and kill any apt process running
 
