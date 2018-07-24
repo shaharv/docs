@@ -17,6 +17,7 @@ Bash basics:
 - Redirect stdout and stderr to file      cmd >log.txt 2>&1
 - Quick copy                              Shift + Ctrl + C
 - Quick paste                             Shift + Ctrl + V
+- sudo with inherited env. vars           sudo -E <cmd>
 
 Folders:
 
