@@ -19,7 +19,7 @@ Upgrade and repair:
 
 Inspect package:
 
-- Display package contents                   dpkg -L <name>
+- Display .deb/installed package contents    dpkg -L <name>
 - Details of installed package (1)           sudo dpkg -l | grep <name>
 - Details of installed package (2)           apt-cache policy <name>
 

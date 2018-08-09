@@ -92,7 +92,8 @@ System:
 - Linux distro version                    lsb_release -a
 - CPU info                                lscpu
 - Linux kernel version                    uname -r
-- System info abbreviated summary         inxi
+- System info - abbreviated summary       inxi
+- System info - detailed summary          inxi -Fxz
 - Restart machine                         sudo reboot
 - Show all running services               service --status-all
 - Show system uptime                      uptime
@@ -171,7 +172,8 @@ Monitor:
 Sound:
 
 - No sound from headphones (1)            alsactl restore
-- No sound from headphones (2)            rm -r ~/.config/pulse; pulseaudio -k && sudo alsa force-reload
+- No sound from headphones (2)            sudo alsa force-reload
+- Display installed sound cards           aplay -l
 - "Top five wrong ways to fix your audio" http://voices.canonical.com/david.henningsson/2012/07/13/top-five-wrong-ways-to-fix-your-audio/
 
 Compression:
