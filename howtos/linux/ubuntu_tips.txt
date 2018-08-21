@@ -18,6 +18,7 @@ Bash basics:
 - Quick copy                              Shift + Ctrl + C
 - Quick paste                             Shift + Ctrl + V
 - sudo with inherited env. vars           sudo -E <cmd>
+- Run GUI program as root                 gksudo <cmd>
 
 Folders:
 
@@ -208,6 +209,7 @@ Misc:
 - Display image                           xdg-open <image.jpg>
 - Hexadecimal text to binary              xxd -r -p input.txt output.jar
 - MD5 sum of a file                       md5sum <filename>
+- SHA256 sum of a file                    sha256sum <filename>
 - Create 1MB binary file filled with 0's  dd if=/dev/zero of=out.bin count=1 bs=1MB
 - Create 1MB binary file filled randomly  dd if=/dev/urandom of=out.bin count=1000 bs=1000
 - Create 1MB text file with random text   base64 /dev/urandom | head -c 1000000 > out.txt
