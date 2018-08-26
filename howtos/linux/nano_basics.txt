@@ -38,6 +38,7 @@ Search and Replace in nano
     Ctrl-w            Search for a target string
     Alt-w             Repeat the last search
     Ctrl-\            Search and replace
+    Alt-Shift-V       Verbatim input (use when replacing X into tab)
 
 Text manipulation
 
