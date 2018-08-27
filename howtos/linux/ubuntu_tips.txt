@@ -208,6 +208,7 @@ Misc:
 
 - Display image                           xdg-open <image.jpg>
 - Hexadecimal text to binary              xxd -r -p input.txt output.jar
+- hex2dec                                 echo $(( 16#<Hex constant> ))
 - MD5 sum of a file                       md5sum <filename>
 - SHA256 sum of a file                    sha256sum <filename>
 - Create 1MB binary file filled with 0's  dd if=/dev/zero of=out.bin count=1 bs=1MB
