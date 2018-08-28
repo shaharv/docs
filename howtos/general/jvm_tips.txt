@@ -6,10 +6,10 @@ HotSpot JVM
 - Print initial -Xmx value         java -XX:+PrintFlagsFinal -version 2>nul | grep MaxHeapSize
 - Print initial -Xss value         java -XX:+PrintFlagsFinal -version 2>nul | grep ThreadStackSize
 
-IBM J9
-------
+JIT:
 
-- Disable JIT - run interpreted    -Xint
+- Disable JIT - interpreter only   -Xint
+- Control JIT threshold            -XX:CompileThreshold=10000
 
 Debugging
 ---------
