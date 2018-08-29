@@ -6,6 +6,7 @@ Bash basics:
 - Back to previous folder                 cd -
 - Set env. variable with global scope     export VAR=VAL
 - Display env. variable                   echo $VAR
+- Show running shell                      echo $0
 - Print all env. variables                printenv
 - Exit code of last command               echo $?
 - Search recent shell commands            Ctrl + R
