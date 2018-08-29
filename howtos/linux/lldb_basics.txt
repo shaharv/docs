@@ -25,8 +25,9 @@ Step:
 Breakpoints:
 
    b <funcname>        - break on function
-   b <srcfile>:<line>  - break on line number in file
+   b <srcfile>:<line>  - break on line number in source file full path
    br l                - list all breakpoints
+   br del <N>          - delete breakpoint
    br di               - disable all breakpoints
    rb ‘regexp’         - break on all functions matching regexp
 
@@ -34,17 +35,30 @@ Registers:
 
    register read       - Show all registers
    register read rax   - Show value of specified register, rax
+   register read rflags  - Read the flags (zf = 0x40)
 
-Watchpoints:
+Memory:
 
-Debug:
+   memory read --size 4 --format x --count 1 <addr> - Read 32-bit value from addr
 
-   bt                  - print backtrace (frame #0 is current)
-   d                   - disassemble function and highlight pc
-   d --pc              - disassemble from pc
+Symbols:
+
    fr v                - show frame variables
    p <var>             - show value of variable <var>
+
+Disassemble:
+
+   d                   - disassemble function and highlight pc
+   d --pc              - disassemble from pc
+   d -s addr1 -e addr2 - disassemble address range
+
+Location:
+
+   bt                  - print backtrace (frame #0 is current)
    reg write pc 0x1234 - set the pc (same as jmp)
+   im loo -a addr      - Lookup raw address in executable or shared libraries
+
+Watchpoints:
 
 More:
 http://lldb.llvm.org/lldb-gdb.html
