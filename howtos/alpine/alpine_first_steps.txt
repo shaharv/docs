@@ -1,0 +1,40 @@
+Alpine Linux First Steps
+========================
+
+-- Update system packages:
+
+   $ sudo apk update
+
+-- Install useful packages:
+
+   sudo apk add bash clang cmake gcc g++ gdb nano ninja man make font-noto
+
+-- Install dev packages:
+
+   sudo apk add gradle openjdk7 zlib-dev
+
+-- Set bash as default shell:
+
+   - Create .profile in home folder
+   - Add "SHELL=/bin/bash"
+
+-- ~/.bashrc convinience updates (append at EOF):
+
+   force_color_prompt=yes
+   bind TAB:menu-complete
+   alias cd..="cd .."
+   alias ll="ls -l"
+
+-- Disable sudo password for sudoers:
+
+   - $ sudo visudo
+
+   - Add the 3rd line below:
+     # Allow members of group sudo to execute any command
+     %sudo   ALL=(ALL:ALL) ALL
+     shahar  ALL=NOPASSWD: ALL
+
+-- Configure git:
+
+   $ git config --global user.name username
+   $ git config --global user.email user@domain.com
