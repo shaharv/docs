@@ -17,7 +17,7 @@ font-noto
 
 -- Install dev packages:
 
-   sudo apk add gradle openjdk7 zlib-dev
+   sudo apk add gradle musl-dbg openjdk8 openjdk8-dbg zlib-dev
 
 -- Set bash as default shell:
 
