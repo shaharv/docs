@@ -12,7 +12,8 @@ Alpine Linux First Steps
 
 -- Install useful packages:
 
-   sudo apk add bash clang cmake gcc g++ gdb nano ninja man make font-noto
+   sudo apk add bash clang cmake gcc g++ gdb nano ninja lldb man make 
+font-noto
 
 -- Install dev packages:
 
