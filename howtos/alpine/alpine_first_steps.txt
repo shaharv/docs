@@ -1,6 +1,11 @@
 Alpine Linux First Steps
 ========================
 
+-- Enable community and testing repositories:
+
+   $ sudo vi /etc/apk/repositories
+   Uncomment wanted repos
+
 -- Update system packages:
 
    $ sudo apk update
