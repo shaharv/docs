@@ -10,15 +10,15 @@ Alpine Linux First Steps
 
    $ sudo apk update
 
--- Install useful packages:
+-- Install useful packages (sudo apk add):
 
-   - Basic packages:     sudo apk add bash gdb nano lldb
-   - Build packages:     sudo apk add clang cmake gcc g++ make ninja
-   - Debugging packages: sudo apk add gdb lldb strace musl-dbg openjdk8-dbg
-   - man packages:       sudo apk add man man-pages less less-doc
-   - SVN packages:       sudo apk add git subversion
-   - Dev packages:       sudo apk add gradle openjdk8 zlib-dev
-   - GUI fonts:          sudo apk add font-noto
+   - Basic packages:     bash gdb nano lldb
+   - Build packages:     clang cmake gcc g++ make ninja linux-headers libpthread-stubs
+   - Debugging packages: gdb lldb strace musl-dbg openjdk8-dbg
+   - man packages:       man man-pages less less-doc
+   - SVN packages:       git subversion
+   - Java dev packages:  gradle openjdk8 zlib-dev
+   - GUI fonts:          apk add font-noto
 
 -- Install optional packages:
 
