@@ -69,3 +69,7 @@ GDB reading
 TrinityCore GDB guidelines:
 https://trinitycore.atlassian.net/wiki/display/tc/GDB
 
+GDB tips
+--------
+
+- catch signal all
