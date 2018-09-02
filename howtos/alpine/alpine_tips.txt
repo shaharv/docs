@@ -1,0 +1,3 @@
+Package management:
+
+- Install specific package version      sudo apk add gdb==8.0.1-r6
