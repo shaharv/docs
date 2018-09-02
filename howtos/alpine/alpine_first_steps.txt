@@ -16,7 +16,7 @@ Alpine Linux First Steps
    - Build packages:     clang cmake gcc g++ make ninja linux-headers libpthread-stubs
    - Debugging packages: gdb lldb strace musl-dbg openjdk8-dbg
    - man packages:       man man-pages less less-doc
-   - SVN packages:       git subversion
+   - SVN packages:       git mercurial subversion
    - Java dev packages:  gradle openjdk8 zlib-dev
    - GUI fonts:          apk add font-noto
 
