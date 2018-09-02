@@ -1,7 +1,7 @@
 Ubuntu cheat sheet
 ------------------
 
-Bash basics:
+Basics:
 
 - Back to previous folder                 cd -
 - Set env. variable with global scope     export VAR=VAL
@@ -35,6 +35,7 @@ Files:
 - Get the full path of a file             realpath <filename>
 - Create a symbolic link                  ln -s <link from> <link name>
 - Batch rename                            rename -v 's/something//' *.txt
+- Recursive dos2unix                      find . -type f -print0 | xargs -0 dos2unix
 
 Finding files:
 
