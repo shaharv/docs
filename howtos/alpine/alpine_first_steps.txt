@@ -17,7 +17,7 @@ Alpine Linux First Steps
    - Debugging packages: gdb lldb strace musl-dbg openjdk8-dbg
    - man packages:       man man-pages less less-doc
    - SVN packages:       git mercurial subversion
-   - Java dev packages:  gradle openjdk8 zlib-dev
+   - Java dev packages:  gradle nodejs nodejs-npm openjdk8
    - GUI fonts:          font-noto
 
 -- Install optional packages (sudo apk add):
