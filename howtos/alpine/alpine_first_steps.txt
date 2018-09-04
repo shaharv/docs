@@ -12,17 +12,17 @@ Alpine Linux First Steps
 
 -- Install useful packages (sudo apk add):
 
-   - Basic packages:     bash gdb nano lldb
+   - Basic packages:     bash nano xz
    - Build packages:     clang cmake gcc g++ make ninja linux-headers libpthread-stubs
    - Debugging packages: gdb lldb strace musl-dbg openjdk8-dbg
    - man packages:       man man-pages less less-doc
    - SVN packages:       git mercurial subversion
    - Java dev packages:  gradle openjdk8 zlib-dev
-   - GUI fonts:          apk add font-noto
+   - GUI fonts:          font-noto
 
--- Install optional packages:
+-- Install optional packages (sudo apk add):
 
-   - lldb build prereq.: sudo apk add python2-dev ncurses-dev libedit-dev libxml2-dev swig yaml-dev
+   - lldb build prereq.: python2-dev ncurses-dev libedit-dev libxml2-dev swig yaml-dev
 
 -- Set bash as default shell:
 
