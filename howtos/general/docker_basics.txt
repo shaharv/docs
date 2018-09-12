@@ -1,0 +1,6 @@
+Docker basics
+-------------  
+
+- Build image                    sudo docker image build -t [image-name]:[version] .
+- Run image                      sudo docker run -i -t uuid /bin/bash
+- List available images          sudo docker images
