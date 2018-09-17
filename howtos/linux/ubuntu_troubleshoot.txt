@@ -4,9 +4,19 @@ Ubuntu Server Troubleshooting Tips
 Xorg crashes at startup
 -----------------------
 
-- sudo nano /etc/init/lightdm.conf
-- Add "sleep 1"
-- See https://bugs.launchpad.net/ubuntu/+source/lightdm/+bug/982889
+- Native fix attempt:
+  * sudo nano /etc/init/lightdm.conf
+  * Add "sleep 1"
+  * See https://bugs.launchpad.net/ubuntu/+source/lightdm/+bug/982889
+
+- Other troubleshooting steps:
+  * sudo cat /var/crash/_usr_lib_xorg_Xorg.0.crash
+  * sudo Xorg :1 -configure
+  * sudo lightdm -d
+  * lspci | grep VGA
+
+- Relevant bug reports:
+  * https://bugs.launchpad.net/ubuntu/+source/mesa/+bug/1753776
 
 Passwords
 ---------
