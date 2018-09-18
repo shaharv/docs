@@ -2,3 +2,7 @@ Package management:
 
 - Install specific package version      sudo apk add gdb==8.0.1-r6
 - Attempt to fix apk issues             sudo apk fix
+
+Desktop:
+
+- Lock xfce4                            xflock4
