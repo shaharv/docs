@@ -65,7 +65,7 @@ Disk usage:
 - Sizes of all files of type, recursive   du -ab . | grep cpp$ | sort -n
 - Ubuntu Disk Usage Analyzer              baobab
 - Empty the bin                           trash-empty (requires trash-cli)
-- Junk cleaner                            bleachbit
+- Junk cleaner                            sudo bleachbit
 - Package manager                         synaptic
 
 Text processing:
