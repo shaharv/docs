@@ -12,7 +12,7 @@ Alpine Linux First Steps
 
 -- Install useful packages (sudo apk add):
 
-   - Basic packages:     bash nano xz
+   - Basic packages:     bash grep nano xz
    - Build packages:     clang cmake gcc g++ make ninja linux-headers libpthread-stubs
    - Debugging packages: gdb lldb strace musl-dbg openjdk8-dbg
    - man packages:       man man-pages less less-doc
