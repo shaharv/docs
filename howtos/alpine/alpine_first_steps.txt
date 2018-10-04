@@ -22,6 +22,7 @@ Alpine Linux First Steps
 
 -- Install optional packages (sudo apk add):
 
+   - Chrome:             chromium    # run with: chromium-browser
    - lldb build prereq.: python2-dev ncurses-dev libedit-dev libxml2-dev swig yaml-dev
 
 -- Set bash as default shell:
