@@ -5,6 +5,8 @@ Package management:
 
 - Install specific package version      sudo apk add gdb==8.0.1-r6
 - Attempt to fix apk issues             sudo apk fix
+- Update packages before adding         sudo apk add --update
+- Specify the repository to add from    sudo apk add --repository=http-link
 
 File system:
 
