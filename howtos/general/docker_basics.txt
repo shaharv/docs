@@ -6,3 +6,8 @@ Docker basics
 - List available images          sudo docker images
 - List running images            sudo docker ps
 - Connect to a running image     sudo docker exec -i -t [image-id] /bin/ash
+
+Cleanup:
+
+- Delete all containers          sudo docker rm $(sudo docker ps -a -q)
+- Delete all images              sudo docker rmi $(sudo docker images -q)
