@@ -62,14 +62,3 @@ Watchpoints:
 
 More:
 http://lldb.llvm.org/lldb-gdb.html
-
-GDB reading
------------
-
-TrinityCore GDB guidelines:
-https://trinitycore.atlassian.net/wiki/display/tc/GDB
-
-GDB tips
---------
-
-- catch signal all

@@ -1,0 +1,21 @@
+GDB cheat sheet
+---------------
+
+From command line, run: $ gdb “exec to debug"
+
+Breakpoints:
+
+   rb ‘regexp’         - break on all functions matching regexp (alias to 'rbreak')
+
+Signals:
+
+   catch signal all    - break on any signal
+
+Useful Links
+------------
+
+- LLDB GDB comparison:
+  http://lldb.llvm.org/lldb-gdb.html
+
+- TrinityCore GDB guidelines:
+  https://trinitycore.atlassian.net/wiki/display/tc/GDB
