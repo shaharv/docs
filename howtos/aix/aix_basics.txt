@@ -34,6 +34,10 @@ Management:
 - Login as superuser (root)               su
 - Increase quotas                         ulimit -d unlimited
 
+Zip:
+
+- Extract all files from iso              https://gist.github.com/nextrevision/0d55e317341186a21d23
+
 Disk and files:
 
 - Find files                              find . -name '*.dmp'
