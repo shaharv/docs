@@ -7,6 +7,11 @@ Breakpoints:
 
    rb ‘regexp’         - break on all functions matching regexp (alias to 'rbreak')
 
+Registers:
+
+   info registers eax  - print register value
+   info registers      - print all register values
+
 Disassemble:
 
    disassemble [func]  - show disassembly of specified function

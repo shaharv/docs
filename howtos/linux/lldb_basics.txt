@@ -30,6 +30,7 @@ Breakpoints:
    br del <N>          - delete breakpoint
    br di               - disable all breakpoints
    rb ‘regexp’         - break on all functions matching regexp
+   process launch -s   - break at the first assembly instruction executed
 
 Registers:
 
