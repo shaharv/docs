@@ -50,12 +50,16 @@ Searching in files:
 - Search recursively in all files         grep -r "string"
 - List files matching an expression       grep -l "expr" * (or --files-with-match)
 - List files NOT matching an expression   grep -L "expr" * (or --files-without-match)
-- Search object files for symbol          find . -name "*.o" -exec llvm-nm -A {} \; | grep "_foo"
 - Search string in specific file types    find . -type f -name '*.cpp' | xargs grep "string"
 - Count "-o" in all commands files        ls commands*.txt | xargs grep '^\-o' | count 1
 - Grep results with sorrounding context   cat file.txt | grep icudt55_dat -B 10 -A 20
 - Search numbers with X digits            grep 'heap: ([0-9]\{11\}B' *.log
 - Grep w/o color (disable ANSI output)    grep --color=never ...
+
+Binary inspection:
+
+- Search objects for debug symbol         find . -name "*.o" -exec nm -A {} \; | grep "_foo"
+- Search .so for dynamic symbol           objdump -T lib.so | grep sym
 
 Disk usage:
 
