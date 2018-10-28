@@ -17,6 +17,7 @@ Installations:
 System:
 
 - Running processes with commands         ps -ef
+- Kill processes by name (ala pkill)      for pid in $(ps -ef | grep "xlC" | awk '{print $2}'); do kill -9 $pid; done
 - Process viewer (similar to top)         topas
 - Virtual and physical CPUs               lparstat -i | grep CPU
 - Get libc version                        lslpp -l bos.rte.lib
