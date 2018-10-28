@@ -24,7 +24,7 @@ Basics:
 Folders:
 
 - Remove a non-empty folder               rm -rf <folder-name>
-- Copy folder entirely                    cp -a <src> <dst>
+- Copy folder                             cp -r <src> <dst>
 - Copy folder with specific files         cd $dir; find . -name '*.txt' | cpio -pdm $target_dir
 - Visualize tree structure                tree
 - Open current folder in Ubuntu GUI       nautilus .
