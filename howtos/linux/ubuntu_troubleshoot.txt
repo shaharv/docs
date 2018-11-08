@@ -191,3 +191,14 @@ Useful links:
    http://www.hiroom2.com/2016/05/18/ubuntu-16-04-auto-apt-update-and-apt-upgrade
    https://help.ubuntu.com/community/AptGet/Howto
 
+Repair Installation
+-------------------
+
+- Chroot into installed Ubuntu from live USB:
+
+  $ sudo fdisk -l                     # examine partitions
+  $ sudo mount /dev/sdXY /mnt/ubuntu  # mount Ubuntu partition
+  $ for i in /dev /proc /sys /run; do sudo mount --bind "$i" "/mnt/ubuntu$i"; done
+  $ sudo cp /etc/resolv.conf /mnt/ubuntu/etc/resolv.conf
+  $ sudo chroot /mnt/ubuntu
+
