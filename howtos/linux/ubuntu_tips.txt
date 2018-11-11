@@ -32,6 +32,7 @@ Folders:
 Files:
 
 - Get the type of a file                  file <filename>
+- Get the type of function/alias          type <alias>
 - Get the full path of a file             realpath <filename>
 - Create a symbolic link                  ln -s <link from> <link name>
 - Batch rename                            rename -v 's/something//' *.txt
@@ -132,6 +133,7 @@ Network:
 - IP address                              ip addr show
 - MAC address                             ifconfig | grep Hwaddr
 - Active internet connection              netstat -tan
+- Check site accessibility (example)      curl -i localhost:9072/ibm/console
 - Speed of transfers                      sudo iftop
 - Open ports                              sudo netstat -ntlp | grep LISTEN
 - Restart network connection              sudo service network-manager restart
