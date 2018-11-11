@@ -86,6 +86,7 @@ Process management:
 
 - Processes stats (CPU, memory)           top, htop
 - Process info in batch mode              top -b -p `pidof some_running_process`
+- nmon monitoring tool - CPU and more     nmon
 - Killing a process                       kill <pid>
 - Kill process by name                    pkill java*
 - Get process PID                         pidof <pname>
