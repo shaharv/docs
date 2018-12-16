@@ -5,25 +5,35 @@ From command line, run: $ gdb “exec to debug"
 
 Breakpoints:
 
-   rb ‘regexp’         - break on all functions matching regexp (alias to 'rbreak')
+   rb ‘regexp’                  - break on all functions matching regexp (alias to 'rbreak')
+
+Variables:
+
+   p 'var'                      - print value of variable var
 
 Registers:
 
-   info registers eax  - print register value
-   info registers      - print all register values
+   info registers eax           - print register value
+   info registers               - print all register values
 
 Disassemble:
 
-   disassemble [func]  - show disassembly of specified function
+   disassemble [func]           - show disassembly of specified function
 
 Signals:
 
-   catch signal all    - break on any signal
+   catch signal all             - break on any signal
 
 Modify:
 
    set {unsigned char}ADDR=0x90 - patch code address with "nop"
    set {unsigned char}ADDR=0xC3 - patch code address with "retq"
+
+Misc:
+
+   info inferior                - get pid of debugged process
+   set follow-fork-mode child   - follow forked child process
+
 
 Useful Links
 ------------
