@@ -3,16 +3,24 @@ Alpine cheat sheet
 
 Package management:
 
-- Install specific package version      sudo apk add gdb==8.0.1-r6
-- Attempt to fix apk issues             sudo apk fix
-- Update packages before adding         sudo apk add --update
-- Specify the repository to add from    sudo apk add --repository=http-link
+- Install specific package version         sudo apk add gdb==8.0.1-r6
+- Attempt to fix apk issues                sudo apk fix
+- Update packages before adding            sudo apk add --update
+- Specify the repository to add from       sudo apk add --repository=http-link
 
 File system:
 
-- Mount USB stick (1)                   sudo fdisk -l # check usb device name and FS
-  Mount USB stick (2)                   sudo mount -t ntfs /dev/sdb1 /mnt/usb
+- List partitions                          sudo fdisk -l
+- List partitions with filesystem (raw)    sudo blkid
+- Check kernel loaded modules for a FS     lsmod | grep [filesystem-name]
+- Check availability of FS kernel module   ls /lib/modules/[version]/kernel/fs
+- Mount device                             sudo mount -t ntfs /dev/sdb1 /mnt/usb
 
 Desktop:
 
-- Lock xfce4                            xflock4
+- Lock xfce4                               xflock4
+
+Network:
+
+- Connect to WiFi                          sudo wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf && sudo udhcpc -i wlan0
+
