@@ -78,9 +78,10 @@ Text processing:
 - Remove blank lines from file            sed -i '/^\s*$/d' file.txt
 - Remove N=123 lines after a match        sed -i '/my-regex/,+123d' file.txt
 - Remove trailing spaces                  sed -i 's/ *$//' file.txt
-- Use Perl as sed - for familiar syntax   perl -pe "s/^\w+\s+//"
+- Perl as sed                             perl -pe "s/^\w+\s+//"
 - Convert epoch to local time (Windows)   perl -pe "s/([\d]{10})/localtime $1/eg;" inp.txt
 - Convert epoch to local time (Linux)     perl -pe 's/([\d]{10})/localtime $1/eg;' inp.txt
+- Sort text by string length              perl -e 'print sort { length($a) <=> length($b) } <>' inp.txt
 
 Process management:
 
