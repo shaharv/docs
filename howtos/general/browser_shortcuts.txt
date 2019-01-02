@@ -28,4 +28,4 @@ Javascript debugging:
 - Choose file                             F12 -> Elements -> Sources
 - Run                                     F8
 - Step Over                               F10
-- Step In                                 F11
+- Step In                                 Ctrl + F11

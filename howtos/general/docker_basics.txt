@@ -5,7 +5,7 @@ Docker basics
 - Run image                      sudo docker run -i -t uuid /bin/ash
 - List available images          sudo docker images
 - List running images            sudo docker ps
-- Connect to a running image     sudo docker exec -i -t [image-id] /bin/ash
+- Connect to running container   sudo docker exec -i -t [image-id] /bin/ash
 
 Cleanup:
 
