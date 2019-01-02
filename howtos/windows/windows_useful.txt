@@ -1,9 +1,14 @@
 Useful Windows Commands
 -----------------------
 
+Files:
+
+- Create an empty file                    copy NUL myfile
+
 Network:
 
 - Who's listening to ports                netstat -a -b -o
+- Get file (wget like)                    powershell -command "iwr -outf filename URL"
 
 Process:
 
