@@ -202,3 +202,11 @@ Repair Installation
   $ sudo cp /etc/resolv.conf /mnt/ubuntu/etc/resolv.conf
   $ sudo chroot /mnt/ubuntu
 
+Network Access
+--------------
+
+- "Temporary failure in name resolution":
+
+  Add Google DNS servers to /etc/resolv.conf:
+  8.8.8.8
+  8.8.4.4
