@@ -68,6 +68,7 @@ Disk usage:
 - Disk usage of each file                 du -sh *
 - Summary of disks and free space         df -h
 - Sizes of all files of type, recursive   du -ab . | grep cpp$ | sort -n
+- Free disk space on current partition    df --output=avail .
 - Ubuntu Disk Usage Analyzer              baobab
 - Empty the bin                           trash-empty (requires trash-cli)
 - Junk cleaner                            sudo bleachbit
