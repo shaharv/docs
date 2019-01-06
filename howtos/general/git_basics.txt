@@ -19,6 +19,7 @@ Git cheat sheet
 - Summarized history                               git log --oneline
 - Show only commits matching a regex               git log --grep="<pattern>"
 - Show only commits from a certain person          git log --author="<pattern>"
+- Show origin branches next to commits             git log --graph --decorate
 
 - Update history of origin branch (without         git fetch
   affecting local files at all)
