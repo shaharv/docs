@@ -31,4 +31,5 @@ Keyboard:
 
 Debugging:
 
-- Dump a pdb file                         cvdump <file.pdb>
+- Dump pdb file contents                  cvdump <file.pdb>
+- Dump pdb file symbols summary           dbh -v <file.pdb> dump
