@@ -29,3 +29,6 @@ Keyboard:
 
 - Exit function key mode (Dell laptop)    Fn + Esc
 
+Debugging:
+
+- Dump a pdb file                         cvdump <file.pdb>
