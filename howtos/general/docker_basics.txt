@@ -1,5 +1,7 @@
-Docker basics
--------------  
+Docker tips
+-----------
+
+Basics:
 
 - Build image                    sudo docker image build -t [image-name]:[version] .
 - Run image                      sudo docker run -i -t uuid /bin/ash
@@ -7,11 +9,25 @@ Docker basics
 - List running images            sudo docker ps
 - Connect to running container   sudo docker exec -i -t [image-id] /bin/ash
 
+Build:
+
+- Build squashed image           sudo docker image build --squash -t <image-name> .
+  (requires experimental mode)
+
 Cleanup:
 
 - Delete all containers          sudo docker rm $(sudo docker ps -a -q)
 - Delete all images              sudo docker rmi $(sudo docker images -q)
 
+Inspect:
+
+- List all files in container    sudo docker export <container-id> | tar tfv -
+
 Debug:
 
 - Run gdb capable docker         sudo docker run --cap-add=SYS_PTRACE --security-opt seccomp=unconfined
+
+Misc:
+
+- Enable experimental features   echo $'{\n    "experimental": true\n}' | sudo tee -a /etc/docker/daemon.json
+                                 sudo service docker restart
