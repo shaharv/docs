@@ -22,12 +22,9 @@ For more details, refer to "Useful Links" below.
 For creating a sample program in which CLRs of different versions are loaded into the same process, we'd need to create a mixed mode assembly targeting an older .NET version (pre-4.0), and load it from a .NET 4.0 assembly.
 The procedure would consist of the following steps:
 1) Create a C# class library, targeting .NET 2.0 (or 3.5).
-2) Expose the C# class to COM:  
-   https://github.com/shaharv/docs/blob/master/wiki/dotnet/COM%20Interop%20and%20In%20Proc%20SxS/Make%20CSharp%20Class%20Library%20COM%20Visible.md
-3) Consume the C# COM class from a C++ class:  
-   https://github.com/shaharv/docs/blob/master/wiki/dotnet/COM%20Interop%20and%20In%20Proc%20SxS/Use%20CSharp%20Classes%20from%20C%2B%2B%20Using%20COM.md
-4) Create a C++/CLI wrapper for the C++ class:  
-   https://github.com/shaharv/docs/blob/master/wiki/dotnet/COM%20Interop%20and%20In%20Proc%20SxS/Use%20C%2B%2B%20class%20from%20CSharp.md
+2) Expose the C# class to COM: [tutorial](https://github.com/shaharv/docs/blob/master/wiki/dotnet/COM%20Interop%20and%20In%20Proc%20SxS/Make%20CSharp%20Class%20Library%20COM%20Visible.md).
+3) Consume the C# COM class from a C++ class: [tutorial](https://github.com/shaharv/docs/blob/master/wiki/dotnet/COM%20Interop%20and%20In%20Proc%20SxS/Use%20CSharp%20Classes%20from%20C%2B%2B%20Using%20COM.md).
+4) Create a C++/CLI wrapper for the C++ class: [tutorial](https://github.com/shaharv/docs/blob/master/wiki/dotnet/COM%20Interop%20and%20In%20Proc%20SxS/Use%20C%2B%2B%20class%20from%20CSharp.md).
 5) Create a C# test project targeting .NET 4.0 or higher, and use the wrapper class, as described in 4.
 
 ### Useful Links - In Proc SxS
