@@ -23,11 +23,11 @@ For creating a sample program in which CLRs of different versions are loaded int
 The procedure would consist of the following steps:
 1) Create a C# class library, targeting .NET 2.0 (or 3.5).
 2) Expose the C# class to COM:  
-   https://github.com/takipi-dev/takipi/wiki/Make-CSharp-Class-Library-COM-Visible
+   https://github.com/shaharv/docs/blob/master/wiki/dotnet/COM%20Interop%20and%20In%20Proc%20SxS/Make%20CSharp%20Class%20Library%20COM%20Visible.md
 3) Consume the C# COM class from a C++ class:  
-   https://github.com/takipi-dev/takipi/wiki/Use-C%23-Classes-from-C%CB%96%CB%96-Using-COM
+   https://github.com/shaharv/docs/blob/master/wiki/dotnet/COM%20Interop%20and%20In%20Proc%20SxS/Use%20CSharp%20Classes%20from%20C%2B%2B%20Using%20COM.md
 4) Create a C++/CLI wrapper for the C++ class:  
-   https://github.com/takipi-dev/takipi/wiki/Use-C%CB%96%CB%96-class-from-C%23
+   https://github.com/shaharv/docs/blob/master/wiki/dotnet/COM%20Interop%20and%20In%20Proc%20SxS/Use%20C%2B%2B%20class%20from%20CSharp.md
 5) Create a C# test project targeting .NET 4.0 or higher, and use the wrapper class, as described in 4.
 
 ### Useful Links - In Proc SxS
