@@ -24,3 +24,6 @@ Network:
 
 - Connect to WiFi                          sudo wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf && sudo udhcpc -i wlan0
 
+Misc:
+
+- Check Alpine version                     cat /etc/os-release
