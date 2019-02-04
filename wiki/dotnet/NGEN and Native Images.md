@@ -30,7 +30,7 @@ For convenience, you might want to add these folders to your `PATH` (globally, o
 
 - For verbose output, add the `/verbose` flag. This will give detailed information about the compiled module, including assembly settings, and location of the native image on the hard drive.
 
-- For creating a native image suitable for a CLR profiler, add the `/profile` flag. **Pay attention, Takipi-Agent only works with images that created with `/profile` flag**
+- For creating a native image suitable for a CLR profiler, add the `/profile` flag.
 
 ### Uninstalling a native image
 
@@ -65,7 +65,7 @@ For convenience, you might want to add these folders to your `PATH` (globally, o
 For verifying images are indeed loaded, the `FUSLOGVW.exe` utility could be used.  
 `FUSLOGVW.exe` provides GUI for inspecting and managing the logs of the native image binder. 
 
-**Note: you must have administrator privileges for running** `FUSLOGVW.exe`
+**Note: You must have administrator privileges for configuting FUSLOGVW.exe.
 
 First, configure the utility:
 - Run `FUSLOGVW.exe`.
@@ -94,15 +94,15 @@ Additionally, when debugging a .NET program and stepping through the profiler AP
 
 ### Useful links
 
-Official man page:  
-https://docs.microsoft.com/en-us/dotnet/framework/tools/ngen-exe-native-image-generator
+- Official man page:  
+  https://docs.microsoft.com/en-us/dotnet/framework/tools/ngen-exe-native-image-generator
 
-NGEN Primer:  
-https://blogs.msdn.microsoft.com/abhinaba/2013/12/10/ngen-primer
+- NGEN Primer:  
+  https://blogs.msdn.microsoft.com/abhinaba/2013/12/10/ngen-primer
 
-Loading NGEN images and interaction with the GAC:  
-https://blogs.msdn.microsoft.com/abhinaba/2013/12/11/net-loading-native-ngen-images-and-its-interaction-with-the-gac
+- Loading NGEN images and interaction with the GAC:  
+  https://blogs.msdn.microsoft.com/abhinaba/2013/12/11/net-loading-native-ngen-images-and-its-interaction-with-the-gac
 
-NGEN and native images Troubleshooting:  
-https://kceiw.me/net-native-image-troubleshooting  
-https://blogs.msdn.microsoft.com/jianges/2012/08/09/how-to-troubleshoot-ngen-issues
+- NGEN and native images Troubleshooting:  
+  https://kceiw.me/net-native-image-troubleshooting  
+  https://blogs.msdn.microsoft.com/jianges/2012/08/09/how-to-troubleshoot-ngen-issues
