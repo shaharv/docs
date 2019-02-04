@@ -1,6 +1,6 @@
 ### Calling a C# class from C++ using COM
 
-This example builds on the COM C# class `MyCOMTestClass`, which is defined [here](https://github.com/takipi-dev/takipi/wiki/Make-CSharp-Class-Library-COM-Visible).  
+This example builds on the COM C# class `MyCOMTestClass`, which is defined [here](https://github.com/shaharv/docs/blob/master/wiki/dotnet/COM%20Interop%20and%20In%20Proc%20SxS/Make%20CSharp%20Class%20Library%20COM%20Visible.md).
 It demonstrates calling a COM class, for which we are only given:
 - The class `ProgID` identifier.
 - The signature of a class method to be called, in our case `public void testPrint()`.
