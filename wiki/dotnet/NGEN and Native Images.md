@@ -65,7 +65,7 @@ For convenience, you might want to add these folders to your `PATH` (globally, o
 For verifying images are indeed loaded, the `FUSLOGVW.exe` utility could be used.  
 `FUSLOGVW.exe` provides GUI for inspecting and managing the logs of the native image binder. 
 
-**Note: You must have administrator privileges for configuting FUSLOGVW.exe.
+**Note: You must have administrator privileges for configuring FUSLOGVW.exe.**
 
 First, configure the utility:
 - Run `FUSLOGVW.exe`.
