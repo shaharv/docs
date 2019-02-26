@@ -17,6 +17,7 @@ Git cheat sheet
 - History of a specific file                       gitk filename
                                                    git log -p filename
 - Summarized history                               git log --oneline
+- History for specific folders                     git log -- llvm/tools/llvm-pdbutil llvm/lib/DebugInfo/PDB
 - Show only commits matching a regex               git log --grep="<pattern>"
 - Show only commits from a certain person          git log --author="<pattern>"
 - Show origin branches next to commits             git log --graph --decorate
