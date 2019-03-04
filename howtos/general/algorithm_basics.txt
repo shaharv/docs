@@ -1,7 +1,0 @@
-Algorithm Cheat Sheet
----------------------
-
-Sets and Permutations:
-
-- Permutations of size K over set of N         N! / K!
-- Subsets of size k over set of N              N! / K! * (N - K)!

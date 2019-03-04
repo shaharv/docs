@@ -1,6 +1,0 @@
-IntelliJ shortcuts
-------------------
-
-- Show next compile error                      F2
-- Show previous compile error                  Shift + F2
-
