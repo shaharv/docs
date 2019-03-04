@@ -1,9 +1,10 @@
 Useful Windows Commands
 -----------------------
 
-Files:
+Files and folders:
 
 - Create an empty file                    copy NUL myfile
+- Delete all subfolders named "bin"       for /f "usebackq" %a in (`dir /ad /b /s bin`) do rmdir /s /q "%a"
 
 Network:
 
