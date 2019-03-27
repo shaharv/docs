@@ -34,3 +34,8 @@ Debugging:
 
 - Dump pdb file contents                  cvdump <file.pdb>
 - Dump pdb file symbols summary           dbh -v <file.pdb> dump
+
+Event Tracing (ETW):
+
+- List running tracing sessions           logman query -ets
+- Kill specified session                  logman stop <SESSION_NAME> -ets
