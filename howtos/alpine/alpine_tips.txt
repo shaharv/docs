@@ -27,3 +27,10 @@ Network:
 Misc:
 
 - Check Alpine version                     cat /etc/os-release
+
+Java:
+
+- Downgrade OpenJDK 8 to 8.181.13          sudo apk del openjdk8* java-jna* && \
+                                           VER=8.181.13-r0 && sudo apk add openjdk8=$VER openjdk8-jre=$VER \
+                                           openjdk8-jre-lib=$VER openjdk8-jre-base=$VER \
+                                           --repository=http://dl-cdn.alpinelinux.org/alpine/v3.5/community
