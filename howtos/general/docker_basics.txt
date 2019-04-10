@@ -22,6 +22,7 @@ Cleanup:
 Inspect:
 
 - List all files in container    sudo docker export <container-id> | tar tfv -
+- Get container IP address       sudo docker inspect <container-id> | grep IPAddress
 
 Debug:
 
