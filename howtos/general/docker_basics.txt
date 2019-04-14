@@ -9,10 +9,15 @@ Basics:
 - List running images            sudo docker ps
 - Connect to running container   sudo docker exec -i -t [image-id] /bin/ash
 
-Build:
+Copy:
+
+- Copy files from/to container   sudo docker cp <file-or-folder> <container-id>:<dest-folder>
+
+Build and Deploy:
 
 - Build squashed image           sudo docker image build --squash -t <image-name> .
   (requires experimental mode)
+- Commit image                   sudo docker commit <container-id> <image-id>[:tag]
 
 Cleanup:
 
