@@ -19,6 +19,7 @@ Registers:
 Disassemble:
 
    disassemble [func]           - show disassembly of specified function
+   x/50i 0xADDR                 - show 50 assembly instructions starting ADDR
 
 Signals:
 
