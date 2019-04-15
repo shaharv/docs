@@ -21,6 +21,10 @@ Disassemble:
    disassemble [func]           - show disassembly of specified function
    x/50i 0xADDR                 - show 50 assembly instructions starting ADDR
 
+Call stack:
+
+   info threads                 - display the call stack and threads information
+
 Signals:
 
    catch signal all             - break on any signal
