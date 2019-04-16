@@ -33,6 +33,10 @@ Debug:
 
 - Run gdb capable docker         sudo docker run --cap-add=SYS_PTRACE --security-opt seccomp=unconfined
 
+Search:
+
+- List Dockerhub tags            wget -q https://registry.hub.docker.com/v1/repositories/<repo-name>/tags -O - | jq -r '.[].name'
+
 Misc:
 
 - Enable experimental features   echo $'{\n    "experimental": true\n}' | sudo tee -a /etc/docker/daemon.json
