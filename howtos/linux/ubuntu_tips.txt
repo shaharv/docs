@@ -228,3 +228,5 @@ Misc:
 - Create 1MB text file with random text   base64 /dev/urandom | head -c 1000000 > out.txt
 - Count source lines                      sloccount --multiproject
   * Note: found sloccount as most reliable comparing to cloc, ohcount
+- Get glibc version (1)                   ldd --version
+- Get glibc version (2)                   apt-cache policy libc6
