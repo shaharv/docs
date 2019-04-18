@@ -3,9 +3,16 @@ GDB cheat sheet
 
 From command line, run: $ gdb “exec to debug"
 
+Basics:
+
+   r                            - run
+   c                            - continue
+
 Breakpoints:
 
+   b <location>                 - place a breakpoint
    rb ‘regexp’                  - break on all functions matching regexp (alias to 'rbreak')
+   d <N>                        - delete breakpoint number N
 
 Variables:
 
