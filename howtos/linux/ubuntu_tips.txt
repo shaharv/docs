@@ -97,6 +97,7 @@ Process management:
   * ps -ef is more portable than ps aux
 - Max mem usage by process                /usr/bin/time --format='(%Xtext+%Ddata %Mmax)' <command>
 - Give time out to shell sub processes    ulimit -t <seconds>
+- Process using port                      fuser <PORT-NUM>/tcp
 
 System:
 
