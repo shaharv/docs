@@ -41,3 +41,4 @@ Misc:
 
 - Enable experimental features   echo $'{\n    "experimental": true\n}' | sudo tee -a /etc/docker/daemon.json
                                  sudo service docker restart
+- Enable core dump               https://dev.to/mizutani/how-to-get-core-file-of-segmentation-fault-process-in-docker-22ii
