@@ -19,6 +19,11 @@ Build and Deploy:
   (requires experimental mode)
 - Commit image                   sudo docker commit <container-id> <image-id>[:tag]
 
+Network:
+
+- Connect to localhost (mapped   sudo docker run --network="host" ...
+  (to 127.0.0.1 in container)
+
 Cleanup:
 
 - Delete all containers          sudo docker rm $(sudo docker ps -a -q)
