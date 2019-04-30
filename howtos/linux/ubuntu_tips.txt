@@ -151,6 +151,7 @@ Make:
 Linking:
 
 - Find library reachable by ld            ldconfig -p | grep <libname>
+- Find library used in processes          sudo grep libMy.so /proc/*/maps
 
 Profiling:
 
