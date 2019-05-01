@@ -10,6 +10,7 @@ HotSpot JVM
 JIT:
 
 - Disable JIT - interpreter only   -Xint
+- Force immediate JIT compilation  -Xcomp
 - Control JIT threshold            -XX:CompileThreshold=10000
 
 Debugging
