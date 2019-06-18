@@ -31,6 +31,8 @@ Disassemble:
 Call stack:
 
    where                        - display the call stack
+   up <N>                       - move N places up the call stack
+   down <N>                     - move N places down the call stack
    info threads                 - display running threads
 
 Signals:
