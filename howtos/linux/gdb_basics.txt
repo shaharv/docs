@@ -30,7 +30,8 @@ Disassemble:
 
 Call stack:
 
-   info threads                 - display the call stack and threads information
+   where                        - display the call stack
+   info threads                 - display running threads
 
 Signals:
 
