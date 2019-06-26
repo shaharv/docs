@@ -82,6 +82,9 @@ Git cheat sheet
 
 - Clean up and optimize                            git gc
 
+- Update and checkout modules                      git submodule update --init --recursive
+- Clone repo with its submodules                   git clone --recursive
+
 
 Git setup tips
 --------------
