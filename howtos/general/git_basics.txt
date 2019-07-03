@@ -46,6 +46,7 @@ Git cheat sheet
 - Checkout a specific git revision, file           git checkout <revhash> -- <filemask>
 - Checkout a specific file from another branch     git checkout <branch-name> -- <filepath>
 - Fix detached head                                git checkout <branch-name>
+- Checkout specific files                          git checkout -- "*.cpp"
 
 - Stash changes                                    git stash
 - Unstash the last stash                           git stash apply
