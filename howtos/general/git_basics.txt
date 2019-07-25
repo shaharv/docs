@@ -48,6 +48,7 @@ Git cheat sheet
 - Fix detached head                                git checkout <branch-name>
 - Branch and checkout                              git checkout -B <branch-name>
 - Checkout specific files                          git checkout -- "*.cpp"
+- Checkout all files under current path            git checkout .
 
 - Stash changes                                    git stash
 - Unstash the last stash                           git stash apply
