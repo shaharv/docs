@@ -11,6 +11,7 @@ File Control in nano, and general
     Ctrl-g            Help
     Esc+$             Word wrap
     Alt+M             Mouse mode
+    Set tab width     nano --tabsize 4 <file>
 
 Navigating through file contents in nano
 
