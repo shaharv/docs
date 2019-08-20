@@ -43,6 +43,7 @@ Zip:
 Disk and files:
 
 - Find files                              find . -name '*.dmp'
+- Find and delete files                   find . -name "*.tar" -exec rm {} \;
 - Sort files by size in KB                du -ak . | sort -n
 - Folder size in KB                       du -sk <dir>
 - Free disk space in KB                   df -k
