@@ -39,6 +39,7 @@ Management:
 Zip:
 
 - Extract all files from iso              https://gist.github.com/nextrevision/0d55e317341186a21d23
+- Gzip a tar file                         gzip my.tar
 
 Disk and files:
 
