@@ -34,7 +34,12 @@ Debugging and diagnostics:
 Management:
 
 - Login as superuser (root)               su
-- Increase quotas                         ulimit -d unlimited
+- Increase limits                         ulimit -d unlimited
+
+Package management:
+
+- List .rpm contents                      rpm -qlpv my.rpm
+- List installed rpm packages             rpm -qa
 
 Zip:
 
