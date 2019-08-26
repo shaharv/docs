@@ -12,6 +12,7 @@ Git cheat sheet
 - Display list of all staged and unstaged files    git status
 - List all local diffs                             git diff
 - List diffs from specified branch                 git diff <base-branch>
+- Diff of a specific file in branch                git diff <base-branch> <file-path>
 - List diffs from specified branch - filenames     git diff --name-only <base-branch>
 
 - History of a specific file                       gitk filename
