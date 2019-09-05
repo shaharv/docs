@@ -61,6 +61,10 @@ Git cheat sheet
 - Remove unstaged folders from folder - dry run    git clean -n -d
 - Remove unstaged files from folder - for real     git clean -f
 
+- Create a new tag                                 git tag <tag-name>
+- Push a tag                                       git push origin <tag-name>
+- Clean up local tags deleted from origin          git tag -l | xargs git tag -d && git fetch --tags
+
 - Discard pending changes                          git reset
 - Discard only last unpushed commit                git reset HEAD~1
 - Reset local branch to its origin state           git checkout <branch>
