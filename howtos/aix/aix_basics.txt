@@ -30,7 +30,7 @@ Debugging and diagnostics:
 - Dump stack                              procstack <pid>
 - Enable debug malloc                     MALLOCTYPE=debug
 - Configure debug malloc                  MALLOCDEBUG=validate_ptrs,postfree_checking,override_signal_handling
-- Dump symbols (XCoff64)                  dump -Tv -X64 mylib.so
+- Dump debug symbols (XCoff64)            dump -tl -X64 mylib.so
 
 Management:
 
