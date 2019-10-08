@@ -178,10 +178,11 @@ Connecting and working on remote machine:
 - New screen                              screen -d -R <name>
 - Connect to existing screen              screen -x <name>
 
-Monitor:
+Monitor and graphics:
 
 - Screen brightness (example)             xbacklight +50
 - Screen contrant (example)               xrandr -gamma 0.5
+- List display drivers                    lspci -k | grep -EA3 'VGA|3D|Display'
 
 Sound:
 
