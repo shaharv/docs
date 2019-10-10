@@ -11,6 +11,7 @@ Source debug:
 
 Breakpoints:
 
+- Break when lib is loaded     stop on load "path-to-lib.so"
 - Register value in range      stop if (($r2 >0x10110000000) && ($r2 < 0x10200000000))
 
 Assembly debug:
