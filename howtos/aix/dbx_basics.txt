@@ -1,17 +1,27 @@
 dbx basics
 ----------
 
+Basic commands:
+
+- Start process                dbx <executable path>
+- Run with arguments           run <arguments>
+- Resume execution             cont
+- Break on main                stop in main
+
 Source debug:
 
-- Run process                  dbx <executable path>
-                               run <arguments>
-- Break on function            stop in __DoThrowV6    // example 1
-                               stop in j9dump_create  // example 2
-- Resume execution             cont
+- Break on function            stop in __DoThrowV6 (useful: j9dump_create)
+- Break on source line         stop at "Logger.cpp":317
+- Show call stack              where
+- Show source code             list
+- Source step into             step
+- Source step over             next
+- Source step out              up
+- Show variable value          print VAR
 
 Breakpoints:
 
-- Break when lib is loaded     stop on load "path-to-lib.so"
+- Break when lib is loaded     stop on load "[path-optional/]libname.so"
 - Register value in range      stop if (($r2 >0x10110000000) && ($r2 < 0x10200000000))
 
 Assembly debug:
