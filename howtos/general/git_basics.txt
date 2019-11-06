@@ -77,6 +77,8 @@ Git cheat sheet
 - Display git configuration settings               git config --list
 - Configure user name                              git config --global [--replace-all] user.name "User Name"
 - Configure user mail                              git config --global user.email user@domain.com
+- Configure pull to merge (disable rebase)         git config --global pull.rebase false
+                                                   git config --local pull.rebase false
 
 - Merge specified branch into current branch       git merge <branch-to-merge-from>
 - Abort failed merge                               git merge --abort
