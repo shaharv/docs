@@ -47,6 +47,7 @@ Modify:
 Misc:
 
    info inferior                - get pid of debugged process
+   info proc mappings           - show all process memory mapping (sections)
    set follow-fork-mode child   - follow forked child process
 
 
