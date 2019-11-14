@@ -38,6 +38,7 @@ Call stack:
 Signals:
 
    catch signal all             - break on any signal
+   p $_siginfo._sifields._sigfault.si_addr - show the address on which SIGSEGV occured
 
 Modify:
 
