@@ -12,6 +12,7 @@ JIT:
 - Disable JIT - interpreter only   -Xint
 - Force immediate JIT compilation  -Xcomp
 - Control JIT threshold            -XX:CompileThreshold=10000
+- Print compiled assembly          -XX:+UnlockDiagnosticVMOptions -XX:+PrintAssembly
 
 Debugging
 ---------
