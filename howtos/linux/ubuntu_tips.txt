@@ -196,6 +196,7 @@ Compression:
 
 - Compress a single file/folder (GNU tar) tar -cvf archive.tar.gz /fullpath/to/folder-or-file
 - Compress a single folder (zip)          zip -r zipname foldername/*
+- Compress a list of files                find -name "*.log" | zip logs.zip -@
 - Unzip all zip files into current dir    for file in `ls *.zip`; do unzip $file; done
 - Unzip all zip files into seperate dirs  for file in `ls *.zip`; do unzip $file -d `echo $file | cut -d . -f 1`; done
 - Extract rpm                             rpm2cpio myinstaller.rpm | cpio -idmv
