@@ -103,6 +103,7 @@ System:
 
 - Linux distro version                    lsb_release -a
 - CPU info                                lscpu
+- CPU number of cores                     nproc --all
 - Linux kernel version                    uname -r
 - System info - abbreviated summary       inxi
 - System info - detailed summary          inxi -Fxz
