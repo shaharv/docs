@@ -21,6 +21,7 @@ System:
 - Process viewer (similar to top)         topas
 - Performance monitoring                  nmon
 - Virtual and physical CPUs               lparstat -i | grep CPU
+- Digested number of cores                lparstat -i | grep "Maximum Physical CPUs" | sed 's/^.*: //'
 - Get libc version                        lslpp -l bos.rte.lib
 
 Debugging and diagnostics:
