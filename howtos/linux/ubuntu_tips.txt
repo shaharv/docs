@@ -37,6 +37,7 @@ Files:
 - Create a symbolic link                  ln -s <link from> <link name>
 - Batch rename                            rename -v 's/something//' *.txt
 - Recursive dos2unix                      find . -type f -print0 | xargs -0 dos2unix
+- Read and wait for input                 less file.txt # then, shift+f
 
 Finding files:
 
