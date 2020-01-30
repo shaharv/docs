@@ -14,6 +14,7 @@ Git cheat sheet
 - List diffs from specified branch                 git diff <base-branch>
 - Diff of a specific file in branch                git diff <base-branch> <file-path>
 - List diffs from specified branch - filenames     git diff --name-only <base-branch>
+- Show all files in a commit                       git show --name-only <commit>
 
 - History of a specific file                       gitk filename
                                                    git log -p filename
