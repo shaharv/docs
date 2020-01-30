@@ -1,5 +1,4 @@
-HotSpot JVM
------------
+HotSpot JVM:
 
 - Print internal flags             java -XX:+UnlockDiagnosticVMOptions -XX:+PrintFlagsFinal -version
 - Print initial -Xms value         java -XX:+PrintFlagsFinal -version 2>nul | grep InitialHeapSize
@@ -14,11 +13,30 @@ JIT:
 - Control JIT threshold            -XX:CompileThreshold=10000
 - Print compiled assembly          -XX:+UnlockDiagnosticVMOptions -XX:+PrintAssembly
 
-Debugging
----------
+Debugging:
 
 - Print loaded classes             -verbose:class
 - Dump stacks of java threads      sudo jstack -l -m <pid>
+
+Links:
+
+- Java RPMs for RedHat 5 Server:
+  ftp://ftp.nluug.nl/pub/os/Linux/distr/RedHat/ftp/redhat/linux/enterprise/5Server/en/RHNSAT/SRPMS
+
+- IBM J9 Linux Java runtimes:
+  http://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/java
+
+- IBM JVM Command Line Options Reference for Java 6:
+  https://www.ibm.com/support/knowledgecenter/en/SSYKE2_6.0.0/com.ibm.java.doc.diagnostics.60/diag/appendixes/cmdline/cmdline.html
+
+- IBM JVM Command Line Options Reference for Java 7:
+  https://www.ibm.com/support/knowledgecenter/en/SSYKE2_7.0.0/com.ibm.java.win.70.doc/diag/appendixes/cmdline/cmdline.html
+
+- IBM JVM Command Line Options Reference for Java 8:
+  https://www.ibm.com/support/knowledgecenter/en/SSYKE2_8.0.0/com.ibm.java.vm.80.doc/docs/cmdline.html
+
+- IBM J9 Class Sharing:
+  https://www.ibm.com/developerworks/java/library/j-ibmjava4/
 
 
   ¯\_( ͡° ͜ʖ ͡°)_/¯                   ¯\_(ツ)_/¯
