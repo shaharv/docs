@@ -5,51 +5,52 @@ From command line, run: $ gdb “exec to debug"
 
 Basics:
 
-   r                            - run
-   c                            - continue
+- Run                                     r
+- Continue                                c
 
 Breakpoints:
 
-   b <location>                 - place a breakpoint
-   rb ‘regexp’                  - break on all functions matching regexp (alias to 'rbreak')
-   d <N>                        - delete breakpoint number N
+- Place breakpint                         b <location>
+- Break on all functions matching regex   rb 'regexp'
+- Delete breakpoint #N                    d <N>
 
 Variables:
 
-   p 'var'                      - print value of variable var
+- Print variable value                    p 'var'
 
 Registers:
 
-   info registers eax           - print register value
-   info registers               - print all register values
+- Print register value (example: eax)     info registers eax
+- Print all register values               info registers
 
 Disassemble:
 
-   disassemble [func]           - show disassembly of specified function
-   x/50i 0xADDR                 - show 50 assembly instructions starting ADDR
+- Show disasm. of function                disassemble [func]
+- Show 50 instructions starting ADDR      x/50i 0xADDR
 
 Call stack:
 
-   where                        - display the call stack
-   up <N>                       - move N places up the call stack
-   down <N>                     - move N places down the call stack
-   info threads                 - display running threads
+- Show call stack                         where
+- Move N places up the stack              up <N>
+- Move N places down the stack            down <N>
+- Show threads information                info threads
 
 Signals:
 
-   catch signal all             - break on any signal
-   p $_siginfo._sifields._sigfault.si_addr - show the address on which SIGSEGV occured
+- Break on any signal                     catch signal all
+- Show the address where SIGSEGV occured  p $_siginfo._sifields._sigfault.si_addr
 
 Modify:
 
-   set {unsigned char}ADDR=0x90 - patch code address with "nop"
-   set {unsigned char}ADDR=0xC3 - patch code address with "retq"
+- Patch code address with "nop"           set {unsigned char}ADDR=0x90
+- Patch code address with "retq"          set {unsigned char}ADDR=0xC3
 
 Misc:
 
-   info inferior                - get pid of debugged process
-   info proc mappings           - show all process memory mapping (sections)
-   set follow-fork-mode child   - follow forked child process
+- Pid of debugged process                 info inferior
+- Show all memory mappings (sections)     info proc mappings
+- Follow forked child process             set follow-fork-mode child
+- Set debug file folder                   set debug-file-directory /usr/lib/debug
 
 
 Useful Links
@@ -58,5 +59,23 @@ Useful Links
 - LLDB GDB comparison:
   http://lldb.llvm.org/lldb-gdb.html
 
+- GDB Technion course:
+  http://tx.technion.ac.il/doc/intel13/debugger/gdb/gdb.pdf
+
 - TrinityCore GDB guidelines:
   https://trinitycore.atlassian.net/wiki/display/tc/GDB
+
+- GDB Wiki FAQ:
+  https://sourceware.org/gdb/wiki/FAQ
+
+- Building and installing GDB:
+  https://ftp.gnu.org/old-gnu/Manuals/gdb/html_chapter/gdb_27.html
+
+- GDB dashboard:
+  https://github.com/cyrus-and/gdb-dashboard
+
+- Alpine Linux GDB build steps:
+
+  * find -name "config.cache" -delete
+  * apk add texinfo bison flex
+  * ./configure --disable-werror
