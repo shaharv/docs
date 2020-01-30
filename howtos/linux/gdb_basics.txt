@@ -79,3 +79,25 @@ Useful Links
   * find -name "config.cache" -delete
   * apk add texinfo bison flex
   * ./configure --disable-werror
+
+- Loading multiple symbol files in gdb:
+  https://stackoverflow.com/questions/20380204/how-to-load-multiple-symbol-files-in-gdb
+
+- Debugging stripped binaries:
+  https://felix.abecassis.me/2012/08/gdb-debugging-stripped-binaries
+
+- GDB cheat sheet:
+  https://darkdust.net/files/GDB%20Cheat%20Sheet.pdf
+
+- GDB signals:
+  https://sourceware.org/gdb/onlinedocs/gdb/Signals.html
+
+- GDB internals:
+  https://sourceware.org/gdb/wiki/Internals
+
+- Debugging the JDK with GDB:
+  https://neugens.wordpress.com/2015/02/26/debugging-the-jdk-with-gdb
+
+- How to use GDB to find what function a memory address corresponds to?
+  https://stackoverflow.com/questions/7639309/how-to-use-gdb-to-find-what-function-a-memory-address-corresponds-to
+
