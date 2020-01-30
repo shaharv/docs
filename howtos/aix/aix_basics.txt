@@ -61,3 +61,24 @@ Disk and files:
 Misc:
 
 - Run processes without hangups           nohup <cmd> &
+
+Links:
+
+- IBM XL C/C++ Optimization and Programming Guide, V10.1
+  http://www-01.ibm.com/support/docview.wss?uid=swg27012864&aid=1
+
+- IBM XL C/C++ for AIX Compiler Reference, V13.1
+  http://www-01.ibm.com/support/docview.wss?uid=swg27041854&aid=1
+
+- Developing and Porting C and C++ Applications on AIX
+  http://www.redbooks.ibm.com/redbooks/pdfs/sg245674.pdf
+
+- IBM SDK for Java 6: Diagnostics Guide
+  https://www.ibm.com/support/knowledgecenter/SSYKE2_6.0.0/pdf/en/diag60.pdf
+
+- AIX Native Memory Problem Determination Techniques and Tools for WebSphere Application Server
+  http://www-01.ibm.com/support/docview.wss?uid=swg27036053&aid=1
+
+- WebSphere Application Server Performance Cookbook - May 2018
+  https://publib.boulder.ibm.com/httpserv/cookbook/WAS_Performance_Cookbook.pdf (edited)
+
