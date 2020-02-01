@@ -37,6 +37,7 @@ Files:
 - Create a symbolic link                  ln -s <link from> <link name>
 - Batch rename                            rename -v 's/something//' *.txt
 - Recursive dos2unix                      find . -type f -print0 | xargs -0 dos2unix
+- Read and wait for input                 less file.txt # then, shift+f
 
 Finding files:
 
@@ -70,6 +71,7 @@ Disk usage:
 - Sizes of all files of type, recursive   du -ab . | grep cpp$ | sort -n
 - Free disk space on current partition    df --output=avail .
 - Ubuntu Disk Usage Analyzer              baobab
+- NCurses Disk Usage Analyzer             ncdu
 - Empty the bin                           trash-empty (requires trash-cli)
 - Junk cleaner                            sudo bleachbit
 - Package manager                         synaptic
@@ -101,8 +103,10 @@ Process management:
 
 System:
 
-- Linux distro version                    lsb_release -a
+- Linux distro version (1)                cat /etc/os-release | grep PRETTY_NAME | sed 's/^.*=//'
+- Linux distro version (2)                lsb_release -a
 - CPU info                                lscpu
+- CPU number of cores                     nproc --all
 - Linux kernel version                    uname -r
 - System info - abbreviated summary       inxi
 - System info - detailed summary          inxi -Fxz
@@ -111,6 +115,7 @@ System:
 - Show system uptime                      uptime
 - Check filesystem                        sudo e2fsck -fv /dev/sdX
 - Check HD for bad blocks                 sudo fsck -c /dev/sdX
+- Machine endianess (BE = 256, LE = 1)    printf '\1' | od -dAn
 
 Boot:
 
@@ -178,10 +183,11 @@ Connecting and working on remote machine:
 - New screen                              screen -d -R <name>
 - Connect to existing screen              screen -x <name>
 
-Monitor:
+Monitor and graphics:
 
 - Screen brightness (example)             xbacklight +50
 - Screen contrant (example)               xrandr -gamma 0.5
+- List display drivers                    lspci -k | grep -EA3 'VGA|3D|Display'
 
 Sound:
 
@@ -194,6 +200,7 @@ Compression:
 
 - Compress a single file/folder (GNU tar) tar -cvf archive.tar.gz /fullpath/to/folder-or-file
 - Compress a single folder (zip)          zip -r zipname foldername/*
+- Compress a list of files                find -name "*.log" | zip logs.zip -@
 - Unzip all zip files into current dir    for file in `ls *.zip`; do unzip $file; done
 - Unzip all zip files into seperate dirs  for file in `ls *.zip`; do unzip $file -d `echo $file | cut -d . -f 1`; done
 - Extract rpm                             rpm2cpio myinstaller.rpm | cpio -idmv
@@ -228,8 +235,9 @@ Misc:
 - Create 1MB binary file filled with 0's  dd if=/dev/zero of=out.bin count=1 bs=1MB
 - Create 1MB binary file filled randomly  dd if=/dev/urandom of=out.bin count=1000 bs=1000
 - Create 1MB text file with random text   base64 /dev/urandom | head -c 1000000 > out.txt
+- Count class files in jar                unzip -l my.jar | grep \.class | wc -l
 - Count source lines                      sloccount --multiproject
   * Note: found sloccount as most reliable comparing to cloc, ohcount
-- Get glibc version (1)                   ldd --version
+- Get glibc version (1)                   ldd --version | grep GLIBC
 - Get glibc version (2)                   apt-cache policy libc6
 - Get pthreads implementation (glibc)     getconf GNU_LIBPTHREAD_VERSION

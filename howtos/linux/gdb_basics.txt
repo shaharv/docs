@@ -5,46 +5,52 @@ From command line, run: $ gdb “exec to debug"
 
 Basics:
 
-   r                            - run
-   c                            - continue
+- Run                                     r
+- Continue                                c
 
 Breakpoints:
 
-   b <location>                 - place a breakpoint
-   rb ‘regexp’                  - break on all functions matching regexp (alias to 'rbreak')
-   d <N>                        - delete breakpoint number N
+- Place breakpint                         b <location>
+- Break on all functions matching regex   rb 'regexp'
+- Delete breakpoint #N                    d <N>
 
 Variables:
 
-   p 'var'                      - print value of variable var
+- Print variable value                    p 'var'
 
 Registers:
 
-   info registers eax           - print register value
-   info registers               - print all register values
+- Print register value (example: eax)     info registers eax
+- Print all register values               info registers
 
 Disassemble:
 
-   disassemble [func]           - show disassembly of specified function
-   x/50i 0xADDR                 - show 50 assembly instructions starting ADDR
+- Show disasm. of function                disassemble [func]
+- Show 50 instructions starting ADDR      x/50i 0xADDR
 
 Call stack:
 
-   info threads                 - display the call stack and threads information
+- Show call stack                         where
+- Move N places up the stack              up <N>
+- Move N places down the stack            down <N>
+- Show threads information                info threads
 
 Signals:
 
-   catch signal all             - break on any signal
+- Break on any signal                     catch signal all
+- Show the address where SIGSEGV occured  p $_siginfo._sifields._sigfault.si_addr
 
 Modify:
 
-   set {unsigned char}ADDR=0x90 - patch code address with "nop"
-   set {unsigned char}ADDR=0xC3 - patch code address with "retq"
+- Patch code address with "nop"           set {unsigned char}ADDR=0x90
+- Patch code address with "retq"          set {unsigned char}ADDR=0xC3
 
 Misc:
 
-   info inferior                - get pid of debugged process
-   set follow-fork-mode child   - follow forked child process
+- Pid of debugged process                 info inferior
+- Show all memory mappings (sections)     info proc mappings
+- Follow forked child process             set follow-fork-mode child
+- Set debug file folder                   set debug-file-directory /usr/lib/debug
 
 
 Useful Links
@@ -53,5 +59,45 @@ Useful Links
 - LLDB GDB comparison:
   http://lldb.llvm.org/lldb-gdb.html
 
+- GDB Technion course:
+  http://tx.technion.ac.il/doc/intel13/debugger/gdb/gdb.pdf
+
 - TrinityCore GDB guidelines:
   https://trinitycore.atlassian.net/wiki/display/tc/GDB
+
+- GDB Wiki FAQ:
+  https://sourceware.org/gdb/wiki/FAQ
+
+- Building and installing GDB:
+  https://ftp.gnu.org/old-gnu/Manuals/gdb/html_chapter/gdb_27.html
+
+- GDB dashboard:
+  https://github.com/cyrus-and/gdb-dashboard
+
+- Alpine Linux GDB build steps:
+
+  * find -name "config.cache" -delete
+  * apk add texinfo bison flex
+  * ./configure --disable-werror
+
+- Loading multiple symbol files in gdb:
+  https://stackoverflow.com/questions/20380204/how-to-load-multiple-symbol-files-in-gdb
+
+- Debugging stripped binaries:
+  https://felix.abecassis.me/2012/08/gdb-debugging-stripped-binaries
+
+- GDB cheat sheet:
+  https://darkdust.net/files/GDB%20Cheat%20Sheet.pdf
+
+- GDB signals:
+  https://sourceware.org/gdb/onlinedocs/gdb/Signals.html
+
+- GDB internals:
+  https://sourceware.org/gdb/wiki/Internals
+
+- Debugging the JDK with GDB:
+  https://neugens.wordpress.com/2015/02/26/debugging-the-jdk-with-gdb
+
+- How to use GDB to find what function a memory address corresponds to?
+  https://stackoverflow.com/questions/7639309/how-to-use-gdb-to-find-what-function-a-memory-address-corresponds-to
+

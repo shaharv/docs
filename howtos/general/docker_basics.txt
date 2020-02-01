@@ -7,7 +7,7 @@ Basics:
 - Run image                      sudo docker run -i -t uuid /bin/ash
 - List available images          sudo docker images
 - List running images            sudo docker ps
-- Connect to running container   sudo docker exec -i -t [image-id] /bin/ash
+- Connect to running container   sudo docker exec -i -t [container-id] /bin/ash
 
 Copy:
 
@@ -28,6 +28,7 @@ Cleanup:
 
 - Delete all containers          sudo docker rm $(sudo docker ps -a -q)
 - Delete all images              sudo docker rmi $(sudo docker images -q)
+- Total docker space usage       sudo docker system df
 
 Inspect:
 
@@ -38,9 +39,11 @@ Debug:
 
 - Run gdb capable docker         sudo docker run --cap-add=SYS_PTRACE --security-opt seccomp=unconfined
 
-Search:
+Search and stats:
 
 - List Dockerhub tags            wget -q https://registry.hub.docker.com/v1/repositories/<repo-name>/tags -O - | jq -r '.[].name'
+- Library summary in JSON fmt.   https://hub.docker.com/v2/repositories/library/<repo-name>/
+- Pull counts for all images     wget -q https://store.docker.com/api/content/v1/products/search?page_size=100\&q=\&source=verified\&type=image%2Cbundle -O - | jq '.'
 
 Misc:
 

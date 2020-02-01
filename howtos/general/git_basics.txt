@@ -12,7 +12,9 @@ Git cheat sheet
 - Display list of all staged and unstaged files    git status
 - List all local diffs                             git diff
 - List diffs from specified branch                 git diff <base-branch>
+- Diff of a specific file in branch                git diff <base-branch> <file-path>
 - List diffs from specified branch - filenames     git diff --name-only <base-branch>
+- Show all files in a commit                       git show --name-only <commit>
 
 - History of a specific file                       gitk filename
                                                    git log -p filename
@@ -46,6 +48,9 @@ Git cheat sheet
 - Checkout a specific git revision, file           git checkout <revhash> -- <filemask>
 - Checkout a specific file from another branch     git checkout <branch-name> -- <filepath>
 - Fix detached head                                git checkout <branch-name>
+- Branch and checkout                              git checkout -B <branch-name>
+- Checkout specific files                          git checkout -- "*.cpp"
+- Checkout all files under current path            git checkout .
 
 - Stash changes                                    git stash
 - Unstash the last stash                           git stash apply
@@ -56,6 +61,10 @@ Git cheat sheet
 - Remove unstaged files from folder - dry run      git clean -n
 - Remove unstaged folders from folder - dry run    git clean -n -d
 - Remove unstaged files from folder - for real     git clean -f
+
+- Create a new tag                                 git tag <tag-name>
+- Push a tag                                       git push origin <tag-name>
+- Clean up local tags deleted from origin          git tag -l | xargs git tag -d && git fetch --tags
 
 - Discard pending changes                          git reset
 - Discard only last unpushed commit                git reset HEAD~1
@@ -69,6 +78,8 @@ Git cheat sheet
 - Display git configuration settings               git config --list
 - Configure user name                              git config --global [--replace-all] user.name "User Name"
 - Configure user mail                              git config --global user.email user@domain.com
+- Configure pull to merge (disable rebase)         git config --global pull.rebase false
+                                                   git config --local pull.rebase false
 
 - Merge specified branch into current branch       git merge <branch-to-merge-from>
 - Abort failed merge                               git merge --abort
@@ -81,6 +92,9 @@ Git cheat sheet
 - Search source code                               git grep 'search string'
 
 - Clean up and optimize                            git gc
+
+- Update and checkout modules                      git submodule update --init --recursive
+- Clone repo with its submodules                   git clone --recursive
 
 
 Git setup tips

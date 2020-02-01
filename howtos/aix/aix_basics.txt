@@ -21,6 +21,7 @@ System:
 - Process viewer (similar to top)         topas
 - Performance monitoring                  nmon
 - Virtual and physical CPUs               lparstat -i | grep CPU
+- Digested number of cores                lparstat -i | grep "Maximum Physical CPUs" | sed 's/^.*: //'
 - Get libc version                        lslpp -l bos.rte.lib
 
 Debugging and diagnostics:
@@ -30,19 +31,27 @@ Debugging and diagnostics:
 - Dump stack                              procstack <pid>
 - Enable debug malloc                     MALLOCTYPE=debug
 - Configure debug malloc                  MALLOCDEBUG=validate_ptrs,postfree_checking,override_signal_handling
+- Dump debug symbols (XCoff64)            dump -tl -X64 mylib.so
 
 Management:
 
 - Login as superuser (root)               su
-- Increase quotas                         ulimit -d unlimited
+- Increase limits                         ulimit -d unlimited
+
+Package management:
+
+- List .rpm contents                      rpm -qlpv my.rpm
+- List installed rpm packages             rpm -qa
 
 Zip:
 
 - Extract all files from iso              https://gist.github.com/nextrevision/0d55e317341186a21d23
+- Gzip a tar file                         gzip my.tar
 
 Disk and files:
 
 - Find files                              find . -name '*.dmp'
+- Find and delete files                   find . -name "*.tar" -exec rm {} \;
 - Sort files by size in KB                du -ak . | sort -n
 - Folder size in KB                       du -sk <dir>
 - Free disk space in KB                   df -k
@@ -52,3 +61,24 @@ Disk and files:
 Misc:
 
 - Run processes without hangups           nohup <cmd> &
+
+Links:
+
+- IBM XL C/C++ Optimization and Programming Guide, V10.1
+  http://www-01.ibm.com/support/docview.wss?uid=swg27012864&aid=1
+
+- IBM XL C/C++ for AIX Compiler Reference, V13.1
+  http://www-01.ibm.com/support/docview.wss?uid=swg27041854&aid=1
+
+- Developing and Porting C and C++ Applications on AIX
+  http://www.redbooks.ibm.com/redbooks/pdfs/sg245674.pdf
+
+- IBM SDK for Java 6: Diagnostics Guide
+  https://www.ibm.com/support/knowledgecenter/SSYKE2_6.0.0/pdf/en/diag60.pdf
+
+- AIX Native Memory Problem Determination Techniques and Tools for WebSphere Application Server
+  http://www-01.ibm.com/support/docview.wss?uid=swg27036053&aid=1
+
+- WebSphere Application Server Performance Cookbook - May 2018
+  https://publib.boulder.ibm.com/httpserv/cookbook/WAS_Performance_Cookbook.pdf (edited)
+
