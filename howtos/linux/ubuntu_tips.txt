@@ -232,3 +232,4 @@ Misc:
   * Note: found sloccount as most reliable comparing to cloc, ohcount
 - Get glibc version (1)                   ldd --version
 - Get glibc version (2)                   apt-cache policy libc6
+- Get pthreads implementation (glibc)     getconf GNU_LIBPTHREAD_VERSION
