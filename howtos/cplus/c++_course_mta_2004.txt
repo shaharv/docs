@@ -1,0 +1,260 @@
+Object Oriented Design and C++ - Amir Kirsh, 2004
+-------------------------------------------------
+
+Chapter 2 - C++ and OOP
+-----------------------
+
+- Arose after the "Software Crisis" (early 70's)
+- OOP - data centric. Prodedural - function centric
+- Java vs. C++:
+  - No pointers - only references
+  - No global functions. main should be defined in one of the classes
+  - main should be declared static (so JVM could invoke it without instanciating
+    any class).
+  - No templates
+- Main OOP principles:
+  - Encapsulation
+  - Inheritance
+  - Polymorphism
+- C++ adds:
+  - Templates
+  - Exceptions
+
+Chapter 3 - Before Classes
+--------------------------
+
+- Function overloading
+- Function parameters:
+  - Default parameters - written in functions *prototype*
+  - Function parameters should be ordered by importance
+  - By reference vs. by value
+    - Prefer by ref. for not creating redundant copies
+- I/O:
+  - cin, cout
+  - They are classes (defined in iostream), overloading >> and <<
+- Memory allocation - new, delete
+
+Chapter 4 - Classes
+-------------------
+
+- class, data members, member functions
+- Access modifiers: private, protected, public
+- Data members should be always private (rare exceptions)
+- this keyword
+- Use const when possible
+- Object size = sum of sizes of its data members.
+  If no data members, size is usually 4 bytes (pointer size) - impl. dependant.
+
+Chapter 5 - C'tors and D'tors
+-----------------------------
+
+- For declaring array of objects, class must define a c'tor with
+  no parameters, or a default c'tor.
+- Default c'tor = a c'tor that *can* be called without arguments
+  (could be defined and have default parameters).
+- c'tor initialize line - *must* be used for:
+  - const data members
+  - object data members, which don't have default c'tor
+  - reference members (rare)
+- If c'tor takes exactly one parameter, it's possible to use '='.
+  For example: CPoint p = '@'
+- Copy c'tor:
+  - Constructs new object based on existing object
+  - If not defined, default copy c'tor is generated, which does shallow copying
+  - If defined, copy c'tor must handle all copying, since shallow copying no
+    longer performed by default
+  - Class could forbid copying by declaring a private copy c'tor
+  - If objects are passed by value (although not recommended), or returned from
+    a function, copy c'tor is invoked for creating a new object
+- Rule of 3/5/0:
+  - http://en.cppreference.com/w/cpp/language/rule_of_three
+  - Rule of 3:
+    "If a class requires a user-defined d'tor, a user-defined copy c'tor, or a
+     user-defined copy assignment operator, it almost certainly requires all 3.
+  - Rule of 5:
+    "Because the presence of a user-defined d'tor, copy-c'tor, or copy-assignment
+     operator prevents implicit definition of the move constructor and the move
+     assignment operator, any class for which move semantics are desirable,
+     has to declare all five special member functions."
+  - Rule of 0:
+    "Classes that have custom d'tors, copy/move c'tors or copy/move
+     assignment operators should deal exclusively with ownership (which
+     follows from the Single Responsibility Principle). Other classes should not
+     have custom d'tors, copy/move c'tors or copy/move assignment operators."
+     https://en.wikipedia.org/wiki/Single_responsibility_principle
+
+Chapter 6 - Data Structures
+---------------------------
+
+- Seperatation of:
+  - The data itself
+  - An element of a data structure
+  - The data structure
+
+Chapter 7 - Classes - More
+--------------------------
+
+- Auto casting
+- explicit keyword - use for preveting implicit casting and construction
+- Using const:
+  - For passing objects by ref, and not changing their contents
+  - For declaring member function that don't change data members
+  - Note: const can be used only for member functions (not global functions)
+- mutable - for allowing modification of members of const objects
+- static data members:
+  - Not counted in object size, since it's common to all class objects
+  - Could serve as default parameter value, e.g. A(int i=myStatic)
+  - Could be acccess with no need for object, using static member function
+- friend function:
+  - A public function that have access to private members of the class
+- friend class:
+  - Can access class privates.
+- Nested classes, nested enums
+- Namespaces
+
+Chapter 8 - Operator Overloading
+--------------------------------
+
+- Operator types:
+  - Arithmetic: + - * / % ++ --     (+= -=   ...)
+  - Bitwise:    >> << & | ~ ^       (>>= <<= ...)
+  - Conditions: == > < >= <= && ||
+  - Casting
+  - Others:     = () [] * -> , ! new delete
+- Overload only when operator operation is clear, else use a plain function
+- The operator should work same as of the basic types (i.e. ints), e.g. return
+  value for allowing a=b=c=d, etc.
+- Efficiency aspects:
+  - Object parameters - always by ref, const ref if applicable
+  - Returning a local object - by val, as temp. object in the return stmt
+  - Returning parameter object - by ref
+- Unary/Binary operators
+- Operator overloading could be done via global functions, that take object
+  parameters, or member functions:
+  - If a global function, friend is preferred (to access privates +
+    declare in the class) [Note: friend is added to prototype, not to decl)
+  - If a global function, need a first extra parameter for the activating
+    object (to operate similar to this in member function operator)
+- Assignment operator:
+  - Important when class contains dynamic allocations/resources. If not impl.
+    then default shallow copy is performed
+  - Must be impl. as a member function
+  - Must return value for allowing multiple assignment
+  - If choosing to not impl. the = operator, need to declare it as private, for
+    preventing it from being used
+- Overloading &&, ||:
+  - Short circuit functionality is expected: A && B -> evaluate B only if A
+    evaluates to True. https://en.wikipedia.org/wiki/Short-circuit_evaluation
+  - With C++98, B is always evaluated before entering the operator, so short
+    circuit functionality couldn't be impl. Therefore, impl. && and || with
+    C++98 is discouraged.
+  - C++11 fixes this: A && B is guaranteed to be evaluated left-to-right. A
+    converted to bool, then evaluated, then B converted to bool.
+  - http://stackoverflow.com/questions/35918735/short-circuit-evaluation-on-c-logical-and-operators
+- Overloading ,:
+  - http://wiki.c2.com/?OverloadingCommaOperator
+  - http://stackoverflow.com/questions/5602112/when-to-overload-the-comma-operator
+- Overloading -> *:
+  - Useful for impl. smart pointers. See:
+    https://en.wikipedia.org/wiki/Smart_pointer
+    https://msdn.microsoft.com/en-us/library/hh279674.aspx
+  - Operator -> overloading semantics:
+    http://stackoverflow.com/questions/10677804/how-arrow-operator-overloading-works-internally-in-c
+
+Chapter 9 - Inheritance
+-----------------------
+
+- Purpose:
+  - Code reuse
+  - Describing similar entities using a common base
+  - Extending existing known working functionality
+- Base class function and data members:
+  - Derived class inherits all members of the base class
+  - Derived class can add data members and functions, and override functions
+    of the base class
+  - Base class functions could be called from derived class functions using
+    Base::function().
+- C'tor call order in derived class object creation:
+  - Base class c'tor
+  - Calling c'tors of class data members of the derived class
+  - Derived class c'tor
+- Passing parameters to the base class c'tor - only via derived c'tor init line
+- The derived c'tor init line determine which base class c'tor will be called
+- The = operator is not inherited from the base class. If derived class doesn't
+  impl. =, default = will be used (shallow copy), and calling base class =
+  operator for copying base class members.
+- Accessing base data members:
+  - All base data members exist in the derived class, but not necasserily
+    accessible. Base members that aren't accessible/needed in the derived
+    class should probably be impl. in the derived class instead.
+- Direct access to base class functions:
+  - Hiding - if derived class defines a member with same name of a base class
+    member, it hides the base class member (it could still be accessed with
+    Base::member)
+    * For calling a global function that have same name as member function:
+      with ::function
+  - Permission - private base members aren't directly accessible from the
+    derived class (could be via base class getters/setters etc).
+- Permissions:
+  - private:   only accessed from within class
+  - public:    for the world
+  - protected: accessed by the class and its derived classes
+- Inheritance permissions:
+  - class Derived1 : public Base - "A is a kind of B"
+  - private/protected inheritance - for restricting access to the base class
+    members from classes deriving from our class (derived1). Doesn't affect
+    Derived1 - but class deriving from it
+- Multiple inheritance:
+  - Class derived from several base classes
+  - Most useful for applying multiple interfaces to a class, and for mixin
+    classes. Generally very good reason is needed, otherwise avoid. See:
+    http://stackoverflow.com/questions/573913/a-use-for-multiple-inheritance
+    https://en.wikipedia.org/wiki/Mixin
+    https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem
+  - In diamond inheriance A <- B, C -< D, normally D holds two copies of A
+    base object, one of B and one of C. This could be solved by using
+    virtual inheritance. If B and C are virutually inherited from A, then
+    D will have only one copy of each of A's members.
+
+- Inheritance - Extra:
+  - In a derived class, when impl. member function overriding base functions:
+    * Use the 'override' keyword.
+      "In a member function declaration or definition, override ensures that
+       the function is virtual and is overriding a virtual function from the
+       base class. The program is ill-formed (a compile-time error is generated)
+       if this is not true."
+       http://en.cppreference.com/w/cpp/language/override
+       https://www.linkedin.com/pulse/c11-reason-why-you-should-use-override-keyword-alexander-serebryakov
+       http://stackoverflow.com/questions/18198314/what-is-the-override-keyword-in-c-used-for
+    * A good practice is to specify "virtual" also in the derived class,
+      although it is implied from the base class virtual function, for clarity.
+
+Links summary
+-------------
+
+- Concepts and terms:
+  http://en.cppreference.com/w/cpp/language/rule_of_three
+  https://en.wikipedia.org/wiki/Resource_acquisition_is_initialization
+  https://en.wikipedia.org/wiki/Single_responsibility_principle
+  https://en.wikipedia.org/wiki/Short-circuit_evaluation
+  https://en.wikipedia.org/wiki/Argument-dependent_name_lookup
+
+- Operator overloading:
+  http://stackoverflow.com/questions/35918735/short-circuit-evaluation-on-c-logical-and-operators
+  http://wiki.c2.com/?OverloadingCommaOperator
+  http://stackoverflow.com/questions/5602112/when-to-overload-the-comma-operator
+
+- Smart pointers:
+  https://en.wikipedia.org/wiki/Smart_pointer
+  https://msdn.microsoft.com/en-us/library/hh279674.aspx
+
+- Inheritance:
+  http://stackoverflow.com/questions/573913/a-use-for-multiple-inheritance
+  https://en.wikipedia.org/wiki/Mixin
+  https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem
+
+- Override specifier:
+  http://en.cppreference.com/w/cpp/language/override
+  https://www.linkedin.com/pulse/c11-reason-why-you-should-use-override-keyword-alexander-serebryakov
+  http://stackoverflow.com/questions/18198314/what-is-the-override-keyword-in-c-used-for
+

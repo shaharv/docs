@@ -1,0 +1,120 @@
+Smart Pointers
+==============
+
+Reading
+-------
+
+Meyers, Scott. Effective modern C++: 42 specific ways to improve your use 
+of C++ 11 and C++ 14. " O'Reilly Media, Inc.", 2014.
+
+Smart Pointers
+--------------
+
+- Smart Pointers in C++ / Francesco Casalegno
+  https://www.slideshare.net/FrancescoCasalegno1/smart-pointers-in-c
+
+- Modern C++ introduces new types for pointer safety:
+  - std::unique_ptr (since C++11)
+  - std::shared_ptr (from C++11)
+  - std::weak_ptr (from C++11)
+
+- Note: std::auto_ptr (from C++98) is *deprecated* since C++11 and removed
+  from C++14.
+
+Key takeaway:
+
+- Use std::unique_ptr to implement exclusive ownership and transfer it using
+  std::move.
+- Use std::make_unique (factory) whenever possible in order to avoid memory 
+  leaks and provide exception safety.
+
+std::unique_ptr:
+
+- A unique_ptr u provides exclusive ownership for the pointer p that it holds. 
+  When u is destroyed, the object pointed by p is disposed using p ’s 
+  associated deleter (custom of default delete/delete[]).
+- Important features:
+  * template specialization unique_prt<T[]> to handle dynamic arrays
+  * copy from lvalue is deleted, copy from rvalue is implemented using move semantics
+    so that it can suitably work in a STL container
+  * custom deleter can be provided if needed
+  * pretty simple wrapper implementation, so no overhead in memory 
+    (unless custom deleter) or runtime
+  * easy conversion to shared_ptr
+- Observes:
+  * pointer get() const;
+    returns a pointer to the managed object
+  * deleter& get_deleter();
+    returns a reference to the deleter object used for the disposal of the 
+    managed object
+- Modifiers
+  * pointer release();
+    releases ownership by returning the managed object + setting the internal pointer 
+    to nullptr
+  * void reset( pointer ptr = pointer() );
+    replaces the internal pointer with ptr, and disposes of the previously owned object 
+    by calling the deleter
+
+std::shared_ptr:
+
+- A shared_ptr provides shared ownership: many pointers may own the same object
+  and the last one to survive is responsible of its disposal through the deleter.
+- This garbage collection mechanism is based on a reference counter contained in
+  a control block. Each new shared owner copies the pointer to the control block 
+  and increases the count by 1.
+- non-trivial implementation and memory overhead (typically 2 pointers: 
+  object itself + control block)
+
+std::weak_ptr:
+
+- A weak_ptr tracks without owning a pointer to an object managed by a shared_ptr. 
+  It implements weak ownership: the object needs to be accessed only if still 
+  exists, and it may be deleted by others. If we need to access the object we 
+  have to convert it into a shared_ptr.
+- Used as observer to determine if the pointer is dangling before converting to 
+  shared_ptr and using it.
+- Important features:
+  * cannot directly access the pointed object: *p, p->val, or p[idx] are not 
+    implemented!
+  * convert to shared_ptr (after check for dangling!) when you need to access 
+    object
+  * implemented very similar to shared_ptr , but no contribution to ref_counter 
+    update
+  * same memory overhead as shared_ptr, and performance penalty for accessing 
+    due to conversion
+
+Avoid new, use factories:
+
+- Using std::unique_ptr and std::shared_ptr avoid memory leaks through 
+  automatic life-time management and garbage collection. Basically, we do not 
+  need to call delete any more!
+- However, we still need to call new operator when we call the constructor. 
+  This is bad for 2 reasons:
+  * Since function arguments can be evaluated in any order, if throw() occurs 
+    we may have a leak
+  * For shared_ptr, calling the c-tor with new inside causes a double allocation
+    (one for the object itself, one for the control block) and therefore time 
+    penalty.
+- C++ provides us with factories that fix this issue:
+  - std::make_unique (from C++14, but implementation is trivial)
+  - std::make_shared (from C++11)
+  - std::allocate_shared (from C++11, same as make_shared but with custom 
+    memory allocator)
+
+Do we still need raw pointers?
+
+- There are still cases when raw pointers are needed:
+  * when the pointer really just mean an address, not ownership of an object
+  * to implement iterators
+  * to handle an array decaying into a pointer
+  * when working with legacy code (e.g. pre-C++11)
+  * when passing arguments by address to modify their content
+
+More links
+----------
+
+- https://en.wikipedia.org/wiki/Smart_pointer
+  https://msdn.microsoft.com/en-us/library/hh279674.aspx
+  https://isocpp.org/wiki/faq/containers#container-of-smart-ptr
+
+

@@ -1,0 +1,136 @@
+Useful C++ Knowledge
+====================
+
+Using "using namespace std"
+---------------------------
+
+- http://stackoverflow.com/questions/1452721/why-is-using-namespace-std-considered-bad-practice
+- Conclusion:
+  - Never inside headers
+  - Possible in source files
+    - Pro: not needing to repeat std:: qualification
+    - Con: less clear about whether the std symbol or other symbol is used
+- Prefer using function local using definitions to allow ADL: 
+  using std::cout
+
+The Copy-swap idiom (also move-swap)
+------------------------------------
+
+- http://stackoverflow.com/questions/3279543/what-is-the-copy-and-swap-idiom
+
+- Followups:
+  http://stackoverflow.com/questions/5695548/public-friend-swap-member-function
+  http://stackoverflow.com/questions/18848215/how-to-use-noexcept-in-assignment-operator-with-copy-and-swap-idiom?rq=1
+
+- Useful for implementing the copy assignment operator and move c'tor, in an
+  exception safe way, and avoiding code duplication, in classes managing
+  a resource.
+- Note: using this idiom the copy assignment operator is actually also a move
+  assignment operator (since parameter is passed by value)
+- Requires: d'tor, copy c'tor, and custom swap function
+- Key notes:
+  - copy assignment opereator parameter is to be taken *by value*, for 
+    the compiler to construct a copy
+  - copy assignment operator may be declared noexcept, since when the
+    operator is entered it is guarenteed that copy construction has succeeeded,
+    and swap itself is non throwing (similarily, swap may be declared noexcept)
+  - our swap is to be declared friend, for enabling ADL
+
+  class MyClass
+  {
+  public:
+    // ...
+    // Copy & Swap idiom
+    MyClass& operator= (MyClass copy) noexcept {
+      using std::swap;
+      swap(*this, copy);
+      return *this;
+    }
+
+    friend void swap(MyClass& first, MyClass& second) noexcept
+    {
+        using std::swap;
+        swap(first.mSize, second.mSize); 
+        swap(first.mArray, second.mArray);
+    }
+    // ...
+  };
+
+Post vs. Pre Increment
+----------------------
+
+- Always use ++i (pre increment) where possible
+- http://stackoverflow.com/questions/24901/is-there-a-performance-difference-between-i-and-i-in-c
+- Since, i++ creates an object temp copy - needs to increment and then 
+  return the previous value of i.
+
+References vs. Pointers
+-----------------------
+
+- http://stackoverflow.com/questions/7058339/when-to-use-references-vs-pointers
+
+- "My rule of thumb is:
+
+  * Use pointers for outgoing or in/out parameters. 
+    So it can be seen that the value is going to be changed. (You must use &)
+  * Use pointers if NULL parameter is acceptable value. 
+    (Make sure it's const if it's an incoming parameter)
+  * Use pointers or smart pointers when returning a newly created object.
+  * Use pointers or smart pointers as struct or class members instead of references.
+  * Use references for incoming parameter if it cannot be NULL and is 
+    not a primitive type (const T&).
+  * Use references for aliasing (eg. int &current = someArray[i])."
+ 
+General Links
+-------------
+
+- C++ operator precedence:
+  http://en.cppreference.com/w/cpp/language/operator_precedence
+
+- Should we use noexcept:
+  http://stackoverflow.com/questions/10787766/when-should-i-really-use-noexcept
+  https://xinhuang.github.io/posts/2013-12-31-when-to-use-noexcept-and-when-to-not.html
+
+- Standard library containers:
+  http://en.cppreference.com/w/cpp/container
+
+- File I/O:
+  http://www.cplusplus.com/doc/tutorial/files
+  http://www.cplusplus.com/reference/fstream/ifstream
+
+- Initialization of data members in definition line:
+  http://stackoverflow.com/questions/17430377/error-when-using-in-class-initialization-of-non-static-data-member-and-nested-cl
+
+- Initialization of const data members:
+  http://stackoverflow.com/questions/14495536/how-to-initialize-const-member-variable-in-a-class-c
+
+- std::to_string (C++11):
+  http://www.cplusplus.com/reference/string/to_string
+
+- std::vector:
+  http://www.cplusplus.com/reference/vector/vector
+  http://www.codeguru.com/cpp/cpp/cpp_mfc/stl/article.php/c4027/C-Tutorial-A-Beginners-Guide-to-stdvector-Part-1.htm
+  http://stackoverflow.com/questions/922360/why-cant-i-make-a-vector-of-references
+  http://stackoverflow.com/questions/4424579/stdvector-versus-stdarray-in-c
+
+- std::is_base_of:
+  http://en.cppreference.com/w/cpp/types/is_base_of
+
+- Duck typing:
+  https://en.wikipedia.org/wiki/Duck_typing
+
+- Transitioning to Modern C++ - Syllabus only
+  http://www.oreilly.com/live-training/transition-to-modern-c.html
+
+- High Integrity C++ Coding Standard
+  http://www.codingstandard.com
+
+- C++ Programming Style Guidelines
+  http://geosoft.no/development/cppstyle.html
+
+- The virtual table
+  https://en.wikipedia.org/wiki/Virtual_method_table
+
+- Can Qt's moc (meta object compiler) be replaced by C++ reflection? 
+  https://woboq.com/blog/reflection-in-cpp-and-qt-moc.html
+

@@ -1,0 +1,71 @@
+Modern C++
+==========
+
+Move semantics
+
+- http://stackoverflow.com/questions/3106110/what-are-move-semantics
+
+lambdas
+
+- http://www.cprogramming.com/c++11/c++11-lambda-closures.html
+
+defaulting the special member functions
+
+- http://en.cppreference.com/w/cpp/language/member_functions#Special_member_functions
+
+auto and decltype
+
+- http://thbecker.net/articles/auto_and_decltype/section_01.html
+  http://www.cprogramming.com/c++11/c++11-auto-decltype-return-value-after-function.html
+
+Trailing return types and type deduction
+
+- https://www.ibm.com/developerworks/community/blogs/5894415f-be62-4bc0-81c5-3956e82276f3/entry/ introduction_to_the_c_11_feature_trailing_return_types?lang=en
+  http://stackoverflow.com/questions/11215227/should-the-trailing-return-type-syntax-style-become-the-default-for-new-c11-pr
+  http://www.codingstandard.com/rule/7-1-7-use-a-trailing-return-type-in-preference-to-type-disambiguation-using-typename
+  https://arne-mertz.de/2016/11/trailing-return-types-everywhere
+
+decltype(auto) - c++14
+
+- http://stackoverflow.com/questions/24109737/what-are-some-uses-of-decltypeauto
+  http://stackoverflow.com/questions/21369113/what-is-the-difference-between-auto-and-decltypeauto-when-returning-from-a-fun
+
+Deducing return types
+
+- auto           - only by value (reference, const, volatile qualifiers ignored)
+- decltype(auto) - value/reference preserved
+- trailing return types
+
+SFINAE
+
+- https://en.wikipedia.org/wiki/Substitution_failure_is_not_an_error
+
+RTTI
+
+- https://en.wikipedia.org/wiki/Run-time_type_information
+  http://jackieokay.com/2017/04/13/reflection1.html
+
+- dynamic_cast<>
+  http://www.bogotobogo.com/cplusplus/dynamic_cast.php
+  http://stackoverflow.com/questions/3314944/how-is-dynamic-cast-typically-implemented
+  http://stackoverflow.com/questions/20798214/how-dynamic-cast-works-internally
+
+- typeid operator
+  std::type_info
+
+Functor
+
+- https://en.m.wikipedia.org/wiki/Function_object
+
+std::variant
+
+- Variants are modern C++ replacements for unions
+- Implementing variant Visitation Using Lambdas - Vittorio Romeo [ACCU 2017]
+  https://www.youtube.com/watch?v=mqei4JJRQ7s
+
+std::function
+
+- std::function is modern C++ replacement for function pointers
+- http://en.cppreference.com/w/cpp/utility/functional/function
+  http://stackoverflow.com/questions/25848690/should-i-use-stdfunction-or-a-function-pointer-in-c
+
