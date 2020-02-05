@@ -97,6 +97,7 @@ Git cheat sheet
 - Update and checkout modules                      git submodule update --init --recursive
 - Clone repo with its submodules                   git clone --recursive
 
+- Chmod file (useful for Windows partitions)       git update-index --add --chmod=-x <file-path>
 
 Git setup tips
 --------------
