@@ -1,6 +1,12 @@
 Interesting and Useful Links
 ============================
 
+Computer Science
+----------------
+
+- Computer Science from the Bottom Up
+  https://www.bottomupcs.com
+
 LLVM/Clang
 ----------
 
@@ -19,8 +25,44 @@ Compilers
 - A (C) Compiler Writing Journey
   https://github.com/DoctorWkt/acwj
 
+CPU
+---
+
+- Gallery of Processor Cache Effects
+  http://igoro.com/archive/gallery-of-processor-cache-effects
+
+C++
+---
+
+- The Horror In The Standard Library
+  https://web.archive.org/web/20171227182929/https://www.zerotier.com/blog/2017-05-05-theleak.shtml
+
+- A Guide to Undefined Behavior in C and C++, Part 1
+  https://blog.regehr.org/archives/213
+
+Linux
+-----
+
+- ExplainShell.com
+  https://explainshell.com/explain?cmd=rm+-rf+%2F
+
+- Exploiting Alpine Linux: From vulnerability discovery to code execution
+  https://www.twistlock.com/wp-content/uploads/2018/10/Exploiting-Alpine-Linux-From-vulnerability-discovery-to-code-execution-2.pdf
+
 Java
 ----
+
+- JVM Anatomy Quarks
+  https://shipilev.net/jvm/anatomy-quarks
+
+- Plumbr Java Garbage Collection handbook
+  https://plumbr.io/java-garbage-collection-handbook
+
+- Java Performance Tuning - Raw Collection Of Tips
+  http://www.javaperformancetuning.com/tips/rawtips.shtml
+
+- Master Thesis: Code Cache Optimizations for Dynamically Compiled Languages
+  http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.869.3315&rep=rep1&type=pdf
 
 - Comparison of Java and C++
   https://en.wikipedia.org/wiki/Comparison_of_Java_and_C%2B%2B
@@ -32,6 +74,12 @@ Java
 - Do you really need instanceof?
   http://letstalkaboutjava.blogspot.co.il/2016/10/do-you-really-need-instanceof.html
   
+Git
+---
+
+- Why Google Stores Billions of Lines of Code in a Single Repository
+  https://cacm.acm.org/magazines/2016/7/204032-why-google-stores-billions-of-lines-of-code-in-a-single-repository/fulltext
+
 Security
 --------
   
@@ -64,4 +112,10 @@ UML
 - UML Diagrams - WikiPedia:
   https://en.wikipedia.org/wiki/Activity_diagram (see page bottom for all types)
   https://en.wikipedia.org/wiki/Unified_Modeling_Language
+
+Misc
+----
+
+- Original MS-DOS Source Code
+  https://github.com/Microsoft/MS-DOS
 
