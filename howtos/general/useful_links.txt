@@ -19,6 +19,9 @@ Build
 - Ninja - by Evan Martin
   http://www.aosabook.org/en/posa/ninja.html
 
+- Everything You Never Wanted to Know About CMake
+  https://izzys.casa/2019/02/everything-you-never-wanted-to-know-about-cmake/
+
 Compilers
 ---------
 
@@ -116,6 +119,24 @@ UML
 Misc
 ----
 
+- "30 seconds of code" - short code snippets for all your development needs
+  https://github.com/30-seconds
+
+- The definitive list of lists (of lists) curated on GitHub and elsewhere
+  https://github.com/jnv/lists
+
 - Original MS-DOS Source Code
   https://github.com/Microsoft/MS-DOS
+
+Fun
+---
+
+- Jenkins developers accidentally do "git push --force" to over 150 repos on github
+  https://news.ycombinator.com/item?id=6713742
+
+- The Worst API Ever Made (ETW)
+  https://caseymuratori.com/blog_0025
+
+- Counting Bugs in Windows Calculator
+  https://m.habr.com/en/company/pvs-studio/blog/443400/
 
