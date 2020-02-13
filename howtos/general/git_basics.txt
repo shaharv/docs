@@ -84,6 +84,7 @@ Git cheat sheet
 
 - Merge specified branch into current branch       git merge <branch-to-merge-from>
 - Abort failed merge                               git merge --abort
+- Continue merge after conflicts are resolved      git merge --continue
 - Merge after pulling the latest                   git pull origin <branch-to-merge-from>
 
 - Cherry pick a merge commit                       git cherry-pick -m1 -x <sha1>
