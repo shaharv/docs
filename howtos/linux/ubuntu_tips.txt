@@ -151,10 +151,12 @@ Network:
 - Restart network connection              sudo service network-manager restart
 - Restart SSHD service                    sudo pkill sshd
 
-Make:
+Build:
 
-- Verbose build (any make impl.)          make SHELL='sh -x'
-- Verbose build (GNU make)                make VERBOSE=1
+- Make: verbose build (any make impl.)    make SHELL='sh -x'
+- Make: verbose build (GNU make)          make VERBOSE=1
+- LLVM/Clang: install from package        sudo apt-get install clang-9 libstdc++-9-dev
+- LLVM/Clang: install latest              sudo bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"
 
 Linking:
 
