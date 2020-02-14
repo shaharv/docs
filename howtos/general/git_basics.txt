@@ -100,6 +100,12 @@ Git cheat sheet
 
 - Chmod file (useful for Windows partitions)       git update-index --add --chmod=-x <file-path>
 
+Github
+------
+
+- Ignore whitespace in PR                           Append ?w=1 to PR link
+- See all subscribed issues (commented, assigned)   https://github.com/notifications/subscriptions
+
 Git setup tips
 --------------
 
@@ -112,15 +118,8 @@ Git setup tips
   git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
   (https://stackoverflow.com/questions/10564/how-can-i-set-up-an-editor-to-work-with-git-on-windows)
 
-
-Github
-------
-
-- Ignore whitespace in PR                           Append ?w=1 to PR link
-
-
-Git reading
------------
+Git links
+---------
 
 - Atlassian - What is Git:
   https://www.atlassian.com/git/tutorials/what-is-git
