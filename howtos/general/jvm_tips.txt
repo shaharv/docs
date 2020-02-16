@@ -19,6 +19,7 @@ JIT:
 Debugging:
 
 - Print loaded classes             -verbose:class
+- Log JNI calls                    -verbose:jni
 - Dump stacks of java threads      sudo jstack -l -m <pid>
 
 Jars:
