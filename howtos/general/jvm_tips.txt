@@ -1,3 +1,6 @@
+JVM Useful Tips
+---------------
+
 HotSpot JVM:
 
 - Print internal flags             java -XX:+UnlockDiagnosticVMOptions -XX:+PrintFlagsFinal -version
@@ -17,6 +20,14 @@ Debugging:
 
 - Print loaded classes             -verbose:class
 - Dump stacks of java threads      sudo jstack -l -m <pid>
+
+Jars:
+
+- Count classes in a jar file      unzip -l my.jar | grep \.class | wc -l
+
+Modules:
+
+- Extract module class files       jimage extract modules
 
 Links:
 
