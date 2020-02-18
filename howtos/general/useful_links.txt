@@ -1,6 +1,18 @@
 Interesting and Useful Links
 ============================
 
+Online Compilers/Interpreters
+-----------------------------
+
+- TIO - Try It Online
+  https://tio.run
+
+- Compiler Explorer
+  https://godbolt.org
+
+- Dot Net Fiddle
+  http://dotnetfiddle.net
+
 Computer Science
 ----------------
 
@@ -22,6 +34,12 @@ Build
 - Everything You Never Wanted to Know About CMake
   https://izzys.casa/2019/02/everything-you-never-wanted-to-know-about-cmake/
 
+- Creating Portable Binaries on Linux (Steve Hanov's Blog)
+  http://stevehanov.ca/blog/index.php?id=97
+
+- Creating Portable Linux Binaries (Insane Coding Blog)
+  http://insanecoding.blogspot.com/2012/07/creating-portable-linux-binaries.html
+
 Compilers
 ---------
 
@@ -34,6 +52,9 @@ CPU
 - Gallery of Processor Cache Effects
   http://igoro.com/archive/gallery-of-processor-cache-effects
 
+- Meltdown and Spectre
+  https://spectreattack.com
+
 C++
 ---
 
@@ -42,6 +63,12 @@ C++
 
 - A Guide to Undefined Behavior in C and C++, Part 1
   https://blog.regehr.org/archives/213
+
+Visual Studio
+-------------
+
+- STL Fixes In VS 2017 RTM
+  https://blogs.msdn.microsoft.com/vcblog/2017/02/06/stl-fixes-in-vs-2017-rtm
 
 Linux
 -----
@@ -76,6 +103,9 @@ Java
 
 - Do you really need instanceof?
   http://letstalkaboutjava.blogspot.co.il/2016/10/do-you-really-need-instanceof.html
+
+- Java 7 Bytecode Verifier: Huge backward step for the JVM
+  http://chrononsystems.com/blog/java-7-design-flaw-leads-to-huge-backward-step-for-the-jvm
   
 Git
 ---
@@ -92,6 +122,13 @@ Security
 - A Design for Building an IPS (Intrusion Prevention System)
   Using Open Source Products
   https://www.sans.org/reading-room/whitepapers/intrusion/design-building-ips-open-source-products-1662
+
+Testing
+-------
+
+- Why Most Unit Testing is Waste + Response
+  https://pythontesting.net/strategy/why-most-unit-testing-is-waste
+  https://henrikwarne.com/2014/09/04/a-response-to-why-most-unit-testing-is-waste
 
 UML
 ---
@@ -139,4 +176,7 @@ Fun
 
 - Counting Bugs in Windows Calculator
   https://m.habr.com/en/company/pvs-studio/blog/443400/
+
+- Unity WebGL Flappy Bird
+  http://unitywebgl.com
 
