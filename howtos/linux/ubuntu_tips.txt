@@ -129,6 +129,7 @@ Permissions:
 
 - Read+write permissions to me only       chmod 400 file
 - Give execute permission                 chmod +x file
+- The Chmod Calculator                    https://chmod-calculator.com
 
 Date and time:
 
