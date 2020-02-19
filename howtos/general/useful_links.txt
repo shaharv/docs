@@ -46,6 +46,12 @@ Compilers
 - A (C) Compiler Writing Journey
   https://github.com/DoctorWkt/acwj
 
+- How Much Does a Compiler Cost?
+  https://www.embecosm.com/2018/02/26/how-much-does-a-compiler-cost
+
+- A Performance-Based Comparison of C/C++ Compilers (2017)
+  https://colfaxresearch.com/compiler-comparison
+
 CPU
 ---
 
@@ -63,6 +69,9 @@ C++
 
 - A Guide to Undefined Behavior in C and C++, Part 1
   https://blog.regehr.org/archives/213
+
+- Programmatic access to the call stack in C++ (Eli Bendersky's website)
+  https://eli.thegreenplace.net/2015/programmatic-access-to-the-call-stack-in-c
 
 Visual Studio
 -------------
@@ -106,7 +115,10 @@ Java
 
 - Java 7 Bytecode Verifier: Huge backward step for the JVM
   http://chrononsystems.com/blog/java-7-design-flaw-leads-to-huge-backward-step-for-the-jvm
-  
+
+- Code Cache Tuning (Oracle):
+  https://docs.oracle.com/javase/8/embedded/develop-apps-platforms/codecache.htm
+
 Git
 ---
 
