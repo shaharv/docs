@@ -50,6 +50,10 @@ Links:
 - IBM J9 Class Sharing:
   https://www.ibm.com/developerworks/java/library/j-ibmjava4/
 
+- JMH - Java Microbenchmark Harness:
+  http://tutorials.jenkov.com/java-performance/jmh.html
+
+
 
   ¯\_( ͡° ͜ʖ ͡°)_/¯                   ¯\_(ツ)_/¯
 
