@@ -3,22 +3,25 @@ Ubuntu First Steps
 
 1. Update system packages:
 
-   $ sudo apt update
-   $ sudo apt upgrade
+   $ sudo apt update && sudo apt upgrade
 
-2. Configure git:
+2. Install latest git:
 
-   $ sudo apt-get install git
+   $ sudo add-apt-repository ppa:git-core/ppa
+   $ apt update && apt-get install git
+
+3. Configure git:
+
    $ git config --global user.name username
    $ git config --global user.email user@domain.com
 
-3. ~/.bashrc convinience updates (append at EOF):
+4. ~/.bashrc convinience updates (append at EOF):
 
    force_color_prompt=yes
    bind TAB:menu-complete
    alias cd..="cd .."
 
-4. Disable sudo password for sudoers:
+5. Disable sudo password for sudoers:
 
    - $ sudo visudo
 
@@ -27,21 +30,21 @@ Ubuntu First Steps
      %sudo   ALL=(ALL:ALL) ALL
      shahar  ALL=NOPASSWD: ALL
 
-5. Install basic packages:
+6. Install basic packages:
 
   $ sudo apt-get install \
       audacious \
       cmake \
       coreutils \
       dos2unix \
-      git \
       gitk \
       meld \
       ninja-build \
       python-pip python3-pip \
       tree
 
-6. Add toolchain repository:
+7. Add toolchain repository:
 
    $ sudo add-apt-repository ppa:ubuntu-toolchain-r/test
    $ sudo apt update
+
