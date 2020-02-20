@@ -1,6 +1,8 @@
 Git cheat sheet
 ---------------
 
+- Install latest git version                       add-apt-repository ppa:git-core/ppa && apt update && apt-get install git
+
 - Basic git commands, files                        add, rm, mv
 - Basic git commands, update                       commit, push, pull
 
