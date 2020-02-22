@@ -19,6 +19,9 @@ Computer Science
 - Computer Science from the Bottom Up
   https://www.bottomupcs.com
 
+- Hackers Delight Second Edition (PDF)
+  https://github.com/lancetw/ebook-1/blob/master/02_algorithm/Hacker's%20Delight%202nd%20Edition.pdf
+
 LLVM/Clang
 ----------
 
@@ -63,6 +66,9 @@ CPU
 
 C++
 ---
+
+- C++03 standard draft
+  https://cs.nyu.edu/courses/fall11/CSCI-GA.2110-003/documents/c++2003std.pdf
 
 - The Horror In The Standard Library
   https://web.archive.org/web/20171227182929/https://www.zerotier.com/blog/2017-05-05-theleak.shtml
