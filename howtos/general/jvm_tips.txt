@@ -53,6 +53,11 @@ Links:
 - JMH - Java Microbenchmark Harness:
   http://tutorials.jenkov.com/java-performance/jmh.html
 
+- JNI Tips - Android Developers:
+  https://developer.android.com/training/articles/perf-jni.html
+
+- The JNI Cookbook:
+  http://jnicookbook.owsiak.org
 
 
   ¯\_( ͡° ͜ʖ ͡°)_/¯                   ¯\_(ツ)_/¯
