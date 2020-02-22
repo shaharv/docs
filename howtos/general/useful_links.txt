@@ -1,11 +1,26 @@
 Interesting and Useful Links
 ============================
 
+Online Compilers/Interpreters
+-----------------------------
+
+- TIO - Try It Online
+  https://tio.run
+
+- Compiler Explorer
+  https://godbolt.org
+
+- Dot Net Fiddle
+  http://dotnetfiddle.net
+
 Computer Science
 ----------------
 
 - Computer Science from the Bottom Up
   https://www.bottomupcs.com
+
+- Hackers Delight Second Edition (PDF)
+  https://github.com/lancetw/ebook-1/blob/master/02_algorithm/Hacker's%20Delight%202nd%20Edition.pdf
 
 LLVM/Clang
 ----------
@@ -22,11 +37,23 @@ Build
 - Everything You Never Wanted to Know About CMake
   https://izzys.casa/2019/02/everything-you-never-wanted-to-know-about-cmake/
 
+- Creating Portable Binaries on Linux (Steve Hanov's Blog)
+  http://stevehanov.ca/blog/index.php?id=97
+
+- Creating Portable Linux Binaries (Insane Coding Blog)
+  http://insanecoding.blogspot.com/2012/07/creating-portable-linux-binaries.html
+
 Compilers
 ---------
 
 - A (C) Compiler Writing Journey
   https://github.com/DoctorWkt/acwj
+
+- How Much Does a Compiler Cost?
+  https://www.embecosm.com/2018/02/26/how-much-does-a-compiler-cost
+
+- A Performance-Based Comparison of C/C++ Compilers (2017)
+  https://colfaxresearch.com/compiler-comparison
 
 CPU
 ---
@@ -34,14 +61,29 @@ CPU
 - Gallery of Processor Cache Effects
   http://igoro.com/archive/gallery-of-processor-cache-effects
 
+- Meltdown and Spectre
+  https://spectreattack.com
+
 C++
 ---
+
+- C++03 standard draft
+  https://cs.nyu.edu/courses/fall11/CSCI-GA.2110-003/documents/c++2003std.pdf
 
 - The Horror In The Standard Library
   https://web.archive.org/web/20171227182929/https://www.zerotier.com/blog/2017-05-05-theleak.shtml
 
 - A Guide to Undefined Behavior in C and C++, Part 1
   https://blog.regehr.org/archives/213
+
+- Programmatic access to the call stack in C++ (Eli Bendersky's website)
+  https://eli.thegreenplace.net/2015/programmatic-access-to-the-call-stack-in-c
+
+Visual Studio
+-------------
+
+- STL Fixes In VS 2017 RTM
+  https://blogs.msdn.microsoft.com/vcblog/2017/02/06/stl-fixes-in-vs-2017-rtm
 
 Linux
 -----
@@ -51,6 +93,9 @@ Linux
 
 - Exploiting Alpine Linux: From vulnerability discovery to code execution
   https://www.twistlock.com/wp-content/uploads/2018/10/Exploiting-Alpine-Linux-From-vulnerability-discovery-to-code-execution-2.pdf
+
+- A tale in adopting Alpine Linux for Docker: problems we faced with RSpec testing
+  https://www.madetech.com/blog/a-tale-in-adopting-alpine-linux-for-docker-problems-we-faced-with-rspec-testing
 
 Java
 ----
@@ -76,7 +121,13 @@ Java
 
 - Do you really need instanceof?
   http://letstalkaboutjava.blogspot.co.il/2016/10/do-you-really-need-instanceof.html
-  
+
+- Java 7 Bytecode Verifier: Huge backward step for the JVM
+  http://chrononsystems.com/blog/java-7-design-flaw-leads-to-huge-backward-step-for-the-jvm
+
+- Code Cache Tuning (Oracle):
+  https://docs.oracle.com/javase/8/embedded/develop-apps-platforms/codecache.htm
+
 Git
 ---
 
@@ -92,6 +143,13 @@ Security
 - A Design for Building an IPS (Intrusion Prevention System)
   Using Open Source Products
   https://www.sans.org/reading-room/whitepapers/intrusion/design-building-ips-open-source-products-1662
+
+Testing
+-------
+
+- Why Most Unit Testing is Waste + Response
+  https://pythontesting.net/strategy/why-most-unit-testing-is-waste
+  https://henrikwarne.com/2014/09/04/a-response-to-why-most-unit-testing-is-waste
 
 UML
 ---
@@ -139,4 +197,7 @@ Fun
 
 - Counting Bugs in Windows Calculator
   https://m.habr.com/en/company/pvs-studio/blog/443400/
+
+- Unity WebGL Flappy Bird
+  http://unitywebgl.com
 

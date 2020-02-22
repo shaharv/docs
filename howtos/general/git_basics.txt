@@ -1,6 +1,8 @@
 Git cheat sheet
 ---------------
 
+- Install latest git version                       add-apt-repository ppa:git-core/ppa && apt update && apt-get install git
+
 - Basic git commands, files                        add, rm, mv
 - Basic git commands, update                       commit, push, pull
 
@@ -118,8 +120,8 @@ Git setup tips
   git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
   (https://stackoverflow.com/questions/10564/how-can-i-set-up-an-editor-to-work-with-git-on-windows)
 
-Git links
----------
+Git/Github useful links
+-----------------------
 
 - Atlassian - What is Git:
   https://www.atlassian.com/git/tutorials/what-is-git
@@ -132,4 +134,10 @@ Git links
 
 - Github GitFlow:
   https://datasift.github.io/gitflow/IntroducingGitFlow.html
+
+- git mv with history:
+  https://gist.github.com/emiller/6769886
+
+- How to send good pull requests on GitHub (Eli Bendersky's website):
+  https://eli.thegreenplace.net/2019/how-to-send-good-pull-requests-on-github
 
