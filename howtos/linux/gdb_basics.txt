@@ -7,6 +7,8 @@ Basics:
 
 - Run                                     r
 - Continue                                c
+- Show source code                        l
+- Single step                             s
 
 Breakpoints:
 
