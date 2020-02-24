@@ -22,6 +22,9 @@ Computer Science
 - Hackers Delight Second Edition (PDF)
   https://github.com/lancetw/ebook-1/blob/master/02_algorithm/Hacker's%20Delight%202nd%20Edition.pdf
 
+- Bit Twiddling Hacks
+  http://graphics.stanford.edu/~seander/bithacks.html
+
 LLVM/Clang
 ----------
 
@@ -55,6 +58,9 @@ Compilers
 - A Performance-Based Comparison of C/C++ Compilers (2017)
   https://colfaxresearch.com/compiler-comparison
 
+- Anatomy of a Stack Smashing Attack and How GCC Prevents It
+  https://www.drdobbs.com/security/anatomy-of-a-stack-smashing-attack-and-h/240001832
+
 CPU
 ---
 
@@ -78,6 +84,9 @@ C++
 
 - Programmatic access to the call stack in C++ (Eli Bendersky's website)
   https://eli.thegreenplace.net/2015/programmatic-access-to-the-call-stack-in-c
+
+- Threads and fork(): think twice before mixing them
+  http://www.linuxprogrammingblog.com/threads-and-fork-think-twice-before-using-them
 
 Visual Studio
 -------------
@@ -143,6 +152,15 @@ Security
 - A Design for Building an IPS (Intrusion Prevention System)
   Using Open Source Products
   https://www.sans.org/reading-room/whitepapers/intrusion/design-building-ips-open-source-products-1662
+
+Static Analysis
+---------------
+
+- Static analysis tools for security
+  https://dwheeler.com/essays/static-analysis-tools.html
+
+- Finding inter-procedural bugs at scale with Infer static analyzer (Facebook engineering)
+  https://engineering.fb.com/developer-tools/finding-inter-procedural-bugs-at-scale-with-infer-static-analyzer/
 
 Testing
 -------
