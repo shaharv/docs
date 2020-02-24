@@ -169,6 +169,12 @@ Testing
   https://pythontesting.net/strategy/why-most-unit-testing-is-waste
   https://henrikwarne.com/2014/09/04/a-response-to-why-most-unit-testing-is-waste
 
+Machine Learning and Neural Networks
+------------------------------------
+
+- A Beginner's Guide to the Mathematics of Neural Networks
+  http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.161.3556&rep=rep1&type=pdf
+
 UML
 ---
 
