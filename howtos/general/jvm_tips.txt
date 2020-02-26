@@ -32,6 +32,9 @@ Modules:
 
 Links:
 
+- OpenJDK official upstream binaries (AdoptOpenJDK):
+  https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases
+
 - Java RPMs for RedHat 5 Server:
   ftp://ftp.nluug.nl/pub/os/Linux/distr/RedHat/ftp/redhat/linux/enterprise/5Server/en/RHNSAT/SRPMS
 
