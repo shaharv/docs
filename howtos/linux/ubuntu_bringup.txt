@@ -21,7 +21,9 @@ Ubuntu First Steps
    bind TAB:menu-complete
    alias cd..="cd .."
 
-5. Disable sudo password for sudoers:
+5. Add startup scripts under /etc/profile.d - for example, setting env. variables
+
+6. Disable sudo password for sudoers:
 
    - $ sudo visudo
 
@@ -30,7 +32,7 @@ Ubuntu First Steps
      %sudo   ALL=(ALL:ALL) ALL
      shahar  ALL=NOPASSWD: ALL
 
-6. Install basic packages:
+7. Install basic packages:
 
   $ sudo apt-get install \
       audacious \
@@ -43,7 +45,7 @@ Ubuntu First Steps
       python-pip python3-pip \
       tree
 
-7. Add toolchain repository:
+8. Add toolchain repository:
 
    $ sudo add-apt-repository ppa:ubuntu-toolchain-r/test
    $ sudo apt update
