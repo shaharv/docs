@@ -100,12 +100,6 @@ Linux
 - ExplainShell.com
   https://explainshell.com/explain?cmd=rm+-rf+%2F
 
-- Exploiting Alpine Linux: From vulnerability discovery to code execution
-  https://www.twistlock.com/wp-content/uploads/2018/10/Exploiting-Alpine-Linux-From-vulnerability-discovery-to-code-execution-2.pdf
-
-- A tale in adopting Alpine Linux for Docker: problems we faced with RSpec testing
-  https://www.madetech.com/blog/a-tale-in-adopting-alpine-linux-for-docker-problems-we-faced-with-rspec-testing
-
 Java
 ----
 

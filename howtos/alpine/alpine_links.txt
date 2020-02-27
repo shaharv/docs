@@ -1,0 +1,18 @@
+Alpine Linux Useful Links
+-------------------------
+
+- My Alpine Desktop - Setting Up a Software Development Environment on Alpine Linux
+  https://blog.overops.com/my-alpine-desktop-setting-up-a-software-development-environment-on-alpine-linux
+
+- Native Java Debugging on Alpine Linux: GDB, OpenJDK and the Mysterious Unknown Signal
+  https://blog.overops.com/native-java-debugging-on-alpine-linux-gdb-openjdk-and-the-mysterious-unknown-signal
+
+- Move OpenJDK 8 and 11 to consume from https://adoptopenjdk.net/upstream.html
+  https://github.com/docker-library/openjdk/pull/322
+
+- Exploiting Alpine Linux: From vulnerability discovery to code execution
+  https://www.twistlock.com/wp-content/uploads/2018/10/Exploiting-Alpine-Linux-From-vulnerability-discovery-to-code-execution-2.pdf
+
+- A tale in adopting Alpine Linux for Docker: problems we faced with RSpec testing
+  https://www.madetech.com/blog/a-tale-in-adopting-alpine-linux-for-docker-problems-we-faced-with-rspec-testing
+
