@@ -16,3 +16,6 @@ Alpine Linux Useful Links
 - A tale in adopting Alpine Linux for Docker: problems we faced with RSpec testing
   https://www.madetech.com/blog/a-tale-in-adopting-alpine-linux-for-docker-problems-we-faced-with-rspec-testing
 
+- Alpine GCC versions
+  https://github.com/just-containers/musl-cross-make/releases
+

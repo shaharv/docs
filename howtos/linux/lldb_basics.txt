@@ -59,7 +59,11 @@ Location:
    reg write pc 0x1234 - set the pc (same as jmp)
    im loo -a addr      - Lookup raw address in executable or shared libraries
 
-Watchpoints:
+Useful Links:
 
-More:
-http://lldb.llvm.org/lldb-gdb.html
+- GDB to LLDB command map
+  https://lldb.llvm.org/use/map.html
+
+- lldb cheat sheet
+  https://www.nesono.com/sites/default/files/lldb%20cheat%20sheet.pdf
+

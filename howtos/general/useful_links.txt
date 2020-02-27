@@ -70,6 +70,12 @@ CPU
 - Meltdown and Spectre
   https://spectreattack.com
 
+- The Free Lunch Is Over: A Fundamental Turn Toward Concurrency in Software
+  http://www.gotw.ca/publications/concurrency-ddj.htm
+
+- Keith Makan's Blog
+  https://blog.k3170makan.com
+
 C++
 ---
 
@@ -99,6 +105,18 @@ Linux
 
 - ExplainShell.com
   https://explainshell.com/explain?cmd=rm+-rf+%2F
+
+- Learning operating system development using Linux kernel and Raspberry Pi
+  https://github.com/s-matyukevich/raspberry-pi-os
+
+- Adélie Linux homepage
+  https://www.adelielinux.org
+
+- BedRock Linux homepage
+  https://bedrocklinux.org
+
+- DistroWatch BedRock review
+  https://distrowatch.com/weekly.php?issue=20190415#bedrock
 
 Java
 ----
