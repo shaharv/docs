@@ -57,3 +57,6 @@ Useful Links:
 - Five Ways to Slim Docker Images
   https://blog.codacy.com/five-ways-to-slim-your-docker-images
 
+- Inside Docker's "FROM scratch"
+  https://www.mgasch.com/post/scratch
+
