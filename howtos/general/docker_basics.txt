@@ -38,6 +38,7 @@ Inspect:
 Debug:
 
 - Run gdb capable docker         sudo docker run --cap-add=SYS_PTRACE --security-opt seccomp=unconfined
+- Docker events console          sudo docker events
 
 Search and stats:
 
