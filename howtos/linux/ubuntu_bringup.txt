@@ -50,3 +50,7 @@ Ubuntu First Steps
    $ sudo add-apt-repository ppa:ubuntu-toolchain-r/test
    $ sudo apt update
 
+9. Install latest docker engine:
+
+   https://docs.docker.com/install/linux/docker-ce/ubuntu
+
