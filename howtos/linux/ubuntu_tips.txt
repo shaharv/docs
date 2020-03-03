@@ -107,6 +107,7 @@ System:
 - Linux distro version (1)                cat /etc/os-release | grep PRETTY_NAME | sed 's/^.*=//'
 - Linux distro version (2)                lsb_release -a
 - Linux distro version (3)                cat /proc/version
+- Linux distro version (4) - codename     lsb_release -cs
 - CPU info                                lscpu
 - CPU number of cores (1)                 nproc --all
 - CPU number of cores (2)                 cat /proc/cpuinfo | grep "physical id" | sort -u | wc -l
