@@ -31,6 +31,9 @@ LLVM/Clang
 - A Tourist’s Guide to the LLVM Source Code
   http://blog.regehr.org/archives/1453
 
+- Notes on setting up projects with LLVM
+  https://weliveindetail.github.io/blog/post/2017/07/17/notes-setup.html
+
 Build
 -----
 
@@ -164,6 +167,9 @@ Security
 - A Design for Building an IPS (Intrusion Prevention System)
   Using Open Source Products
   https://www.sans.org/reading-room/whitepapers/intrusion/design-building-ips-open-source-products-1662
+
+- Exploiting a misused C++ shared pointer on Windows 10
+  https://blog.scrt.ch/2017/01/27/exploiting-a-misused-c-shared-pointer-on-windows-10
 
 Static Analysis
 ---------------
