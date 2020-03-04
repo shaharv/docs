@@ -1,6 +1,11 @@
 Alpine Linux First Steps
 ========================
 
+-- Blacklist nouveau kernel module (causes lspci to get stuck):
+
+   - Edit /etc/modprobe.d/blacklist
+   - Add "blacklist nouveau"
+
 -- Enable community and testing repositories:
 
    $ sudo vi /etc/apk/repositories
@@ -19,6 +24,11 @@ Alpine Linux First Steps
    - SVN packages:       git mercurial subversion
    - Java dev packages:  gradle nodejs nodejs-npm openjdk8
    - GUI fonts:          font-noto
+
+-- Install XFCE Desktop:
+
+   https://wiki.alpinelinux.org/wiki/XFCE_Setup
+   https://wiki.alpinelinux.org/wiki/Xfce_Desktop
 
 -- Install optional packages (sudo apk add):
 
