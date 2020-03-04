@@ -1,21 +1,19 @@
 Alpine Linux First Steps
 ========================
 
--- Blacklist nouveau kernel module (causes lspci to get stuck):
+1. Blacklist nouveau kernel module (causes lspci to get stuck)
 
-   - Edit /etc/modprobe.d/blacklist
-   - Add "blacklist nouveau"
+   Edit /etc/modprobe.d/blacklist
+   Add "blacklist nouveau"
 
--- Enable community and testing repositories:
+2. Enable community and testing repositories
 
-   $ sudo vi /etc/apk/repositories
+   sudo vi /etc/apk/repositories
    Uncomment wanted repos
 
--- Update system packages:
+3. Update system packages: sudo apk update
 
-   $ sudo apk update
-
--- Install useful packages (sudo apk add):
+4. Install useful packages (sudo apk add):
 
    - Basic packages:     bash coreutils grep nano openssl openssh xz
    - Build packages:     clang cmake gcc g++ make ninja linux-headers libpthread-stubs
@@ -25,29 +23,29 @@ Alpine Linux First Steps
    - Java dev packages:  gradle nodejs nodejs-npm openjdk8
    - GUI fonts:          font-noto
 
--- Install XFCE Desktop:
+5. Install XFCE Desktop
 
    https://wiki.alpinelinux.org/wiki/XFCE_Setup
    https://wiki.alpinelinux.org/wiki/Xfce_Desktop
 
--- Install optional packages (sudo apk add):
+6. Install optional packages (sudo apk add):
 
    - Chrome:             chromium    # run with: chromium-browser
    - lldb build prereq.: python2-dev ncurses-dev libedit-dev libxml2-dev swig yaml-dev
 
--- Set bash as default shell:
+7. Set bash as default shell
 
    - Create .profile in home folder
    - Add "SHELL=/bin/bash"
 
--- ~/.bashrc convinience updates (append at EOF):
+8. ~/.bashrc convinience updates (append at EOF)
 
    force_color_prompt=yes
    bind TAB:menu-complete
    alias cd..="cd .."
    alias ll="ls -l"
 
--- Disable sudo password for sudoers:
+9. Disable sudo password for sudoers:
 
    - $ sudo visudo
 
@@ -56,7 +54,8 @@ Alpine Linux First Steps
      %sudo   ALL=(ALL:ALL) ALL
      shahar  ALL=NOPASSWD: ALL
 
--- Configure git:
+10. Configure git
 
    $ git config --global user.name username
    $ git config --global user.email user@domain.com
+
