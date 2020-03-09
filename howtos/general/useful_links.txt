@@ -1,8 +1,8 @@
 Interesting and Useful Links
 ============================
 
-Online Compilers/Interpreters
------------------------------
+Online Compilers, Interpreters and Tools
+----------------------------------------
 
 - TIO - Try It Online
   https://tio.run
@@ -12,6 +12,9 @@ Online Compilers/Interpreters
 
 - Dot Net Fiddle
   http://dotnetfiddle.net
+
+- clang-format configurator
+  https://zed0.co.uk/clang-format-configurator
 
 Computer Science
 ----------------
