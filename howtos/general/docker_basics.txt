@@ -18,6 +18,7 @@ Build and Deploy:
 - Build squashed image           sudo docker image build --squash -t <image-name> .
   (requires experimental mode)
 - Commit image                   sudo docker commit <container-id> <image-id>[:tag]
+- Build from scratch             sudo docker image build --no-cache
 
 Network:
 
