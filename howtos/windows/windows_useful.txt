@@ -40,3 +40,11 @@ Event Tracing (ETW):
 
 - List running tracing sessions           logman query -ets
 - Kill specified session                  logman stop <SESSION_NAME> -ets
+
+.NET:
+
+- Find all installed versions             dir /b/o-n %SYSTEMROOT%\Microsoft.NET\Framework\v?.*
+  (4.5+ will list as 4.0)
+- .NET versions of running executables    clrver -all
+- Latest .NET version (C# CC banner)      csc.exe
+
