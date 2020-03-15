@@ -53,6 +53,8 @@ Useful Utils:
 
 - Executable and DLL analysis             DependencyWalker
 - Process analysis                        ProcessExplorer
+- File comparison                         BeyondCompare
+- Audio player                            foobar
 - .NET decompilation                      ILSpy
 - .NET PE inspection                      PEInsider
 - Analyze disk space                      SpaceSniffer
