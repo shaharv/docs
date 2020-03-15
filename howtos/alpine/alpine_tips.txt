@@ -7,6 +7,7 @@ Package management:
 - Attempt to fix apk issues                sudo apk fix
 - Update packages before adding            sudo apk add --update
 - Specify the repository to add from       sudo apk add --repository=http://dl-cdn.alpinelinux.org/alpine/v3.5/community
+- Add virtual package                      sudo apk add --virtual .deps
 
 File system:
 
