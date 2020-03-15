@@ -26,6 +26,7 @@ System:
 
 - Disable hibernation (as admin)          powercfg -h on
 - Schedule RAM check                      mdsched
+- Check SSD Trim (0 = TRIM enabled)       fsutil behavior query disabledeletenotify
 
 Keyboard:
 
