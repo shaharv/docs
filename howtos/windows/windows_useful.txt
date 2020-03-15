@@ -59,4 +59,5 @@ Useful Utils:
 - Text editor                             Notepad++
 - Text editor and search tool             Sublime
 - Git client                              GitKraken
+- Clipboard manager                       Ditto
 
