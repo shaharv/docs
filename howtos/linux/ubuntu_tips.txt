@@ -201,6 +201,7 @@ Sound:
 
 - No sound from headphones (1)            alsactl restore
 - No sound from headphones (2)            sudo alsa force-reload
+- No sound from headphones (3) + reboot   killall pulseaudio; rm -rf ~/.config/pulse/*; rm -rf ~/.pulse*; reboot
 - Display installed sound cards           aplay -l
 - "Top five wrong ways to fix your audio" http://voices.canonical.com/david.henningsson/2012/07/13/top-five-wrong-ways-to-fix-your-audio/
 - Ubuntu SoundTroubleshootingProcedure    https://help.ubuntu.com/community/SoundTroubleshootingProcedure
