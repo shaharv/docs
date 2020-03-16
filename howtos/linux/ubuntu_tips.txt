@@ -203,6 +203,7 @@ Sound:
 - No sound from headphones (2)            sudo alsa force-reload
 - Display installed sound cards           aplay -l
 - "Top five wrong ways to fix your audio" http://voices.canonical.com/david.henningsson/2012/07/13/top-five-wrong-ways-to-fix-your-audio/
+- Ubuntu SoundTroubleshootingProcedure    https://help.ubuntu.com/community/SoundTroubleshootingProcedure
 
 Compression:
 
