@@ -24,7 +24,7 @@ Shell:
 
 System:
 
-- Disable hibernation (as admin)          powercfg -h on
+- Disable hibernation (as admin)          powercfg /hibernate off
 - Schedule RAM check                      mdsched
 - Check SSD Trim (0 = TRIM enabled)       fsutil behavior query disabledeletenotify
 
