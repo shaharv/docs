@@ -63,4 +63,4 @@ Useful Utils:
 - Text editor and search tool             Sublime
 - Git client                              GitKraken
 - Clipboard manager                       Ditto
-
+- Partition manager                       MiniTool Parition Wizard Free
