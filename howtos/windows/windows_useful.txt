@@ -27,6 +27,7 @@ System:
 - Disable hibernation (as admin)          powercfg /hibernate off
 - Schedule RAM check                      mdsched
 - Check SSD Trim (0 = TRIM enabled)       fsutil behavior query disabledeletenotify
+- Verify integrity of Windows files       sfc /scannow
 
 Keyboard:
 
