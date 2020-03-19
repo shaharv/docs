@@ -47,6 +47,12 @@ Search and stats:
 - Library summary in JSON fmt.   https://hub.docker.com/v2/repositories/library/<repo-name>/
 - Pull counts for all images     wget -q https://store.docker.com/api/content/v1/products/search?page_size=100\&q=\&source=verified\&type=image%2Cbundle -O - | jq '.'
 
+Users:
+
+- Login                          sudo docker login
+- Logout                         sudo docker logout
+- Show logged in user            sudo docker info | grep Username
+
 Misc:
 
 - Enable experimental features   echo $'{\n    "experimental": true\n}' | sudo tee -a /etc/docker/daemon.json
