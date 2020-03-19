@@ -1,0 +1,24 @@
+Tutorials
+---------
+
+- scikit-learn - Machine Learning in Python
+  https://scikit-learn.org/stable/user_guide.html
+
+- PyTorch Tutorials
+  https://pytorch.org/tutorials
+
+- PyTorch Examples
+  https://github.com/pytorch/examples
+
+Graph Theory
+------------
+
+- Graph (Wikipedia):
+  https://en.wikipedia.org/wiki/Graph_(abstract_data_type)
+
+- Adjacency Matrix (Wikipedia):
+  https://en.wikipedia.org/wiki/Adjacency_matrix
+
+- Incidence Matrix (Wikipedia):
+  https://en.wikipedia.org/wiki/Incidence_matrix
+

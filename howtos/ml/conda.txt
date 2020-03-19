@@ -1,0 +1,17 @@
+Conda - Python Package Manager
+------------------------------
+
+Useful Links:
+
+- Intro                                https://en.wikipedia.org/wiki/Conda_(package_manager)
+- Install MiniConda                    https://docs.conda.io/en/latest/miniconda.html#linux-installers
+
+Install:
+
+- Install a package                    conda install numpy
+- Install ONNX                         conda install -c conda-forge onnx
+
+Update:
+
+- Update all conda packages            conda update conda
+

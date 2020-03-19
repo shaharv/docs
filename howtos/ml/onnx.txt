@@ -1,0 +1,18 @@
+ONNX - Open Neural Network Exchange
+-----------------------------------
+
+Useful Links:
+
+- ONNX format specification (1)        https://github.com/onnx/onnx/blob/master/docs/IR.md
+- ONNX format specification (2)        https://github.com/onnx/onnx/blob/master/onnx/onnx.in.proto
+
+ONNX Runtime:
+
+- Microsoft ONNX Runtime               https://github.com/microsoft/onnxruntime
+- Build with clang                     ./build.sh --config RelWithDebInfo --build_shared_lib --parallel \
+                                       --cmake_extra_defines CMAKE_CXX_COMPILER=/usr/bin/clang++-9 CMAKE_C_COMPILER=/usr/bin/clang-9 CMAKE_CXX_FLAGS=-Wno-deprecated-declarations
+
+ONNX Interfaces:
+
+- ONNX Interface for F/W Integration   https://github.com/onnx/onnx/blob/master/docs/ONNXIFI.md
+
