@@ -45,10 +45,12 @@ Ubuntu First Steps
       python3-pip \
       tree
 
-8. Add toolchain repository:
+8. Add toolchain repository, upgrade and install clang:
 
    $ sudo add-apt-repository ppa:ubuntu-toolchain-r/test
-   $ sudo apt update
+   $ sudo apt update && sudo apt upgrade
+   $ sudo apt-get install clang-9
+   $ sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-9 900 --slave /usr/bin/clang++ clang++ /usr/bin/clang++-9
 
 9. Install latest docker engine:
 
