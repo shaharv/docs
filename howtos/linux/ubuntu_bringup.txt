@@ -8,7 +8,7 @@ Ubuntu First Steps
 2. Install latest git:
 
    $ sudo add-apt-repository ppa:git-core/ppa
-   $ apt update && apt-get install git
+   $ sudo apt update && sudo apt-get install git
 
 3. Configure git:
 
