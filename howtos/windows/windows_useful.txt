@@ -28,6 +28,7 @@ System:
 - Schedule RAM check                      mdsched
 - Check SSD Trim (0 = TRIM enabled)       fsutil behavior query disabledeletenotify
 - Verify integrity of Windows files       sfc /scannow
+- Scan and fix disk errors                chkdsk c: /x /f /r
 
 Keyboard:
 

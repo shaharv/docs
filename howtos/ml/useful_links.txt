@@ -1,6 +1,9 @@
 Tutorials
 ---------
 
+- Microsoft's AI School
+  https://aischool.microsoft.com/en-us/home
+
 - scikit-learn - Machine Learning in Python
   https://scikit-learn.org/stable/user_guide.html
 

@@ -8,7 +8,7 @@ Ubuntu First Steps
 2. Install latest git:
 
    $ sudo add-apt-repository ppa:git-core/ppa
-   $ apt update && apt-get install git
+   $ sudo apt update && sudo apt-get install git
 
 3. Configure git:
 
@@ -43,7 +43,7 @@ Ubuntu First Steps
       meld \
       nano \
       ninja-build \
-      python-pip python3-pip \
+      python3-pip \
       tree
 
 8. Configure nano - create .nanorc:
@@ -53,7 +53,9 @@ Ubuntu First Steps
 9. Add toolchain repository:
 
    $ sudo add-apt-repository ppa:ubuntu-toolchain-r/test
-   $ sudo apt update
+   $ sudo apt update && sudo apt upgrade
+   $ sudo apt-get install clang-9
+   $ sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-9 900 --slave /usr/bin/clang++ clang++ /usr/bin/clang++-9
 
 10. Install latest docker engine:
 
