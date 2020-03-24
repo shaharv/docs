@@ -41,16 +41,21 @@ Ubuntu First Steps
       dos2unix \
       gitk \
       meld \
+      nano \
       ninja-build \
       python-pip python3-pip \
       tree
 
-8. Add toolchain repository:
+8. Configure nano - create .nanorc:
+
+   set tabsize 4
+
+9. Add toolchain repository:
 
    $ sudo add-apt-repository ppa:ubuntu-toolchain-r/test
    $ sudo apt update
 
-9. Install latest docker engine:
+10. Install latest docker engine:
 
    https://docs.docker.com/install/linux/docker-ce/ubuntu
 
