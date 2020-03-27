@@ -50,14 +50,17 @@ Ubuntu First Steps
 
    set tabsize 4
 
-9. Add toolchain repository:
+9. Add toolchain repository (optional):
 
    $ sudo add-apt-repository ppa:ubuntu-toolchain-r/test
    $ sudo apt update && sudo apt upgrade
+
+10. Install Clang 9:
+
    $ sudo apt-get install clang-9
    $ sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-9 900 --slave /usr/bin/clang++ clang++ /usr/bin/clang++-9
 
-10. Install latest docker engine:
+11. Install latest docker engine:
 
    https://docs.docker.com/install/linux/docker-ce/ubuntu
 
