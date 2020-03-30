@@ -17,8 +17,14 @@ Windows First Steps
 
 3. Install WSL:
    https://docs.microsoft.com/en-us/windows/wsl/install-win10
- 
-4. Recommended software (optional):
+
+4. Install VSCode:
+   https://code.visualstudio.com/download#
+
+   Enable VSCode WSL support:
+   https://code.visualstudio.com/docs/remote/wsl
+
+5. Recommended software (optional):
 
   - Executable and DLL analysis  DependencyWalker
   - Process analysis             ProcessExplorer
