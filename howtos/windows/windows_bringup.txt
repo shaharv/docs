@@ -1,0 +1,31 @@
+Windows First Steps
+===================
+
+1. Install essential utils:
+
+  - Audio player                 foobar
+  - File explorer                Total Commander
+  - File comparison              BeyondCompare
+  - Text editor                  Notepad++
+  - Git client                   GitKraken
+
+2. Install and configure git:
+
+   $ git config --global user.name username
+   $ git config --global user.email user@domain.com
+   $ git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe'"
+
+3. Install WSL:
+   https://docs.microsoft.com/en-us/windows/wsl/install-win10
+ 
+4. Recommended software (optional):
+
+  - Executable and DLL analysis  DependencyWalker
+  - Process analysis             ProcessExplorer
+  - .NET decompilation           ILSpy
+  - .NET PE inspection           PEInsider
+  - Analyze disk space           SpaceSniffer
+  - Text editor and search tool  Sublime
+  - Clipboard manager            Ditto
+  - Partition manager            MiniTool Parition Wizard Free
+

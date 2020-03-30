@@ -52,18 +52,3 @@ Event Tracing (ETW):
 - .NET versions of running executables    clrver -all
 - Latest .NET version (C# CC banner)      csc.exe
 
-Useful Utils:
-
-- Executable and DLL analysis             DependencyWalker
-- Process analysis                        ProcessExplorer
-- File comparison                         BeyondCompare
-- Audio player                            foobar
-- .NET decompilation                      ILSpy
-- .NET PE inspection                      PEInsider
-- Analyze disk space                      SpaceSniffer
-- File explorer                           Total Commander
-- Text editor                             Notepad++
-- Text editor and search tool             Sublime
-- Git client                              GitKraken
-- Clipboard manager                       Ditto
-- Partition manager                       MiniTool Parition Wizard Free
