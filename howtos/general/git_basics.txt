@@ -110,6 +110,7 @@ Github
 - Filter according to base PR                       "is:pr is:open base:<branch-name>"
 - Expand all diffs in PR (Javascript)               Array.from(document.getElementsByClassName('load-diff-button')).map(button => button.click())
 - Github Redefined - browser extension              https://github.com/sindresorhus/refined-github
+- Github free features                              https://github.com/pricing
 
 Git setup tips
 --------------
