@@ -19,15 +19,33 @@ Neural Networks
 - A Beginner's Guide to the Mathematics of Neural Networks
   http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.161.3556&rep=rep1&type=pdf
 
+Linear Algebra
+--------------
+
+- Essence of Linera Algebra series
+  https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab
+
+- Matrix Multiplication (Wikipedia)
+  https://en.wikipedia.org/wiki/Matrix_multiplication
+
+- Dot product (Wikipedia)
+  https://en.wikipedia.org/wiki/Dot_product
+
+Image Processing
+----------------
+
+- Kernel (Wikipedia)
+  https://en.wikipedia.org/wiki/Kernel_(image_processing)
+
 Graph Theory
 ------------
 
-- Graph (Wikipedia):
+- Graph (Wikipedia)
   https://en.wikipedia.org/wiki/Graph_(abstract_data_type)
 
-- Adjacency Matrix (Wikipedia):
+- Adjacency Matrix (Wikipedia)
   https://en.wikipedia.org/wiki/Adjacency_matrix
 
-- Incidence Matrix (Wikipedia):
+- Incidence Matrix (Wikipedia)
   https://en.wikipedia.org/wiki/Incidence_matrix
 
