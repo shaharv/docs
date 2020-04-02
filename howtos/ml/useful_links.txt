@@ -25,6 +25,15 @@ Linear Algebra
 - Essence of Linera Algebra series
   https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab
 
+- Cheat sheet - most basic stuff
+  https://www.uio.no/studier/emner/matnat/ifi/IN5550/v19/la.pdf
+
+- Cheat sheet - more advanced
+  https://laurentlessard.com/teaching/ece532/cheat_sheet.pdf
+
+- Linear algebra cheat sheet for deep learning + numpy examples
+  https://towardsdatascience.com/linear-algebra-cheat-sheet-for-deep-learning-cd67aba4526c
+
 - Matrix Multiplication (Wikipedia)
   https://en.wikipedia.org/wiki/Matrix_multiplication
 
