@@ -40,6 +40,16 @@ Linear Algebra
 - Dot product (Wikipedia)
   https://en.wikipedia.org/wiki/Dot_product
 
+- Matrices - Khan Academy
+  https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:matrices
+
+- Matrix Multiplication Practice
+  https://www.shmoop.com/matrices/multiplying-matrix-exercises.html
+  https://onlinemschool.com/math/practice/matrix/multiply
+
+- Matrix Calculator
+  https://www.mathsisfun.com/algebra/matrix-calculator.html
+
 Image Processing
 ----------------
 
