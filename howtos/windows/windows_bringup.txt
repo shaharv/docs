@@ -24,7 +24,13 @@ Windows First Steps
    Enable VSCode WSL support:
    https://code.visualstudio.com/docs/remote/wsl
 
-5. Recommended software (optional):
+5. Install Python 3 for Windows:
+   https://www.python.org/downloads/windows
+
+   Upgrade pip:
+   $ python -m pip install --upgrade pip
+
+6. Recommended software (optional):
 
   - Executable and DLL analysis  DependencyWalker
   - Process analysis             ProcessExplorer
