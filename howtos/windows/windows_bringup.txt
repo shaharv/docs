@@ -30,7 +30,13 @@ Windows First Steps
    Upgrade pip:
    $ python -m pip install --upgrade pip
 
-6. Recommended software (optional):
+6. Create the folder C:\Batch and add it to PATH.
+
+   * Create getfile.bat:
+     REM %1 - filename, %2 - download link
+     powershell -command "iwr -outf %1 %2"
+
+7. Recommended software (optional):
 
   - Executable and DLL analysis  DependencyWalker
   - Process analysis             ProcessExplorer
