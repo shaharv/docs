@@ -36,6 +36,9 @@ Windows First Steps
      REM %1 - filename, %2 - download link
      powershell -command "iwr -outf %1 %2"
 
+   * Get and extract dos2unix:
+     https://sourceforge.net/projects/dos2unix
+
 7. Recommended software (optional):
 
   - Executable and DLL analysis  DependencyWalker
