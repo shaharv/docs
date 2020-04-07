@@ -19,11 +19,17 @@ Neural Networks
 - A Beginner's Guide to the Mathematics of Neural Networks
   http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.161.3556&rep=rep1&type=pdf
 
+- Neural Networks and Deep Learning - free online book
+  http://neuralnetworksanddeeplearning.com
+
 - Gradient Descent with Backpropagation
   http://outlace.com/Gradient-Descent.html
 
 - The Matrix Calculus You Need For Deep Learning
   https://explained.ai/matrix-calculus/index.html
+
+- The Cross-entropy loss function (Wikipedia)
+  https://en.wikipedia.org/wiki/Cross_entropy#Cross-entropy_loss_function_and_logistic_regression
 
 Linear Algebra
 --------------
