@@ -31,6 +31,9 @@ Compilers
 - Intel nGraph
   https://arxiv.org/pdf/1801.08058.pdf
 
+- The Deep Learning Compiler: A Comprehensive Survey (27/2/2020)
+  https://arxiv.org/pdf/2002.03794.pdf
+
 Neural Networks
 ---------------
 
