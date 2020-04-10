@@ -13,6 +13,24 @@ Tutorials
 - PyTorch Examples
   https://github.com/pytorch/examples
 
+Compilers
+---------
+
+- TVM: An Automated End-to-End Optimizing Compiler for Deep Learning
+  https://www.usenix.org/system/files/osdi18-chen.pdf
+
+- Glow: Graph Lowering Compiler Techniques for Neural Networks
+  https://arxiv.org/pdf/1805.00907.pdf
+
+- MLIR: Multi-Level Intermediate Representation Compiler Infrastructure
+  https://llvm.org/devmtg/2019-04/slides/Keynote-ShpeismanLattner-MLIR.pdf
+
+- Tensor Comprehensions: Framework-Agnostic High-Performance Machine Learning Abstractions
+  https://arxiv.org/pdf/1802.04730.pdf
+
+- Intel nGraph
+  https://arxiv.org/pdf/1801.08058.pdf
+
 Neural Networks
 ---------------
 
