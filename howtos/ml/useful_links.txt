@@ -34,6 +34,15 @@ Compilers
 - The Deep Learning Compiler: A Comprehensive Survey (27/2/2020)
   https://arxiv.org/pdf/2002.03794.pdf
 
+ONNX
+----
+
+- LinaroOrg talk: SAN19-211 ONNX & ONNX Runtime
+  https://www.youtube.com/watch?v=tua4ec2v2ls
+
+- Arm talk: Scalable ML acceleration with ONNX Runtime
+  https://www.youtube.com/watch?v=nRlnSy4Vbnc
+
 Neural Networks
 ---------------
 
