@@ -84,6 +84,8 @@
 
 - Target code is generated
 
+## IR/CG Life Cycle
+
 ![Glow IR Levels](https://github.com/shaharv/glow/blob/master/docs/3LevelIR.png)
 
 ## Glow Runtime
@@ -94,8 +96,8 @@
 
 ## Links
 
-- Glow: Graph Lowering Compiler Techniques for Neural Networks
+- Glow: Graph Lowering Compiler Techniques for Neural Networks  
   https://arxiv.org/pdf/1805.00907.pdf
 
-- Glow talk at 2018 LLVM Developers’ Meeting
+- Glow talk at 2018 LLVM Developers’ Meeting  
   https://www.youtube.com/watch?v=cTz7c5dn5Gc
