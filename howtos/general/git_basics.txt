@@ -102,6 +102,10 @@ Git cheat sheet
 
 - Chmod file (useful for Windows partitions)       git update-index --add --chmod=-x <file-path>
 
+- Create a fork manually (empty repo exists)       git remote add upstream https://github.com/pytorch/glow
+                                                   git pull upstream master
+                                                   git push origin master
+
 Github
 ------
 
