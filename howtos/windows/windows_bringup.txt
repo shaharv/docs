@@ -8,6 +8,7 @@ Windows First Steps
   - File comparison              BeyondCompare
   - Text editor                  Notepad++
   - Git client                   GitKraken
+  - Image editor                 Paint.NET
 
 2. Install and configure git:
 
