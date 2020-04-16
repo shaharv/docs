@@ -18,6 +18,6 @@ ONNX Interfaces:
 
 Inspect .onnx files:
 
-- Decode .onnx to proto                protoc --decode=onnx.ModelProto onnx.proto < model.onnx
+- Decode .onnx to proto                protoc --decode=onnx.ModelProto onnx.proto < model.onnx > model.onnx.txt
                                        (onnx.proto of onnx/onnx Github repo)
 
