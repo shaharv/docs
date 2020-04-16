@@ -18,6 +18,7 @@ ONNX Interfaces:
 
 Inspect .onnx files:
 
-- Decode .onnx to proto                protoc --decode=onnx.ModelProto onnx.proto < model.onnx > model.onnx.txt
-                                       (onnx.proto of onnx/onnx Github repo)
+* Using onnx.proto of the onnx/onnx Github repo
 
+- Decode .onnx to proto                protoc --decode=onnx.ModelProto onnx.proto < model.onnx > model.onnx.txt
+- Extract IR version                   protoc --decode=onnx.ModelProto onnx.proto < model.onnx | grep ir_version
