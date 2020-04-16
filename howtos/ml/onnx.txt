@@ -16,3 +16,8 @@ ONNX Interfaces:
 
 - ONNX Interface for F/W Integration   https://github.com/onnx/onnx/blob/master/docs/ONNXIFI.md
 
+Inspect .onnx files:
+
+- Decode .onnx to proto                protoc --decode=onnx.ModelProto onnx.proto < model.onnx
+                                       (onnx.proto of onnx/onnx Github repo)
+
