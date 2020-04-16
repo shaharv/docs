@@ -19,6 +19,12 @@ Windows First Steps
 3. Install WSL:
    https://docs.microsoft.com/en-us/windows/wsl/install-win10
 
+   For GUI, install Xming:
+   https://sourceforge.net/projects/xming
+
+   In WSL ~/.bashrc set:
+   export DISPLAY=localhost:0.0
+
 4. Install VSCode:
    https://code.visualstudio.com/download#
 
