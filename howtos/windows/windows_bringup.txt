@@ -29,7 +29,7 @@ Windows First Steps
    https://www.python.org/downloads/windows
 
    Upgrade pip:
-   $ python -m pip install --upgrade pip
+   $ python3 -m pip install --upgrade pip
 
 6. Create the folder C:\Batch and add it to PATH.
 
@@ -51,3 +51,6 @@ Windows First Steps
   - Clipboard manager            Ditto
   - Partition manager            MiniTool Parition Wizard Free
 
+8. Disable system sounds:
+
+  "Change system sounds" -> set "No Sounds" scheme
