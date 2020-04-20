@@ -102,3 +102,22 @@
 
 - Glow talk at 2018 LLVM Developers’ Meeting  
   https://www.youtube.com/watch?v=cTz7c5dn5Gc
+
+# Glow Internals
+
+## model-compiler
+
+- The `model-compiler` is one of several wrappers around the `Loader` tool. It takes an .onnx model and compiles it to machine code with the desired backend.
+
+- Flow:
+  - [ModelCompiler.cpp](https://github.com/pytorch/glow/blob/master/tools/loader/ModelCompiler.cpp) `main` function
+  - Loader object is initialized
+  - Model is loaded: `loader.loadModel()`
+    - `ONNXModelLoader` is instantiated:  
+      `new ONNXModelLoader(getOnnxModelFilename(), inputNameRefs, inputTypeRefs, *getFunction()))`
+  - Model is compiled with default options: `loader.compile(cctx)`
+    - Dump DAG (graph IR) - optional
+    - Optimizes the graph IR: `glow::optimizeFunction(F_, *backend_, cctx)`  
+    - Calls `backend_->save` for saving the bundle  
+      - In `save`, DAG is transformed to IR: `generateAndOptimizeIR(F, *this /*backend*/, shouldShareBuffers())`  
+    - Dump the optimized DAG - optional
