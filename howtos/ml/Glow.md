@@ -113,7 +113,7 @@
   - [ModelCompiler.cpp](https://github.com/pytorch/glow/blob/master/tools/loader/ModelCompiler.cpp) `main` function
   - Loader object is initialized
   - Model is loaded: `loader.loadModel()`
-    - `ONNXModelLoader` is instantiated:  
+    - `ONNXModelLoader` is instantiated - see [ONNXModelLoader.cpp](https://github.com/pytorch/glow/blob/master/lib/Importer/ONNXModelLoader.cpp):  
       `new ONNXModelLoader(getOnnxModelFilename(), inputNameRefs, inputTypeRefs, *getFunction()))`
   - Model is compiled with default options: `loader.compile(cctx)`
     - Dump DAG (graph IR) - optional
