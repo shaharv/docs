@@ -121,3 +121,21 @@
     - Calls `backend_->save` for saving the bundle  
       - In `save`, DAG is transformed to IR: `generateAndOptimizeIR(F, *this /*backend*/, shouldShareBuffers())`  
     - Dump the optimized DAG - optional
+
+## ClassGen
+
+- The code for graph nodes and IR instructions is mostly generated automatically in the [ClassGen](https://github.com/pytorch/glow/tree/master/tools/ClassGen) project.  
+- Code is generated during build and written to the build folder, under `glow`.
+- `NodeGen` executable:
+  - Used for automatic code generation for nodes.
+  - Generates required boilerplate code: methods (getters and setters, visit, isEqual, clone, verify), definitions, etc.
+  - The actual node creations functions, `createNodeName`, are in [Graph.cpp](https://github.com/pytorch/glow/blob/master/lib/Graph/Graph.cpp), and are called from ONNXModelLoader during ONNX model traversal.
+  - In [`NodeGen.cpp`](https://github.com/pytorch/glow/blob/master/tools/ClassGen/NodeGen.cpp), the nodes are defined, each by calling `BB.newNode("NodeName")`, where BB is a builder object. There are currently 89 node types (not including backend specific ones).  
+  - Running manually:  
+    `$GLOW_BIN/NodeGen ./AutoGenNodes.h ./AutoGenNodes.cpp ./AutoGenNodes.def ./AutoGenNodesImport.h ./AutoGenNodesExport.h`
+- `InstrGen` executable:  
+  - Used for automatic code generation for instructions.
+  - Generates instructions boilerplate code. As opposed to `NodeGen`, it also generates the actual IR creation functions, which are defined in `AutoGenIRBuilder.cpp`.
+  - In [`InstrGen.cpp`](https://github.com/pytorch/glow/blob/master/tools/ClassGen/InstrGen.cpp), the instructions are defined, each by calling `BB.newInstr("InstrName")`. There are currently 79 instruction types (not including backend specific ones).  
+  - Running manually:  
+    `$GLOW_BIN/InstrGen ./AutoGenInstr.h ./AutoGenInstr.cpp ./AutoGenInstr.def ./AutoGenIRBuilder.h ./AutoGenIRBuilder.cpp ./AutoGenIRGen.h`
