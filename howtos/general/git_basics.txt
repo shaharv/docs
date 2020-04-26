@@ -70,8 +70,7 @@ Git cheat sheet
 
 - Discard pending changes                          git reset
 - Discard only last unpushed commit                git reset HEAD~1
-- Reset local branch to its origin state           git checkout <branch>
-                                                   git reset --hard origin/<branch>
+- Reset local branch to its origin state           git fetch origin && git reset --hard origin/<branch>
 - Revert a specific commit (place a new            git revert <id>
   commit that undo the specified commit)
 
