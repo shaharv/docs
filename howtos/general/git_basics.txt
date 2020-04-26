@@ -105,6 +105,9 @@ Git cheat sheet
                                                    git pull upstream master
                                                    git push origin master
 
+- Syncing fork with upstream                       git fetch upstream && git merge upstream/master
+                                                   https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork
+
 Github
 ------
 
