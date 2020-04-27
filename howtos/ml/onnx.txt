@@ -3,10 +3,11 @@ ONNX - Open Neural Network Exchange
 
 Useful Links:
 
-- ONNX format specification (1)        https://github.com/onnx/onnx/blob/master/docs/IR.md
-- ONNX format specification (2)        https://github.com/onnx/onnx/blob/master/onnx/onnx.in.proto
+- Format specification (1)             https://github.com/onnx/onnx/blob/master/docs/IR.md
+- Format specification (2)             https://github.com/onnx/onnx/blob/master/onnx/onnx.in.proto
+- Python API overview                  https://github.com/onnx/onnx/blob/master/docs/PythonAPIOverview.md
 
-ONNX Runtime:
+ONNXRuntime:
 
 - Microsoft ONNX Runtime               https://github.com/microsoft/onnxruntime
 - Build with clang                     ./build.sh --config RelWithDebInfo --build_shared_lib --parallel \
@@ -22,3 +23,8 @@ Inspect .onnx files:
 
 - Decode .onnx to proto                protoc --decode=onnx.ModelProto onnx.proto < model.onnx > model.onnx.txt
 - Extract IR version                   protoc --decode=onnx.ModelProto onnx.proto < model.onnx | grep ir_version
+
+ONNX tools:
+
+- ONNX Simplifier                      https://github.com/daquexian/onnx-simplifier
+- ONNX Optimizer                       https://github.com/onnx/onnx/tree/master/onnx/optimizer
