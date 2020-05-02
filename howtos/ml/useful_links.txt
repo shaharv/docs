@@ -52,6 +52,15 @@ DLRM
 - DLRM Github
   https://github.com/facebookresearch/dlrm
 
+- Paper: Deep Learning Recommendation Model for Personalization and Recommendation Systems
+  https://arxiv.org/pdf/1906.00091.pdf
+
+- Paper: The Architectural Implications of Facebook's DNN-based Personalized Recommendation
+  https://arxiv.org/pdf/1906.03109.pdf
+
+- DLRM Glow implementation
+  https://github.com/pytorch/glow/blob/master/tests/unittests/RecommendationSystemTest.cpp
+
 Neural Networks
 ---------------
 
