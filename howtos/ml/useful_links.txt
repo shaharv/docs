@@ -43,6 +43,15 @@ ONNX
 - Arm talk: Scalable ML acceleration with ONNX Runtime
   https://www.youtube.com/watch?v=nRlnSy4Vbnc
 
+DLRM
+----
+
+- DLRM: An advanced, open source deep learning recommendation model
+  https://ai.facebook.com/blog/dlrm-an-advanced-open-source-deep-learning-recommendation-model
+
+- DLRM Github
+  https://github.com/facebookresearch/dlrm
+
 Neural Networks
 ---------------
 
