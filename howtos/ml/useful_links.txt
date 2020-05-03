@@ -79,6 +79,9 @@ Neural Networks
 - The Cross-entropy loss function (Wikipedia)
   https://en.wikipedia.org/wiki/Cross_entropy#Cross-entropy_loss_function_and_logistic_regression
 
+- Paper: ADAM: A method for stochastic optimization
+  https://arxiv.org/pdf/1412.6980.pdf
+
 Linear Algebra
 --------------
 
