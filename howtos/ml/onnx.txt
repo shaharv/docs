@@ -10,7 +10,8 @@ Useful Links:
 ONNXRuntime:
 
 - Microsoft ONNX Runtime               https://github.com/microsoft/onnxruntime
-- Build with clang                     ./build.sh --config RelWithDebInfo --build_shared_lib --parallel \
+- Simple debug build                   ./build.sh --parallel
+- Build with clang                     ./build.sh --parallel --config RelWithDebInfo --build_shared_lib \
                                        --cmake_extra_defines CMAKE_CXX_COMPILER=/usr/bin/clang++-9 CMAKE_C_COMPILER=/usr/bin/clang-9 CMAKE_CXX_FLAGS=-Wno-deprecated-declarations
 
 ONNX Interfaces:
