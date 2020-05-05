@@ -1,7 +1,7 @@
 GDB cheat sheet
 ---------------
 
-From command line, run: $ gdb “exec to debug"
+From command line, run: $ gdb /path/to/exec
 
 Basics:
 
@@ -9,6 +9,8 @@ Basics:
 - Continue                                c
 - Show source code                        l
 - Single step                             s
+- Step out                                finish
+- Step over                               n
 
 Breakpoints:
 
@@ -32,6 +34,7 @@ Disassemble:
 
 Call stack:
 
+- Show current function                   f
 - Show call stack                         where
 - Move N places up the stack              up <N>
 - Move N places down the stack            down <N>
