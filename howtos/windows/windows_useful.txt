@@ -30,6 +30,7 @@ System:
 - Verify integrity of Windows files       sfc /scannow
 - Scan and fix disk errors                chkdsk c: /x /f /r
 - Print Windows build                     ver
+- Get graphics card model                 wmic path win32_VideoController get name
 
 Keyboard:
 
