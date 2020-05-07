@@ -99,6 +99,7 @@ Process management:
 - Get pid's of processes matching regexp  ps -ef | grep 'java -agentpath:' | perl -pe "s/^\w+\s+//" | perl -pe "s/\s+.*$//" | head -n -1
   * ps -ef is more portable than ps aux
 - Max mem usage by process                /usr/bin/time --format='(%Xtext+%Ddata %Mmax)' <command>
+- Process running time                    ps -o etime= -p <pid>
 - Give time out to shell sub processes    ulimit -t <seconds>
 - Process using port                      fuser <PORT-NUM>/tcp
 
