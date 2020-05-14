@@ -88,6 +88,8 @@ Git cheat sheet
 - Continue merge after conflicts are resolved      git merge --continue
 - Merge after pulling the latest                   git pull origin <branch-to-merge-from>
 
+- Rebase while preserving merge commits            git rebase <branch> --preserve-merges
+
 - Cherry pick a merge commit                       git cherry-pick -m1 -x <sha1>
   (m1 is the branch we merged from,
    m2 is the branch we merged to)
