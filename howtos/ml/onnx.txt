@@ -18,6 +18,7 @@ ONNXRuntime:
 - Build with python                    ./build.sh --parallel --build_wheel --enable_pybind
 - Build with clang                     ./build.sh --parallel --config RelWithDebInfo --build_shared_lib \
                                        --cmake_extra_defines CMAKE_CXX_COMPILER=/usr/bin/clang++-9 CMAKE_C_COMPILER=/usr/bin/clang-9 CMAKE_CXX_FLAGS=-Wno-deprecated-declarations
+- Update python env                    export PYTHONPATH=$ONNXRUNTIME_ROOT/build/Linux/Debug && export LD_LIBRARY_PATH=$PYTHONPATH
 
 ONNX Interfaces:
 
