@@ -31,6 +31,15 @@ Windows First Steps
    Enable VSCode WSL support:
    https://code.visualstudio.com/docs/remote/wsl
 
+   Install extensions:
+   - C/C++
+   - C++ Intellisense
+   - CMake
+   - CMakeTools
+   - Python
+   - Remote - WSL
+   - TabNine
+
 5. Install Python 3 for Windows:
    https://www.python.org/downloads/windows
 
