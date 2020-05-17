@@ -71,3 +71,9 @@ Ubuntu First Steps
 
    https://docs.docker.com/install/linux/docker-ce/ubuntu
 
+12. Install debugging tools:
+
+   $ sudo apt-get install \
+       gdb \
+       libstdc++6-7-dbg \
+       valgrind
