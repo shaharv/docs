@@ -28,8 +28,9 @@ Inspect .onnx files:
 
 * Using onnx.proto of the onnx/onnx Github repo
 
-- Decode .onnx to proto                protoc --decode=onnx.ModelProto onnx.proto < model.onnx > model.onnx.txt
-- Extract IR version                   protoc --decode=onnx.ModelProto onnx.proto < model.onnx | grep ir_version
+- Decode .onnx to proto                protoc --proto_path=$ONNX_PATH --decode=onnx.ModelProto $ONNX_PATH/onnx.proto < model.onnx > model.onnx.txt
+- Extract IR version                   protoc --proto_path=$ONNX_PATH --decode=onnx.ModelProto $ONNX_PATH/onnx.proto < model.onnx | grep ir_version
+- Encode proto text to .onnx           protoc --proto_path=$ONNX_PATH --encode=onnx.ModelProto $ONNX_PATH/onnx.proto < proto.txt > model.onnx
 
 ONNX tools:
 
