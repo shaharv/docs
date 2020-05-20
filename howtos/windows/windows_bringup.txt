@@ -55,7 +55,9 @@ Windows First Steps
    * Get and extract dos2unix:
      https://sourceforge.net/projects/dos2unix
 
-7. Recommended software (optional):
+7. Install Docker Desktop (Windows Pro/Enterprise only)
+
+8. Recommended software (optional):
 
   - Executable and DLL analysis  DependencyWalker
   - Process analysis             ProcessExplorer
@@ -66,6 +68,6 @@ Windows First Steps
   - Clipboard manager            Ditto
   - Partition manager            MiniTool Parition Wizard Free
 
-8. Disable system sounds:
+9. Disable system sounds:
 
   "Change system sounds" -> set "No Sounds" scheme
