@@ -31,6 +31,7 @@ System:
 - Scan and fix disk errors                chkdsk c: /x /f /r
 - Print Windows build                     ver
 - Get graphics card model                 wmic path win32_VideoController get name
+- Get Windows update log (decode ETW)     powershell -command Get-WindowsUpdateLog
 
 Keyboard:
 
