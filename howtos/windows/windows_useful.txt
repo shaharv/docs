@@ -49,7 +49,8 @@ Event Tracing (ETW):
 
 WSL:
 
-- Troubleshooting steps                   https://github.com/microsoft/WSL/blob/master/CONTRIBUTING.md
+- Troubleshooting steps (1)               https://docs.microsoft.com/en-us/windows/wsl/troubleshooting
+- Troubleshooting steps (2)               https://github.com/microsoft/WSL/blob/master/CONTRIBUTING.md
 
 .NET:
 
