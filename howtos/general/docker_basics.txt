@@ -53,6 +53,10 @@ Users:
 - Logout                         sudo docker logout
 - Show logged in user            sudo docker info | grep Username
 
+Docker Desktop for Windows:
+
+- Compact virtual disk           powershell -command "optimize-vhd -path c:\ProgramData\DockerDesktop\vm-data\DockerDesktop.vhdx -mode quick"
+
 Misc:
 
 - Enable experimental features   echo $'{\n    "experimental": true\n}' | sudo tee -a /etc/docker/daemon.json
