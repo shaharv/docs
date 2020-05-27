@@ -71,3 +71,6 @@ Windows First Steps
 9. Disable system sounds:
 
   "Change system sounds" -> set "No Sounds" scheme
+
+10. Disable hibernation.
+    From admin prompt: powercfg /hibernate off
