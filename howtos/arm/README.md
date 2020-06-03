@@ -1,4 +1,4 @@
-# Building and running ARM Cortex-M0
+# Building and running C on ARM Cortex-M0
 
 ## Installation
 
@@ -41,9 +41,10 @@ sudo make install
 - For cross compiling to ARM Cortex, use the following command line:  
   `arm-none-eabi-gcc foo.c -mcpu=cortex-m0 --specs=rdimon.specs`
 
-  `-mcpu=cortex-m0` specifies the target processor.  
-  `--specs=rdimon.specs` allows for semihosting - interacting with the host machine, like printing to the console.  
-  For baremetal, we should add `--specs=nosys.specs`.
+  Where:
+  - `-mcpu=cortex-m0` specifies the target processor.  
+  - `--specs=rdimon.specs` allows for semihosting - interacting with the host machine, like printing to the console.  
+    For baremetal, we should add `--specs=nosys.specs`.
 
 - Run `file a.out` to verify the resulting executable:  
   `a.out: ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, with debug_info, not stripped`
@@ -56,5 +57,5 @@ For running a ARM Cortex-M0 program:
 
 ## Useful links
 
-- GCC ARM options
+- GCC ARM options  
   https://gcc.gnu.org/onlinedocs/gcc/ARM-Options.html
