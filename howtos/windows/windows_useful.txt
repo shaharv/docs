@@ -49,6 +49,8 @@ Event Tracing (ETW):
 
 WSL:
 
+- List installed distros                  wsl -l -v
+- Change default WSL distro               wsl --setdefault Ubuntu-20.04
 - Set/reset sudo password                 sudo passwd
 - Troubleshooting steps (1)               https://docs.microsoft.com/en-us/windows/wsl/troubleshooting
 - Troubleshooting steps (2)               https://github.com/microsoft/WSL/blob/master/CONTRIBUTING.md
