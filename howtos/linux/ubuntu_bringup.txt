@@ -55,7 +55,7 @@ Ubuntu First Steps
    $ sudo add-apt-repository ppa:ubuntu-toolchain-r/test
    $ sudo apt update && sudo apt upgrade
 
-10. Install Clang 10:
+10. Install Clang 10 (note - default on Ubuntu 20.04):
 
    $ Install latest LLVM (clang, lldb, lld, clangd)
    $ sudo bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"
