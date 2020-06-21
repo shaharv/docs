@@ -22,6 +22,7 @@ Git cheat sheet
                                                    git log -p filename
 - Summarized history                               git log --oneline
 - Summarized history with date, no paging          git --no-pager log --pretty=format:"%h%x09%an%x09%ad%x09%s" --date=short
+- Summarized history with date, no paging (color)  git --no-pager log --pretty=format:'%C(yellow)%h|%Cred%ad|%Cblue%an|%Cgreen%d %Creset%s' --date=short
 - History for specific folders                     git log -- llvm/tools/llvm-pdbutil llvm/lib/DebugInfo/PDB
 - Show only commits matching a regex               git log --grep="<pattern>"
 - Show only commits from a certain person          git log --author="<pattern>"
