@@ -25,6 +25,12 @@ Windows First Steps
    In WSL ~/.bashrc set:
    export DISPLAY=localhost:0.0
 
+   In Windows, create "c:\users\username\.wslconfig" with desired limits:
+
+     [wsl2]
+     memory=4GB
+     processors=6
+
 4. Install VSCode:
    https://code.visualstudio.com/download#
 
