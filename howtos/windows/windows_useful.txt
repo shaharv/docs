@@ -49,6 +49,7 @@ Event Tracing (ETW):
 
 WSL:
 
+- Restart WSL (reclaims VM memory)        powershell -c "Restart-Service LxssManager"
 - List installed distros                  wsl -l -v
 - Change default WSL distro               wsl --setdefault Ubuntu-20.04
 - Set/reset sudo password                 sudo passwd
