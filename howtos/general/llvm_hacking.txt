@@ -4,6 +4,8 @@ LLVM tips and hacking
 Clang:
 
 - Print LLVM IR after each pass      clang -mllvm -print-after-all
+- List available targets             llc --version
+- List available CPUs for target     llc -march=hexagon -mattr=help
 
 lit:
 
@@ -13,3 +15,4 @@ lit:
   * --threads N   Number of threads to run
   * -v            Verbose failure output
   * -a            Verbose output always
+
