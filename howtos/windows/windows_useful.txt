@@ -51,6 +51,7 @@ WSL:
 
 - Restart WSL (reclaims VM memory)        powershell -c "Restart-Service LxssManager"
 - List installed distros                  wsl -l -v
+- Run specific distro (no quotes)         wsl -d Ubuntu-18.04
 - Change default WSL distro               wsl --setdefault Ubuntu-20.04
 - Set/reset sudo password                 sudo passwd
 - Troubleshooting steps (1)               https://docs.microsoft.com/en-us/windows/wsl/troubleshooting
