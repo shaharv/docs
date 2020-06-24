@@ -12,7 +12,7 @@ lit:
 - Running a lit test                 bin/llvm-lit path/to/testname.cpp [options]
 
   lit options:
-  * --threads N   Number of threads to run
-  * -v            Verbose failure output
-  * -a            Verbose output always
-
+  * --threads N     Number of threads to run
+  * -v              Verbose failure output
+  * -a              Verbose output always
+  * --filter REGEX  Run only tests matching REGEX
