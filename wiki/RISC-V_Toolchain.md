@@ -196,8 +196,8 @@ sudo make install
 
 - Spike command line options:  
   - `--help` - list all available options.
-  - `-d` - run in interactive debug mode.  
-.  
+  - `-d` - run in interactive debug mode.
+
 - Spike interactive mode options:  
   - `help` - list all options.  
   - `reg 0` - print all registers of core `0`.
