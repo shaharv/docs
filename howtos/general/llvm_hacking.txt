@@ -3,17 +3,20 @@ LLVM tips and hacking
 
 Clang:
 
-- Print LLVM IR after each pass      clang -mllvm -print-after-all
-- List available targets (1)         clang -print-targets
-- List available targets (2)         llc --version
-- List available CPUs for target     llc -march=hexagon -mattr=help
+- Print LLVM IR after each pass          clang -mllvm -print-after-all
+- List available targets (1)             clang -print-targets
+- List available targets (2)             llc --version
+- List available CPUs for target         llc -march=hexagon -mattr=help
 
 lit:
 
-- Running a lit test                 bin/llvm-lit path/to/testname.cpp [options]
+- Running a lit test                     bin/llvm-lit path/to/testname.cpp [options]
 
   lit options:
   * --threads N     Number of threads to run
   * -v              Verbose failure output
   * -a              Verbose output always
   * --filter REGEX  Run only tests matching REGEX
+
+- Updating llc lit tests                 update_llc_test_checks.py --llc-binary $LLVM_BIN/llc <ll file(s)>
+  after compiler codegen change
