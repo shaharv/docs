@@ -56,6 +56,8 @@ Git cheat sheet
 - Checkout specific files                          git checkout -- "*.cpp"
 - Checkout all files under current path            git checkout .
 
+- Blame on line range                              git blame -L 123,456 File.cpp
+
 - Stash changes                                    git stash
 - Unstash the last stash                           git stash apply
 - Unstash the 3rd last stash                       git stash apply stash@{2}
