@@ -5,8 +5,12 @@ Clang:
 
 - Print LLVM IR after each pass          clang -mllvm -print-after-all
 - List available targets (1)             clang -print-targets
-- List available targets (2)             llc --version
-- List available CPUs for target         llc -march=hexagon -mattr=help
+
+llc:
+
+- Add debug prints                       llc -debug
+- List available LLVM targets (2)        llc --version
+- List available CPUs per target         llc -march=hexagon -mattr=help
 
 lit:
 
