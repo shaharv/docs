@@ -58,6 +58,21 @@ Misc:
 - Set debug file folder                   set debug-file-directory /usr/lib/debug
 
 
+Debugging PPC QEMU programs
+---------------------------
+
+For debugging PPC programs running on QEMU, gdb must be built with --target=powerpc-linux.
+See http://www.ultsol.com/pdfs/Tool_Talk_03-001-Using-GDB-for-PowerPC.pdf
+
+1) Start QEMU: qemu-ppc -g 9000 ./a.out
+   -g is for starting gdb, listening to port 9000
+
+2) (gdb) target remote :9000
+   (gdb) file /path/to/a.out
+   (gdb) b main
+   (gdb) c
+
+
 Useful Links
 ------------
 

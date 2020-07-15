@@ -4,12 +4,13 @@ LLVM tips and hacking
 Clang:
 
 - Print LLVM IR after each pass          clang -mllvm -print-after-all
-- List available targets (1)             clang -print-targets
+- List available targets                 clang -print-targets
+- Enable LLVM debug prints               clang -mllvm -debug
 
 llc:
 
-- Add debug prints                       llc -debug
-- List available LLVM targets (2)        llc --version
+- Enable LLVM debug prints               llc -debug
+- List available LLVM targets            llc --version
 - List available CPUs per target         llc -march=hexagon -mattr=help
 
 lit:
