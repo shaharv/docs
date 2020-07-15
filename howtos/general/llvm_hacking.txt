@@ -3,6 +3,7 @@ LLVM tips and hacking
 
 Clang:
 
+- Print LLVM IR                          clang -S -emit-llvm
 - Print LLVM IR after each pass          clang -mllvm -print-after-all
 - List available targets                 clang -print-targets
 - Enable LLVM debug prints               clang -mllvm -debug
