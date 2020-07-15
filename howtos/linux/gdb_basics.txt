@@ -121,3 +121,5 @@ Useful Links
 - How to use GDB to find what function a memory address corresponds to?
   https://stackoverflow.com/questions/7639309/how-to-use-gdb-to-find-what-function-a-memory-address-corresponds-to
 
+- QEMU remote debugging
+  https://rust-embedded.github.io/book/start/qemu.html
