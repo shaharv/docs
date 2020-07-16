@@ -244,6 +244,11 @@ Graphviz:
 
 - Convert dot file to pdf                 dot -Tpdf graph1.dot -o graph1.pdf
 
+VSCode:
+
+- Kill all running VSCode process         killall node
+  (assuming no other node apps)
+
 Misc:
 
 - Display image                           xdg-open <image.jpg>
