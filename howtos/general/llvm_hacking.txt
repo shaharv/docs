@@ -7,6 +7,7 @@ Clang:
 - Print LLVM IR after each pass          clang -mllvm -print-after-all
 - List available targets                 clang -print-targets
 - Enable LLVM debug prints               clang -mllvm -debug
+- Enable debug prints of specific pass   clang -mllvm -debug-only=type
 
 llc:
 
