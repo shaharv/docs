@@ -5,6 +5,7 @@ Clang:
 
 - Print LLVM IR from clang (unoptimized) clang -S -emit-llvm
 - Print LLVM IR after each pass          clang -mllvm -print-after-all
+- Print MC after each pass               clang -print-machineinstrs
 - List available targets                 clang -print-targets
 - Enable LLVM debug prints               clang -mllvm -debug
 - Enable debug prints of specific pass   clang -mllvm -debug-only=type
@@ -28,12 +29,12 @@ lit:
 - Updating llc lit tests                 update_llc_test_checks.py --llc-binary $LLVM_BIN/llc <ll file(s)>
   after compiler codegen change
 
-Useful breakpoints:
+Useful gdb breakpoints and prints:
 
-* b BuildMI if MCID.getOpcode()==123
+* b BuildMI if MCID.getOpcode()==123     (see GenInstrInfo.inc for opcode enumerations)
+* p MI->dump()
 
 Misc:
 
-* MachineInstrBuilder BuildMI
 * TII->get(TargetOpcode::PHI)
 
