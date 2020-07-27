@@ -32,6 +32,7 @@ lit:
 Useful gdb breakpoints and prints:
 
 * b BuildMI if MCID.getOpcode()==123     (see GenInstrInfo.inc for opcode enumerations)
+* b MCInstBuilder if Opcode==0           (--""--)
 * p MI->dump()
 
 Misc:
