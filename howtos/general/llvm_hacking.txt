@@ -31,11 +31,12 @@ lit:
 
 Useful gdb breakpoints and prints:
 
+Codegen:
 * b BuildMI if MCID.getOpcode()==123     (see GenInstrInfo.inc for opcode enumerations)
-* b MCInstBuilder if Opcode==0           (--""--)
+* b MCInstBuilder if Opcode==123         (--""--)
+* b MCInst::setOpcode if Opcode==244     (--""--)
 * p MI->dump()
 
-Misc:
-
-* TII->get(TargetOpcode::PHI)
-
+Encoding/decoding:
+* b PPCMCCodeEmitter::encodeInstruction
+* b PPCDisassembler::getInstruction
