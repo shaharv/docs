@@ -67,6 +67,8 @@ mkdir build && cd build
 sudo make install
 ```
 
+**Tip:** For a debug QEMU build, add `--enable-debug --disable-pie` to the configure line.
+
 ### Building a C program
 
 - Using GCC:  
