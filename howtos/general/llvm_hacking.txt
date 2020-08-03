@@ -32,11 +32,25 @@ lit:
 Useful gdb breakpoints and prints:
 
 Codegen:
+
 * b BuildMI if MCID.getOpcode()==123     (see GenInstrInfo.inc for opcode enumerations)
 * b MCInstBuilder if Opcode==123         (--""--)
 * b MCInst::setOpcode if Opcode==244     (--""--)
 * p MI->dump()
 
 Encoding/decoding:
+
 * b PPCMCCodeEmitter::encodeInstruction
 * b PPCDisassembler::getInstruction
+
+TableGen:
+
+* For reproducing tablegen command lines, print argv in TableGen.cpp/main:
+
+  int main(int argc, char **argv) {
+  #ifndef NDEBUG
+    for (int i = 0; i < argc; i++) {
+      std::cout << argv[i] << " ";
+    }
+    std::cout << std::endl;
+  #endif
