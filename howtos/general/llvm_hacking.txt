@@ -31,6 +31,10 @@ lit:
 
 Useful gdb breakpoints and prints:
 
+General:
+
+* b report_fatal_error
+
 Codegen:
 
 * b BuildMI if MCID.getOpcode()==123     (see GenInstrInfo.inc for opcode enumerations)
