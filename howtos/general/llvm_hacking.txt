@@ -44,6 +44,7 @@ Codegen:
 
 Encoding/decoding:
 
+* b PPCAsmParser::MatchAndEmitInstruction
 * b PPCMCCodeEmitter::encodeInstruction
 * b PPCDisassembler::getInstruction
 
