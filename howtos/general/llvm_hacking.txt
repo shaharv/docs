@@ -37,9 +37,10 @@ General:
 
 Codegen:
 
-* b BuildMI if MCID.getOpcode()==123     (see GenInstrInfo.inc for opcode enumerations)
-* b MCInstBuilder if Opcode==123         (--""--)
-* b MCInst::setOpcode if Opcode==244     (--""--)
+* b MachineInstr::MachineInstr if tid==123 (see GenInstrInfo.inc for opcode enumerations)
+* b BuildMI if MCID.getOpcode()==123       (--""--)
+* b MCInstBuilder if Opcode==123           (--""--)
+* b MCInst::setOpcode if Opcode==244       (--""--)
 * p MI->dump()
 
 Encoding/decoding:
