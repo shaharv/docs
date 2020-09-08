@@ -40,6 +40,8 @@ Git cheat sheet
   (note: checkout a different branch first)
 - Publish new local branch                         git push --set-upstream origin <branch-name>
 												   
+- Show recent active branches                      git branch --sort=-committerdate | head -10
+
 - Show old file version of a file                  git show <revhash>:<file>
 - Show commit                                      git show <revhash>
 
