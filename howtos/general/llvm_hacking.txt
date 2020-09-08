@@ -29,6 +29,10 @@ lit:
 - Updating llc lit tests                 update_llc_test_checks.py --llc-binary $LLVM_BIN/llc <ll file(s)>
   after compiler codegen change
 
+Useful source locations:
+
+- The list of possible SDNodes           include/llvm/CodeGen/ISDOpcodes.h
+
 Useful gdb breakpoints and prints:
 
 General:
