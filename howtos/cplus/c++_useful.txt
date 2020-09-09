@@ -146,3 +146,5 @@ General Links
 - Can Qt's moc (meta object compiler) be replaced by C++ reflection? 
   https://woboq.com/blog/reflection-in-cpp-and-qt-moc.html
 
+- Mixing C and C++
+  https://isocpp.org/wiki/faq/mixing-c-and-cpp
