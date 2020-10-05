@@ -47,6 +47,7 @@ Signals:
 
 Modify:
 
+- Set variable                            set variable VAR=VAL
 - Patch code address with "nop"           set {unsigned char}ADDR=0x90
 - Patch code address with "retq"          set {unsigned char}ADDR=0xC3
 
