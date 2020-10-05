@@ -5,7 +5,7 @@ Clang:
 
 - Print LLVM IR from clang (unoptimized) clang -S -emit-llvm
 - Print LLVM IR after each pass          clang -mllvm -print-after-all
-- Print MC after each pass               clang -print-machineinstrs
+- Print MC after each pass               clang -mllvm -print-machineinstrs
 - List available targets                 clang -print-targets
 - Enable LLVM debug prints               clang -mllvm -debug
 - Enable debug prints of specific pass   clang -mllvm -debug-only=type
@@ -32,6 +32,7 @@ lit:
 Useful source locations:
 
 - The list of possible SDNodes           include/llvm/CodeGen/ISDOpcodes.h
+- The list of possible Value Types       include/llvm/Support/MachineValueType.h
 
 Useful gdb breakpoints and prints:
 
