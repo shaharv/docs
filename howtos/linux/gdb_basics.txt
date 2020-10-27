@@ -15,8 +15,10 @@ Basics:
 Breakpoints:
 
 - Place breakpint                         b <location>
-- Break on all functions matching regex   rb 'regexp'
+- Break on all functions matching regex   rb <regexp>
+- Break on all functions in a file        rb <file.cpp>:.*
 - Delete breakpoint #N                    d <N>
+- Delete all breakpoints                  d
 - Conditional breakpoint                  b <location> if <expression>
 
 Variables:
