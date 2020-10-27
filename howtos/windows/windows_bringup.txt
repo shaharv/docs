@@ -16,14 +16,15 @@ Windows First Steps
    $ git config --global user.email user@domain.com
    $ git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe'"
 
-3. Install WSL:
+3. Install WSL 2:
    https://docs.microsoft.com/en-us/windows/wsl/install-win10
 
-   For GUI, install Xming:
-   https://sourceforge.net/projects/xming
+   For GUI, install VcXsrv:
+   https://sourceforge.net/projects/vcxsrv
 
-   In WSL ~/.bashrc set:
-   export DISPLAY=localhost:0.0
+   In WSL ~/.bashrc set the following for VcXsrv:
+     export DISPLAY=`grep nameserver /etc/resolv.conf | sed 's/nameserver //'`:0
+     export LIBGL_ALWAYS_INDIRECT=1
 
    In Windows, create "c:\users\username\.wslconfig" with desired limits:
 
