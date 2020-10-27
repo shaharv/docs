@@ -66,3 +66,9 @@ TableGen:
     }
     std::cout << std::endl;
   #endif
+
+
+AsmParser:
+
+* SMLoc start - the first character of the token
+* SMLoc end - the first character past the token
