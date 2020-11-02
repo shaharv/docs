@@ -1,14 +1,21 @@
 LLVM tips and hacking
 ---------------------
 
-Clang:
+Clang/LLVM:
 
 - Print LLVM IR from clang (unoptimized) clang -S -emit-llvm
 - Print LLVM IR after each pass          clang -mllvm -print-after-all
 - Print MC after each pass               clang -mllvm -print-machineinstrs
 - List available targets                 clang -print-targets
 - Enable LLVM debug prints               clang -mllvm -debug
-- Enable debug prints of specific pass   clang -mllvm -debug-only=type
+- Enable debug prints of specific pass   clang -mllvm -debug-only=<pass-name>
+  (using the appropriate DEBUG_TYPE)
+- Verify MIs for debug                   clang -mllvm -verify-machineinstrs
+
+LLVM Scheduling:
+
+- MachineScheduler debug prints          clang -O3 -S -mllvm -debug-only=machine-scheduler
+- Print scheduling critical path         clang -O3 -S -mllvm -misched-dcpl
 
 llc:
 
@@ -67,8 +74,15 @@ TableGen:
     std::cout << std::endl;
   #endif
 
-
 AsmParser:
 
 * SMLoc start - the first character of the token
 * SMLoc end - the first character past the token
+
+Useful Links:
+
+* VLIW scheduling presentation
+  https://llvm.org/devmtg/2015-04/slides/EuroLLVM_2015_CodeGen_SS_VLIW.pdf
+
+* SchedMachineModel: Adding and Optimizing a Subtarget
+  https://llvm.org/devmtg/2014-10/Slides/Estes-MISchedulerTutorial.pdf
