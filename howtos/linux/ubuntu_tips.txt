@@ -62,6 +62,7 @@ Binary inspection:
 
 - Search objects for debug symbol         find . -name "*.o" -exec nm -A {} \; | grep "_foo"
 - Search .so for dynamic symbol           objdump -T lib.so | grep sym
+- Binary to text                          od -t x1 ./a.out
 
 Disk usage:
 
