@@ -47,6 +47,13 @@ General:
 
 * b report_fatal_error
 
+Driver:
+
+* b ExecuteCC1Tool               - Compiler entrypoint
+* b ExecuteCompilerInvocation    - Frontend entrypoint
+* b ExecuteAction                - Frontend compile entrypoint
+* b parseArch                    - Parse target triple
+
 Codegen:
 
 * b MachineFunction::CreateMachineInstr if MCID.getOpcode()==123

@@ -20,6 +20,7 @@ Breakpoints:
 - Delete breakpoint #N                    d <N>
 - Delete all breakpoints                  d
 - Conditional breakpoint                  b <location> if <expression>
+- List breakpoints                        info b
 
 Variables:
 

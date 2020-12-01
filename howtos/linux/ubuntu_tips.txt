@@ -46,6 +46,7 @@ Finding files:
 - Find a file in folder hierarcy          find . -name "wildcard"
 - Find files with several wildcards       find -type f \( -name "*.ext1" -o -name "*.ext2" \)
 - Find folders created today              find . -mtime -1 -type d -print | grep -v "^.$"
+- Find files and display dates            find -name "*abc*" -exec stat -c "%n %y" {} \
 
 Searching in files:
 
