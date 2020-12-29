@@ -47,6 +47,10 @@ General:
 
 * b report_fatal_error
 
+Frontend:
+
+* b Sema::ActOnGCCAsmStmt        - Inline assembly expansion
+
 Driver:
 
 * b ExecuteCC1Tool               - Compiler entrypoint
