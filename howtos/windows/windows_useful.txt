@@ -54,6 +54,7 @@ WSL:
 - Run specific distro (no quotes)         wsl -d Ubuntu-18.04
 - Change default WSL distro               wsl --setdefault Ubuntu-20.04
 - Set/reset sudo password                 sudo passwd
+- Windows path for WSL filesystem         \\wsl$
 - Troubleshooting steps (1)               https://docs.microsoft.com/en-us/windows/wsl/troubleshooting
 - Troubleshooting steps (2)               https://github.com/microsoft/WSL/blob/master/CONTRIBUTING.md
 
