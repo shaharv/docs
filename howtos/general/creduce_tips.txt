@@ -1,0 +1,24 @@
+CReduce tips
+------------
+
+- Example command line:
+  creduce ./run.sh md5-v1.c --timeout 30
+
+- Example interestingness test:
+ 
+  #!/bin/bash -exu
+  
+  # Verify with mainstream compilers, max warnings + ubsan
+  gcc -O3 -Wall -Wextra -Werror md5-v1.c && ./a.out
+  clang -O3 -Wall -Wextra -Werror md5-v1.c && ./a.out
+  clang-10 -fsanitize=undefined -fno-sanitize-recover=all -O1 -Wall -Wextra -Werror md5-v1.c && ./a.out
+
+  # Verify with tools/options of choice
+  $LLVM_BIN/clang --target=ppc -O1 -static md5-v1.c
+  set +e
+  ./a.out > out.txt 2<&1
+  set -e
+  # Use exact error string check to prevent false positives
+  cat out.txt | grep "Assertion failed: result\[i\] == res1\[i\]"
+  echo "OK."
+
