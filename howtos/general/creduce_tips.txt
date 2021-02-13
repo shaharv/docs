@@ -10,9 +10,9 @@ CReduce tips
   
   # Verify with mainstream compilers, max warnings + ubsan + static analyzer + valgrind
   C_FILE=md5-v1.c
-  gcc      -fsanitize=undefined -fno-sanitize-recover     -O3 -Wall -Wextra -Werror $C_FILE && ./a.out
-  gcc      -fsanitize=undefined -fno-sanitize-recover     -O0 -Wall -Wextra -Werror $C_FILE && ./a.out
-  clang-10 -fsanitize=undefined -fno-sanitize-recover=all -O1 -Wall -Wextra -Werror $C_FILE && ./a.out
+  gcc      -fstack-protector-all -fsanitize=undefined -fno-sanitize-recover     -O3 -Wall -Wextra -Werror $C_FILE && ./a.out
+  gcc      -fstack-protector-all -fsanitize=undefined -fno-sanitize-recover     -O0 -Wall -Wextra -Werror $C_FILE && ./a.out
+  clang-10 -fstack-protector-all -fsanitize=undefined -fno-sanitize-recover=all -O1 -Wall -Wextra -Werror $C_FILE && ./a.out
   clang-10 --analyze $C_FILE 2>err.txt
   if [ -s err.txt ]; then
     echo "Static analyzer warnings found!"; exit 1
