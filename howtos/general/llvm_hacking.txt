@@ -71,6 +71,8 @@ Encoding/decoding:
 
 * b PPCAsmParser::MatchAndEmitInstruction
 * b PPCMCCodeEmitter::encodeInstruction
+* b PPCMCCodeEmitter::EncodeSingleInstruction if MI.getOpcode() == 123
+* b PPCMCCodeEmitter::EncodeSingleInstruction if PMem[0] == <opcode>
 * b PPCDisassembler::getInstruction
 
 TableGen:
