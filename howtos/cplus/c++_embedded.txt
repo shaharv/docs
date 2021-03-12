@@ -1,0 +1,18 @@
+C++ features over C, with little/no speed overhead:
+
+- Function overloading
+- Operator overloading
+- References
+- Default arguments
+- std::array
+- Templates
+- constexpr functions (careful)
+- auto
+- Range-based for
+- STL
+- std::function
+
+Useful links:
+
+https://www.embedded.com/modern-c-in-embedded-systems-part-1-myth-and-reality/
+https://www.embedded.com/modern-c-embedded-systems-part-2-evaluating-c/
