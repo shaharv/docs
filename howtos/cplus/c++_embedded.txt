@@ -9,10 +9,27 @@ C++ features over C, with little/no speed overhead:
 - constexpr functions (careful)
 - auto
 - Range-based for
-- STL
-- std::function
+- STL algorithms
+- std::function (careful: won't inline)
+
+Refrain from:
+
+- Memory allocations
+- STL data structures with allocations
+- Fragmated data structures (i.e. prefer vectors for cache friendliness)
+- RTTI
+- Exceptions (safety)
+- System calls
+
+Guidelines:
+
+- Try have structs fit cache line size - 64 bytes on x86
+  * Order struct members from large to small to minimize padding
 
 Useful links:
 
 https://www.embedded.com/modern-c-in-embedded-systems-part-1-myth-and-reality/
 https://www.embedded.com/modern-c-embedded-systems-part-2-evaluating-c/
+https://www.quora.com/C-C++-is-used-in-low-latency-systems-like-finance-for-its-speed-What-are-some-ways-expert-C++-developers-actually-get-this-speed-boost
+https://software.intel.com/content/www/us/en/develop/articles/coding-for-performance-data-alignment-and-structures.html
+https://meribold.org/2017/10/20/survey-of-cpu-caches/
