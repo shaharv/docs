@@ -148,3 +148,6 @@ General Links
 
 - Mixing C and C++
   https://isocpp.org/wiki/faq/mixing-c-and-cpp
+
+- How to make your maps, try_emplace and smart pointers play nicely with each others in C++17
+  https://jguegant.github.io/blogs/tech/performing-try-emplace.html
