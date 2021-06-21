@@ -143,6 +143,9 @@ General Links
 - The virtual table
   https://en.wikipedia.org/wiki/Virtual_method_table
 
+- Is there any reason not to make a member function virtual?
+  https://stackoverflow.com/questions/292124/is-there-any-reason-not-to-make-a-member-function-virtual
+
 - Can Qt's moc (meta object compiler) be replaced by C++ reflection? 
   https://woboq.com/blog/reflection-in-cpp-and-qt-moc.html
 
