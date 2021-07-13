@@ -1,7 +1,9 @@
 GDB cheat sheet
 ---------------
 
-From command line, run: $ gdb /path/to/exec
+Execute:
+- Load executable                         $ gdb /path/to/exec
+- Load executable with arguments          $ gdb --args /path/to/exec arg1 arg2
 
 Basics:
 
