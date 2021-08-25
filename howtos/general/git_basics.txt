@@ -72,6 +72,7 @@ Git cheat sheet
 
 - Create a new tag                                 git tag <tag-name>
 - Push a tag                                       git push origin <tag-name>
+- Delete a tag from origin                         git push --delete origin <tag-name>
 - Clean up local tags deleted from origin          git tag -l | xargs git tag -d && git fetch --tags
 
 - Discard pending changes                          git reset
