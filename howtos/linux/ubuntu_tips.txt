@@ -163,6 +163,7 @@ Build:
 
 - Make: verbose build (any make impl.)    make SHELL='sh -x'
 - Make: verbose build (GNU make)          make VERBOSE=1
+                                          make V=1
 - Ninja: list all buildable targets       ninja -t targets all
 - LLVM/Clang: install from package        sudo apt-get install clang-9 libstdc++-9-dev
 - LLVM/Clang: install latest              sudo bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"
