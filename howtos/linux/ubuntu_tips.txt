@@ -120,6 +120,7 @@ System:
 - Linux kernel version                    uname -r
 - System info - abbreviated summary       inxi
 - System info - detailed summary          inxi -Fxz
+- Show free memory                        free -h
 - Restart machine                         sudo reboot
 - Show all running services               service --status-all
 - Show system uptime                      uptime
