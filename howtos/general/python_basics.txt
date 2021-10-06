@@ -4,6 +4,7 @@ Python Basics
 Installation
 ------------
 
+- Install python3                            sudo apt-get install python3 python3-pip
 - Install pacakges, with pip                 sudo pip3 install <package>
 - Install packages, pip.py alternative       python3 -m pip install <package>
 - List installed packages                    pip list
