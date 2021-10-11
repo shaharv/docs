@@ -2,6 +2,7 @@ GDB cheat sheet
 ---------------
 
 Execute:
+
 - Load executable                         $ gdb /path/to/exec
 - Load executable with arguments          $ gdb --args /path/to/exec arg1 arg2
 
@@ -41,6 +42,7 @@ Disassemble:
 Call stack:
 
 - Show current function                   f
+- Show stack traces of all threads        thread apply all where
 - Show call stack                         where
 - Move N places up the stack              up <N>
 - Move N places down the stack            down <N>
