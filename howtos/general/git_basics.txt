@@ -107,6 +107,7 @@ Git cheat sheet
 - Clean up and optimize                            git gc
 
 - Update and checkout modules                      git submodule update --init --recursive
+- Update submodule(s) to latest                    git submodule update --remote --merge <submodule-optional>
 - Clone repo with its submodules                   git clone --recursive
 
 - Chmod file (useful for Windows partitions)       git update-index --add --chmod=-x <file-path>
