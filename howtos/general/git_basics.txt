@@ -73,6 +73,7 @@ Git cheat sheet
 - Create a new tag                                 git tag <tag-name>
 - Create a new tag for specific commit             git tag <tag-name> <commit-id>
 - Push a tag                                       git push origin <tag-name>
+- Delete a tag                                     git tag -d <tag-name>
 - Delete a tag from origin                         git push --delete origin <tag-name>
 - Clean up local tags deleted from origin          git tag -l | xargs git tag -d && git fetch --tags
 
