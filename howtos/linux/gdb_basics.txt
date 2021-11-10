@@ -52,6 +52,7 @@ Signals:
 
 - Break on any signal                     catch signal all
 - Show the address where SIGSEGV occured  p $_siginfo._sifields._sigfault.si_addr
+- Ignore specific signal                  handle SIGUSR1 nostop noprint pass
 
 Modify:
 

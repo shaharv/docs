@@ -108,6 +108,7 @@ Process management:
 - Process thread count                    ps -o thcount <pid>
 - Thread count for all processes          ps -e -o pid,comm,cputime,thcount
 - Give time out to shell sub processes    ulimit -t <seconds>
+- Run ulimit as su (ulimit is sh builtin) sudo sh -c "ulimit -c unlimited"
 - Process using port                      fuser <PORT-NUM>/tcp
 
 System:
