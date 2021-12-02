@@ -130,6 +130,7 @@ System:
 - Check filesystem                        sudo e2fsck -fv /dev/sdX
 - Check HD for bad blocks                 sudo fsck -c /dev/sdX
 - Machine endianess (BE = 256, LE = 1)    printf '\1' | od -dAn
+- Currently held file locks               sudo lslocks -u
 
 Boot:
 
