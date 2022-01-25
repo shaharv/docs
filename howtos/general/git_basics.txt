@@ -130,6 +130,7 @@ Github
 - Expand all diffs in PR (Javascript)               Array.from(document.getElementsByClassName('load-diff-button')).map(button => button.click())
 - Github Redefined - browser extension              https://github.com/sindresorhus/refined-github
 - Github free features                              https://github.com/pricing
+- After updating personal access token              Use the token as the password for authenticating
 
 Git setup tips
 --------------
