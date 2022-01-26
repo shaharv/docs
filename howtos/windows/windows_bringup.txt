@@ -9,6 +9,7 @@ Windows First Steps
   - Text editor                  Notepad++
   - Git client                   GitKraken
   - Image editor                 Paint.NET
+  - SSH and Xserver              MobeXterm
 
 2. Install and configure git:
 
@@ -74,7 +75,6 @@ Windows First Steps
   - Text editor and search tool  Sublime
   - Clipboard manager            Ditto
   - Partition manager            MiniTool Parition Wizard Free
-  - SSH and remote connections   MobeXterm
 
 9. Disable system sounds:
 
