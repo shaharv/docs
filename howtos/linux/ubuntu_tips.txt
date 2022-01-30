@@ -184,11 +184,13 @@ Linking:
 
 Profiling:
 
-- Perf basic CPU stats                    perf stat <command>
-- Perf detailed CPU stats                 perf stat -d <command>
-- Perf cache events                       perf stat -e cache-references,cache-misses <command>
-- Perf list available event types         perf list
+- Perf basic CPU stats                    sudo perf stat <command>
+- Perf detailed CPU stats                 sudo perf stat -d <command>
+- Perf cache events                       sudo perf stat -e cache-references,cache-misses <command>
+- Perf list available event types         sudo perf list
+- Perf with call graph                    sudo perf record --call-graph dwarf -g -p $(pgrep <name>)
 - Perf examples and cheat sheet           http://www.brendangregg.com/perf.html
+- Visualize perf data                     https://github.com/KDAB/hotspot
 
 Transferring files:
 
