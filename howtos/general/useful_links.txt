@@ -161,6 +161,12 @@ Git
 - Why Google Stores Billions of Lines of Code in a Single Repository
   https://cacm.acm.org/magazines/2016/7/204032-why-google-stores-billions-of-lines-of-code-in-a-single-repository/fulltext
 
+SQL
+---
+
+- Umbra DB demo - with runnable TPC-H queries
+  https://umbra-db.com/interface/
+
 Security
 --------
   
