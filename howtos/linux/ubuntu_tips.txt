@@ -95,7 +95,6 @@ Process management:
 
 - Interactive system stats                top, htop
 - Process info in batch mode              top -b -p `pidof some_running_process`
-- Print size of free memory               free -b
 - nmon monitoring tool - CPU and more     nmon
 - Killing a process                       kill <pid>
 - Kill process by name                    pkill java*
@@ -123,7 +122,8 @@ System:
 - Linux kernel version                    uname -r
 - System info - abbreviated summary       inxi
 - System info - detailed summary          inxi -Fxz
-- Show free memory                        free -h
+- Show free memory                        free -h / -b
+- Detailed memory stats                   cat /proc/meminfo
 - Restart machine                         sudo reboot
 - Show all running services               service --status-all
 - Show system uptime                      uptime
@@ -132,6 +132,11 @@ System:
 - Machine endianess (BE = 256, LE = 1)    printf '\1' | od -dAn
 - Currently held file locks               sudo lslocks -u
 - Find which process is locking a file    fuser <path-to-file>
+
+KVM:
+
+- Check for kvm support                   kvm-ok
+- Allow kvm as non sudo                   sudo chmod 666 /dev/kvm
 
 Boot:
 
