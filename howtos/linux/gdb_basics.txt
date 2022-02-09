@@ -24,6 +24,7 @@ Breakpoints:
 - Delete all breakpoints                  d
 - Conditional breakpoint                  b <location> if <expression>
 - List breakpoints                        info b
+- Add watchpoint                          watch <expression>
 
 Variables:
 
@@ -81,6 +82,27 @@ See http://www.ultsol.com/pdfs/Tool_Talk_03-001-Using-GDB-for-PowerPC.pdf
    (gdb) file /path/to/a.out
    (gdb) b main
    (gdb) c
+
+
+Reverse debugging
+-----------------
+
+CppCon 2016: Greg Law "GDB - A Lot More Than You Knew"
+https://www.youtube.com/watch?v=-n9Fkq1e6sg
+
+Run program repeatedly in gdb until it fails:
+- b main
+- b _exit
+- command 1 // record commands for breakpoint 1 (main)
+  > record
+  > continue
+  > end
+- command 2 // record command for breakpoint 2 (_exit)
+  > run
+  > end
+- When program failed:
+  reverse-step  // source step back
+  reverse-stepi // assembly step back
 
 
 Useful Links
