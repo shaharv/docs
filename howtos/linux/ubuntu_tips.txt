@@ -299,3 +299,5 @@ Misc:
 - Loop on command until fails             while true; do <cmd>; sleep <sec>; done
 - Run tidy + fix errors                   run-clang-tidy-11.py -checks readability-identifier-naming -fix foo.cpp
   (requires compile_commands.json)
+- Shrink qemu qcow2 image - remove        qemu-img convert -O qcow2 source.qcow2 shrunk.qcow2
+  sparse space
