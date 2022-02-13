@@ -30,6 +30,10 @@ Variables:
 
 - Print variable value                    p 'var'
 
+Source:
+
+- Set source files location               directory <path>
+
 Registers:
 
 - Print register value (example: eax)     info registers eax
