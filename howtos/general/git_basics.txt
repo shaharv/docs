@@ -96,6 +96,7 @@ Git cheat sheet
 - Merge specified branch into current branch       git merge <branch-to-merge-from>
 - Abort failed merge                               git merge --abort
 - Continue merge after conflicts are resolved      git merge --continue
+- Merge including merge commit                     git merge --no-ff
 - Merge after pulling the latest                   git pull origin <branch-to-merge-from>
 
 - Rebase while preserving merge commits            git rebase <branch> --preserve-merges
