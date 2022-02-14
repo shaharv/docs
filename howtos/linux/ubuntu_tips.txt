@@ -82,6 +82,8 @@ Disk usage:
 - Empty the bin                           trash-empty (requires trash-cli)
 - Junk cleaner                            sudo bleachbit
 - Package manager                         synaptic
+- Cleanup - system journal - keep 100M    sudo journalctl --vacuum-size=100M
+- Cleanup - snapd cache                   sudo rm /var/lib/snapd/cache/*
 
 Text processing:
 
