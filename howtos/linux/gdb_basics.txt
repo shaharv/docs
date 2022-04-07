@@ -33,6 +33,7 @@ Variables:
 Source:
 
 - Set source files location               directory <path>
+- Show function code                      list <function name>
 
 Registers:
 

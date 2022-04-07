@@ -94,6 +94,7 @@ Text processing:
 - Convert epoch to local time (Windows)   perl -pe "s/([\d]{10})/localtime $1/eg;" inp.txt
 - Convert epoch to local time (Linux)     perl -pe 's/([\d]{10})/localtime $1/eg;' inp.txt
 - Sort text by string length              perl -e 'print sort { length($a) <=> length($b) } <>' inp.txt
+- Replace C++ comments with C comments    sed -ie 'sX// *\(.*[^ ]\) *$X/* \1 */X' text-file
 
 Process management:
 
@@ -113,6 +114,7 @@ Process management:
 - Give time out to shell sub processes    ulimit -t <seconds>
 - Run ulimit as su (ulimit is sh builtin) sudo sh -c "ulimit -c unlimited"
 - Process using port                      fuser <PORT-NUM>/tcp
+- Process using port (2)                  lsof -i tcp:<PORT-NUM>
 
 System:
 
@@ -237,7 +239,7 @@ Sound:
 
 Compression:
 
-- Compress a single file/folder (GNU tar) tar -cvf archive.tar.gz /fullpath/to/folder-or-file
+- Compress a single file/folder (GNU tar) tar -cvzf archive.tar.gz /fullpath/to/folder-or-file
 - Compress a single folder (zip)          zip -r zipname foldername/*
 - Compress a list of files                find -name "*.log" | zip logs.zip -@
 - Unzip all zip files into current dir    for file in `ls *.zip`; do unzip $file; done
