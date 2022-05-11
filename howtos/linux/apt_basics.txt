@@ -27,7 +27,7 @@ Search and list packages:
 
 - Find installable package                   apt-cache search <name>
 - List installed packages                    apt list --installed
-- Find which package provides a file         apt-file search <filename>
+- Find which installable package has a file  apt-file search <filename>
 - All versions of package from Ubuntu        rmadison <package name>
   main repositories (incl. uninstallable)
 
