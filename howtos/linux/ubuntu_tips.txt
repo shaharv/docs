@@ -75,8 +75,10 @@ Disk usage:
 - Disk usage of current folder            du -sh
 - Disk usage of each file                 du -sh *
 - Summary of disks and free space         df -h
-- Sizes of all files of type, recursive   du -ab . | grep cpp$ | sort -n
+- Display filesystem type as well         df -Th
+- Display filesystem of folder            df -Th <path>
 - Free disk space on current partition    df --output=avail .
+- Sizes of all files of type, recursive   du -ab . | grep cpp$ | sort -n
 - Ubuntu Disk Usage Analyzer              baobab
 - NCurses Disk Usage Analyzer             ncdu
 - Empty the bin                           trash-empty (requires trash-cli)
