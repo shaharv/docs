@@ -71,3 +71,19 @@ Useful Links:
 - Inside Docker's "FROM scratch"
   https://www.mgasch.com/post/scratch
 
+
+Podman
+------
+
+Configure and troubleshoot:
+
+- Set storage driver              Edit /etc/containers/storage.conf, driver="vfs" (example)
+- Remove libpod local storage     rm -rf ~/.local/share/containers (for plain user)
+  files                           rm -rf /var/lib/containers (for root user)
+                                  rm -rf /var/run/containers (for root user)
+- Hard reset podman               podman system reset --force
+
+Links:
+
+- Podman Linux static builds
+  https://github.com/mgoltzsche/podman-static/releases/
