@@ -33,6 +33,10 @@ Windows First Steps
      memory=4GB
      processors=6
 
+   Install podman (daemonless docker):
+   https://www.atlantic.net/dedicated-server-hosting/how-to-install-and-use-podman-on-ubuntu-20-04/
+   sudo apt-get install uidmap
+
 4. Install VSCode:
    https://code.visualstudio.com/download#
 
@@ -63,9 +67,7 @@ Windows First Steps
    * Get and extract dos2unix:
      https://sourceforge.net/projects/dos2unix
 
-7. Install Docker Desktop (Windows Pro/Enterprise only)
-
-8. Recommended software (optional):
+7. Recommended software (optional):
 
   - Executable and DLL analysis  DependencyWalker
   - Process analysis             ProcessExplorer
@@ -76,9 +78,9 @@ Windows First Steps
   - Clipboard manager            Ditto
   - Partition manager            MiniTool Parition Wizard Free
 
-9. Disable system sounds:
+8. Disable system sounds:
 
-  "Change system sounds" -> set "No Sounds" scheme
+   "Change system sounds" -> set "No Sounds" scheme
 
-10. Disable hibernation.
-    From admin prompt: powercfg /hibernate off
+9. Disable hibernation.
+   From admin prompt: powercfg /hibernate off
