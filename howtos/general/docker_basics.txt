@@ -8,6 +8,8 @@ Basics:
 - List available images          sudo docker images
 - List running images            sudo docker ps
 - Connect to running container   sudo docker exec -i -t [container-id] /bin/ash
+- Start a paused container       sudo docker start -i -a [container-id]
+  and attach stdout/stderr
 
 Copy:
 
@@ -81,7 +83,8 @@ Configure and troubleshoot:
 - Remove libpod local storage     rm -rf ~/.local/share/containers (for plain user)
   files / free storage            rm -rf /var/lib/containers (for root user)
                                   rm -rf /var/run/containers (for root user)
-- Hard reset podman               podman system reset --force
+- Hard reset podman including
+  all images and containers       podman system reset --force
 
 Links:
 

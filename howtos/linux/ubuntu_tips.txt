@@ -170,7 +170,7 @@ Date and time:
 Network:
 
 - Network status                          nmcli dev show
-- IP address                              ip addr show
+- IP address                              apt install iproute2 && ip addr show
 - MAC address                             ifconfig | grep Hwaddr
 - Active internet connection              netstat -tan
 - Check site accessibility (example)      curl -i localhost:9072/ibm/console
