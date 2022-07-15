@@ -6,7 +6,9 @@ Basics:
 - Build image                    sudo docker image build -t [image-name]:[version] .
 - Run image                      sudo docker run -i -t uuid /bin/ash
 - List available images          sudo docker images
-- List running images            sudo docker ps
+- List running containers        sudo docker ps
+- List all containers            sudo docker ps -a
+  (running and stopped)
 - Connect to running container   sudo docker exec -i -t [container-id] /bin/ash
 - Start a paused container       sudo docker start -i -a [container-id]
   and attach stdout/stderr
