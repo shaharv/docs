@@ -22,6 +22,8 @@ Inspect package:
 - Display .deb/installed package contents    dpkg -L <name>
 - Details of installed package (1)           sudo dpkg -l | grep <name>
 - Details of installed package (2)           apt-cache policy <name>
+- Find dependencies of a package             apt-cache depends <name>
+- Find reverse deps (which package requires) apt-cache rdepends <name>
 
 Search and list packages:
 
