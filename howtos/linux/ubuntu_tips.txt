@@ -212,6 +212,8 @@ Transferring files:
 - Download file from URL (2)              curl -O <url>
 - Copy remote files                       scp [-P port] src dst    [ Example: scp foo.txt user@server.com:/tmp ]
 - Copying text to clipboard               xsel --clipboard < somefile
+- Copy binary file to clipboard           xclip-copyfile <file.bin>
+- Paste binary file from clipboard        xclip-pastefile
 
 Desktop:
 
@@ -223,6 +225,9 @@ Connecting and working on remote machine:
 - Connect to a server                     ssh [-p port] user@server.com
 - New screen                              screen -d -R <name>
 - Connect to existing screen              screen -x <name>
+- Create a named tmux session             tmux new -s <sessionName>
+- Attach to a tmux session                tmux attach-session -t <sessionNameOrNumber>
+- Kill tmux session                       tmux kill-session -t <sessionNameOrNumber>
 
 Monitor and graphics:
 

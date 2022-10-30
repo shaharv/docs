@@ -18,7 +18,7 @@ Windows First Steps
    $ git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe'"
 
 3. Install WSL 2 (Windows build 2004 is required):
-   https://docs.microsoft.com/en-us/windows/wsl/install-win10
+   https://docs.microsoft.com/en-us/windows/wsl/install
 
    For GUI, install VcXsrv:
    https://sourceforge.net/projects/vcxsrv
