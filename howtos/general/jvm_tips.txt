@@ -8,6 +8,7 @@ HotSpot JVM:
 - Print initial -Xmx value         java -XX:+PrintFlagsFinal -version 2>nul | grep MaxHeapSize
 - Print initial -XX:MaxPermSize    java -XX:+PrintFlagsFinal -version 2>nul | grep MaxPermSize
 - Print initial -Xss value         java -XX:+PrintFlagsFinal -version 2>nul | grep ThreadStackSize
+- Enable class loading trace       export _JAVA_OPTIONS="-XX:+TraceClassLoading"
 
 JIT:
 
