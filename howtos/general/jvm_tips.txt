@@ -23,6 +23,10 @@ Debugging:
 - Log JNI calls                    -verbose:jni
 - Dump stacks of java threads      sudo jstack -l -m <pid>
 
+Bytecode:
+
+- Decompile classes                find -name "*.class" | xargs javap -p -l -v -s -c > decompiled_classes.txt
+
 Jars:
 
 - Count classes in a jar file      unzip -l my.jar | grep \.class | wc -l
