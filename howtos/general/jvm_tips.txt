@@ -30,6 +30,7 @@ Bytecode:
 Jars:
 
 - Count classes in a jar file      unzip -l my.jar | grep \.class | wc -l
+- Extract all jars in folder       find ./ -name "*.jar" -exec jar -xf {} \;
 
 Modules:
 

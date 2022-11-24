@@ -49,6 +49,7 @@ Finding files:
 - Find files with several wildcards       find -type f \( -name "*.ext1" -o -name "*.ext2" \)
 - Find folders created today              find . -mtime -1 -type d -print | grep -v "^.$"
 - Find files and display dates            find -name "*abc*" -exec stat -c "%n %y" {} \
+- Find and copy                           find -name "*.jar" -exec cp "{}" dest-path \;
 
 Searching in files:
 
