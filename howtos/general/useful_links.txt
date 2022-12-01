@@ -219,6 +219,12 @@ UML
   https://en.wikipedia.org/wiki/Activity_diagram (see page bottom for all types)
   https://en.wikipedia.org/wiki/Unified_Modeling_Language
 
+Apache Arrow
+------------
+
+- Introducing Apache Arrow Flight: A Framework for Fast Data Transport
+  https://arrow.apache.org/blog/2019/10/13/introducing-arrow-flight
+
 Misc
 ----
 
