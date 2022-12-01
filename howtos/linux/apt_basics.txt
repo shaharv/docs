@@ -5,7 +5,8 @@ Install, remove or repair specific packages:
 
 - Install package from specified repo        sudo apt-get install <name>/<repo>
 - Reinstall package                          sudo apt-get install --reinstall <name>
-- Forcibly remove package                    dpkg -r <name>
+- Forcibly remove package                    sudo dpkg -r <name>
+- Forcibly remove package but keep deps      sudo dpkg -r --force-depends <name>
 - Remove installed package with apt          sudo apt-get --purge remove <name>
 - Installable version of package             apt-cache madison <name>
 - Forcibly overwrite a package               sudo apt-get -o Dpkg::Options::="--force-overwrite" install <name>
