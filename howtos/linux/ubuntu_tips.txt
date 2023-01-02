@@ -230,6 +230,7 @@ Connecting and working on remote machine:
 - Create a named tmux session             tmux new -s <sessionName>
 - Attach to a tmux session                tmux attach-session -t <sessionNameOrNumber>
 - Kill tmux session                       tmux kill-session -t <sessionNameOrNumber>
+- List tmux sessions                      tmux ls
 
 Monitor and graphics:
 
