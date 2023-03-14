@@ -128,7 +128,7 @@ Useful Links
 - Building and installing GDB:
   https://ftp.gnu.org/old-gnu/Manuals/gdb/html_chapter/gdb_27.html
 
-- GDB dashboard:
+- GDB dashboard (gdbinit):
   https://github.com/cyrus-and/gdb-dashboard
 
 - Alpine Linux GDB build steps:
