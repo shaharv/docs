@@ -152,8 +152,11 @@ Java
 - Java 7 Bytecode Verifier: Huge backward step for the JVM
   http://chrononsystems.com/blog/java-7-design-flaw-leads-to-huge-backward-step-for-the-jvm
 
-- Code Cache Tuning (Oracle):
+- Code Cache Tuning (Oracle)
   https://docs.oracle.com/javase/8/embedded/develop-apps-platforms/codecache.htm
+
+- Top 10 Mistakes Java Developers Make
+  https://www.programcreek.com/2014/05/top-10-mistakes-java-developers-make
 
 Git
 ---
@@ -239,6 +242,12 @@ Misc
 
 - URL encoder/decoder
   https://www.urlencoder.org/
+
+- Online IDE for 50+ languages
+  https://ideone.com/
+
+- Online regex compiler
+  https://regex101.com/
 
 - GCC ABI Policy and Guidelines
   https://gcc.gnu.org/onlinedocs/libstdc++/manual/abi.html
