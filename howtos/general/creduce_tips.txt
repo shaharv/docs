@@ -4,8 +4,9 @@ CReduce tips
 - Example command line:
   creduce ./run.sh md5-v1.c --timeout 30
 
-- Example interestingness test:
- 
+1) Example interestingness test:
+   -----------------------------
+
   #!/bin/bash -exu
   
   # Verify with mainstream compilers, max warnings + ubsan + static analyzer + valgrind
@@ -28,3 +29,22 @@ CReduce tips
   cat out.txt | grep "Assertion failed: result\[i\] == res1\[i\]"
   echo "OK."
 
+2) Example interestingness test:
+   -----------------------------
+
+  #!/bin/bash -exu
+
+  gcc -O0 -Wall -Wextra -Werror muldi3.c
+  ./a.out
+  clang -O3 -Wall -Wextra -Werror muldi3.c
+  ./a.out
+  clang --target=powerpc-linux-gnu -O0 muldi3.c -isystem /usr/powerpc-linux-gnu/include -static
+  qemu-ppc ./a.out
+
+  $LLVM_BIN/clang -O0 -static muldi3.c
+
+  set +e
+  $LLVM_BIN/sim ./a.out > out.txt 2<&1
+  set -e
+  cat out.txt | grep "Assertion failed: x == expected"
+  echo "OK."
