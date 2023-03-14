@@ -1,11 +1,34 @@
+=======================================
 CReduce tips
-------------
+=======================================
+
+Resources:
+
+- CReduce homepage:
+  https://embed.cs.utah.edu/creduce
+
+- Slides:
+  https://embed.cs.utah.edu/creduce/pldi12_talk.pdf
+
+- Github:
+  https://github.com/csmith-project/creduce
+
+Tips:
+
+- When reducing, make sure the test case remains valid at all times
+  - Check against host gcc, clang, or both
+  - Compile with -Wall -Werror
+  - Check for the exact error message in the interestingness test
+
+- If there's very easy and quick minimization (like reducing the number of test cases), it's good to do it first.
+
+Examples:
 
 - Example command line:
   creduce ./run.sh md5-v1.c --timeout 30
 
-1) Example interestingness test:
-   -----------------------------
+- Example interestingness test #1
+  -------------------------------
 
   #!/bin/bash -exu
   
@@ -29,8 +52,8 @@ CReduce tips
   cat out.txt | grep "Assertion failed: result\[i\] == res1\[i\]"
   echo "OK."
 
-2) Example interestingness test:
-   -----------------------------
+- Example interestingness test #2
+  -------------------------------
 
   #!/bin/bash -exu
 
