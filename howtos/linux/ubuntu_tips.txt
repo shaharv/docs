@@ -61,6 +61,7 @@ Searching in files:
 - Grep results with sorrounding context   cat file.txt | grep icudt55_dat -B 10 -A 20
 - Search numbers with X digits            grep 'heap: ([0-9]\{11\}B' *.log
 - Grep w/o color (disable ANSI output)    grep --color=never ...
+- Search replace in files                 find -name "*.cpp" -exec sed -i "s/2022/2023/g" {} +
 
 Binary inspection:
 
