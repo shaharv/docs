@@ -100,6 +100,15 @@ C++
 - Threads and fork(): think twice before mixing them
   http://www.linuxprogrammingblog.com/threads-and-fork-think-twice-before-using-them
 
+- Top 25 C++ API design mistakes and how to avoid them
+  https://www.acodersjourney.com/top-25-cplusplus-api-design-mistakes-and-how-to-avoid-them
+
+- A summary of API Design for C++ - Martin Reddy (part 1)
+  https://biendltb.github.io/book/api-design-for-cpp-martin-reddy-part-1
+
+- A summary of API Design for C++ - Martin Reddy (part 2)
+  https://biendltb.github.io/book/api-design-for-cpp-martin-reddy-part-2
+
 Visual Studio
 -------------
 
