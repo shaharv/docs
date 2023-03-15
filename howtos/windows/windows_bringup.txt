@@ -17,6 +17,10 @@ Windows First Steps
    $ git config --global user.email user@domain.com
    $ git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe'"
 
+   For web authentication:
+
+   $ git config --global http.sslBackend schannel
+
 3. Install WSL 2 (Windows build 2004 is required):
    https://docs.microsoft.com/en-us/windows/wsl/install
 
