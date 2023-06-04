@@ -50,6 +50,7 @@ Finding files:
 - Find folders created today              find . -mtime -1 -type d -print | grep -v "^.$"
 - Find files and display dates            find -name "*abc*" -exec stat -c "%n %y" {} \
 - Find and copy                           find -name "*.jar" -exec cp "{}" dest-path \;
+- Find files excluding specific subfolder find "root_folder" -type d -name "folder_to_exclude" -prune -o -type f -print
 
 Searching in files:
 
