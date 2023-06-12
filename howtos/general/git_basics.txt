@@ -77,6 +77,7 @@ Git cheat sheet
 - Delete a tag                                     git tag -d <tag-name>
 - Delete a tag from origin                         git push --delete origin <tag-name>
 - Clean up local tags deleted from origin          git tag -l | xargs git tag -d && git fetch --tags
+- Get pretty tag and commit name                   git describe --tags --always
 
 - Discard pending changes                          git reset
 - Discard only last unpushed commit                git reset HEAD~1
