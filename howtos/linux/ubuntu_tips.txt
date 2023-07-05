@@ -63,6 +63,7 @@ Searching in files:
 - Search numbers with X digits            grep 'heap: ([0-9]\{11\}B' *.log
 - Grep w/o color (disable ANSI output)    grep --color=never ...
 - Search replace in files                 find \( -name "*.h" -or -name "*.cpp" \) -exec sed -i 's/2022/2023/g' {} +
+- Detect trailing whitespace              ! grep -rnI '[[:blank:]]$' <DIR> || (echo "Trailing whitespace found!" && false)
 
 Binary inspection:
 
