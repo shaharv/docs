@@ -55,20 +55,20 @@ Ubuntu First Steps
    $ sudo add-apt-repository ppa:ubuntu-toolchain-r/test
    $ sudo apt update && sudo apt upgrade
 
-10. Install Clang 10 (note - default on Ubuntu 20.04):
+10. Install LLVM+Clang 16:
 
    $ Install latest LLVM (clang, lldb, lld, clangd)
    $ sudo bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"
 
-   Install additional LLVM 10 tooling:
-   $ sudo apt-get install clang-tidy-10 clang-format-10
+   Install additional LLVM 16 tooling:
+   $ sudo apt-get install clang-tidy-16 clang-format-16 libc++-16-dev libc++abi-16-dev
 
    Configure:
-   $ sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-10 1000 --slave /usr/bin/clang++ clang++ /usr/bin/clang++-10
-   $ sudo update-alternatives --install /usr/bin/clang-tidy clang-tidy /usr/bin/clang-tidy-10 1000
-   $ sudo update-alternatives --install /usr/bin/clang-format clang-format /usr/bin/clang-format-10 1000
-   $ sudo update-alternatives --install /usr/bin/lldb lldb /usr/bin/lldb-10 1000
-   $ sudo update-alternatives --install /usr/bin/lld lld /usr/bin/lld-10 1000
+   $ sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-16 1600 --slave /usr/bin/clang++ clang++ /usr/bin/clang++-16
+   $ sudo update-alternatives --install /usr/bin/clang-tidy clang-tidy /usr/bin/clang-tidy-16 1600
+   $ sudo update-alternatives --install /usr/bin/clang-format clang-format /usr/bin/clang-format-16 1600
+   $ sudo update-alternatives --install /usr/bin/lldb lldb /usr/bin/lldb-16 1600
+   $ sudo update-alternatives --install /usr/bin/lld lld /usr/bin/lld-16 1600
 
 11. Install latest docker engine:
 
