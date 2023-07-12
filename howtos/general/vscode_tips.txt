@@ -1,0 +1,7 @@
+VSCode Shortcuts
+----------------
+
+- Go to file           Ctrl + P
+- Go to line           Ctrl + G
+- Navigate backwards   Alt + Left Arrow
+- Navigate forward     Alt + Right Arrow
