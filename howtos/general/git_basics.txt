@@ -134,6 +134,9 @@ Github
 - Github free features                              https://github.com/pricing
 - After updating personal access token              Use the token as the password for authenticating
 - Embed gif in PR comment                           ![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+- Add TODO list in PR description                   TODO:
+                                                    - [x] Action item 1
+                                                    - [ ] Action item 2
 
 Git setup tips
 --------------
