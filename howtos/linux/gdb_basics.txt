@@ -68,6 +68,7 @@ Modify:
 
 Misc:
 
+- Attach to process                       attach <pid>
 - Pid of debugged process                 info inferior
 - Show all memory mappings (sections)     info proc mappings
 - Follow forked child process             set follow-fork-mode child

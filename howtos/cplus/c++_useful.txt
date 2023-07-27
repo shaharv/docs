@@ -154,3 +154,9 @@ General Links
 
 - How to make your maps, try_emplace and smart pointers play nicely with each others in C++17
   https://jguegant.github.io/blogs/tech/performing-try-emplace.html
+
+SIMD and Vectorization
+----------------------
+
+- Google Highway project:
+  https://github.com/google/highway

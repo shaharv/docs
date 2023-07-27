@@ -5,3 +5,4 @@ VSCode Shortcuts
 - Go to line           Ctrl + G
 - Navigate backwards   Alt + Left Arrow
 - Navigate forward     Alt + Right Arrow
+- Search the project   Ctrl + Shift + F
