@@ -14,10 +14,10 @@ Run and debug
 - Start debug          F5
 - Stop debug           Shift + F5
 
-Installation
-------------
+Installation (Windows+WSL)
+--------------------------
 
-- Install VSCode:
+- Install VSCode for Windows:
   https://code.visualstudio.com/download#
 
 - Enable VSCode WSL support:
@@ -26,7 +26,7 @@ Installation
 - VSCode and C++ on WSL:
   https://code.visualstudio.com/docs/cpp/config-wsl
 
-- Install extensions (for both local and WSL):
+- Install extensions (for WSL):
   - C/C++
   - C/C++ Extension Pack
   - CMake
