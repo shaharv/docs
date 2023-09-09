@@ -55,28 +55,15 @@ Ubuntu First Steps
    $ sudo add-apt-repository ppa:ubuntu-toolchain-r/test
    $ sudo apt update && sudo apt upgrade
 
-10. Install LLVM+Clang 16:
+10. Install LLVM and Clang. See:
+    https://github.com/shaharv/scripts/blob/master/bash/llvm_install.sh
 
-   $ Install latest LLVM (clang, lldb, lld, clangd)
-   $ sudo bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"
-
-   Install additional LLVM 16 tooling:
-   $ sudo apt-get install clang-tidy-16 clang-format-16 libc++-16-dev libc++abi-16-dev
-
-   Configure:
-   $ sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-16 1600 --slave /usr/bin/clang++ clang++ /usr/bin/clang++-16
-   $ sudo update-alternatives --install /usr/bin/clang-tidy clang-tidy /usr/bin/clang-tidy-16 1600
-   $ sudo update-alternatives --install /usr/bin/clang-format clang-format /usr/bin/clang-format-16 1600
-   $ sudo update-alternatives --install /usr/bin/lldb lldb /usr/bin/lldb-16 1600
-   $ sudo update-alternatives --install /usr/bin/lld lld /usr/bin/lld-16 1600
-
-11. Install latest docker engine:
-
-   https://docs.docker.com/install/linux/docker-ce/ubuntu
+11. Install latest docker engine. See:
+    https://docs.docker.com/install/linux/docker-ce/ubuntu
 
 12. Install debugging tools:
 
-   $ sudo apt-get install \
-       gdb \
-       libstdc++6-7-dbg \
-       valgrind
+    $ sudo apt-get install \
+      gdb \
+      libstdc++6-7-dbg \
+      valgrind
