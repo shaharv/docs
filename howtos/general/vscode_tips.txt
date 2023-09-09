@@ -3,16 +3,36 @@ VSCode Shortcuts
 
 Navigate
 
-- Go to file           Ctrl + P
-- Go to line           Ctrl + G
-- Navigate backwards   Alt + Left Arrow
-- Navigate forward     Alt + Right Arrow
-- Search all files     Ctrl + Shift + F
+- Go to file                       Ctrl + P
+- Go to line                       Ctrl + G
+- Move to previous location        Alt + Left Arrow
+- Move to next location            Alt + Right Arrow
+- Search all files                 Ctrl + Shift + F
+- Switch one tab to the left       Ctrl + PageUp
+- Switch one tab to the right      Ctrl + PageDown
+
+Edit
+
+- Copy / paste the active line     Ctrl + C / Ctrl + V
+- Move the active line             Alt + Up/Down Arrow
+- Edit multiple lines at once      Mark with Alt + Plus, then type
+- Comment / uncomment lines        Ctrl + /
+- Select next occurance of word    Ctrl + D
+- Select all occurances of word    Ctrl + F2
+- Mark rectangle block of text     Shift + Alt while dragging mouse
 
 Run and debug
 
-- Start debug          F5
-- Stop debug           Shift + F5
+- Start debug                      F5
+- Stop debug                       Shift + F5
+
+Commands
+
+- Open list of all commands        Ctrl + Shift + P
+
+View
+
+- Hide left side bar               Ctrl + B
 
 Installation (Windows+WSL)
 --------------------------
