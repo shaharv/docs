@@ -1,8 +1,37 @@
 VSCode Shortcuts
 ----------------
 
+Navigate
+
 - Go to file           Ctrl + P
 - Go to line           Ctrl + G
 - Navigate backwards   Alt + Left Arrow
 - Navigate forward     Alt + Right Arrow
-- Search the project   Ctrl + Shift + F
+- Search all files     Ctrl + Shift + F
+
+Run and debug
+
+- Start debug          F5
+- Stop debug           Shift + F5
+
+Installation
+------------
+
+- Install VSCode:
+  https://code.visualstudio.com/download#
+
+- Enable VSCode WSL support:
+  https://code.visualstudio.com/docs/remote/wsl
+
+- VSCode and C++ on WSL:
+  https://code.visualstudio.com/docs/cpp/config-wsl
+
+- Install extensions (for both local and WSL):
+  - C/C++
+  - C/C++ Extension Pack
+  - CMake
+  - CMakeTools
+  - Python
+  - Remote - WSL
+  - TabNine
+  - Code Spell Checker
