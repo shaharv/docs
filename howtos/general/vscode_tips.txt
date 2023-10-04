@@ -10,6 +10,7 @@ Navigate
 - Search all files                   Ctrl + Shift + F
 - Switch one tab to the left         Ctrl + PageUp
 - Switch one tab to the right        Ctrl + PageDown
+- Switch between header/source       Alt + O
 
 Edit
 
