@@ -29,6 +29,8 @@ Breakpoints:
 Variables:
 
 - Print variable value                    p 'var'
+- Display variable after each step        disp 'var'
+- Un-display variable after each step     undisp 'var'
 
 Source:
 
