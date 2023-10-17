@@ -39,7 +39,8 @@ Commands
 
 View
 
-- Hide left side bar                 Ctrl + B
+- Hide/show left side bar            Ctrl + B
+- Hide/show bottom panel             Ctrl + J
 
 Installation (Windows+WSL)
 --------------------------
