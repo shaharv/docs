@@ -216,7 +216,7 @@ Profiling:
 Transferring files:
 
 - Download file from URL (1)              wget <url>
-- Download file from URL (2)              curl -O <url>
+- Download file from URL (2)              curl <url> -o <dest>
 - Copy remote files                       scp [-P port] src dst    [ Example: scp foo.txt user@server.com:/tmp ]
 - Copying text to clipboard               xsel --clipboard < somefile
 - Copy binary file to clipboard           xclip-copyfile <file.bin>
