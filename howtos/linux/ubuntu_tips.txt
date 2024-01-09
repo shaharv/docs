@@ -83,6 +83,7 @@ Disk usage:
 - Display filesystem of folder            df -Th <path>
 - Free disk space on current partition    df --output=avail .
 - Sizes of all files of type, recursive   du -ab . | grep cpp$ | sort -n
+- Average file size for files of type     du -ab . | grep parquet$ | sed 's/|/ /' | awk '{print $1}' | datamash mean 1
 - Ubuntu Disk Usage Analyzer              baobab
 - NCurses Disk Usage Analyzer             ncdu
 - Empty the bin                           trash-empty (requires trash-cli)
