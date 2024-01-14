@@ -122,6 +122,7 @@ Process management:
 - Run ulimit as su (ulimit is sh builtin) sudo sh -c "ulimit -c unlimited"
 - Process using port                      fuser <PORT-NUM>/tcp
 - Process using port (2)                  lsof -i tcp:<PORT-NUM>
+- Connectivity to port on remote machine  telnet <HOST> <PORT>
 
 System:
 
