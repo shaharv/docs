@@ -155,6 +155,9 @@ General Links
 - How to make your maps, try_emplace and smart pointers play nicely with each others in C++17
   https://jguegant.github.io/blogs/tech/performing-try-emplace.html
 
+- Ericsson code checker - a meta-linter (keyword: clang-tidy, cppcheck)
+  https://github.com/Ericsson/codechecker
+
 SIMD and Vectorization
 ----------------------
 
