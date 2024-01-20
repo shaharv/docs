@@ -109,6 +109,9 @@ C++
 - A summary of API Design for C++ - Martin Reddy (part 2)
   https://biendltb.github.io/book/api-design-for-cpp-martin-reddy-part-2
 
+- C Isn't A Programming Language Anymore
+  https://faultlore.com/blah/c-isnt-a-language
+
 Visual Studio
 -------------
 
@@ -178,6 +181,9 @@ SQL
 
 - Umbra DB demo - with runnable TPC-H queries
   https://umbra-db.com/interface/
+
+- libSQL (SQLite: QEMU all over again?)
+  https://itnext.io/sqlite-qemu-all-over-again-aedad19c9a1c
 
 Security
 --------
@@ -257,17 +263,6 @@ Misc
 
 - Online regex compiler
   https://regex101.com/
-
-- GCC ABI Policy and Guidelines
-  https://gcc.gnu.org/onlinedocs/libstdc++/manual/abi.html
-
-  Standard C++ library compatiblity on selected distros:
-
-  Ubuntu 18.04         libstdc++6:amd64   8.4.0-1ubuntu1~18.04   /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
-  Ubuntu 20.04         libstdc++6:amd64   10.3.0-1ubuntu1~20.04  /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28
-  Ubuntu 22.04         libstdc++6:amd64   12.1.0-2ubuntu1~22.04  /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30
-  Debian 10 (Buster)   libstdc++6:amd64   8.3.0-6                /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
-  Debian 11 (Bullseye) libstdc++6:amd64   10.2.1-6               /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28
 
 Fun
 ---

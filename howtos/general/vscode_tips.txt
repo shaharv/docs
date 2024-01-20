@@ -42,6 +42,11 @@ View
 - Hide/show left side bar            Ctrl + B
 - Hide/show bottom panel             Ctrl + J
 
+Misc
+
+- Kill all running VSCode process    killall node
+  (assuming no other node apps)
+
 Installation (Windows+WSL)
 --------------------------
 
