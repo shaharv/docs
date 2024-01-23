@@ -75,7 +75,8 @@ Misc:
 - Show all memory mappings (sections)     info proc mappings
 - Follow forked child process             set follow-fork-mode child
 - Set debug file folder                   set debug-file-directory /usr/lib/debug
-
+- Set source code path                    set substitute-path <path-in-executable> <local-path>
+- Attach debug symbols                    symbol-file <path-to-symbols [.dbg file or binary with debug symbols]>
 
 Debugging PPC QEMU programs
 ---------------------------
