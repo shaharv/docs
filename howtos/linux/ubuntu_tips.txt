@@ -273,6 +273,8 @@ Troubleshooting:
 - Possible locations for coredumps        /var/lib/apport/coredump
                                           /var/lib/systemd/coredump
                                           /var/crash
+                                          /var/cache/abrt
+                                          /var/spool/abrt
                                           cat /proc/sys/kernel/core_pattern
 
 Useful Utilities:
