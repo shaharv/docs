@@ -236,6 +236,7 @@ Connecting and working on remote machine:
 - Connect to existing screen              screen -x <name>
 - Create a named tmux session             tmux new -s <sessionName>
 - Attach to a tmux session                tmux attach-session -t <sessionNameOrNumber>
+- Detach from tmux session                Ctrl + B D
 - Kill tmux session                       tmux kill-session -t <sessionNameOrNumber>
 - List tmux sessions                      tmux ls
 

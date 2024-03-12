@@ -14,7 +14,7 @@ GIT_COMMIT              For Git-based projects, this variable contains the Git
                         hash of the commit checked out for the build
 
 More:
-https://wiki.jenkins-ci.org/display/JENKINS/Building+a+software+project
+https://wiki.jenkins.io/display/JENKINS/Building+a+software+project
 
 Job Statistics:
 
