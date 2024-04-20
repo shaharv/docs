@@ -7,6 +7,8 @@ Install, remove or repair specific packages:
 - Reinstall package                          sudo apt-get install --reinstall <name>
 - Forcibly remove package                    sudo dpkg -r <name>
 - Forcibly remove package but keep deps      sudo dpkg -r --force-depends <name>
+- Forcibly remove broken package             sudo mv /var/lib/dpkg/info/<name>.* /tmp/
+                                             sudo dpkg --purge --force-remove-reinstreq <name>
 - Remove installed package with apt          sudo apt-get --purge remove <name>
 - Installable version of package             apt-cache madison <name>
 - Forcibly overwrite a package               sudo apt-get -o Dpkg::Options::="--force-overwrite" install <name>
