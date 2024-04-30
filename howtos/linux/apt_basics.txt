@@ -61,7 +61,7 @@ Manage:
 
 Alternatives (example):
 
-- sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 720 --slave /usr/bin/g++ g++ /usr/bin/g++-7
+- sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-10 1000 --slave /usr/bin/g++ g++ /usr/bin/g++-10
 - sudo update-alternatives --remove clang /usr/bin/clang
 - sudo update-alternatives --config
 

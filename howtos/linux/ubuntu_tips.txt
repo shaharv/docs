@@ -314,6 +314,7 @@ glibc:
   Ubuntu 20.04         libstdc++6:amd64   10.3.0-1ubuntu1~20.04  /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28
   Debian 11 (Bullseye) libstdc++6:amd64   10.2.1-6               /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28
   Ubuntu 22.04         libstdc++6:amd64   12.1.0-2ubuntu1~22.04  /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30
+  Ubuntu 24.04         libstdc++6:amd64   14-20240412-0ubuntu1   /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33
 
 Misc:
 

@@ -8,6 +8,7 @@ Navigate
 - Move to previous location          Alt + Left Arrow
 - Move to next location              Alt + Right Arrow
 - Search all files                   Ctrl + Shift + F
+- Replace in all files               Ctrl + Shift + H
 - Switch one tab to the left         Ctrl + PageUp
 - Switch one tab to the right        Ctrl + PageDown
 - Switch between header/source       Alt + O
