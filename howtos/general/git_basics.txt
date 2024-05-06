@@ -112,6 +112,8 @@ Git cheat sheet
 
 - Update and checkout modules                      git submodule update --init --recursive
 - Update submodule(s) to latest                    git submodule update --remote --merge <submodule-optional>
+- Sync submodules                                  git submodule sync --recursive
+  To fix "Direct fetching of that commit failed."
 - Clone repo with its submodules                   git clone --recursive
 
 - Chmod file (useful for Windows partitions)       git update-index --add --chmod=-x <file-path>
