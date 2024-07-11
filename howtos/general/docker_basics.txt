@@ -3,70 +3,70 @@ Docker tips
 
 Basics:
 
-- Build image                    sudo docker image build -t [image-name]:[version] .
-- Run image                      sudo docker run -i -t uuid /bin/ash
-- List available images          sudo docker images
-- List running containers        sudo docker ps
-- List all containers            sudo docker ps -a
+- Build image                        sudo docker image build -t [image-name]:[version] .
+- Run image                          sudo docker run -i -t uuid /bin/ash
+- List available images              sudo docker images
+- List running containers            sudo docker ps
+- List all containers                sudo docker ps -a
   (running and stopped)
-- Connect to running container   sudo docker exec -i -t [container-id] /bin/ash
-- Start a paused container       sudo docker start -i -a [container-id]
+- Connect to running container       sudo docker exec -i -t [container-id] /bin/ash
+- Start a paused container           sudo docker start -i -a [container-id]
   and attach stdout/stderr
 
 Copy:
 
-- Copy files from/to container   sudo docker cp <file-or-folder> <container-id>:<dest-folder>
+- Copy files from/to container       sudo docker cp <file-or-folder> <container-id>:<dest-folder>
 
 Build and Deploy:
 
-- Build squashed image           sudo docker image build --squash -t <image-name> .
+- Build squashed image               sudo docker image build --squash -t <image-name> .
   (requires experimental mode)
-- Commit image                   sudo docker commit <container-id> <image-id>[:tag]
-- Build from scratch             sudo docker image build --no-cache
+- Commit image                       sudo docker commit <container-id> <image-id>[:tag]
+- Build from scratch                 sudo docker image build --no-cache
 
 Network:
 
-- Connect to localhost (mapped   sudo docker run --network="host" ...
+- Connect to localhost (mapped       sudo docker run --network="host" ...
   (to 127.0.0.1 in container)
 
 Cleanup:
 
-- Delete all containers          sudo docker rm $(sudo docker ps -a -q)
-- Delete all images              sudo docker rmi $(sudo docker images -q)
-- Delete build cache             sudo docker builder prune
-- Total docker space usage       sudo docker system df
+- Delete all containers              sudo docker rm $(sudo docker ps -a -q)
+- Delete all images                  sudo docker rmi $(sudo docker images -q)
+- Delete build cache                 sudo docker builder prune
+- Total docker space usage           sudo docker system df
 
 Inspect:
 
-- List all files in container    sudo docker export <container-id> | tar tfv -
-- Get container IP address       sudo docker inspect <container-id> | grep IPAddress
+- List all files in container        sudo docker export <container-id> | tar tfv -
+- Get container IP address           sudo docker inspect <container-id> | grep IPAddress
 
 Debug:
 
-- Run gdb capable docker         sudo docker run --cap-add=SYS_PTRACE --security-opt seccomp=unconfined
-- Docker events console          sudo docker events
+- Run gdb capable docker             sudo docker run --cap-add=SYS_PTRACE --security-opt seccomp=unconfined
+- Docker events console              sudo docker events
 
 Search and stats:
 
-- List Dockerhub tags            wget -q https://registry.hub.docker.com/v1/repositories/<repo-name>/tags -O - | jq -r '.[].name'
-- Library summary in JSON fmt.   https://hub.docker.com/v2/repositories/library/<repo-name>/
-- Pull counts for all images     wget -q https://store.docker.com/api/content/v1/products/search?page_size=100\&q=\&source=verified\&type=image%2Cbundle -O - | jq '.'
+- List Dockerhub tags                wget -q https://registry.hub.docker.com/v1/repositories/<repo-name>/tags -O - | jq -r '.[].name'
+- Library summary in JSON fmt.       https://hub.docker.com/v2/repositories/library/<repo-name>/
+- Pull counts for all images         wget -q https://store.docker.com/api/content/v1/products/search?page_size=100\&q=\&source=verified\&type=image%2Cbundle -O - | jq '.'
 
 Users:
 
-- Login                          sudo docker login
-- Logout                         sudo docker logout
-- Show logged in user            sudo docker info | grep Username
+- Login                              sudo docker login
+- Logout                             sudo docker logout
+- Show logged in user                sudo docker info | grep Username
 
 Docker Desktop for Windows:
 
-- Compact virtual disk           powershell -command "optimize-vhd -path c:\ProgramData\DockerDesktop\vm-data\DockerDesktop.vhdx -mode quick"
+- Compact virtual disk               powershell -command "optimize-vhd -path c:\ProgramData\DockerDesktop\vm-data\DockerDesktop.vhdx -mode quick"
 
 Misc:
 
-- Enable experimental features   echo $'{\n    "experimental": true\n}' | sudo tee -a /etc/docker/daemon.json
-                                 sudo service docker restart
-- Enable core dump               https://dev.to/mizutani/how-to-get-core-file-of-segmentation-fault-process-in-docker-22ii
+- Enable experimental features       echo $'{\n    "experimental": true\n}' | sudo tee -a /etc/docker/daemon.json
+                                     sudo service docker restart
+- Enable core dump                   https://dev.to/mizutani/how-to-get-core-file-of-segmentation-fault-process-in-docker-22ii
 
 Useful Links:
 
@@ -82,14 +82,22 @@ Podman
 
 Configure and troubleshoot:
 
-- Set storage driver              Edit /etc/containers/storage.conf, driver="vfs" (example)
-- Remove libpod local storage     rm -rf ~/.local/share/containers (for plain user)
-  files / free storage            rm -rf /var/lib/containers (for root user)
-                                  rm -rf /var/run/containers (for root user)
+- Set storage driver                  Edit /etc/containers/storage.conf, driver="vfs" (example)
+- Remove libpod local storage         rm -rf ~/.local/share/containers (for plain user)
+  files / free storage                rm -rf /var/lib/containers (for root user)
+                                      rm -rf /var/run/containers (for root user)
 - Hard reset podman including
-  all images and containers       podman system reset --force
+  all images and containers           podman system reset --force
 
 Links:
 
 - Podman Linux static builds
   https://github.com/mgoltzsche/podman-static/releases/
+
+
+Kubernetes
+----------
+
+Inspect:
+
+- List all containers, all pods       kubectl get pods --all-namespaces -o jsonpath="{..image}" | tr -s '[[:space:]]' '\n' | sort | uniq -c
