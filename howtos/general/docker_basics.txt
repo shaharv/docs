@@ -100,4 +100,10 @@ Kubernetes
 
 Inspect:
 
-- List all containers, all pods       kubectl get pods --all-namespaces -o jsonpath="{..image}" | tr -s '[[:space:]]' '\n' | sort | uniq -c
+- Check pods status                   kubectl get pods -o wide
+- Status of containers in pod         kubectl describe pod <pod-name>
+- List all running containers         kubectl get pods --all-namespaces -o jsonpath='{range .items[*]}{.metadata.namespace}/{.metadata.name}{"\n"}{range .spec.containers[*]}{.name}{"\n"}{end}{"\n"}{end}'
+- List all images of all pods         kubectl get pods --all-namespaces -o jsonpath="{..image}" | tr -s '[[:space:]]' '\n' | sort | uniq -c
+- Get name of running pod             kubectl get pods --no-headers -l app.kubernetes.io/name=<pod-name> -o custom-columns=":metadata.name"
+- Login to container                  kubectl exec -it <pod-name> -c <container-name> -- /bin/sh
+- helm upgrade --install <foo> nexus-repo/<goo>
