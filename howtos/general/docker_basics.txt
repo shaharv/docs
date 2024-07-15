@@ -3,48 +3,48 @@ Docker tips
 
 Basics:
 
-- Build image                        sudo docker image build -t [image-name]:[version] .
-- Run image                          sudo docker run -i -t uuid /bin/ash
-- List available images              sudo docker images
-- List running containers            sudo docker ps
-- List all containers                sudo docker ps -a
+- Build image                        docker image build -t [image-name]:[version] .
+- Run image                          docker run -i -t uuid /bin/ash
+- List available images              docker images
+- List running containers            docker ps
+- List all containers                docker ps -a
   (running and stopped)
-- Connect to running container       sudo docker exec -i -t [container-id] /bin/ash
-- Start a paused container           sudo docker start -i -a [container-id]
+- Connect to running container       docker exec -i -t [container-id] /bin/ash
+- Start a paused container           docker start -i -a [container-id]
   and attach stdout/stderr
 
 Copy:
 
-- Copy files from/to container       sudo docker cp <file-or-folder> <container-id>:<dest-folder>
+- Copy files from/to container       docker cp <file-or-folder> <container-id>:<dest-folder>
 
 Build and Deploy:
 
-- Build squashed image               sudo docker image build --squash -t <image-name> .
+- Build squashed image               docker image build --squash -t <image-name> .
   (requires experimental mode)
-- Commit image                       sudo docker commit <container-id> <image-id>[:tag]
-- Build from scratch                 sudo docker image build --no-cache
+- Commit image                       docker commit <container-id> <image-id>[:tag]
+- Build from scratch                 docker image build --no-cache
 
 Network:
 
-- Connect to localhost (mapped       sudo docker run --network="host" ...
+- Connect to localhost (mapped       docker run --network="host" ...
   (to 127.0.0.1 in container)
 
 Cleanup:
 
-- Delete all containers              sudo docker rm $(sudo docker ps -a -q)
-- Delete all images                  sudo docker rmi $(sudo docker images -q)
-- Delete build cache                 sudo docker builder prune
-- Total docker space usage           sudo docker system df
+- Delete all containers              docker rm $(docker ps -a -q)
+- Delete all images                  docker rmi $(docker images -q)
+- Delete build cache                 docker builder prune
+- Total docker space usage           docker system df
 
 Inspect:
 
-- List all files in container        sudo docker export <container-id> | tar tfv -
-- Get container IP address           sudo docker inspect <container-id> | grep IPAddress
+- List all files in container        docker export <container-id> | tar tfv -
+- Get container IP address           docker inspect <container-id> | grep IPAddress
 
 Debug:
 
-- Run gdb capable docker             sudo docker run --cap-add=SYS_PTRACE --security-opt seccomp=unconfined
-- Docker events console              sudo docker events
+- Run gdb capable docker             docker run --cap-add=SYS_PTRACE --security-opt seccomp=unconfined
+- Docker events console              docker events
 
 Search and stats:
 
@@ -54,9 +54,9 @@ Search and stats:
 
 Users:
 
-- Login                              sudo docker login
-- Logout                             sudo docker logout
-- Show logged in user                sudo docker info | grep Username
+- Login                              docker login
+- Logout                             docker logout
+- Show logged in user                docker info | grep Username
 
 Docker Desktop for Windows:
 
