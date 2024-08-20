@@ -31,6 +31,7 @@ Folders:
 
 Files:
 
+- Copy a file to file with suffix (bash)  cp test.json{,.orig}
 - Get the type of a file                  file <filename>
 - Get the type of function/alias          type <alias>
 - Get the full path of a file             realpath <filename>
