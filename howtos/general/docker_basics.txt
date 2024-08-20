@@ -95,8 +95,8 @@ Links:
   https://github.com/mgoltzsche/podman-static/releases/
 
 
-Kubernetes
-----------
+Kubernetes (K8s)
+----------------
 
 Inspect:
 
@@ -107,3 +107,6 @@ Inspect:
 - Get name of running pod             kubectl get pods --no-headers -l app.kubernetes.io/name=<pod-name> -o custom-columns=":metadata.name"
 - Login to container                  kubectl exec -it <pod-name> -c <container-name> -- /bin/sh
 - K9s - Kubernetes CLI                https://github.com/derailed/k9s
+
+Handle:
+- Delete all pods                     kubectl delete pods --all
