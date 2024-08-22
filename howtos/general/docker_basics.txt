@@ -110,3 +110,4 @@ Inspect:
 
 Handle:
 - Delete all pods                     kubectl delete pods --all
+- Force kill pod                      kubectl delete pod NAME --grace-period=0 --force
