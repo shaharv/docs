@@ -106,6 +106,8 @@ Inspect:
 - List all images of all pods         kubectl get pods --all-namespaces -o jsonpath="{..image}" | tr -s '[[:space:]]' '\n' | sort | uniq -c
 - Get name of running pod             kubectl get pods --no-headers -l app.kubernetes.io/name=<pod-name> -o custom-columns=":metadata.name"
 - Login to container                  kubectl exec -it <pod-name> -c <container-name> -- /bin/sh
+- List all configmaps                 kubectl get configmaps --all-namespaces
+- Print a configmap (e.g. coredns)    kubectl get cm coredns -n kube-system -o yaml
 - K9s - Kubernetes CLI                https://github.com/derailed/k9s
 
 Handle:
