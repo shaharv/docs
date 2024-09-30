@@ -324,6 +324,7 @@ Misc:
 - Display image                           xdg-open <image.jpg>
 - Hexadecimal text to binary              xxd -r -p input.txt output.jar
 - Random 64 hexadecimal bytes             xxd -l "64" -p /dev/urandom | tr -d " \n" ; echo
+- Enable glibc malloc max. debug level    export MALLOC_DEBUG_=3
 - Binary to hex text, 8 bytes at a time   cat my.bin | xxd -g 8 -c 8 -p | tr a-x A-Z
 - hex2dec                                 echo $(( 16#<Hex constant> ))
 - MD5 sum of a file                       md5sum <filename>
