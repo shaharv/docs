@@ -108,6 +108,7 @@ Inspect:
 - Login to container                  kubectl exec -it <pod-name> -c <container-name> -- /bin/sh
 - List all configmaps                 kubectl get configmaps --all-namespaces
 - Print a configmap (e.g. coredns)    kubectl get cm coredns -n kube-system -o yaml
+- Print network mappings              kubectl describe svc <pod-name>
 - K9s - Kubernetes CLI                https://github.com/derailed/k9s
 
 Handle:
