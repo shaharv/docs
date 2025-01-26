@@ -1,7 +1,7 @@
 LLDB cheat sheet
 ----------------
 
-From command line, run: $ lldb “exec to debug"
+From command line, run: $ lldb -- <executable> <args>
 
 Run:
 

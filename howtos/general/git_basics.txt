@@ -93,6 +93,7 @@ Git cheat sheet
 - Configure pull to merge (disable rebase)         git config --global pull.rebase false
                                                    git config --local pull.rebase false
 - Allow file modes (chmod)                         git config core.fileMode false
+- Fetch from all remote branches                   git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
 
 - Merge specified branch into current branch       git merge <branch-to-merge-from>
 - Abort failed merge                               git merge --abort
