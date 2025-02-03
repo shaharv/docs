@@ -29,8 +29,8 @@ Git cheat sheet
 - Show only commits from a certain person          git log --author="<pattern>"
 - Show origin branches next to commits             git log --graph --decorate
 
-- Update history of origin branch (without         git fetch
-  affecting local files at all)
+- Update history of origin branch                  git fetch
+- Force fetch from all remotes                     git fetch --all --force
   
 - Rename unpushed branch                           git branch -m <feature/new/name>
 - Create a new branch                              git branch crazy-experiment
