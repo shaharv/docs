@@ -22,6 +22,7 @@ Edit
 - Select all occurances of word      Ctrl + F2
 - Rename all occurances of symbol    F2
 - Mark rectangle block of text       Shift + Alt while dragging mouse
+- Trigger auto-complete manually     Ctrl + Space
 
 Edit - Multiple Cursors
 
@@ -33,10 +34,11 @@ Run and debug
 - Start debug                        F5
 - Stop debug                         Shift + F5
 
-Commands
+Commands and settings
 
 - Open the command palette           F1
 - See all keyboard shortcuts         Ctrl + K + S
+- Open settings                      Ctrl + ,
 
 View
 

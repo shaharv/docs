@@ -74,6 +74,7 @@ Binary inspection:
 - Binary to text, bytes, formatted        od -t x1 -w24 -v a.out
 - Read rpath setting of executable        readelf -d <executable> | grep 'R.*PATH'
 - Patch rpath in executable               chrpath -r "\$\ORIGIN/path/to/library" <executable>
+- Trace dynamic symbols loading           LD_DEBUG=all ./prog
 
 Disk usage:
 
