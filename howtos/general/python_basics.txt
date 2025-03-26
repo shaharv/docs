@@ -8,6 +8,7 @@ Installation
 - Install pacakges, with pip                 sudo pip3 install <package>
 - Install packages, pip.py alternative       python3 -m pip install <package>
 - List installed packages                    pip list
+- Upgrade pip                                pip install --upgrade pip
 
 Classes
 -------
