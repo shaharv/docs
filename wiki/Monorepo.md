@@ -1,6 +1,6 @@
 # Monorepo
 
-# Pros
+## Pros
 
 | Pro                      | Description |
 | ------------------------ | ----------- |
@@ -9,13 +9,13 @@
 | Atomic commits           | Easier to track down the origin of regressions using git bisect.
 | Benefit from LLM         | Monorepos will make AI tools much more efficient and context aware. Cross-module refactor becomes much easier. 
 
-# Risks
+## Risks
 
-| Month    | Savings |
-| -------- | ------- |
-| TBD      | TBD     |
+| Risk                     | Description |
+| ------------------------ | ----------- |
+| TBD                      | TBD         |
 
-# Tooling
+## Tooling
 
 - **_Merge Queue_**
   * Problem: In a monorepo, linear history is required (squash merge strategy), for allowing efficient bisecting and clear version history.
@@ -41,12 +41,18 @@
     - **Advanced:** Test Result Memoization - cache test results and skip running tests when possible.
   * Assumption: The gating tests of each component offer sufficient testing coverage.
 
-# Step towards Monorepo
+## Steps towards Monorepo
 
 - **Component testing**  
   * Make sure every components is covered by adaquete gater tests. Map the gaps and extend the coverage as needed.
 
+- **Improve build efficiency**
+  * Make sure the gater build process for each component is efficient and uses proper caching.  
+  * For C++, use ccache and ctcache.  
+  * For Java, use caching of maven artifacts. Avoid unneeded downloads.  
+  * Smart caching of common artifacts, such as Arrow.  
+
 - **Gradual transition - fake monorepo**
   * Keep components in separate repos.
   * Create a workspace repo that pulls each repo into a fixed layout (via script, not submodule); builds the system as if it were a monorepo; tests system integration end-to-end.
-  
+
