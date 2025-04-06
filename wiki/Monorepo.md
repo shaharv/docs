@@ -8,13 +8,18 @@
 | Dependency management    | Dependencies are naturally synched. The same submodule is used by the different components. The dependency needs to be built just once (e.g. Arrow).
 | Atomic commits           | Easier to track down the origin of regressions using git bisect.
 | Benefit from LLM         | Monorepos will make AI tools much more efficient and context aware. Cross-module refactor becomes much easier. 
+| Improved visibility      | Everyone has the full picture. Easier to understand what changed.
+| Unified tooling          | Monorepo allows for consolidating tooling, development procedures and CI.
+| Cross team colaboration  | Easier to contribute to different modules, reduces psychological boundries
 
 ## Risks
 
-| Risk                     | Description |
-| ------------------------ | ----------- |
-| Longer developemnt cycle | Pushing changes requires more rigorous testing and PR cycle becomes much longer. Long merge queues. Heavier load on CI machines.
-| Lost flexibility         | "Quick and dirty", semi-tested patches are no longer allowed. Must follow strict protocols. Slower turnaround time.
+| Risk                      | Description |
+| ------------------------- | ----------- |
+| Longer developement cycle | Pushing changes requires more rigorous testing and PR cycle becomes much longer. Long merge queues. Heavier load on CI machines.
+| Lost flexibility          | "Quick and dirty", semi-tested patches are no longer allowed. Must follow strict protocols. Slower turnaround time.
+| Ownership                 | Monorepo infra maintanance must be handled full time. Clear ownership of build and CI infra per component is needed.
+| Cross-team standards      | It might be hard to define and enforce common standards that are accepted by everyone.
 
 ## Tooling
 
@@ -43,6 +48,10 @@
   * Assumption: The gating tests of each component offer sufficient testing coverage.
 
 ## Steps towards Monorepo
+
+- **Define ownership**  
+  * A mono-repo might require full time maintainance, or at least "on-call" duty to handle any issue that rises.  
+  * The ownership for build, CI and test infra per component must be clearly defined.  
 
 - **Component testing coverage**  
   * Make sure every components is covered by adaquete gater tests. Map the gaps and extend the coverage as needed.
