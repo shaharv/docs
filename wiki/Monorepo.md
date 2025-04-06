@@ -10,15 +10,15 @@
 | Benefit from LLM         | Monorepos will make AI tools much more efficient and context aware. Cross-module refactor becomes much easier. 
 | Improved visibility      | Everyone has the full picture. Easier to understand what changed.
 | Unified tooling          | Monorepo allows for consolidating tooling, development procedures and CI.
-| Cross team colaboration  | Easier to contribute to different modules, reduces psychological boundries
+| Cross team collaboration | Easier to contribute to different modules, reduces psychological boundaries
 
 ## Risks
 
 | Risk                      | Description |
 | ------------------------- | ----------- |
-| Longer developement cycle | Pushing changes requires more rigorous testing and PR cycle becomes much longer. Long merge queues. Heavier load on CI machines.
+| Longer development cycle  | Pushing changes requires more rigorous testing and PR cycle becomes much longer. Long merge queues. Heavier load on CI machines.
 | Lost flexibility          | "Quick and dirty", semi-tested patches are no longer allowed. Must follow strict protocols. Slower turnaround time.
-| Ownership                 | Monorepo infra maintanance must be handled full time. Clear ownership of build and CI infra per component is needed.
+| Ownership                 | Monorepo infra maintenance must be handled full time. Clear ownership of build and CI infra per component is needed.
 | Cross-team standards      | It might be hard to define and enforce common standards that are accepted by everyone.
 
 ## Tooling
@@ -50,7 +50,7 @@
 ## Steps towards Monorepo
 
 - **Define ownership**  
-  * A mono-repo might require full time maintainance, or at least "on-call" duty to handle any issue that rises.  
+  * A mono-repo might require full time maintenance, or at least "on-call" duty to handle any issue that rises.  
   * The ownership for build, CI and test infra per component must be clearly defined.  
 
 - **Component testing coverage**  
