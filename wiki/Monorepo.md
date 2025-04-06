@@ -13,7 +13,8 @@
 
 | Risk                     | Description |
 | ------------------------ | ----------- |
-| TBD                      | TBD         |
+| Longer developemnt cycle | Pushing changes requires more rigorous testing and PR cycle becomes much longer. Long merge queues. Heavier load on CI machines.
+| Lost flexibility         | "Quick and dirty", semi-tested patches are no longer allowed. Must follow strict protocols. Slower turnaround time.
 
 ## Tooling
 
@@ -22,7 +23,7 @@
   With linear history, the issue of stall PRs is significantly amplified. Each PR must be based on the latest HEAD.
   When a PR passes gater tests and is considered "ready for merge", merging it will require all other
   "ready for merge" PRs to rebase and retest.  
-  * Solution: Using an automated merge queue - **GitHub Merge Queue** feature - automates the process.
+  * Solution: Using an automated merge queue - **GitHub Merge Queue** feature - automates the process.  
 
 - **_Differential Testing_**
   * Problem: Each PR should be verified by the tests related to the changed component(s). We can't run the whole set of tests for each monorepo PR.  
@@ -43,8 +44,11 @@
 
 ## Steps towards Monorepo
 
-- **Component testing**  
+- **Component testing coverage**  
   * Make sure every components is covered by adaquete gater tests. Map the gaps and extend the coverage as needed.
+
+- **Component testing consistency**  
+  * Make sure component gaters produce consistent results. Ideally, build and run tests in docker containers.  
 
 - **Improve build efficiency**
   * Make sure the gater build process for each component is efficient and uses proper caching.  
@@ -56,3 +60,6 @@
   * Keep components in separate repos.
   * Create a workspace repo that pulls each repo into a fixed layout (via script, not submodule); builds the system as if it were a monorepo; tests system integration end-to-end.
 
+- **Infra and testing machines**
+  * Define the minimum and desired requirements for CI resources. There should be enough machines to support build and integration flows with reasonable service times.  
+  * Consider the mix between Github actions and Jenkins jobs.  
