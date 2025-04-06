@@ -46,6 +46,8 @@
     - Write a test selector for running only relevant tests. Consider the files changes in the PR.  
     - **Advanced:** Test Result Memoization - cache test results and skip running tests when possible.
   * Assumption: The gating tests of each component offer sufficient testing coverage.
+  * Cavaet: need to carefully map hidden and non-trivial dependencies.  
+    While not all them can be mapped, need to enable requesting extra tests from the gater.  
 
 ## Steps towards Monorepo
 
@@ -72,3 +74,13 @@
 - **Infra and testing machines**
   * Define the minimum and desired requirements for CI resources. There should be enough machines to support build and integration flows with reasonable service times.  
   * Consider the mix between Github actions and Jenkins jobs.  
+
+## Implementation considerations
+
+- **Git history**
+  * Git history of the projects should be maintained.  
+  * Attempt to discard large unused objects while rewriting history. Check how history could be kept compact yet complete.  
+
+- **Commit format**
+  * Consider changing the commit format string to include the relevant components for better visibility.  
+    Example from Arrow project: `GH-45185: [C++][Parquet] Raise an error for invalid repetition levels (#45186)`.
