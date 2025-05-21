@@ -64,3 +64,7 @@ WSL:
   (4.5+ will list as 4.0)
 - .NET versions of running executables    clrver -all
 - Latest .NET version (C# CC banner)      csc.exe
+
+Outlook:
+
+- Make special characters invisible       Ctrl + Shift + 8

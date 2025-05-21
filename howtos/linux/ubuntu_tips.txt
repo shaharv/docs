@@ -201,6 +201,7 @@ Build:
 - Check libstdc++ version (2)             ls -l /usr/lib/x86_64-linux-gnu/libstdc*
 - Upgrade libstdc++                       sudo apt upgrade libstdc++6
 - Downgrade libstdc++ back                sudo apt install libstdc++6=<ver>
+- Add the Ubuntu toolchain repository     sudo add-apt-repository ppa:ubuntu-toolchain-r/test
 
 Linking:
 
