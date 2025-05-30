@@ -93,6 +93,7 @@ Disk usage:
 - Package manager                         synaptic
 - Cleanup - system journal - keep 100M    sudo journalctl --vacuum-size=100M
 - Cleanup - snapd cache                   sudo rm /var/lib/snapd/cache/*
+- List NVMe disks                         sudo nvme list
 
 Text processing:
 
