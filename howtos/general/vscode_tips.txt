@@ -62,12 +62,13 @@ Installation (Windows+WSL)
 - VSCode and C++ on WSL:
   https://code.visualstudio.com/docs/cpp/config-wsl
 
-- Install extensions (for WSL):
+- Install extensions (for Windows and WSL):
   - C/C++
   - C/C++ Extension Pack
   - CMake
   - CMakeTools
   - Python
+  - Remote - SSH
   - Remote - WSL
   - TabNine
   - Code Spell Checker
