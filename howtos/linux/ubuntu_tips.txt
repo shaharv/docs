@@ -246,6 +246,7 @@ Connecting and working on remote machine:
 - Detach from tmux session                Ctrl + B D
 - Kill tmux session                       tmux kill-session -t <sessionNameOrNumber>
 - List tmux sessions                      tmux ls
+- tmux search/scroll mode                 Ctrl+B (then PageUp / PageDown)
 
 Monitor and graphics:
 
