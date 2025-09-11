@@ -50,6 +50,12 @@ Misc
 - Kill all running VSCode process    killall node
   (assuming no other node apps)
 
+Resouces
+--------
+
+- Visual Studio Code Keyboard shortcuts for Windows
+  https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
+
 Installation (Windows+WSL)
 --------------------------
 

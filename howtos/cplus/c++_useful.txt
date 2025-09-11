@@ -158,6 +158,9 @@ General Links
 - Ericsson code checker - a meta-linter (keyword: clang-tidy, cppcheck)
   https://github.com/Ericsson/codechecker
 
+- Ulrich Drepper - How to write shared libraries
+  https://www.cs.dartmouth.edu/sergey/cs108/ABI/UlrichDrepper-How-To-Write-Shared-Libraries.pdf
+
 SIMD and Vectorization
 ----------------------
 

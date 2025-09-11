@@ -68,3 +68,8 @@ Configuration object
 
 - https://softwareengineering.stackexchange.com/questions/40313/is-a-single-config-object-a-bad-idea
 
+Resources
+---------
+
+- Design Patterns - elements of reusable software
+  https://www.javier8a.com/itc/bd1/articulo.pdf
