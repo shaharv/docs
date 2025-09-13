@@ -1,6 +1,15 @@
 Memory Concepts
 ===============
 
+Cache
+-----
+
+- Cpu Cache (Paul Bone)
+  https://paul.bone.id.au/blog/2019/05/01/cpu-cache
+
+- Understanding CPU Cache Organization and Structure
+  https://levelup.gitconnected.com/understanding-cpu-cache-organization-and-structure-4cb4a7c32545
+
 Data Locality
 -------------
 
