@@ -15,7 +15,7 @@ Ubuntu First Steps
    $ git config --global user.name username
    $ git config --global user.email user@domain.com
 
-4. ~/.bashrc convinience updates (append at EOF):
+4. ~/.bashrc convenience updates (append at EOF):
 
    force_color_prompt=yes
    bind TAB:menu-complete

@@ -46,7 +46,7 @@ Git cheat sheet
 - Show old file version of a file                  git show <revhash>:<file>
 - Show commit                                      git show <revhash>
 
-- Search for commited files                        git ls-tree -r --name-only <branch name> | grep <file pattern>
+- Search for committed files                       git ls-tree -r --name-only <branch name> | grep <file pattern>
 
 - Commit all pending changes, not adding files     git commit -a
 - Overwrite last commit with a new commit          git commit --amend

@@ -9,7 +9,7 @@ Chapter 2 - C++ and OOP
 - Java vs. C++:
   - No pointers - only references
   - No global functions. main should be defined in one of the classes
-  - main should be declared static (so JVM could invoke it without instanciating
+  - main should be declared static (so JVM could invoke it without instantiating
     any class).
   - No templates
 - Main OOP principles:
@@ -43,7 +43,7 @@ Chapter 4 - Classes
 - this keyword
 - Use const when possible
 - Object size = sum of sizes of its data members.
-  If no data members, size is usually 4 bytes (pointer size) - impl. dependant.
+  If no data members, size is usually 4 bytes (pointer size) - impl. dependent.
 
 Chapter 5 - C'tors and D'tors
 -----------------------------
@@ -104,7 +104,7 @@ Chapter 7 - Classes - More
 - static data members:
   - Not counted in object size, since it's common to all class objects
   - Could serve as default parameter value, e.g. A(int i=myStatic)
-  - Could be acccess with no need for object, using static member function
+  - Could be accessed with no need for object, using static member function
 - friend function:
   - A public function that have access to private members of the class
 - friend class:
@@ -184,7 +184,7 @@ Chapter 9 - Inheritance
   impl. =, default = will be used (shallow copy), and calling base class =
   operator for copying base class members.
 - Accessing base data members:
-  - All base data members exist in the derived class, but not necasserily
+  - All base data members exist in the derived class, but not necessarily
     accessible. Base members that aren't accessible/needed in the derived
     class should probably be impl. in the derived class instead.
 - Direct access to base class functions:

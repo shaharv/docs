@@ -14,7 +14,7 @@ Basic:
 
 Developer:
 
-- Open develper mode                      F12
+- Open developer mode                     F12
 - Disable page caching                    Network -> Disable cache
 - Search for script files                 Ctrl + O
 - Reload and refresh options              Right click refresh button

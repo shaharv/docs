@@ -9,7 +9,7 @@ General (MISRA)
 - Use const where possible
 - Use stdint.h types (uint32_t)
 - For bool, #include <stdbool.h>
-- Use size_t for respresenting sizes, for increased portability
+- Use size_t for representing sizes, for increased portability
 - Use constant suffixes (1u, 0x8000ull)
 - perror
 - Use enums
@@ -20,7 +20,7 @@ General (MISRA)
 Symbol names
 ------------
 
-- Names begining with __ or _[A-Z] are reserved to the implementation
+- Names beginning with __ or _[A-Z] are reserved to the implementation
   (C99 and C++11).
 
 Functions

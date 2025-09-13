@@ -14,7 +14,7 @@ Basics:
 - Make shell echo executed commands       set -x (set +x to revert)
 - Bash "strict mode"                      set -euo pipefail
 - Run script in the same shell env.       . script.sh
-- Change languague                        Super key [Windows Key] + Space
+- Change language                         Super key [Windows Key] + Space
 - Redirect stdout and stderr to file      cmd >log.txt 2>&1
 - Quick copy                              Shift + Ctrl + C
 - Quick paste                             Shift + Ctrl + V
@@ -46,7 +46,7 @@ Finding files:
 
 - Locate a file, first in PATH:           whereis <filename>
 - Locate all files matching wildcard      locate <filename>
-- Find a file in folder hierarcy          find . -name "wildcard"
+- Find a file in folder hierarchy         find . -name "wildcard"
 - Find files with several wildcards       find -type f \( -name "*.ext1" -o -name "*.ext2" \)
 - Find folders created today              find . -mtime -1 -type d -print | grep -v "^.$"
 - Find files and display dates            find -name "*abc*" -exec stat -c "%n %y" {} \
@@ -60,7 +60,7 @@ Searching in files:
 - List files NOT matching an expression   grep -L "expr" * (or --files-without-match)
 - Search string in specific file types    find . -type f -name '*.cpp' | xargs grep "string"
 - Count "-o" in all commands files        ls commands*.txt | xargs grep '^\-o' | count 1
-- Grep results with sorrounding context   cat file.txt | grep icudt55_dat -B 10 -A 20
+- Grep results with surrounding context   cat file.txt | grep icudt55_dat -B 10 -A 20
 - Search numbers with X digits            grep 'heap: ([0-9]\{11\}B' *.log
 - Grep w/o color (disable ANSI output)    grep --color=never ...
 - Search replace in files                 find \( -name "*.h" -or -name "*.cpp" \) -exec sed -i 's/2022/2023/g' {} +
@@ -147,7 +147,7 @@ System:
 - Show system uptime                      uptime
 - Check filesystem                        sudo e2fsck -fv /dev/sdX
 - Check HD for bad blocks                 sudo fsck -c /dev/sdX
-- Machine endianess (BE = 256, LE = 1)    printf '\1' | od -dAn
+- Machine endianness (BE = 256, LE = 1)   printf '\1' | od -dAn
 - Currently held file locks               sudo lslocks -u
 - Find which process is locking a file    fuser <path-to-file>
 - Inspect disks                           lsblk
@@ -271,7 +271,7 @@ Compression:
 - Compress a single folder (zip)          zip -r zipname foldername/*
 - Compress a list of files                find -name "*.log" | zip logs.zip -@
 - Unzip all zip files into current dir    for file in `ls *.zip`; do unzip $file; done
-- Unzip all zip files into seperate dirs  for file in `ls *.zip`; do unzip $file -d `echo $file | cut -d . -f 1`; done
+- Unzip all zip files into separate dirs  for file in `ls *.zip`; do unzip $file -d `echo $file | cut -d . -f 1`; done
 - Extract rpm                             rpm2cpio myinstaller.rpm | cpio -idmv
 - Extract gz                              gunzip file.gz
 - Extract xz                              unxz file.xz
@@ -290,7 +290,7 @@ Troubleshooting:
 
 Useful Utilities:
 
-- Paritition mangement                    gparted
+- Partition management                    gparted
 - Unity tweaker                           unity-tweak-tool
 
 Source Code Formatting:
@@ -317,7 +317,7 @@ glibc:
 - Get pthreads implementation (glibc)     getconf GNU_LIBPTHREAD_VERSION
 
 - glibc compatibility with gcc            https://gcc.gnu.org/onlinedocs/libstdc++/manual/abi.html
-  Standard C++ library compatiblity on selected distros:
+  Standard C++ library compatibility on selected distros:
 
   Ubuntu 18.04         libstdc++6:amd64   8.4.0-1ubuntu1~18.04   /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
   Debian 10 (Buster)   libstdc++6:amd64   8.3.0-6                /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25

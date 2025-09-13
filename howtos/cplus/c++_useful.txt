@@ -32,8 +32,8 @@ The Copy-swap idiom (also move-swap)
   - copy assignment opereator parameter is to be taken *by value*, for 
     the compiler to construct a copy
   - copy assignment operator may be declared noexcept, since when the
-    operator is entered it is guarenteed that copy construction has succeeeded,
-    and swap itself is non throwing (similarily, swap may be declared noexcept)
+    operator is entered it is guaranteed that copy construction has succeeded,
+    and swap itself is non throwing (similarly, swap may be declared noexcept)
   - our swap is to be declared friend, for enabling ADL
 
   class MyClass

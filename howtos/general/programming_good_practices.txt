@@ -82,14 +82,14 @@ Additional Guidelines:
 * Code should be as expressive as possible
 * Needing too much comments might indicate the code is overly complex and needs a rewrite
 * Document where needed (non-trivial algorithm etc.)
-* A commentary paragraph in the begining of a file - good practice
+* A commentary paragraph in the beginning of a file - good practice
 
 Links:
 
 - The Principles of Good Programming
   http://www.artima.com/weblogs/viewpost.jsp?thread=331531
 
-- Programming Priciples
+- Programming Principles
   https://webpro.github.io/programming-principles
 
 - List of software development philosophies

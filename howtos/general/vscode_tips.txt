@@ -18,9 +18,9 @@ Edit
 - Copy / paste the active line       Ctrl + C / Ctrl + V
 - Move the active line               Alt + Up/Down Arrow
 - Comment / uncomment lines          Ctrl + /
-- Select next occurance of word      Ctrl + D
-- Select all occurances of word      Ctrl + F2
-- Rename all occurances of symbol    F2
+- Select next occurrence of word     Ctrl + D
+- Select all occurrences of word     Ctrl + F2
+- Rename all occurrences of symbol   F2
 - Mark rectangle block of text       Shift + Alt while dragging mouse
 - Trigger auto-complete manually     Ctrl + Space
 
@@ -50,7 +50,7 @@ Misc
 - Kill all running VSCode process    killall node
   (assuming no other node apps)
 
-Resouces
+Resources
 --------
 
 - Visual Studio Code Keyboard shortcuts for Windows

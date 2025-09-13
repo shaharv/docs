@@ -13,8 +13,8 @@ Network:
 
 Process:
 
-- Forcibly termniate process by PID       taskkill /F /PID 5096
-- Forcibly termniate process by name      taskkill /F /IM notepad++.exe
+- Forcibly terminate process by PID       taskkill /F /PID 5096
+- Forcibly terminate process by name      taskkill /F /IM notepad++.exe
 - List all processes                      tasklist
 - List process with PID                   tasklist /FI "PID eq 12196"
 

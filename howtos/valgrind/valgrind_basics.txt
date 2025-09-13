@@ -24,8 +24,8 @@ Memcheck:
 
 - Generate suppressions                   --gen-suppressions=all
 - Generate suppressions - example         --gen-suppressions=all --suppressions=jvm_hotspot_8.supp --undef-value-errors=no --trace-children=yes --error-limit=no
-- Use supressions                         --suppressions=my_valgrind.supp
-- Use supressions - example               --suppressions=jvm_hotspot_8.supp --leak-check=full --undef-value-errors=no --error-limit=no
+- Use suppressions                        --suppressions=my_valgrind.supp
+- Use suppressions - example              --suppressions=jvm_hotspot_8.supp --leak-check=full --undef-value-errors=no --error-limit=no
 
 Misc:
 

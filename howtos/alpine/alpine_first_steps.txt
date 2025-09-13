@@ -38,7 +38,7 @@ Alpine Linux First Steps
    - Create .profile in home folder
    - Add "SHELL=/bin/bash"
 
-8. ~/.bashrc convinience updates (append at EOF)
+8. ~/.bashrc convenience updates (append at EOF)
 
    force_color_prompt=yes
    bind TAB:menu-complete

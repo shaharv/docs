@@ -70,7 +70,7 @@ Windows First Steps
   - Analyze disk space           SpaceSniffer
   - Text editor and search tool  Sublime
   - Clipboard manager            Ditto
-  - Partition manager            MiniTool Parition Wizard Free
+  - Partition manager            MiniTool Partition Wizard Free
 
 8. Disable system sounds:
 
