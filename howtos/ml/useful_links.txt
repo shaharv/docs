@@ -113,6 +113,12 @@ Linear Algebra
 - Matrix Calculator
   https://www.mathsisfun.com/algebra/matrix-calculator.html
 
+* A x B = AB
+  The element AB[ij] is the result of multiplying A row i with B column j.
+  AB is defined only when the number of A columns == number of B rows.
+
+* Identity matrix
+
 Image Processing
 ----------------
 
