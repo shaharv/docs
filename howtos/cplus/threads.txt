@@ -1,0 +1,55 @@
+Threads
+=======
+
+Mutex
+-----
+
+Mutex vs. Semaphore:
+
+- A mutex is a locking mechanism for ensuring a resource is accessed by only one thread at a time.
+  A mutex enforces strict ownership: only the thread that locks the mutex can unlock it.
+
+- A semaphore is a signaling mechanism used to control access to shared resources.
+  Multiple threads can access the critical section at the same time.
+
+Condition variable
+------------------
+
+- std::condition_variable is a synchronization primitive used with a std::mutex to block one or more threads until another thread
+  both modifies a shared variable (the condition) and notifies the std::condition_variable.
+
+- std::condition_variable works only with std::unique_lock<std::mutex>.
+
+- Never rely on wait() returning only when notify_one() or notify_all() was called - always check your actual condition in a loop,
+  due to possible spurious wakeup (spurious wakeup could occur due to OS and implementation reasons. A well formed code must also
+  check a condition before proceeding).
+
+  Method 1 - use a loop:
+  
+  std::unique_lock<std::mutex> lock(mtx);
+  while (!condition_is_met) {
+      cv.wait(lock);
+  }
+  
+  Method 2 - use a predicate:
+
+  std::unique_lock<std::mutex> lock(mtx);
+  cv.wait(lock, []{ return condition_is_met; }); // wait until predicate returns true
+
+  
+Semaphore
+---------
+
+- std::counting_semaphore<N> (since C++20)
+
+- using binary_semaphore = std::counting_semaphore<1>;
+
+- A counting_semaphore contains an internal counter initialized by the constructor. This counter is decremented by calls to acquire()
+  and related methods, and is incremented by calls to release(). When the counter is zero, acquire() blocks until the counter is incremented,
+  but try_acquire() does not block; try_acquire_for() and try_acquire_until() block until the counter is incremented or a timeout is reached.
+
+Resources
+---------
+
+- Mutex vs Semaphore
+  https://www.geeksforgeeks.org/operating-systems/mutex-vs-semaphore/
