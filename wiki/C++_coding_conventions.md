@@ -40,7 +40,7 @@ The following naming rules apply:
 ## Namespaces
 
 - Never add `using namespace` in header files, for not polluting the namespace of the includers. Always fully qualified type name in header files.
-- Never use `using namespace::std`, not even in source files. If needed, import individual symbols, for example using `std::cout`. Importing the entire std namespace is overkill and could easily create ambiguities.
+- Never use `using namespace std`, not even in source files. If needed, import individual symbols, for example using `std::cout`. Importing the entire std namespace is overkill and could easily create ambiguities.
 
 ## Variable declarations
 
@@ -63,7 +63,7 @@ The following naming rules apply:
 ## Default Parameters
 
 - Refrain from using C++ default parameters as much as possible. Giving function parameters default values may be error prune:
-  * When adding a parameter with a default value to an existing function, we may miss function calls that we should have been updated, and should not get the default parameter value.
+  * When adding a parameter with a default value to an existing function, we may miss function calls that should have been updated, and should not get the default parameter value.
   * Having to specify the parameter value improves maintainability - it forces the programmer to assign a thought-of value, and not a default which might not be suitable for all cases.
 
 ## Enumerations
@@ -73,16 +73,6 @@ The following naming rules apply:
   * Enumerator names are not exported to the global namespace (otherwise causes name clashes).
   * The underlying type of a C enum cannot be specified, causing confusion, compatibility problems, and makes forward declaration impossible.
   * For more details see: https://stackoverflow.com/questions/18335861/why-is-enum-class-considered-safer-to-use-than-plain-enum
-- In API public enum classes, use inline Doxygen documentation. For Example:
-  ``` 
-  /**
-   * The ProfilingStatistics structure holds the statistics parameters.
-   */
-  struct EXPORT_SYMBOL ProfilingStatistics {
-      uint64_t hed;  /**< Execution Duration (in nanoseconds) */
-      uint64_t eqr;  /**< Effective Query scanned Rows */
-  };
-  ```
 
 ## Const correctness
 
