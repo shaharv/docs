@@ -8,8 +8,8 @@ For enforcing conventions automatically, use clang-tidy version 18 and later (fo
 The recommended standard is C++20. Feel free to use any C++20 features in your code.
 
 Note: libc++ (LLVM) currently doesn't support several C++ standard library features. Known missing features:
-- `std:derived_from (<concepts>)`
-- `std::jthread (<jthread>)`
+- `std:derived_from` (<concepts>)
+- `std::jthread` (<jthread>)
 
 ## Code formatting
 
@@ -24,17 +24,17 @@ The recommended formatting rules are:
 
 ## Naming conventions
 
-The naming conventions are listed in the `.clang-ti file.
+The naming conventions are listed in the `.clang-tidy` file.
 
 The following naming rules apply:
-- Type names - classes, structs, unions: using *CamelCase*
-- Function/method names: using *camelBack*
-- Variables, data members: using *camelBack*
-- Private data members: using *camelBack* with underscore suffix. For example: `eventCounter_`.
-- Namespaces: using *snake_case*.
-- Constants: using *UPPER_CASE*.
+- Type names - classes, structs, unions: using **CamelCase**
+- Function/method names: using **camelBack**
+- Variables, data members: using **camelBack**
+- Private data members: using **camelBack** with underscore suffix. For example: `eventCounter_`.
+- Namespaces: using **snake_case**.
+- Constants: using **UPPER_CASE**.
 - Boolean variables naming:
-  * The name *isOk* should be used for Boolean variables that hold success or failure status of an operation.
+  * The name **isOk** should be used for Boolean variables that hold success or failure status of an operation.
   * Otherwise, Boolean variables should start with the is prefix.
 
 ## Namespaces
@@ -44,7 +44,7 @@ The following naming rules apply:
 
 ## Variable declarations
 
-- When declaring simple variables (such as scalars and std::string), prefer initializing using assignment operator, and not using function-like brackets. For example:
+- When declaring simple variables (such as scalars and `std::string`), prefer initializing using assignment operator, and not using function-like brackets. For example:
   ```
   int32_t myInt = 5;              // good
   std::string myString = "hello"; // good
@@ -69,8 +69,8 @@ The following naming rules apply:
 ## Enumerations
 
 - Use C++ `enum class` for defining enumerations. Avoid using C enums, or groups of static integer constants. A C++ enum class is a type-safe alternative to a C enum and offers the following benefits:
-  * Requires explicit cast to integer, which helps to avoid coding errors and misuse
-  * Enumerator names are not exported to the global namespace (otherwise causes name clashes)
+  * Requires explicit cast to integer, which helps to avoid coding errors and misuse.
+  * Enumerator names are not exported to the global namespace (otherwise causes name clashes).
   * The underlying type of a C enum cannot be specified, causing confusion, compatibility problems, and makes forward declaration impossible.
   * For more details see: https://stackoverflow.com/questions/18335861/why-is-enum-class-considered-safer-to-use-than-plain-enum
 - In API public enum classes, use inline Doxygen documentation. For Example:
@@ -81,7 +81,6 @@ The following naming rules apply:
   struct EXPORT_SYMBOL ProfilingStatistics {
       uint64_t hed;  /**< Execution Duration (in nanoseconds) */
       uint64_t eqr;  /**< Effective Query scanned Rows */
-      uint64_t rqr;  /**< Raw Query scanned Rows */
   };
   ```
 
@@ -115,11 +114,11 @@ The following naming rules apply:
 
 - Every .cpp file should directly include the header files which are needed. For example, if `std::string` is used in the .cpp file, the header `<string>` should be included (and not rely on it being included by another header file). This rule is enforced automatically by clang-tidy’s `misc-include-cleaner` check.
 - System headers and third-party headers should be included using `<>` while user (implementation) headers should be included with `""`. The third party libraries used in the project are marked as “system” (which affect the compiler include search paths).
-- Headers should be organized in include groups according to the following convention:
-  * 1. The interface header for this file, if any. For example, `Foo.cpp` should include `Foo.h`.
-  * 2. Any headers required for the implementation, including auto-generated headers such as protobuf headers (that are not system headers or third party headers).
-  * 3. API headers.
-  * 4. Third party headers, such as Arrow, spdlog, etc.
-  * 5. System headers.
+- Headers should be organized in include groups according to the following order:
+  * The interface header for this file, if any. For example, `Foo.cpp` should include `Foo.h`.
+  * Any headers required for the implementation, including auto-generated headers such as protobuf headers (that are not system headers or third party headers).
+  * API headers.
+  * Third party headers, such as Arrow, spdlog, etc.
+  * System headers.
 - Each include group should be separated by a newline.
 - Header includes in each include group should be sorted. This rule is enforced automatically by clang-tidy’s `llvm-include-order` check.
