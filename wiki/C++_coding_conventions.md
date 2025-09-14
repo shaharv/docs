@@ -8,8 +8,8 @@ For enforcing conventions automatically, use clang-tidy version 18 and later (fo
 The recommended standard is C++20. Feel free to use any C++20 features in your code.
 
 Note: libc++ (LLVM) currently doesn't support several C++ standard library features. Known missing features:
-- `std:derived_from` (<concepts>)
-- `std::jthread` (<jthread>)
+- `std:derived_from` (concepts)
+- `std::jthread` (jthread)
 
 ## Code formatting
 
