@@ -103,11 +103,10 @@ The following naming rules apply:
 ## Included headers
 
 - Every .cpp file should directly include the header files which are needed. For example, if `std::string` is used in the .cpp file, the header `<string>` should be included (and not rely on it being included by another header file). This rule is enforced automatically by clang-tidy’s `misc-include-cleaner` check.
-- System headers and third-party headers should be included using `<>` while user (implementation) headers should be included with `""`. The third party libraries used in the project are marked as “system” (which affect the compiler include search paths).
+- System headers and third-party headers should be included using `<>` while user (implementation) headers should be included with `""`. The third party libraries used in the project might be marked as “system” (which affect the compiler include search paths).
 - Headers should be organized in include groups according to the following order:
   * The interface header for this file, if any. For example, `Foo.cpp` should include `Foo.h`.
   * Any headers required for the implementation, including auto-generated headers such as protobuf headers (that are not system headers or third party headers).
-  * API headers.
   * Third party headers, such as Arrow, spdlog, etc.
   * System headers.
 - Each include group should be separated by a newline.
