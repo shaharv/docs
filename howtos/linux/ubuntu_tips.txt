@@ -20,6 +20,7 @@ Basics:
 - Quick paste                             Shift + Ctrl + V
 - sudo with inherited env. vars           sudo -E <cmd>
 - Run GUI program as root                 gksudo <cmd>
+- Authenticate as sudo                    sudo -v
 
 Folders:
 
