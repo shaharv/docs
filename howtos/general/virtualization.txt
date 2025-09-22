@@ -1,0 +1,23 @@
+Virtualization
+==============
+
+- Understanding the Virtualization Spectrum
+  https://wiki.xenproject.org/wiki/Understanding_the_Virtualization_Spectrum
+
+- Hypercall: analogous to a system call, but instead of going from a user-space process to kernel,
+  it's from a guest domain / guest kernel to hypervisor.
+
+- Types of virtualization:
+  * Full software emulation (e.g. QEMU TCG mode [Tiny Code Generator])
+  * Binary translation (e.g. QEMU TCG with block caching; VirtualBox, VMware Workstation / ESX)
+  * Para-Virtualization (PV) (e.g. Xen PV)
+    - Requires guest OS support
+    - Privileged instructions are replaced with hypercalls
+  * Hardware-Assisted Virtualization (HVM) (e.g. KVM, Xen HVM)
+    - Intel VMX instructions
+  * Hybrid Virtualization (PVH, PVHVM) (e.g. Linux KVM with virtio drivers)
+    - CPU hardware virtualization combined with paravirtualized drivers for efficient I/O
+
+- Intel® 64 and IA-32 Architectures Software Developer’s Manual
+  Chapter 23: Introduction to Virtual Machine Extensions
+  https://www.intel.com.tw/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-vol-3c-part-3-manual.pdf
