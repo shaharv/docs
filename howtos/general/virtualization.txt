@@ -9,7 +9,7 @@ Virtualization
 
 - Types of virtualization:
   * Full software emulation (e.g. QEMU TCG mode [Tiny Code Generator])
-  * Binary translation (e.g. QEMU TCG with block caching; VirtualBox, VMware Workstation / ESX)
+  * Binary translation (e.g. QEMU TCG with block caching; VirtualBox [pre-2019])
   * Para-Virtualization (PV) (e.g. Xen PV)
     - Requires guest OS support
     - Privileged instructions are replaced with hypercalls
