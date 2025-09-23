@@ -1,0 +1,20 @@
+Interesting HW related resources
+================================
+
+- Gallery of Processor Cache Effects
+  http://igoro.com/archive/gallery-of-processor-cache-effects
+
+- Spectre and Meltdown
+  https://spectreattack.com
+
+- Spectre detailed breakdown - Google project Zero
+  https://googleprojectzero.blogspot.com/2018/01/reading-privileged-memory-with-side.html
+
+- Spectre variant #2 LLVM patch - retpoline:
+  https://lists.llvm.org/pipermail/llvm-commits/Week-of-Mon-20180101/513630.html
+
+- The Free Lunch Is Over: A Fundamental Turn Toward Concurrency in Software
+  http://www.gotw.ca/publications/concurrency-ddj.htm
+
+- Keith Makan's Blog
+  https://blog.k3170makan.com
