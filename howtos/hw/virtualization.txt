@@ -4,8 +4,22 @@ Virtualization
 - Understanding the Virtualization Spectrum
   https://wiki.xenproject.org/wiki/Understanding_the_Virtualization_Spectrum
 
+- CPU protection rings
+  * Ring 3 - user space
+  * Ring 2 - not used (intended for OS services, drivers)
+  * Ring 1 - not used (intended for device drivers)
+  * Ring 0 - kernel
+
+- CPL (Current Privilege Level) is the active ring in the CPU. It's a 2-bit field in the
+  CS (code segment) register.
+
 - Hypercall: analogous to a system call, but instead of going from a user-space process to kernel,
   it's from a guest domain / guest kernel to hypervisor.
+  When a privileged instruction is executed (such as "MOV CR3"), the CPU should trap (interrupt)
+  and the control is transferred to the hypervisior. However, not all x86 previliged instructions
+  (pre-VT-x / pre-AMD-V x86) trapped cleanly - for example some will not trap and silently ignored
+  if run unpreviliged. Replacing those instructions with hypercalls allows the hypervisior to
+  handle them cleanly.
 
 - Types of virtualization:
   * Full software emulation (e.g. QEMU TCG mode [Tiny Code Generator])
