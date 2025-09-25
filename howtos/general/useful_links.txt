@@ -37,8 +37,8 @@ LLVM/Clang
 - Notes on setting up projects with LLVM
   https://weliveindetail.github.io/blog/post/2017/07/17/notes-setup.html
 
-Build
------
+Build tools and internals
+-------------------------
 
 - Ninja - by Evan Martin
   http://www.aosabook.org/en/posa/ninja.html
@@ -51,6 +51,9 @@ Build
 
 - Creating Portable Linux Binaries (Insane Coding Blog)
   http://insanecoding.blogspot.com/2012/07/creating-portable-linux-binaries.html
+
+- Inside ELF Symbol Tables (Oracle Solaris Blog)
+  https://blogs.oracle.com/solaris/post/inside-elf-symbol-tables
 
 Compilers
 ---------
@@ -185,6 +188,9 @@ Security
 
 - Exploiting a misused C++ shared pointer on Windows 10
   https://blog.scrt.ch/2017/01/27/exploiting-a-misused-c-shared-pointer-on-windows-10
+
+- The XZ backdoor CVE-2024-3094
+  https://snyk.io/blog/the-xz-backdoor-cve-2024-3094/
 
 Static Analysis
 ---------------
