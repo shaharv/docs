@@ -32,6 +32,42 @@ Virtualization
   * Hybrid Virtualization (PVH, PVHVM) (e.g. Linux KVM with virtio drivers)
     - CPU hardware virtualization combined with paravirtualized drivers for efficient I/O
 
-- Intel 64 and IA-32 Architectures Software Developer’s Manual
+- Intel 64 and IA-32 Architectures Software Developer's Manual
   Chapter 23: Introduction to Virtual Machine Extensions
   https://www.intel.com.tw/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-vol-3c-part-3-manual.pdf
+
+Xen Hypervisor
+==============
+
+- Xen hypervisor vs. Dom0
+  Dom0 (domain zero) is the privileged control domain in Xen-based virtualization systems, running a
+  Linux kernel to manage the HW and control guest VMs (domUs). It handles hardware detection, resource allocation,
+  and the management of other VMs, providing the necessary toolstack for virtualization operations while guest
+  domains are unprivileged and lack direct hardware access.
+
+- The Xen Hypervisor is a thin layer that runs directly on the hardware. It is focused on
+  CPU, memory, and isolation:
+  1. CPU & Scheduling
+     Owns the physical CPU; Implements the scheduler which maps vCPUs to physical cores;
+     supports time-slicing and pinning of vCPUs.
+  2. Memory Management
+     Owns the machine's RAM; provides memory isolation between domains (VMs).
+  3. Privilege Enforcement & Traps
+     Runs in highest privilege mode; intercepts privileged instructions from guests;
+     provides the hypercalls interface for guests to request privileged operations.
+  The hypervisor has no user interface - all management is through Dom0.
+
+- Domain 0 (Dom0) is a special VM, started by Xen at boot.
+  It's the management domain, running a full OS (typically Linux). Its responsibilities are much larger:
+  1. Device Drivers
+     Dom0 has direct access to physical devices (network cards, disks, etc.).
+     Provides backend drivers for guest VMs (DomU).
+     Guests use frontend drivers (paravirtualized) that communicate with Dom0 drivers via shared memory + event channels.
+  2. Toolstack & Management
+     Runs the Xen toolstack (xl, libxl, xapi); handles VM lifecycle: create, start, stop, migrate VMs;
+     manages VM configuration, networking, and storage.
+  3. I/O Virtualization
+     Emulates or mediates devices for guest VMs.
+     Legacy devices (BIOS, PCI, VGA, etc.) are emulated with QEMU.
+  4. Control Plane
+     Dom0 provides administrative access to Xen (via toolstack).

@@ -70,3 +70,8 @@ Paging (swapping)
 - Paging is a memory management scheme by which a computer stores and retrieves 
   data from secondary storage for use in main memory (e.g. HD <-> RAM).
 
+Memory HW
+---------
+
+- HBM
+  https://en.wikipedia.org/wiki/High_Bandwidth_Memory

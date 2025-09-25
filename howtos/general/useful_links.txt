@@ -179,6 +179,10 @@ SQL
 Security
 --------
   
+- Public-key cryptography
+  https://en.wikipedia.org/wiki/Public-key_cryptography
+  https://en.wikipedia.org/wiki/One-way_function
+
 - The Beginner's Guide to iptables, the Linux Firewall
   https://www.howtogeek.com/177621/the-beginners-guide-to-iptables-the-linux-firewall
 
