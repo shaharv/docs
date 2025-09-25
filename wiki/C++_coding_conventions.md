@@ -40,7 +40,7 @@ The following naming rules apply:
 ## Namespaces
 
 - Never add `using namespace` in header files, for not polluting the namespace of the includers. Always fully qualified type name in header files.
-- Never use `using namespace std`, not even in source files. If needed, import individual symbols, for example using `std::cout`. Importing the entire std namespace is overkill and could easily create ambiguities.
+- Never use `using namespace std`, not even in source files. If needed, import individual symbols, for example `using std::cout`. Importing the entire std namespace is overkill and could easily create ambiguities.
 
 ## Variable declarations
 
@@ -58,7 +58,7 @@ The following naming rules apply:
 
 ## Integer types
 
-- Prefer using `<cstdint>` integer types with explicit sizes: `int32_t`, `uint32_t`, `int64_t`, `uint64_t`, etc. Using these types improves code readability and is more portable than `int`, `unsigned`, `long long`, etc. 
+- Prefer using `<cstdint>` integer types with explicit sizes, such as `int32_t`, `uint32_t`, `int64_t` and `uint64_t`. Using these types improves code readability and is more portable than `int`, `unsigned`, `long long`, etc.
 
 ## Default Parameters
 
@@ -70,7 +70,7 @@ The following naming rules apply:
 
 - Use C++ `enum class` for defining enumerations. Avoid using C enums, or groups of static integer constants. A C++ enum class is a type-safe alternative to a C enum and offers the following benefits:
   * Requires explicit cast to integer, which helps to avoid coding errors and misuse.
-  * Enumerator names are not exported to the global namespace (otherwise causes name clashes).
+  * Enumerator names are not exported to the global namespace (which otherwise could cause name clashes).
   * The underlying type of a C enum cannot be specified, causing confusion, compatibility problems, and makes forward declaration impossible.
   * For more details see: https://stackoverflow.com/questions/18335861/why-is-enum-class-considered-safer-to-use-than-plain-enum
 
@@ -97,17 +97,17 @@ The following naming rules apply:
 - Naming unit tests:
   * Whitespace characters and special characters are forbidden. Use only alphanumeric characters, `_` and `-` as delimiters.
   * Test name should be informative and concise.
-- In Catch2 test files, do not define global functions - for avoiding collisions between different files when there are same named functions in different source files that are linked into the same Catch2 tests executable. If helper functions are needed, define them as local using anonymous namespaces.
+- In Catch2 test files, do not define global functions - for avoiding collisions between different files when there are same named functions in different source files that are linked into the same Catch2 tests executable. If helper functions are needed, define them in file scope by using anonymous namespaces.
 - Do not use Catch2 `REQUIRE` checks in destructors, as they throw exception if they fail (throwing exception from a destructor could result with undefined behavior).
 
 ## Included headers
 
 - Every .cpp file should directly include the header files which are needed. For example, if `std::string` is used in the .cpp file, the header `<string>` should be included (and not rely on it being included by another header file). This rule is enforced automatically by clang-tidy’s `misc-include-cleaner` check.
-- System headers and third-party headers should be included using `<>` while user (implementation) headers should be included with `""`. The third party libraries used in the project might be marked as “system” (which affect the compiler include search paths).
+- System headers and third-party headers should be included using `<>` while user (implementation) headers should be included with `""`. In the CMake project it's useful to mark the third party libraries as "system" (which affect the compiler include search paths).
 - Headers should be organized in include groups according to the following order:
   * The interface header for this file, if any. For example, `Foo.cpp` should include `Foo.h`.
   * Any headers required for the implementation, including auto-generated headers such as protobuf headers (that are not system headers or third party headers).
   * Third party headers, such as Arrow, spdlog, etc.
   * System headers.
 - Each include group should be separated by a newline.
-- Header includes in each include group should be sorted. This rule is enforced automatically by clang-tidy’s `llvm-include-order` check.
+- Includes in each include group should be sorted. This rule is enforced automatically by clang-tidy’s `llvm-include-order` check.
