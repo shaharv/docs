@@ -31,7 +31,7 @@ Computer Science
 LLVM/Clang
 ----------
 
-- A Tourist’s Guide to the LLVM Source Code
+- A Tourist's Guide to the LLVM Source Code
   http://blog.regehr.org/archives/1453
 
 - Notes on setting up projects with LLVM
@@ -118,7 +118,7 @@ Linux
 - Learning operating system development using Linux kernel and Raspberry Pi
   https://github.com/s-matyukevich/raspberry-pi-os
 
-- Adélie Linux homepage
+- Adelie Linux homepage
   https://www.adelielinux.org
 
 - BedRock Linux homepage
@@ -179,7 +179,7 @@ SQL
 Security
 --------
   
-- The Beginner’s Guide to iptables, the Linux Firewall
+- The Beginner's Guide to iptables, the Linux Firewall
   https://www.howtogeek.com/177621/the-beginners-guide-to-iptables-the-linux-firewall
 
 - A Design for Building an IPS (Intrusion Prevention System)

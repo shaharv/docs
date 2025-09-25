@@ -20,7 +20,7 @@ Abstract Factory
 Singletone
 ----------
 
-- Singletons: Solving problems you didn’t know you never had since 1995
+- Singletons: Solving problems you didn't know you never had since 1995
   http://www.onelib.org/article/singletons-solving-problems-you-didnt-know-you-never-had-since-1995
 
 - Why singletones are bad:
@@ -44,7 +44,7 @@ SOLID
       the software's specification should be able to affect the specification of the class).
 
   O - Open/closed principle
-      software entities … should be open for extension, but closed for modification.
+      software entities ... should be open for extension, but closed for modification.
 
   L - Liskov's substitution principle
       objects in a program should be replaceable with instances of their subtypes without 

@@ -32,6 +32,6 @@ Virtualization
   * Hybrid Virtualization (PVH, PVHVM) (e.g. Linux KVM with virtio drivers)
     - CPU hardware virtualization combined with paravirtualized drivers for efficient I/O
 
-- Intel® 64 and IA-32 Architectures Software Developer’s Manual
+- Intel 64 and IA-32 Architectures Software Developer’s Manual
   Chapter 23: Introduction to Virtual Machine Extensions
   https://www.intel.com.tw/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-vol-3c-part-3-manual.pdf

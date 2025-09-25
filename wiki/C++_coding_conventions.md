@@ -20,7 +20,7 @@ The recommended formatting rules are:
 - Maximum line length is 120 characters.
 - Always use block braces, even if block body is only 1 line.
 - Open block brace is always followed by a newline (i.e. `if (a) { func(); }` is forbidden).
-- `#include`’s must be sorted alphabetically and separated to project includes, 3rd party includes and system includes.
+- `#include`'s must be sorted alphabetically and separated to project includes, 3rd party includes and system includes.
 
 ## Naming conventions
 
@@ -84,7 +84,7 @@ The following naming rules apply:
   const int foo() { return val; } 
 
   // BAD: returning a const object interferes with rvalue optimization and move semantics
-  const std::string foo() { return “boo”; }
+  const std::string foo() { return "boo"; }
 
   // GOOD: returning a const reference or const pointer
   const MyObj& foo() { return myObj; }
@@ -102,7 +102,7 @@ The following naming rules apply:
 
 ## Included headers
 
-- Every .cpp file should directly include the header files which are needed. For example, if `std::string` is used in the .cpp file, the header `<string>` should be included (and not rely on it being included by another header file). This rule is enforced automatically by clang-tidy’s `misc-include-cleaner` check.
+- Every .cpp file should directly include the header files which are needed. For example, if `std::string` is used in the .cpp file, the header `<string>` should be included (and not rely on it being included by another header file). This rule is enforced automatically by clang-tidy's `misc-include-cleaner` check.
 - System headers and third-party headers should be included using `<>` while user (implementation) headers should be included with `""`. In the CMake project it's useful to mark the third party libraries as "system" (which affect the compiler include search paths).
 - Headers should be organized in include groups according to the following order:
   * The interface header for this file, if any. For example, `Foo.cpp` should include `Foo.h`.
@@ -110,4 +110,4 @@ The following naming rules apply:
   * Third party headers, such as Arrow, spdlog, etc.
   * System headers.
 - Each include group should be separated by a newline.
-- Includes in each include group should be sorted. This rule is enforced automatically by clang-tidy’s `llvm-include-order` check.
+- Includes in each include group should be sorted. This rule is enforced automatically by clang-tidy's `llvm-include-order` check.

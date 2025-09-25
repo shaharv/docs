@@ -39,7 +39,7 @@ TLB
   https://cs.stackexchange.com/questions/18313/how-does-a-tlb-and-data-cache-work
 
 - The TLB is a cache for the virtual address to physical address lookup. 
-  The page tables provide a way to map virtualaddress ↦ physicaladdress, by looking 
+  The page tables provide a way to map virtualaddress -> physicaladdress, by looking 
   up the virtual address in the page tables. However, doing the lookup in the page 
   tables is slow (it involves 2-3 memory loads). If the processor had to do this 
   lookup every time any instruction accessed memory, this would cause a substantial

@@ -66,6 +66,7 @@ Searching in files:
 - Grep w/o color (disable ANSI output)    grep --color=never ...
 - Search replace in files                 find \( -name "*.h" -or -name "*.cpp" \) -exec sed -i 's/2022/2023/g' {} +
 - Detect trailing whitespace              ! grep -rnI '[[:blank:]]$' <DIR> || (echo "Trailing whitespace found!" && false)
+- Detect non-ascii characters             grep -P '[^\x00-\x7F]' -R
 
 Binary inspection:
 
@@ -177,7 +178,7 @@ Date and time:
 
 - Disable auto time update                timedatectl set-ntp 0
 - Enable auto time update                 timedatectl set-ntp 1
-- Set date – example                      sudo date -s "30 OCT 2016 18:00:00"
+- Set date - example                      sudo date -s "30 OCT 2016 18:00:00"
 - Seconds since the epoch (1/1/1970)      date +%s
 - Date in DD/MM/YY format                 date +%D
 - Date and time                           date '+%D %T'

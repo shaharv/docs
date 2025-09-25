@@ -31,7 +31,7 @@ Key takeaway:
 std::unique_ptr:
 
 - A unique_ptr u provides exclusive ownership for the pointer p that it holds. 
-  When u is destroyed, the object pointed by p is disposed using p ’s 
+  When u is destroyed, the object pointed by p is disposed using p's 
   associated deleter (custom of default delete/delete[]).
 - Important features:
   * template specialization unique_prt<T[]> to handle dynamic arrays

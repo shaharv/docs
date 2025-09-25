@@ -33,7 +33,7 @@ Main Principles of Good Programming:
 
   How:
   With each commit make sure it does not degrade the codebase quality.
-  Any time someone sees some code that isn’t as clear as it should be,
+  Any time someone sees some code that isn't as clear as it should be,
   they should take the opportunity to fix it right there and then.
 
 - Code For The Maintainer
@@ -51,7 +51,7 @@ Main Principles of Good Programming:
 
 - Avoid Premature Optimization
 
-  Don’t even think about optimization unless your code is working, but slower
+  Don't even think about optimization unless your code is working, but slower
   than you want. Only then should you start thinking about optimizing, and
   then only with the aid of empirical data.
   "We should forget about small efficiencies, say about 97% of the time:
