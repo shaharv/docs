@@ -36,6 +36,16 @@ Virtualization
   Chapter 23: Introduction to Virtual Machine Extensions
   https://www.intel.com.tw/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-vol-3c-part-3-manual.pdf
 
+- Firecracker
+  https://github.com/firecracker-microvm/firecracker
+
+  Firecracker is an open source virtualization engine for creating and managing secure, multi-tenant container
+  and function-based services that provide serverless operational models. It powers services like AWS Lambda and AWS Fargate.
+  The main component of Firecracker is a virtual machine monitor (VMM) that uses the Linux Kernel Virtual Machine (KVM)
+  to create and run lightweight VMs called microVMs. microVMs combine the security and isolation properties
+  provided by HW virtualization with the speed and flexibility of containers.
+  Firecracker has been integrated in container runtimes such as Kata Containers and Flintlock.
+
 Xen Hypervisor
 ==============
 
@@ -71,3 +81,9 @@ Xen Hypervisor
      Legacy devices (BIOS, PCI, VGA, etc.) are emulated with QEMU.
   4. Control Plane
      Dom0 provides administrative access to Xen (via toolstack).
+
+AWS Nitro
+=========
+
+- AWS re:Inforce 2023 - Security design of the AWS Nitro System (DAP401)
+  https://www.youtube.com/watch?v=hhAHyc9x3M4
