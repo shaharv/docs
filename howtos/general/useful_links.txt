@@ -167,14 +167,17 @@ Git
 - Why Google Stores Billions of Lines of Code in a Single Repository
   https://cacm.acm.org/magazines/2016/7/204032-why-google-stores-billions-of-lines-of-code-in-a-single-repository/fulltext
 
-SQL
----
+SQL and Analytics
+-----------------
 
 - Umbra DB demo - with runnable TPC-H queries
   https://umbra-db.com/interface/
 
 - libSQL (SQLite: QEMU all over again?)
   https://itnext.io/sqlite-qemu-all-over-again-aedad19c9a1c
+
+- Big Data is Dead
+  https://www.reddit.com/r/programming/comments/1d1qia0/big_data_is_dead
 
 Security
 --------
@@ -234,12 +237,6 @@ UML
 - UML Diagrams - WikiPedia:
   https://en.wikipedia.org/wiki/Activity_diagram (see page bottom for all types)
   https://en.wikipedia.org/wiki/Unified_Modeling_Language
-
-Apache Arrow
-------------
-
-- Introducing Apache Arrow Flight: A Framework for Fast Data Transport
-  https://arrow.apache.org/blog/2019/10/13/introducing-arrow-flight
 
 Misc
 ----
