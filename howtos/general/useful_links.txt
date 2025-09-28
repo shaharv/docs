@@ -103,6 +103,9 @@ C++
 - C Isn't A Programming Language Anymore
   https://faultlore.com/blah/c-isnt-a-language
 
+- Characterizing and Improving the Performance of Intel Threading Building Blocks
+  https://mrmgroup.cs.princeton.edu/papers/contreras-iiswc2008.pdf
+
 Visual Studio
 -------------
 
@@ -185,6 +188,7 @@ Security
 - Public-key cryptography
   https://en.wikipedia.org/wiki/Public-key_cryptography
   https://en.wikipedia.org/wiki/One-way_function
+  https://en.wikipedia.org/wiki/Diffie-Hellman_key_exchange
 
 - The Beginner's Guide to iptables, the Linux Firewall
   https://www.howtogeek.com/177621/the-beginners-guide-to-iptables-the-linux-firewall
@@ -198,6 +202,12 @@ Security
 
 - The XZ backdoor CVE-2024-3094
   https://snyk.io/blog/the-xz-backdoor-cve-2024-3094/
+
+Data Structures
+---------------
+
+- Concurrent Hash Tables: Fast and General(?)!
+  https://arxiv.org/pdf/1601.04017
 
 Static Analysis
 ---------------
