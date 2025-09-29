@@ -137,3 +137,8 @@ Graph Theory
 - Incidence Matrix (Wikipedia)
   https://en.wikipedia.org/wiki/Incidence_matrix
 
+AI
+--
+
+- Attention Is All You Need (2017 Google paper)
+  https://arxiv.org/pdf/1706.03762
