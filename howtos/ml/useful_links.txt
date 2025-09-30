@@ -154,3 +154,6 @@ GenAI and LLM
 
 - BloombergGPT: A Large Language Model for Finance
   https://arxiv.org/pdf/2303.17564
+
+- Extract-0: A Specialized Language Model for Document Information Extraction
+  https://arxiv.org/pdf/2509.22906
