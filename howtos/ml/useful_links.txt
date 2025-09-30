@@ -148,3 +148,9 @@ GenAI and LLM
 
 - EMNLP: Prompt engineering is the new feature engineering
   https://www.amazon.science/blog/emnlp-prompt-engineering-is-the-new-feature-engineering
+
+- Training Compute-Optimal Large Language Models (Chinchilla paper)
+  https://arxiv.org/pdf/2203.15556
+
+- BloombergGPT: A Large Language Model for Finance
+  https://arxiv.org/pdf/2303.17564
