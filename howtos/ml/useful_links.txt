@@ -137,8 +137,14 @@ Graph Theory
 - Incidence Matrix (Wikipedia)
   https://en.wikipedia.org/wiki/Incidence_matrix
 
-AI
---
+GenAI and LLM
+-------------
 
 - Attention Is All You Need (2017 Google paper)
   https://arxiv.org/pdf/1706.03762
+
+- Few-shot learning in practice: GPT-Neo and the HuggingFace Accelerated Inference API
+  https://huggingface.co/blog/few-shot-learning-gpt-neo-and-inference-api
+
+- EMNLP: Prompt engineering is the new feature engineering
+  https://www.amazon.science/blog/emnlp-prompt-engineering-is-the-new-feature-engineering
