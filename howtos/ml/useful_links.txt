@@ -157,3 +157,12 @@ GenAI and LLM
 
 - Extract-0: A Specialized Language Model for Document Information Extraction
   https://arxiv.org/pdf/2509.22906
+
+- Scaling Instruction-Finetuned Language Models (FLAN paper)
+  https://arxiv.org/pdf/2210.11416
+
+- HELM Benchmark Leaderboard: Core scenarios
+  https://crfm.stanford.edu/helm/classic/latest/#/leaderboard
+
+- The Power of Scale for Parameter-Efficient Prompt Tuning
+  https://arxiv.org/pdf/2104.08691
