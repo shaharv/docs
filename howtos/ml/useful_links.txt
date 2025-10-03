@@ -143,6 +143,9 @@ GenAI and LLM
 - Attention Is All You Need (2017 Google paper)
   https://arxiv.org/pdf/1706.03762
 
+- Transformers, the tech behind LLMs | Deep Learning Chapter 5 (3Blue1Brown)
+  https://www.youtube.com/watch?v=wjZofJX0v4M
+
 - Few-shot learning in practice: GPT-Neo and the HuggingFace Accelerated Inference API
   https://huggingface.co/blog/few-shot-learning-gpt-neo-and-inference-api
 
