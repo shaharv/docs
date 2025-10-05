@@ -169,3 +169,18 @@ GenAI and LLM
 
 - The Power of Scale for Parameter-Efficient Prompt Tuning
   https://arxiv.org/pdf/2104.08691
+
+- ReAct: Synergizing Reasoning and Acting in Language Models (ReAct paper)
+  https://arxiv.org/pdf/2210.03629
+
+- PAL: Program-aided Language Models (PAL paper)
+  https://arxiv.org/pdf/2211.10435
+
+- Chain-of-Thought Prompting Elicits Reasoning in Large Language Models
+  https://arxiv.org/pdf/2201.11903
+
+- Constitutional AI: Harmlessness from AI Feedback
+  https://arxiv.org/pdf/2212.08073
+
+- Proximal Policy Optimization Algorithms (PPO paper)
+  https://arxiv.org/pdf/1707.06347
