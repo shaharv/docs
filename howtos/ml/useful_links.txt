@@ -82,6 +82,15 @@ Neural Networks
 - Paper: ADAM: A method for stochastic optimization
   https://arxiv.org/pdf/1412.6980.pdf
 
+- Activation Functions (ml-cheatsheet)
+  https://ml-cheatsheet.readthedocs.io/en/latest/activation_functions.html
+
+- Activation Functions cheat sheet (kaggle)
+  https://www.kaggle.com/discussions/getting-started/429326
+
+- Deep Learning Cheatsheet (Stanford)
+  https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-deep-learning
+
 Linear Algebra
 --------------
 
