@@ -49,7 +49,7 @@ Event Tracing (ETW):
 
 WSL:
 
-- Restart WSL (reclaims VM memory)        powershell -c "Restart-Service LxssManager"
+- Restart WSL (reclaims VM memory)        powershell -c "Restart-Service WSLService"
 - List installed distros                  wsl -l -v
 - Run specific distro (no quotes)         wsl -d Ubuntu-18.04
 - Change default WSL distro               wsl --setdefault Ubuntu-20.04
