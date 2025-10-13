@@ -90,6 +90,10 @@ The following naming rules apply:
   const MyObj& foo() { return myObj; }
   const MyObj* const foo() { return &myObj; }
   ```
+- Prefer using `static constexpr` for integer constants. For example:  
+  ```
+  static constexpr int32_t FOO = 5;
+  ```
 
 ## Unit tests
 
