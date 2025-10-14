@@ -58,9 +58,6 @@ DLRM
 Neural Networks
 ---------------
 
-- A Beginner's Guide to the Mathematics of Neural Networks
-  http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.161.3556&rep=rep1&type=pdf
-
 - Neural Networks and Deep Learning - free online book
   http://neuralnetworksanddeeplearning.com
 
@@ -219,13 +216,13 @@ PyTorch
 
   Python code (eager)
         ↓
-  TorchDynamo - graph capture
+  TorchDynamo - PyTorch graph capture (uses Python Frame Evaluation API to intercept Python bytecode [PEP 523])
         ↓
   AOTAutograd - forward & backward graph extraction (may be skipped for Inference)
         ↓
   PrimTorch - canonicalize ops to primitive set
         ↓
-  TorchInductor - optimize & generate code (graph compiler). Uses Triton compiler for GPU codegen:
+  TorchInductor - graph compiler. Generates Triton for GPU codegen and C++/OpenMP for CPU. GPU codegen flow:
             ↓
         Triton kernel (Python DSL)
             ↓
