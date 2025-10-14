@@ -7,14 +7,8 @@ Tutorials
 - scikit-learn - Machine Learning in Python
   https://scikit-learn.org/stable/user_guide.html
 
-- PyTorch Tutorials
-  https://pytorch.org/tutorials
-
-- PyTorch Examples
-  https://github.com/pytorch/examples
-
-Compilers
----------
+Static Compilers and IR (legacy)
+--------------------------------
 
 - TVM: An Automated End-to-End Optimizing Compiler for Deep Learning
   https://www.usenix.org/system/files/osdi18-chen.pdf
@@ -193,3 +187,41 @@ GenAI and LLM
 
 - Proximal Policy Optimization Algorithms (PPO paper)
   https://arxiv.org/pdf/1707.06347
+
+PyTorch
+-------
+
+- PyTorch Tutorials
+  https://docs.pytorch.org/tutorials
+
+- PyTorch Examples
+  https://github.com/pytorch/examples
+
+- PyTorch 2.0 release (Mar 2023)
+  https://pytorch.org/blog/pytorch-2-0-release
+
+- HotChips 2023: "PyTorch 2.0" slides (Aug 2023)
+  https://www.hc2023.hotchips.org/assets/program/tutorials/ml/PyTorch%202.0.pdf
+
+- Introducing depyf: mastering torch.compile with ease (May 2024)
+  https://pytorch.org/blog/introducing-depyf
+
+- A Walk Through Example of torch.compile
+  https://depyf.readthedocs.io/en/latest/walk_through.html
+
+- The Simple Path to PyTorch Graphs: Dynamo and AOT Autograd Explained
+  https://medium.com/%40sgurwinderr/pytorch-dynamo-and-aot-autograd-enhancing-performance-and-flexibility-fa18feda5f3a
+
+- PyTorch execution flow (2025):
+
+  Python code (eager)
+        ↓
+  TorchDynamo - graph capture
+        ↓
+  AOTAutograd - forward & backward graph extraction (may be skipped for Inference)
+        ↓
+  PrimTorch - canonicalize ops to primitive set
+        ↓
+  TorchInductor - optimize & generate code
+        ↓
+  Compiled execution
