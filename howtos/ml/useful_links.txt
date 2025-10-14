@@ -212,6 +212,9 @@ PyTorch
 - The Simple Path to PyTorch Graphs: Dynamo and AOT Autograd Explained
   https://medium.com/%40sgurwinderr/pytorch-dynamo-and-aot-autograd-enhancing-performance-and-flexibility-fa18feda5f3a
 
+- Triton language & compiler (by OpenAI)
+  https://github.com/triton-lang/triton
+
 - PyTorch execution flow (2025):
 
   Python code (eager)
@@ -222,6 +225,18 @@ PyTorch
         ↓
   PrimTorch - canonicalize ops to primitive set
         ↓
-  TorchInductor - optimize & generate code
-        ↓
-  Compiled execution
+  TorchInductor - optimize & generate code (graph compiler). Uses Triton compiler for GPU codegen:
+            ↓
+        Triton kernel (Python DSL)
+            ↓
+        Triton IR
+            ↓
+        LLVM IR
+            ↓
+        PTX (NVIDIA's intermediate GPU ISA)
+            ↓
+        CUDA Driver (JIT compilation)
+            ↓
+        SASS (native GPU machine code)
+            ↓
+        Execution on GPU
