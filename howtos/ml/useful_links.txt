@@ -82,6 +82,16 @@ Neural Networks
 - Deep Learning Cheatsheet (Stanford)
   https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-deep-learning
 
+- Learning Rate cheat sheet (for model training):
+
+  | Learning Rate     | Behavior                | Typical Use Case                   |
+  |-------------------|-------------------------|------------------------------------|
+  | 0.001 - 0.01      | Slow, stable learning   | Deep neural networks               |
+  | 0.01 - 0.1        | Moderate speed          | Simple models, logistic regression |
+  | 0.1 - 1.0         | Fast but unstable       | Small datasets, experimentation    |
+  | Too high (>1.0)   | Diverges, loss explodes | X Usually bad                      |
+  | Too low (<0.0001) | Learning is too slow    | X Wastes time                      |
+
 Linear Algebra
 --------------
 
