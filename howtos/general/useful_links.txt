@@ -248,6 +248,18 @@ UML
   https://en.wikipedia.org/wiki/Activity_diagram (see page bottom for all types)
   https://en.wikipedia.org/wiki/Unified_Modeling_Language
 
+AWS
+---
+
+- Summary of the AWS Service Event in the Northern Virginia (US-EAST-1) Region
+  https://aws.amazon.com/message/12721
+
+- The Nitro Project – Next Generation AWS Infrastructure (PPT)
+  https://picture.iczhiku.com/resource/eetop/SHISiaPhtdGDPxVn.pdf
+
+- The components of the Nitro System
+  https://docs.aws.amazon.com/whitepapers/latest/security-design-of-aws-nitro-system/the-components-of-the-nitro-system.html
+
 Misc
 ----
 
