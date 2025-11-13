@@ -55,6 +55,15 @@ DLRM
 - DLRM Glow implementation
   https://github.com/pytorch/glow/blob/master/tests/unittests/RecommendationSystemTest.cpp
 
+Transformers
+------------
+
+- Transformer Explainer
+  https://poloclub.github.io/transformer-explainer
+
+- 3D LLM Visualization
+  https://bbycroft.net/llm
+
 Neural Networks
 ---------------
 
@@ -225,11 +234,11 @@ PyTorch
 - Triton language & compiler (by OpenAI)
   https://github.com/triton-lang/triton
 
-- PyTorch execution flow (2025):
+- PyTorch execution flow (2025) - for GPU:
 
   Python code (eager)
         ↓
-  TorchDynamo - PyTorch graph capture (uses Python Frame Evaluation API to intercept Python bytecode [PEP 523])
+  TorchDynamo / torch.compile - PyTorch graph capture (Dynamo uses Python Frame Evaluation API to intercept Python bytecode [PEP 523])
         ↓
   AOTAutograd - forward & backward graph extraction (may be skipped for Inference)
         ↓
@@ -250,3 +259,31 @@ PyTorch
         SASS (native GPU machine code)
             ↓
         Execution on GPU
+
+- PyTorch execution flow (2025) - for AWS Trainium and Inferentia instances:
+
+                       +----------------------+
+                       |     PyTorch Model    |
+                       +----------+-----------+
+                                  |
+                 +----------------+----------------+
+                 |                                 |
+        +--------+--------+               +--------+--------+
+        |  TRAINING (Trn) |               | INFERENCE (Inf) |
+        +--------+--------+               +--------+--------+
+                 |                                 |
+     TorchDynamo / torch.compile            TorchScript Trace
+                 |                     (torch.jit.trace/model.eval)
+              FX Graph                             |
+                 |                                 |
+      torch_neuronx Partitioner        torch_neuron / torch_neuronx
+                 |                                 |
+      NeuronX Compiler (XLA)          Neuron Compiler (Infer/Train)
+                 |                                 |
+             NEFF File                         NEFF File
+                 |                                 |
+          NeuronX Runtime                    Neuron Runtime
+                 |                                 |
+      Trainium HW (Trn1/Trn2)       Inferentia / Trainium HW (Inf/Trn)
+                 |                                 |
+           Training Loop                       Execution
