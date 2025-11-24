@@ -225,29 +225,6 @@ Testing
   https://pythontesting.net/strategy/why-most-unit-testing-is-waste
   https://henrikwarne.com/2014/09/04/a-response-to-why-most-unit-testing-is-waste
 
-UML
----
-
-- Recommended UML modeler - Umberllo:
-  https://umbrello.kde.org
-  https://en.wikipedia.org/wiki/Umbrello_UML_Modeller
-
-- List of UML modeling tools:
-  https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools
-
-- 2014 review of free UML tools:
-  http://software-talk.org/blog/2014/05/comparison-of-free-uml-tools
-
-- 2009 review of UML tools:
-  http://judebert.com/progress/archives/329-Rating-UML-Editors.html#comments
-
-- Types of UML diagrams - SmartDraw:
-  https://www.smartdraw.com/uml-diagram
-
-- UML Diagrams - WikiPedia:
-  https://en.wikipedia.org/wiki/Activity_diagram (see page bottom for all types)
-  https://en.wikipedia.org/wiki/Unified_Modeling_Language
-
 AWS
 ---
 
@@ -259,6 +236,12 @@ AWS
 
 - The components of the Nitro System
   https://docs.aws.amazon.com/whitepapers/latest/security-design-of-aws-nitro-system/the-components-of-the-nitro-system.html
+
+Internet
+--------
+
+- Cloudflare outage on November 18, 2025
+  https://blog.cloudflare.com/18-november-2025-outage
 
 Misc
 ----
