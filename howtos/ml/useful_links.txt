@@ -55,15 +55,6 @@ DLRM
 - DLRM Glow implementation
   https://github.com/pytorch/glow/blob/master/tests/unittests/RecommendationSystemTest.cpp
 
-Transformers
-------------
-
-- Transformer Explainer
-  https://poloclub.github.io/transformer-explainer
-
-- 3D LLM Visualization
-  https://bbycroft.net/llm
-
 Neural Networks
 ---------------
 
@@ -206,6 +197,21 @@ GenAI and LLM
 
 - Proximal Policy Optimization Algorithms (PPO paper)
   https://arxiv.org/pdf/1707.06347
+
+Transformers
+------------
+
+- Transformer Explainer
+  https://poloclub.github.io/transformer-explainer
+
+- 3D LLM Visualization
+  https://bbycroft.net/llm
+
+- Understanding and Coding the KV Cache in LLMs from Scratch
+  https://magazine.sebastianraschka.com/p/coding-the-kv-cache-in-llms
+
+- Coding LLMs from the Ground Up: A Complete Course
+  https://magazine.sebastianraschka.com/p/coding-llms-from-the-ground-up
 
 PyTorch
 -------
