@@ -213,6 +213,9 @@ Transformers
 - Coding LLMs from the Ground Up: A Complete Course
   https://magazine.sebastianraschka.com/p/coding-llms-from-the-ground-up
 
+- GPT Architecture
+  https://medium.com/@prashunjaveri/gpt-architecture-0415e7a5796d
+
 vLLM
 ----
 
