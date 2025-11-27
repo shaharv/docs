@@ -213,6 +213,12 @@ Transformers
 - Coding LLMs from the Ground Up: A Complete Course
   https://magazine.sebastianraschka.com/p/coding-llms-from-the-ground-up
 
+vLLM
+----
+
+- Inside vLLM: Anatomy of a High-Throughput LLM Inference System
+  https://www.aleksagordic.com/blog/vllm
+
 PyTorch
 -------
 
