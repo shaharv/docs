@@ -198,6 +198,9 @@ GenAI and LLM
 - Proximal Policy Optimization Algorithms (PPO paper)
   https://arxiv.org/pdf/1707.06347
 
+- Neural Machine Translation By Jointly Learning To Align And Translate (Bahadanau Attention paper)
+  https://arxiv.org/pdf/1409.0473
+
 Transformers
 ------------
 
