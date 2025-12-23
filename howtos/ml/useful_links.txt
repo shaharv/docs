@@ -216,6 +216,12 @@ Transformers
 - GPT Architecture
   https://medium.com/@prashunjaveri/gpt-architecture-0415e7a5796d
 
+- From GPT-2 to gpt-oss: Analyzing the Architectural Advances
+  https://magazine.sebastianraschka.com/p/from-gpt-2-to-gpt-oss-analyzing-the
+
+- Attention in transformers, step-by-step | Deep Learning Chapter 6
+  https://www.youtube.com/watch?v=eMlx5fFNoYc
+
 vLLM
 ----
 
