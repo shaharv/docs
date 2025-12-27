@@ -225,11 +225,41 @@ Transformers
 - Attention in transformers, step-by-step | Deep Learning Chapter 6
   https://www.youtube.com/watch?v=eMlx5fFNoYc
 
-vLLM
-----
+Inference
+---------
+
+- Mastering LLM Techniques: Inference Optimization (NVIDIA NeMo Framework Developer Docs)
+  https://developer.nvidia.com/blog/mastering-llm-techniques-inference-optimization
+
+- Parallelisms (NVIDIA NeMo Framework Developer Docs)
+  https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/features/parallelisms.html
+
+- Neuron Batching
+  https://awsdocs-neuron.readthedocs-hosted.com/en/v2.25.0/general/arch/neuron-features/neuroncore-batching.html
+
+- Prefill and Decode for Concurrent Requests - Optimizing LLM Performance
+  https://huggingface.co/blog/tngtech/llm-performance-prefill-decode-concurrent-requests
+
+- Efficient Memory Management for Large Language Model Serving with PagedAttention (vLLM paper)
+  https://huggingface.co/blog/tngtech/llm-performance-prefill-decode-concurrent-requests
+
+- Dynamo Disaggregation: Separating Prefill and Decode for Enhanced Performance
+  https://docs.nvidia.com/dynamo/latest/design_docs/disagg_serving.html
 
 - Inside vLLM: Anatomy of a High-Throughput LLM Inference System
   https://www.aleksagordic.com/blog/vllm
+
+- Mixture of Experts Explained
+  https://huggingface.co/blog/moe
+
+- Applying Mixture of Experts in LLM Architectures
+  https://developer.nvidia.com/blog/applying-mixture-of-experts-in-llm-architectures
+
+- GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints (GQA paper)
+  https://arxiv.org/pdf/2305.13245
+
+- Speculative Decoding
+  https://huggingface.co/docs/text-generation-inference/en/conceptual/speculation
 
 PyTorch
 -------
