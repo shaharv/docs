@@ -241,7 +241,7 @@ Inference
   https://huggingface.co/blog/tngtech/llm-performance-prefill-decode-concurrent-requests
 
 - Efficient Memory Management for Large Language Model Serving with PagedAttention (vLLM paper)
-  https://huggingface.co/blog/tngtech/llm-performance-prefill-decode-concurrent-requests
+  https://arxiv.org/pdf/2309.06180
 
 - Dynamo Disaggregation: Separating Prefill and Decode for Enhanced Performance
   https://docs.nvidia.com/dynamo/latest/design_docs/disagg_serving.html
