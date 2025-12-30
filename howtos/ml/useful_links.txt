@@ -225,6 +225,9 @@ Transformers
 - Attention in transformers, step-by-step | Deep Learning Chapter 6
   https://www.youtube.com/watch?v=eMlx5fFNoYc
 
+- Demystifying the Attention Formula
+  https://medium.com/@weidagang/demystifying-the-attention-formula-8f5ad602546f
+
 Inference
 ---------
 
