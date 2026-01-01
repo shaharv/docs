@@ -353,3 +353,4 @@ Misc:
   sparse space
 - Remove unused filesystem blocks -       fstrim -av
   shrink QEMU image
+- Install stable Rust                     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
