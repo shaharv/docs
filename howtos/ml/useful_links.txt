@@ -234,6 +234,9 @@ LLM and Transformers
 - Less is More: Recursive Reasoning with Tiny Networks
   https://arxiv.org/pdf/2510.04871
 
+- The State Of LLMs 2025: Progress, Problems, and Predictions
+  https://magazine.sebastianraschka.com/p/state-of-llms-2025
+
 Inference
 ---------
 
