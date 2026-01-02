@@ -150,8 +150,8 @@ Graph Theory
 - Incidence Matrix (Wikipedia)
   https://en.wikipedia.org/wiki/Incidence_matrix
 
-GenAI and LLM
--------------
+LLM and Transformers
+--------------------
 
 - Attention Is All You Need (2017 Google paper)
   https://arxiv.org/pdf/1706.03762
@@ -201,9 +201,6 @@ GenAI and LLM
 - Neural Machine Translation By Jointly Learning To Align And Translate (Bahadanau Attention paper)
   https://arxiv.org/pdf/1409.0473
 
-Transformers
-------------
-
 - Transformer Explainer
   https://poloclub.github.io/transformer-explainer
 
@@ -227,6 +224,15 @@ Transformers
 
 - Demystifying the Attention Formula
   https://medium.com/@weidagang/demystifying-the-attention-formula-8f5ad602546f
+
+- A Review Of Sparse Expert Models In Deep Learning
+  https://arxiv.org/pdf/2209.01667
+
+- QMoE: Practical Sub-1-Bit Compression of Trillion-Parameter Models
+  https://arxiv.org/pdf/2310.16795
+
+- Less is More: Recursive Reasoning with Tiny Networks
+  https://arxiv.org/pdf/2510.04871
 
 Inference
 ---------
