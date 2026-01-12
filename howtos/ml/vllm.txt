@@ -1,0 +1,8 @@
+vLLM info and tips
+------------------
+
+Installation:
+
+- Install local vLLM to system editable package for CPU    VLLM_TARGET_DEVICE=cpu pip install -e . --no-build-isolation
+  Requires torch>=2.8.0; Modify requirements/cpu*; use
+  local build env. (no isolation) to pick correct torch
