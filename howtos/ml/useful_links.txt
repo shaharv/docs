@@ -82,6 +82,9 @@ Neural Networks
 - Activation Functions cheat sheet (kaggle)
   https://www.kaggle.com/discussions/getting-started/429326
 
+- ReLU Activation Function: The Complete 2025 Guide
+  https://iabac.org/blog/relu-activation-function
+
 - Deep Learning Cheatsheet (Stanford)
   https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-deep-learning
 
