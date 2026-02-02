@@ -39,7 +39,7 @@ The installation instructions were tested on Ubuntu 24.04 (WSL).
   The first is for picking the dynamic linker from `/lib`, required for QEMU.
   The second is for having `gcc` point to `gcc-13`, needed for `pk`.
 
-- Install clang (version 18 on Ubuntu 24.04): `sudo apt-get install clang-18`.
+- Install clang (version 18 on Ubuntu 24.04): `sudo apt-get install clang-18`.  
   For the latest LLVM version, use the official script: `sudo bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"`
 
 - **Note:** The GNU toolchain binaries are installed in the following locations:
