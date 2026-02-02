@@ -53,18 +53,19 @@ The installation instructions were tested on Ubuntu 24.04 (WSL).
 
 ### Installing QEMU
 
-For building latest QEMU from source (5.0.0 as of May 2020) for `riscv64`:
+For building latest QEMU from source (9.2.0 as of January 2025) for `riscv64`:
 
 - Install dependencies: https://wiki.qemu.org/Hosts/Linux
-- Install Flex and Bison: `sudo apt-get install flex bison`
+- Install required packages: `sudo apt-get install bison bzip2 flex git libglib2.0-dev libpixman-1-dev make ninja-build python3-venv wget xz-utils`
 - Follow these steps:
 
 ```
 mkdir ~/qemu && cd ~/qemu
-wget https://download.qemu.org/qemu-5.0.0.tar.xz
-tar -xf qemu-5.0.0.tar.xz
+wget https://download.qemu.org/qemu-9.2.0.tar.xz
+tar -xf qemu-9.2.0.tar.xz
 mkdir build && cd build
-../qemu-5.0.0/configure --target-list=riscv64-softmmu,riscv64-linux-user
+../qemu-9.2.0/configure --target-list=riscv64-softmmu,riscv64-linux-user
+make -j$(nproc)
 sudo make install
 ```
 
@@ -72,16 +73,16 @@ sudo make install
 
 ### Building a C program
 
-- Using GCC:  
-  `riscv64-linux-gnu-gcc-8 -static foo.c`
+- Using GCC:
+  `riscv64-linux-gnu-gcc-13 -static foo.c`
 
-- Using Clang:  
-  `clang-10 --target=riscv64-linux-gnu -static -isystem /usr/riscv64-linux-gnu/include foo.c`
+- Using Clang:
+  `clang-18 --target=riscv64-linux-gnu -static -isystem /usr/riscv64-linux-gnu/include foo.c`
 
-- Using Clang and the experimental `V` extension:  
-  `$LLVM_BIN/clang --target=riscv64-linux-gnu -menable-experimental-extensions -march=rv64ifdv0p9 -static -isystem /usr/riscv64-linux-gnu/include foo.c`
+- Using Clang with the `V` extension (ratified in LLVM 17+):
+  `clang-18 --target=riscv64-linux-gnu -march=rv64gcv -static -isystem /usr/riscv64-linux-gnu/include foo.c`
 
-- Run `file a.out` to verify the resulting executable:  
+- Run `file a.out` to verify the resulting executable:
   `./a.out: ELF 64-bit LSB executable, UCB RISC-V, version 1 (SYSV), statically linked, for GNU/Linux 4.15.0, not stripped`
 
 - **Note:** The installed RISC-V toolchain is 64-bit, with the `D` extension (double precision floating point). This is "hard float", as opposed to "soft float" which means floats are emulated in software. The relevant ABI flag is `-mabi=lp64d`. It is implied, but could be specified in the command line for extra clarity.  
@@ -99,15 +100,25 @@ For running the `riscv64` program:
 
 ### Compiling for RISC-V32IM
 
-With the `riscv64` toolchain, we can't build and run 32-bit RISC-V, but we can compile simple functions into 32-bit RISC-V assembly.  
-The influential compiler flags are `-march=rv32im` and `-mabi=ilp32`.  
-For clang, we should also specify `--target=riscv32`.  
+With the `riscv64` toolchain, we can't build and run 32-bit RISC-V, but we can compile simple freestanding functions into 32-bit RISC-V assembly.
+The influential compiler flags are `-march=rv32im` and `-mabi=ilp32`.
+For clang, we should also specify `--target=riscv32`.
 
-GCC command line:  
-- `riscv64-linux-gnu-gcc-8 -march=rv32im -mabi=ilp32 -O3 -S foo.c`
+**Note:** Ubuntu's `libc6-dev-riscv64-cross` package only includes 64-bit (LP64) headers. The 32-bit ILP32 headers are not available, so code must be freestanding (no libc includes like `<stdio.h>`).
 
-Clang command line:  
-- `clang-10 --target=riscv32 -march=rv32im -mabi=ilp32 -O3 -S foo.c`
+Example freestanding function:
+```c
+// foo.c
+int add(int a, int b) {
+    return a + b;
+}
+```
+
+GCC command line:
+- `riscv64-linux-gnu-gcc-13 -march=rv32im -mabi=ilp32 -ffreestanding -O3 -S foo.c`
+
+Clang command line:
+- `clang-18 --target=riscv32 -march=rv32im -mabi=ilp32 -ffreestanding -O3 -S foo.c`
 
 
 ## 2. Assembling RISC-V-V programs with llvm-mc
@@ -121,13 +132,13 @@ Assembling RISC-V programs of ISA `RV32IV`:
 For assembling RV32IV programs and displaying encodings:
 
 ```
-$LLVM_BIN/llvm-mc -triple=riscv32 --mattr=+experimental-v -show-encoding foo.asm
+llvm-mc-18 -triple=riscv32 --mattr=+experimental-v -show-encoding foo.s
 ```
 
 For assembling into an object:
 
 ```
-$LLVM_BIN/llvm-mc -triple=riscv32 --mattr=+experimental-v --filetype=obj foo.asm > foo.o
+llvm-mc-18 -triple=riscv32 --filetype=obj foo.s > foo.o
 ```
 
 ### llvm-objdump
@@ -135,7 +146,7 @@ $LLVM_BIN/llvm-mc -triple=riscv32 --mattr=+experimental-v --filetype=obj foo.asm
 For disassembling the generated object with `llvm-objdump`:  
 
 ```
-$LLVM_BIN/llvm-objdump --arch=riscv64 --mattr=+experimental-v -d foo.o
+llvm-objdump-18 --arch=riscv64 -d foo.o
 ```
 
 
