@@ -24,28 +24,29 @@ This page summarizes the steps required for building and running RISC-V programs
 
 ### Installing GNU RISC-V toolchain
 
-The installation instructions were tested on Ubuntu 18.04 (WSL).
+The installation instructions were tested on Ubuntu 24.04 (WSL).
 
-- Install GNU's cross compiler, bintools and libraries for `riscv64` cross compilation:  
-  `sudo apt-get install gcc-8-riscv64-linux-gnu libc6-dev-riscv64-cross`
+- Install GNU's cross compiler, bintools and libraries for `riscv64` cross compilation:
+  `sudo apt-get install gcc-13-riscv64-linux-gnu libc6-dev-riscv64-cross`
 
   Then, create required symlinks:
 
   ```
   sudo ln -s /usr/riscv64-linux-gnu/lib/ld-linux-riscv64-lp64d.so.1 /lib
-  sudo ln -s /usr/bin/riscv64-linux-gnu-gcc-8 /usr/bin/riscv64-linux-gnu-gcc
+  sudo ln -s /usr/bin/riscv64-linux-gnu-gcc-13 /usr/bin/riscv64-linux-gnu-gcc
   ```
 
-  The first is for picking the dynamic linker from `/lib`, required for `qemu`.  
-  The second is for having `gcc` point to `gcc-8`, needed for `pk`.  
+  The first is for picking the dynamic linker from `/lib`, required for QEMU.
+  The second is for having `gcc` point to `gcc-13`, needed for `pk`.
 
-- Install latest clang (version 10 as of May 2020):  
+- Install clang (version 18 on Ubuntu 24.04):
+  `sudo apt-get install clang`
+
+  For the latest LLVM version, use the official script:
   `sudo bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"`
 
-  On Ubuntu 20.04, this will do instead: `sudo apt-get install clang`
-  
-- **Note:** The GNU toolchain binaries are installed in the following locations:  
-  - Compiler driver: `/usr/bin/riscv64-linux-gnu-gcc-8`
+- **Note:** The GNU toolchain binaries are installed in the following locations:
+  - Compiler driver: `/usr/bin/riscv64-linux-gnu-gcc-13`
   - Assembler: `/usr/bin/riscv64-linux-gnu-as`
   - Linker: `/usr/bin/riscv64-linux-gnu-ld`
   - Libraries: `/usr/lib/riscv64-linux-gnu/`
