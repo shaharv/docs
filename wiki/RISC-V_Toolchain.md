@@ -215,17 +215,11 @@ sudo make install
 - GCC RISC-V options  
   https://gcc.gnu.org/onlinedocs/gcc/RISC-V-Options.html
 
-- RISC-V software tools presentation (2015)  
-  https://riscv.org/wp-content/uploads/2015/02/riscv-software-stack-tutorial-hpca2015.pdf
-
 - Spike homepage  
   https://github.com/riscv/riscv-isa-sim
 
 - Tutorial on Spike internals  
   https://github.com/poweihuang17/Documentation_Spike
-
-- List of RISC-V Simulators  
-  https://riscv.org/software-status/#simulators
 
 - RISC-V Vector Extensions spec drafts  
   https://github.com/riscv/riscv-v-spec/releases
