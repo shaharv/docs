@@ -65,7 +65,7 @@ wget https://download.qemu.org/qemu-9.2.0.tar.xz
 tar -xf qemu-9.2.0.tar.xz
 mkdir build && cd build
 ../qemu-9.2.0/configure --target-list=riscv64-softmmu,riscv64-linux-user
-make -j$(nproc)
+make -j
 sudo make install
 ```
 
@@ -152,16 +152,15 @@ llvm-objdump-18 --arch=riscv64 -d foo.o
 
 ## 3. RISC-V Simulation with Spike
 
-[Spike](https://github.com/riscv/riscv-isa-sim) is a the original RISC-V ISA simulator implementation.  
-It is an instruction accurate implementation (ISS), as opposed to cycle accurate (CAS).  
-Currently, it is the only free RISC-V simulator implementation supporting the V extension (vector instructions).
+[Spike](https://github.com/riscv/riscv-isa-sim) is the original RISC-V ISA simulator implementation.
+It is an instruction accurate implementation (ISS), as opposed to cycle accurate (CAS).
 
 ### Installing GNU RISC-V64 Toolchain
 
-The installation instructions were tested on Ubuntu 18.04 (WSL).
+The installation instructions were tested on Ubuntu 24.04 (WSL).
 
-First, install a RISC-V toolchain, as described [here](#installing-gnu-risc-v-toolchain).  
-At minimum, install the GNU toolchain (`gcc-8-riscv64-linux-gnu`). Clang is optional.
+First, install a RISC-V toolchain, as described [here](#installing-gnu-risc-v-toolchain).
+At minimum, install the GNU toolchain (`gcc-13-riscv64-linux-gnu`). Clang is optional.
 
 It is recommended to add the toolchain binaries location to `PATH`, in `.bashrc` for example:
 
