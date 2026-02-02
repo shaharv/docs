@@ -39,11 +39,8 @@ The installation instructions were tested on Ubuntu 24.04 (WSL).
   The first is for picking the dynamic linker from `/lib`, required for QEMU.
   The second is for having `gcc` point to `gcc-13`, needed for `pk`.
 
-- Install clang (version 18 on Ubuntu 24.04):
-  `sudo apt-get install clang`
-
-  For the latest LLVM version, use the official script:
-  `sudo bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"`
+- Install clang (version 18 on Ubuntu 24.04): `sudo apt-get install clang-18`.
+  For the latest LLVM version, use the official script: `sudo bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"`
 
 - **Note:** The GNU toolchain binaries are installed in the following locations:
   - Compiler driver: `/usr/bin/riscv64-linux-gnu-gcc-13`
@@ -56,7 +53,10 @@ The installation instructions were tested on Ubuntu 24.04 (WSL).
 For building latest QEMU from source (9.2.0 as of January 2025) for `riscv64`:
 
 - Install dependencies: https://wiki.qemu.org/Hosts/Linux
-- Install required packages: `sudo apt-get install bison bzip2 flex git libglib2.0-dev libpixman-1-dev make ninja-build python3-venv wget xz-utils`
+- Install required packages:
+```
+sudo apt-get install bison bzip2 flex git libglib2.0-dev libpixman-1-dev make ninja-build python3-venv wget xz-utils
+```
 - Follow these steps:
 
 ```
