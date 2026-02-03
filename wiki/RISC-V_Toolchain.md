@@ -50,21 +50,21 @@ The installation instructions were tested on Ubuntu 24.04 (WSL).
 
 ### Installing QEMU
 
-For building latest QEMU from source (9.2.0 as of January 2025) for `riscv64`:
+For building latest QEMU from source (10.2.0 as of December 2025) for `riscv64`:
 
 - Install dependencies: https://wiki.qemu.org/Hosts/Linux
 - Install required packages:
 ```
-sudo apt-get install bison bzip2 flex git libglib2.0-dev libpixman-1-dev make ninja-build python3-venv wget xz-utils
+sudo apt-get install -y bison bzip2 flex git libglib2.0-dev libpixman-1-dev make ninja-build python3-venv wget xz-utils
 ```
 - Follow these steps:
 
 ```
 mkdir ~/qemu && cd ~/qemu
-wget https://download.qemu.org/qemu-9.2.0.tar.xz
-tar -xf qemu-9.2.0.tar.xz
+wget https://download.qemu.org/qemu-10.2.0.tar.xz
+tar -xf qemu-10.2.0.tar.xz
 mkdir build && cd build
-../qemu-9.2.0/configure --target-list=riscv64-softmmu,riscv64-linux-user
+../qemu-10.2.0/configure --target-list=riscv64-softmmu,riscv64-linux-user
 make -j
 sudo make install
 ```
