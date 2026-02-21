@@ -235,8 +235,8 @@ sudo make install
 - RISC-V Vector Extensions spec drafts  
   https://github.com/riscv/riscv-v-spec/releases
 
-- RVV Intrinsics API specs
+- RVV Intrinsics API specs  
   https://github.com/riscv-non-isa/rvv-intrinsic-doc/releases
 
-- rvv-benchmark: testing of the vector assembly code examples come from riscv/riscv-v-spec/example
+- rvv-benchmark: testing of the vector assembly code examples come from riscv/riscv-v-spec/example  
   https://github.com/plctlab/rvv-benchmark
