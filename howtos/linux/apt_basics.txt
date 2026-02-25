@@ -59,9 +59,11 @@ Manage:
 
 - Launch the Gnome update manager            sudo update-manager -d
 
-Alternatives (example):
+Alternatives (examples):
 
-- sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-10 1000 --slave /usr/bin/g++ g++ /usr/bin/g++-10
+- sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 1100 --slave /usr/bin/g++ g++ /usr/bin/g++-11
+- sudo update-alternatives --install /usr/bin/c++ c++ /usr/bin/g++-11 1100
+- sudo update-alternatives --install /usr/bin/cc cc /usr/bin/g++-11 1100
 - sudo update-alternatives --remove clang /usr/bin/clang
 - sudo update-alternatives --config
 
