@@ -1,8 +1,12 @@
 vLLM info and tips
 ------------------
 
-Installation:
+Building:
 
-- Install local vLLM to system editable package for CPU    VLLM_TARGET_DEVICE=cpu pip install -e . --no-build-isolation
-  Requires torch>=2.8.0; Modify requirements/cpu*; use
-  local build env. (no isolation) to pick correct torch
+- Build and install local vLLM to system editable package      VLLM_TARGET_DEVICE=cpu python3 -m pip install -e . --no-build-isolation
+  for CPU. Notes:
+  1. Modify requirements/cpu* to require torch>=2.8.0
+  2. Requires avx512 (check `lscpu | grep avx512`)
+  3. Using no build isolation (local env) to pick right torch
+
+- Full vLLM build instructions for CPU                         https://docs.vllm.ai/en/stable/getting_started/installation/cpu
