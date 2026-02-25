@@ -23,7 +23,6 @@ Building:
      https://github.com/vllm-project/vllm/issues/33991
 
 - Full vLLM build instructions for CPU                         https://docs.vllm.ai/en/stable/getting_started/installation/cpu
-But 
 
 Chatting:
 
