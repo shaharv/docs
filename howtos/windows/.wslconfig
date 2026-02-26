@@ -1,0 +1,15 @@
+[wsl2]
+# Set the amount of RAM available to WSL. Default is 50%. Leave at least 6GB to Windows.
+memory=24GB
+
+# If the value is mirrored then this turns on mirrored networking mode. Default or unrecognized strings result in NAT networking.
+networkingMode=mirrored
+
+# Changes how DNS requests are proxied from WSL to Windows.
+dnsTunneling=true
+
+# Setting this to true allows the Windows Firewall rules, as well as rules specific to Hyper-V traffic, to filter WSL network traffic.
+firewall=true
+
+# Enables GUI application support
+guiApplications=true
