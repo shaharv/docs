@@ -36,14 +36,15 @@
   ```
   pip install torch --index-url https://download.pytorch.org/whl/cpu --force-reinstall
   pip install --upgrade setuptools
-  VLLM_TARGET_DEVICE=cpu python3 -m pip install -e . --no-build-isolation
+  MAX_JOBS=4 VLLM_TARGET_DEVICE=cpu python3 -m pip install -e . --no-build-isolation
   ```
   Notes:
   1. Using no build isolation (local env) to pick right torch
   2. Must install CPU-only PyTorch first — CUDA-built PyTorch's cmake config
      requires CUDA libraries even for CPU-only vLLM builds
   3. Modify `requirements/cpu*` to require `torch>=2.8.0`
-  4. Requires avx512. Otherwise, apply this patch:
+  4. `MAX_JOBS` caps the number of parallel CMake build jobs (useful to limit memory usage)
+  5. Requires avx512. Otherwise, apply this patch:
      https://github.com/vllm-project/vllm/issues/33991
 
 - Full vLLM build instructions for CPU: https://docs.vllm.ai/en/stable/getting_started/installation/cpu
