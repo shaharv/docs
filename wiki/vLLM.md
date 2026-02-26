@@ -34,7 +34,7 @@
 
 - Build and install local vLLM to system editable package for CPU:
   ```
-  pip install torch --index-url https://download.pytorch.org/whl/cpu --force-reinstall
+  pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu --force-reinstall
   pip install --upgrade setuptools
   MAX_JOBS=4 VLLM_TARGET_DEVICE=cpu python3 -m pip install -e . --no-build-isolation
   ```
