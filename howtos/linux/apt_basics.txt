@@ -64,8 +64,9 @@ Alternatives (examples):
 - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 1100 --slave /usr/bin/g++ g++ /usr/bin/g++-11
 - sudo update-alternatives --install /usr/bin/c++ c++ /usr/bin/g++-11 1100
 - sudo update-alternatives --install /usr/bin/cc cc /usr/bin/g++-11 1100
+- sudo update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-20 2000
 - sudo update-alternatives --remove clang /usr/bin/clang
-- sudo update-alternatives --config
+- sudo update-alternatives --config clang
 
 Release apt lock (E: Could not get lock /var/lib/apt/lists/lock):
 
